@@ -2,11 +2,11 @@
 VER=3250200
 
 EXE=shell
-C=shell.c sqlite3.c
-BC=$(addsuffix .bc,$(EXE))
-LL=$(BC:.bc=.ll)
-KEEP=$(addprefix sqlite-amalgamation-$(VER)/,$(EXE) $(BC))
-TESTDATA=$(LL)
+SRC_C=shell.c sqlite3.c
+SRC_BC=$(addsuffix .bc,$(EXE))
+SRC_LL=$(SRC_BC:.bc=.ll)
+KEEP=$(addprefix sqlite-amalgamation-$(VER)/,$(EXE) $(SRC_BC))
+TESTDATA=$(SRC_LL)
 
 all: $(KEEP) $(TESTDATA)
 
@@ -23,7 +23,7 @@ sqlite-amalgamation-$(VER)/%.bc: sqlite-amalgamation-$(VER)/%
 sqlite-amalgamation-$(VER)/$(EXE): | sqlite-amalgamation-$(VER)
 	cd sqlite-amalgamation-$(VER)
 	export LLVM_COMPILER=clang
-	wllvm -g -o $(EXE) $(C) -lpthread -ldl
+	wllvm -g -o $(EXE) $(SRC_C) -lpthread -ldl
 
 # Fetch source code.
 fetch: sqlite-amalgamation-$(VER)
