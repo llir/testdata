@@ -4,14 +4,15 @@ VER=3250200
 EXE=shell
 SRC_C=shell.c sqlite3.c
 SRC_BC=$(addsuffix .bc,$(EXE))
-SRC_LL=$(SRC_BC:.bc=.ll)
+SRC_LL=$(addprefix test/,$(SRC_BC:.bc=.ll))
 KEEP=$(addprefix sqlite-amalgamation-$(VER)/,$(EXE) $(SRC_BC))
 TESTDATA=$(SRC_LL)
 
 all: $(KEEP) $(TESTDATA)
 
 # Produce LLVM IR assembly files from LLVM IR bitcode.
-%.ll: sqlite-amalgamation-$(VER)/%.bc
+test/%.ll: sqlite-amalgamation-$(VER)/%.bc
+	mkdir -p test
 	llvm-dis -o $@ $<
 
 # Extract LLVM IR bitcode from executables.
@@ -36,7 +37,8 @@ sqlite-amalgamation-$(VER).zip:
 	touch $@
 
 clean:
-	$(RM) *.ll
+	find test -type f -name '*.ll' | xargs -I '{}' $(RM) '{}'
+	find test -type d | xargs -I '{}' rmdir -p --ignore-fail-on-non-empty '{}'
 	$(RM) -R sqlite-amalgamation-$(VER)
 	$(RM) sqlite-amalgamation-$(VER).zip
 
