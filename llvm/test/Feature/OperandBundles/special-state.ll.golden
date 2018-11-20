@@ -1,0 +1,9 @@
+declare i32 @foo(...)
+
+define i32 @f() {
+entry:
+	%v0 = call i32 (...) @foo(i32 10) readonly [ "foo"(i32 20) ]
+	%v1 = call i32 (...) @foo() readonly [ "foo"(i32 10, i32 20) ]
+	%v = add i32 %v0, %v1
+	ret i32 %v
+}

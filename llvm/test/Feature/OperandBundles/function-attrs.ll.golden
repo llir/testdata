@@ -1,0 +1,21 @@
+declare void @f_readonly() readonly
+
+declare void @f_readnone() readnone
+
+define void @test_0(i32* %x) {
+entry:
+	call void @f_readonly() [ "foo"(i32* %x) ]
+	ret void
+}
+
+define void @test_1(i32* %x) {
+entry:
+	call void @f_readnone() [ "foo"(i32* %x) ]
+	ret void
+}
+
+define void @test_2(i32* %x) {
+entry:
+	call void @f_readonly() [ "deopt"(i32* %x) ]
+	ret void
+}

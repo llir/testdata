@@ -1,0 +1,10 @@
+define i32 @callee() {
+entry:
+	ret i32 2
+}
+
+define i32 @caller() {
+entry:
+	%x = call i32 @callee() [ "unknown"() ]
+	ret i32 %x
+}

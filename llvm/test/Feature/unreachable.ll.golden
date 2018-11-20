@@ -1,0 +1,12 @@
+declare void @bar()
+
+define i32 @foo() {
+; <label>:0
+	unreachable
+}
+
+define double @xyz() {
+; <label>:0
+	call void @bar()
+	unreachable
+}

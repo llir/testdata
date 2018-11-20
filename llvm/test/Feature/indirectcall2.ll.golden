@@ -1,0 +1,18 @@
+define i64 @test(i64 %X) {
+; <label>:0
+	ret i64 %X
+}
+
+define i64 @fib(i64 %n) {
+; <label>:0
+	%T = icmp ult i64 %n, 2
+	br i1 %T, label %BaseCase, label %RecurseCase
+
+RecurseCase:
+	%result = call i64 @test(i64 %n)
+	br label %BaseCase
+
+BaseCase:
+	%X = phi i64 [ 1, %0 ], [ 2, %RecurseCase ]
+	ret i64 %X
+}

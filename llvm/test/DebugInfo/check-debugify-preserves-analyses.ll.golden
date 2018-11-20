@@ -1,0 +1,5 @@
+define i32 @f_1(i32 %x) {
+; <label>:0
+	%tmp = call i32 @f_1(i32 0) [ "deopt"() ]
+	ret i32 0
+}

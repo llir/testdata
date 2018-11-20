@@ -1,0 +1,19 @@
+define i32 @test1() {
+; <label>:0
+	ret i32 bitcast (float 0x400D9999A0000000 to i32)
+}
+
+define float @test2() {
+; <label>:0
+	ret float bitcast (i32 17 to float)
+}
+
+define i64 @test3() {
+; <label>:0
+	ret i64 bitcast (double 0x400921FB4D12D84A to i64)
+}
+
+define double @test4() {
+; <label>:0
+	ret double bitcast (i64 42 to double)
+}

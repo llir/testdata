@@ -1,0 +1,33 @@
+declare void @readonly_function() readonly nounwind
+
+declare void @readnone_function() readnone nounwind
+
+define void @test0() {
+entry:
+	call void @readonly_function() [ "tag"() ]
+	ret void
+}
+
+define void @test1() {
+entry:
+	call void @readnone_function() [ "tag"() ]
+	ret void
+}
+
+define void @test2() {
+entry:
+	call void @readonly_function() readonly [ "tag"() ]
+	ret void
+}
+
+define void @test3() {
+entry:
+	call void @readnone_function() readnone [ "tag"() ]
+	ret void
+}
+
+define void @test4() {
+entry:
+	call void @readonly_function() [ "deopt"() ]
+	ret void
+}

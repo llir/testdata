@@ -1,0 +1,20 @@
+@ld = external global fp128
+@d = global double 0x4010333333333333, align 8
+@f = global float 0x4010333340000000
+
+define i32 @foo() {
+entry:
+	%retval = alloca i32, align 4
+	%"alloca point" = bitcast i32 0 to i32
+	%tmp = load float, float* @f
+	%tmp1 = fpext float %tmp to double
+	%tmp2 = load double, double* @d
+	%tmp3 = fmul double %tmp1, %tmp2
+	%tmp4 = fpext double %tmp3 to fp128
+	store fp128 %tmp4, fp128* @ld
+	br label %return
+
+return:
+	%retval4 = load i32, i32* %retval
+	ret i32 %retval4
+}

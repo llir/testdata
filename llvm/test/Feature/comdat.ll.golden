@@ -1,0 +1,15 @@
+$f = comdat any
+
+$f2 = comdat any
+
+$i = comdat largest
+
+@v = global i32 0, comdat($f)
+@i = internal global i32 0, comdat
+
+@a = alias i32, i32* @v
+
+define void @f() comdat {
+; <label>:0
+	ret void
+}

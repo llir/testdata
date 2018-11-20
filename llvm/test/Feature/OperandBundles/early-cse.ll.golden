@@ -1,0 +1,51 @@
+declare void @readonly_function() readonly nounwind
+
+declare void @readnone_function() readnone nounwind
+
+define i32 @test0(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readonly_function() [ "tag"() ]
+	%v = load i32, i32* %x
+	ret i32 %v
+}
+
+define i32 @test1(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readonly_function() readonly [ "tag"() ]
+	%v = load i32, i32* %x
+	ret i32 %v
+}
+
+define i32 @test3(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readonly_function()
+	%v = load i32, i32* %x
+	ret i32 %v
+}
+
+define void @test4(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readnone_function() [ "tag"() ]
+	store i32 200, i32* %x
+	ret void
+}
+
+define void @test5(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readnone_function() readnone [ "tag"() ]
+	store i32 200, i32* %x
+	ret void
+}
+
+define void @test6(i32* %x) {
+entry:
+	store i32 100, i32* %x
+	call void @readonly_function() [ "deopt"() ]
+	store i32 200, i32* %x
+	ret void
+}

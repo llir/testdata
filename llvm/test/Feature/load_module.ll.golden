@@ -1,0 +1,6 @@
+@junk = global i32 0
+
+define i32* @somefunk() {
+; <label>:0
+	ret i32* @junk
+}
