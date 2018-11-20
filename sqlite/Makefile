@@ -4,9 +4,9 @@ VER=3250200
 EXE=shell
 SRC_C=shell.c sqlite3.c
 SRC_BC=$(addsuffix .bc,$(EXE))
-SRC_LL=$(addprefix test/,$(SRC_BC:.bc=.ll))
+SRC_LL=$(SRC_BC:.bc=.ll)
 KEEP=$(addprefix sqlite-amalgamation-$(VER)/,$(EXE) $(SRC_BC))
-TESTDATA=$(SRC_LL)
+TESTDATA=$(addprefix test/,$(SRC_LL))
 
 all: $(KEEP) $(TESTDATA)
 

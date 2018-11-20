@@ -8,7 +8,7 @@ EXE=[ b2sum base32 base64 basename cat chcon chgrp chmod chown chroot cksum comm
 SRC_BC=$(addsuffix .bc,$(EXE))
 SRC_LL=$(SRC_BC:.bc=.ll)
 KEEP=$(addprefix coreutils-$(VER)/src/,$(EXE) $(SRC_BC))
-TESTDATA=$(addprefix testdata/,$(SRC_LL))
+TESTDATA=$(addprefix test/,$(SRC_LL))
 
 all: $(KEEP) $(TESTDATA)
 
