@@ -25,8 +25,9 @@ llvm-${VER}.src.tar.xz:
 	touch $@
 
 clean:
-	$(RM) -R -v test
-	$(RM) -R -v llvm-${VER}.src
-	$(RM) -v llvm-${VER}.src.tar.xz
+	find test -type f -name '*.ll' | xargs -I '{}' $(RM) '{}'
+	find test -type d | xargs -I '{}' rmdir -p --ignore-fail-on-non-empty '{}'
+	$(RM) -R llvm-${VER}.src
+	$(RM) llvm-${VER}.src.tar.xz
 
 .PHONY: all fetch clean
