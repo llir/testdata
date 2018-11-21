@@ -17,3 +17,4 @@ mv "test/Assembler/alloca-addrspace-parse-error-1.ll" "test/Assembler/alloca-add
 mv "test/Assembler/alloca-invalid-type.ll" "test/Assembler/alloca-invalid-type.ll.x"
 mv "test/Assembler/asm-path-writer.ll" "test/Assembler/asm-path-writer.ll.x"
 mv "test/Assembler/call-invalid-1.ll" "test/Assembler/call-invalid-1.ll.x"
+mv "test/Assembler/extractvalue-no-idx.ll" "test/Assembler/extractvalue-no-idx.ll.x"
