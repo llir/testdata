@@ -3,7 +3,7 @@
 @glob2 = global i5 7
 @glob3 = global i5 7
 
-@b = alias i1, i1* getelementptr ([4 x i1], [4 x i1]* @a, i64 0, i64 2)
+@b = alias i1, getelementptr ([4 x i1], [4 x i1]* @a, i64 0, i64 2)
 
 define i32 @f32(i32 %a, i32 %b, i32 %c, i32 %d) {
 entry:

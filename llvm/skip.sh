@@ -18,3 +18,4 @@ mv "test/Assembler/alloca-invalid-type.ll" "test/Assembler/alloca-invalid-type.l
 mv "test/Assembler/asm-path-writer.ll" "test/Assembler/asm-path-writer.ll.x"
 mv "test/Assembler/call-invalid-1.ll" "test/Assembler/call-invalid-1.ll.x"
 mv "test/Assembler/extractvalue-no-idx.ll" "test/Assembler/extractvalue-no-idx.ll.x"
+mv "test/Assembler/getelementptr_vec_struct.ll" "test/Assembler/getelementptr_vec_struct.ll.x"
