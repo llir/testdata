@@ -1,0 +1,19 @@
+define i8 @test_invoke(i8 (i32)* %fnptr0, i8 (i32) addrspace(200)* %fnptr200) personality i32 (...)* @__gxx_personality_v0 {
+; <label>:0
+	%first = invoke i8 %fnptr0(i32 0)
+		to label %ok unwind label %lpad
+
+; <label>:1
+	%second = invoke i8 %fnptr200(i32 0)
+		to label %ok unwind label %lpad
+
+ok:
+	ret i8 0
+
+lpad:
+	%exn = landingpad { i8*, i32 }
+		cleanup
+	unreachable
+}
+
+declare i32 @__gxx_personality_v0(...)

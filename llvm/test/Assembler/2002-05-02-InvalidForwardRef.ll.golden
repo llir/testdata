@@ -1,0 +1,7 @@
+define void @test() {
+; <label>:0
+	call void @foo()
+	ret void
+}
+
+declare void @foo()

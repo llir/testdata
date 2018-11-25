@@ -1,0 +1,5 @@
+define double @test() {
+; <label>:0
+	%tmp = fmul double 0x551492E2CA475BED, 0x427F4000
+	ret double %tmp
+}

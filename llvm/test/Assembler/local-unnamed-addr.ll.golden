@@ -1,0 +1,8 @@
+@c = local_unnamed_addr constant i32 0
+
+@a = local_unnamed_addr alias i32, i32* @c
+
+define void @f() local_unnamed_addr {
+; <label>:0
+	ret void
+}

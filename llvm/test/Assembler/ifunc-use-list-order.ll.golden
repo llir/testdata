@@ -1,0 +1,31 @@
+@ptr_foo = global void ()* @foo_ifunc
+@ptr_bar = global void ()* @bar
+
+@alias_foo = alias void (), void ()* @foo_ifunc
+@alias_bar = alias void (), void ()* @bar
+
+@foo_ifunc = ifunc void (), i8* ()* @foo_resolver
+@bar_ifunc = ifunc void (), i8* ()* @bar2_ifunc
+@bar2_ifunc = ifunc i8* (), i8* ()* @bar_resolver
+
+define i8* @foo_resolver() {
+entry:
+	ret i8* null
+}
+
+define void @bar() {
+entry:
+	call void @foo_ifunc()
+	ret void
+}
+
+define i8* @bar_resolver() {
+entry:
+	ret i8* null
+}
+
+define void @bar2() {
+entry:
+	call void @bar()
+	ret void
+}

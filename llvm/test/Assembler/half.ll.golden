@@ -1,0 +1,4 @@
+define half @halftest(half %A0) {
+; <label>:0
+	ret half %A0
+}

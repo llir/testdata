@@ -1,0 +1,14 @@
+define void @fn1() alwaysinline {
+; <label>:0
+	ret void
+}
+
+define void @fn2() noinline {
+; <label>:0
+	ret void
+}
+
+define void @fn3() {
+; <label>:0
+	ret void
+}

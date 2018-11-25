@@ -1,0 +1,5 @@
+define i65 @testConsts(i65 %N) {
+; <label>:0
+	%a = add i65 %N, -1
+	ret i65 %a
+}

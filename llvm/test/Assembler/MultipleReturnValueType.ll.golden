@@ -1,0 +1,11 @@
+%struct.S_102 = type { float, float }
+
+@callthis = external global void ()*
+
+declare %struct.S_102 @f_102() nounwind
+
+define void @foo() {
+; <label>:0
+	store void ()* bitcast (%struct.S_102 ()* @f_102 to void ()*), void ()** @callthis, align 8
+	ret void
+}

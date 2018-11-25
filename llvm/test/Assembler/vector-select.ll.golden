@@ -1,0 +1,5 @@
+define <4 x i32> @foo(<4 x i32> %a, <4 x i32> %b, <4 x i1> %cond) nounwind {
+entry:
+	%cmp = select <4 x i1> %cond, <4 x i32> %a, <4 x i32> %b
+	ret <4 x i32> %cmp
+}

@@ -1,0 +1,9 @@
+%struct = type {}
+
+declare void @foo(...)
+
+define void @bar() {
+; <label>:0
+	call void (...) @foo(%struct* byval null)
+	ret void
+}

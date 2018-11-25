@@ -1,0 +1,24 @@
+target datalayout = "p:32:32"
+
+@A = global i64 0
+@B = global i64 0
+@C = global i1 icmp eq (i64* getelementptr inbounds (i64, i64* @A, i64 1), i64* @B)
+@D = global i1 icmp eq (i64* getelementptr inbounds (i64, i64* @A, i64 1), i64* getelementptr inbounds (i64, i64* @B, i64 2))
+@E = global i64 addrspace(1)* addrspacecast (i64* @A to i64 addrspace(1)*)
+@weak.gep = global i32* getelementptr (i32, i32* @weak, i32 1)
+@weak = extern_weak global i32
+@F = global i1 icmp eq (i32* @weakany, i32* @glob)
+@weakany = weak global i32 0
+@empty.1 = external global [0 x i8], align 1
+@empty.2 = external global [0 x i8], align 1
+@empty.cmp = global i1 icmp eq ([0 x i8]* @empty.1, [0 x i8]* @empty.2)
+@addrspace3 = internal addrspace(3) global i32 undef
+@no.fold.addrspace.icmp.eq.gv.null = global i1 icmp eq (i32 addrspace(3)* @addrspace3, i32 addrspace(3)* null)
+@no.fold.addrspace.icmp.eq.null.gv = global i1 icmp eq (i32 addrspace(3)* null, i32 addrspace(3)* @addrspace3)
+@no.fold.addrspace.icmp.ne.gv.null = global i1 icmp ne (i32 addrspace(3)* @addrspace3, i32 addrspace(3)* null)
+@no.fold.addrspace.icmp.ne.null.gv = global i1 icmp ne (i32 addrspace(3)* null, i32 addrspace(3)* @addrspace3)
+@glob = global i32 0
+
+@glob.a3 = alias i32, getelementptr (i32, i32* @glob.a2, i32 1)
+@glob.a2 = alias i32, getelementptr (i32, i32* @glob.a1, i32 1)
+@glob.a1 = alias i32, i32* @glob

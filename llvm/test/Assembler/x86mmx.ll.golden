@@ -1,0 +1,4 @@
+define x86_mmx @sh16(x86_mmx %A) {
+; <label>:0
+	ret x86_mmx %A
+}

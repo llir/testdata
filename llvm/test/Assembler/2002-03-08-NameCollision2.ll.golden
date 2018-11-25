@@ -1,0 +1,7 @@
+@Var = external global i32
+
+define void @foo() {
+; <label>:0
+	%Var = alloca i32
+	ret void
+}

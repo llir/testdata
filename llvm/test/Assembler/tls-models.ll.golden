@@ -1,0 +1,4 @@
+@a = thread_local global i32 0
+@b = thread_local(localdynamic) global i32 0
+@c = thread_local(initialexec) global i32 0
+@d = thread_local(localexec) global i32 0

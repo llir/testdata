@@ -1,0 +1,21 @@
+define void @f(i32* %x) {
+; <label>:0
+	%1 = load atomic i32, i32* %x unordered, align 4
+	%2 = load atomic volatile i32, i32* %x syncscope("singlethread") acquire, align 4
+	%3 = load atomic volatile i32, i32* %x syncscope("agent") acquire, align 4
+	store atomic i32 3, i32* %x release, align 4
+	store atomic volatile i32 3, i32* %x syncscope("singlethread") monotonic, align 4
+	store atomic volatile i32 3, i32* %x syncscope("workgroup") monotonic, align 4
+	%4 = cmpxchg i32* %x, i32 1, i32 0 syncscope("singlethread") monotonic monotonic
+	%5 = cmpxchg i32* %x, i32 1, i32 0 syncscope("workitem") monotonic monotonic
+	%6 = cmpxchg volatile i32* %x, i32 0, i32 1 acq_rel acquire
+	%7 = cmpxchg i32* %x, i32 42, i32 0 acq_rel monotonic
+	%8 = cmpxchg weak i32* %x, i32 13, i32 0 seq_cst monotonic
+	%9 = atomicrmw add i32* %x, i32 10 seq_cst
+	%10 = atomicrmw volatile xchg i32* %x, i32 10 monotonic
+	%11 = atomicrmw volatile xchg i32* %x, i32 10 syncscope("agent") monotonic
+	fence syncscope("singlethread") release
+	fence seq_cst
+	fence syncscope("device") seq_cst
+	ret void
+}

@@ -1,0 +1,4 @@
+define i32 @test() {
+; <label>:0
+	ret i32 ashr (i32 ptrtoint (i32 ()* @test to i32), i32 2)
+}

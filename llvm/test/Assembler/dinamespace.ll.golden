@@ -1,0 +1,10 @@
+!named = !{!0, !1, !2, !3, !4, !5, !6, !7}
+
+!0 = !DIFile(filename: "file.cpp", directory: "/path/to/dir")
+!1 = distinct !{}
+!2 = !DIFile(filename: "path/to/file", directory: "/path/to/dir")
+!3 = !DINamespace(scope: !0, name: "Namespace")
+!4 = !DINamespace(scope: !0)
+!5 = !DINamespace(scope: !0)
+!6 = !DINamespace(scope: !0)
+!7 = !DINamespace(scope: !0, exportSymbols: true)

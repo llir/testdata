@@ -1,0 +1,5 @@
+define void @foo() {
+; <label>:0
+	%p = alloca i1, align 1073741824
+	ret void
+}

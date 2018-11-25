@@ -1,0 +1,2 @@
+@A = external global { float }
+@0 = global i32* bitcast ({ float }* @A to i32*)
