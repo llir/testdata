@@ -1,7 +1,5 @@
 $f = comdat any
-
 $f2 = comdat any
-
 $i = comdat largest
 
 @v = global i32 0, comdat($f)
