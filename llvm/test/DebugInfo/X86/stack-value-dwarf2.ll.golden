@@ -1,17 +1,17 @@
 source_filename = "bugpoint-reduced-simplified.ll"
 target triple = "i386-apple-ios7.0.0"
 
-%class.K = type { %class.N, %struct.F, i32 }
-%class.N = type { %struct.B }
-%struct.B = type { i8 }
-%struct.F = type { i8 }
-%struct.ConditionPlatformHelper = type { i8 }
-%"struct.J<K::L, false, int>::Node" = type { %"class.K::L" }
-%"class.K::L" = type { %class.__thread_id }
-%class.__thread_id = type { i32 }
-%"struct.K::M" = type { %class.I, %class.H }
-%class.I = type { i32 }
 %class.H = type { i32 }
+%class.I = type { i32 }
+%class.K = type { %class.N, %struct.F, i32 }
+%"class.K::L" = type { %class.__thread_id }
+%class.N = type { %struct.B }
+%class.__thread_id = type { i32 }
+%struct.B = type { i8 }
+%struct.ConditionPlatformHelper = type { i8 }
+%struct.F = type { i8 }
+%"struct.J<K::L, false, int>::Node" = type { %"class.K::L" }
+%"struct.K::M" = type { %class.I, %class.H }
 
 define void @_Z34swift_getGenericMetadata_argumentsv() #0 !dbg !5 {
 entry:

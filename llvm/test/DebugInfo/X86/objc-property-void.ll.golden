@@ -2,17 +2,17 @@ target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-apple-macosx10.9.0"
 
 %0 = type opaque
-%struct._objc_cache = type opaque
-%struct._class_t = type { %struct._class_t*, %struct._class_t*, %struct._objc_cache*, i8* (i8*, i8*)**, %struct._class_ro_t* }
-%struct._class_ro_t = type { i32, i32, i32, i8*, i8*, %struct.__method_list_t*, %struct._objc_protocol_list*, %struct._ivar_list_t*, i8*, %struct._prop_list_t* }
 %struct.__method_list_t = type { i32, i32, [0 x %struct._objc_method] }
-%struct._objc_method = type { i8*, i8*, i8* }
-%struct._objc_protocol_list = type { i64, [0 x %struct._protocol_t*] }
-%struct._protocol_t = type { i8*, i8*, %struct._objc_protocol_list*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct._prop_list_t*, i32, i32, i8** }
+%struct._class_ro_t = type { i32, i32, i32, i8*, i8*, %struct.__method_list_t*, %struct._objc_protocol_list*, %struct._ivar_list_t*, i8*, %struct._prop_list_t* }
+%struct._class_t = type { %struct._class_t*, %struct._class_t*, %struct._objc_cache*, i8* (i8*, i8*)**, %struct._class_ro_t* }
 %struct._ivar_list_t = type { i32, i32, [0 x %struct._ivar_t] }
 %struct._ivar_t = type { i64*, i8*, i8*, i32, i32 }
+%struct._objc_cache = type opaque
+%struct._objc_method = type { i8*, i8*, i8* }
+%struct._objc_protocol_list = type { i64, [0 x %struct._protocol_t*] }
 %struct._prop_list_t = type { i32, i32, [0 x %struct._prop_t] }
 %struct._prop_t = type { i8*, i8* }
+%struct._protocol_t = type { i8*, i8*, %struct._objc_protocol_list*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct.__method_list_t*, %struct._prop_list_t*, i32, i32, i8** }
 
 @_objc_empty_cache = external global %struct._objc_cache
 @OBJC_CLASS_$_Foo = global %struct._class_t { %struct._class_t* @OBJC_METACLASS_$_Foo, %struct._class_t* null, %struct._objc_cache* @_objc_empty_cache, i8* (i8*, i8*)** null, %struct._class_ro_t* @"\01l_OBJC_CLASS_RO_$_Foo" }, section "__DATA, __objc_data", align 8

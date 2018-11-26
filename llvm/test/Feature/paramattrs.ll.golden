@@ -1,5 +1,5 @@
-%ZFunTy = type i32 (i8)
 %SFunTy = type i32 (i8)
+%ZFunTy = type i32 (i8)
 
 declare signext i16 @test(i16 signext %arg)
 

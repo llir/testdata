@@ -3,15 +3,15 @@ target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
 %struct._IO_FILE = type { i32, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, %struct._IO_marker*, %struct._IO_FILE*, i32, i32, i64, i16, i8, [1 x i8], i8*, i64, %struct._IO_codecvt*, %struct._IO_wide_data*, %struct._IO_FILE*, i8*, i64, i32, [20 x i8] }
-%struct._IO_marker = type opaque
 %struct._IO_codecvt = type opaque
+%struct._IO_marker = type opaque
 %struct._IO_wide_data = type opaque
+%struct.__mbstate_t = type { i32, %union.anon }
+%struct.__va_list_tag = type { i32, i32, i8*, i8* }
 %struct.infomap = type { i8*, i8* }
 %struct.quoting_options = type { i32, i32, [8 x i32], i8*, i8* }
 %struct.slotvec = type { i64, i8* }
-%struct.__mbstate_t = type { i32, %union.anon }
 %union.anon = type { i32 }
-%struct.__va_list_tag = type { i32, i32, i8*, i8* }
 
 @.str = private unnamed_addr constant [61 x i8] c"Usage: %s [ignored command line arguments]\0A  or:  %s OPTION\0A\00", align 1
 @.str.2 = private unnamed_addr constant [44 x i8] c"Exit with a status code indicating failure.\00", align 1
