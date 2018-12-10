@@ -50,9 +50,9 @@ target triple = "x86_64-pc-linux-gnu"
 %struct.timezone = type { i32, i32 }
 %union.anon = type { %struct.hash_table* }
 %union.anon.0 = type { [256 x i64] }
-%union.anon.142 = type { %struct.isaac }
 %union.anon.20 = type { %struct.fiemap, [4064 x i8] }
 %union.anon.56 = type { i32 }
+%union.anon.142 = type { %struct.isaac }
 
 @stderr = external local_unnamed_addr global %struct._IO_FILE*, align 8
 @.str = private unnamed_addr constant [39 x i8] c"Try '%s --help' for more information.\0A\00", align 1

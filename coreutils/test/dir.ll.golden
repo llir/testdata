@@ -42,8 +42,8 @@ target triple = "x86_64-pc-linux-gnu"
 %union.anon = type { i64 }
 %union.anon.0 = type { i8* (i64)* }
 %union.anon.1 = type { void (i8*)* }
-%union.anon.12 = type { i32 }
 %union.anon.2 = type { void (i32)* }
+%union.anon.12 = type { i32 }
 
 @.str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @.str.1 = private unnamed_addr constant [10 x i8] c"coreutils\00", align 1
