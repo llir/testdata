@@ -26,10 +26,10 @@ define void @test_attachment_name() {
 
 declare void @llvm.dbg.func.start(metadata) nounwind readnone
 
-!llvm.module.flags = !{!7}
-!llvm.dbg.cu = !{!5}
-!foo = !{!0}
 !bar = !{!1}
+!foo = !{!0}
+!llvm.dbg.cu = !{!5}
+!llvm.module.flags = !{!7}
 
 !0 = !DILocation(line: 662302, column: 26, scope: !1)
 !1 = distinct !DISubprogram(name: "foo", isDefinition: true, unit: !5)

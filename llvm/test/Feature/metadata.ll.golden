@@ -8,8 +8,8 @@ define void @foo(i32 %x) {
 
 declare void @llvm.zonk(metadata, i64, metadata) nounwind readnone
 
-!named = !{!0}
 !another_named = !{}
+!named = !{!0}
 
 !0 = !{i8** null}
 !1 = !{i8* null, !2}

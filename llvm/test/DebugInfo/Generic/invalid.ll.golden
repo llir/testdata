@@ -3,8 +3,8 @@ define void @tinkywinky() !dbg !3 {
 	ret void
 }
 
-!llvm.module.flags = !{!4}
 !llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!4}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1)
 !1 = !DIFile(filename: "/home/davide", directory: "/home/davide")

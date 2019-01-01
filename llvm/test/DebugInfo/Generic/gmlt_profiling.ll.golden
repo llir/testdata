@@ -4,8 +4,8 @@ entry:
 }
 
 !llvm.dbg.cu = !{!0}
-!llvm.module.flags = !{!10, !11}
 !llvm.ident = !{!12}
+!llvm.module.flags = !{!10, !11}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C_plus_plus, file: !1, producer: "clang version 3.6.0 ", emissionKind: LineTablesOnly, enums: !2, retainedTypes: !2, globals: !2, imports: !2, debugInfoForProfiling: true)
 !1 = !DIFile(filename: "gmlt.cpp", directory: "/tmp/dbginfo")

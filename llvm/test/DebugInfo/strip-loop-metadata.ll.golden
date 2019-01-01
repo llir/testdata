@@ -61,8 +61,8 @@ return:
 }
 
 !llvm.dbg.cu = !{!0}
-!llvm.module.flags = !{!3, !4, !5}
 !llvm.ident = !{!6}
+!llvm.module.flags = !{!3, !4, !5}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C_plus_plus, file: !1, producer: "clang version 4.0.0", emissionKind: LineTablesOnly, enums: !2)
 !1 = !DIFile(filename: "test.cpp", directory: "/tmp")

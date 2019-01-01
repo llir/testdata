@@ -46,8 +46,8 @@ attributes #0 = { ssp uwtable "less-precise-fpmad"="false" "no-frame-pointer-eli
 attributes #1 = { nounwind readnone }
 
 !llvm.dbg.cu = !{!0}
-!llvm.module.flags = !{!17, !18, !19, !20, !21, !22}
 !llvm.ident = !{!23}
+!llvm.module.flags = !{!17, !18, !19, !20, !21, !22}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_ObjC, file: !1, runtimeVersion: 2, emissionKind: FullDebug, enums: !2, retainedTypes: !3, globals: !2, imports: !2)
 !1 = !DIFile(filename: "-", directory: "")

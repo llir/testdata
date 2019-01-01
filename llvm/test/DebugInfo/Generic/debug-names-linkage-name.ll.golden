@@ -15,8 +15,8 @@ declare void @llvm.dbg.value(metadata, metadata, metadata) #0
 attributes #2 = { nounwind readnone speculatable }
 
 !llvm.dbg.cu = !{!5}
-!llvm.module.flags = !{!8, !9, !10}
 !llvm.ident = !{!11}
+!llvm.module.flags = !{!8, !9, !10}
 
 !0 = !DIGlobalVariableExpression(var: !1, expr: !DIExpression())
 !1 = distinct !DIGlobalVariable(name: "v", scope: !2, linkageName: "_ZN1n1vE", file: !3, line: 6, type: !4, isDefinition: true)

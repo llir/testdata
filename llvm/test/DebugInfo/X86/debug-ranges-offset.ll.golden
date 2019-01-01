@@ -183,8 +183,8 @@ attributes #3 = { nounwind }
 attributes #4 = { builtin }
 
 !llvm.dbg.cu = !{!0}
-!llvm.module.flags = !{!16, !17}
 !llvm.ident = !{!18}
+!llvm.module.flags = !{!16, !17}
 
 !0 = distinct !DICompileUnit(language: DW_LANG_C_plus_plus, file: !1, producer: "clang version 3.5.0 (trunk 207243) (llvm/trunk 207259)", isOptimized: true, emissionKind: FullDebug, enums: !2, retainedTypes: !2, globals: !2, imports: !2)
 !1 = !DIFile(filename: "foo.cpp", directory: "/usr/local/google/home/echristo/tmp")

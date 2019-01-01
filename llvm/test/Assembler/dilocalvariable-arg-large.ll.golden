@@ -1,6 +1,6 @@
-!named = !{!0, !3}
-!llvm.module.flags = !{!4}
 !llvm.dbg.cu = !{!1}
+!llvm.module.flags = !{!4}
+!named = !{!0, !3}
 
 !0 = distinct !DISubprogram(unit: !1)
 !1 = distinct !DICompileUnit(language: DW_LANG_C99, file: !2, producer: "clang", isOptimized: true, flags: "-O2", splitDebugFilename: "abc.debug", emissionKind: LineTablesOnly)
