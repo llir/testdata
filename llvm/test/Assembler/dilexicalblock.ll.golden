@@ -7,10 +7,10 @@
 !2 = distinct !DISubprogram(name: "foo", scope: !1, unit: !0)
 !3 = !DILexicalBlock(scope: !2, file: !1, line: 7, column: 35)
 !4 = !DILexicalBlock(scope: !2)
-!5 = !DILexicalBlock(scope: !2, file: null)
+!5 = !DILexicalBlock(scope: !2)
 !6 = !DILexicalBlockFile(scope: !3, file: !1, discriminator: 0)
 !7 = !DILexicalBlockFile(scope: !3, file: !1, discriminator: 1)
 !8 = !DILexicalBlockFile(scope: !3, discriminator: 7)
-!9 = !DILexicalBlockFile(scope: !3, file: null, discriminator: 7)
+!9 = !DILexicalBlockFile(scope: !3, discriminator: 7)
 !10 = distinct !{}
 !11 = !{i32 2, !"Debug Info Version", i32 3}
