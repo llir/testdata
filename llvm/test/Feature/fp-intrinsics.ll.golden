@@ -112,6 +112,18 @@ entry:
 	ret double %result
 }
 
+define float @f20() {
+entry:
+	%result = call float @llvm.experimental.constrained.fptrunc.f32.f64(double 42.1, metadata !"round.dynamic", metadata !"fpexcept.strict")
+	ret float %result
+}
+
+define double @f21() {
+entry:
+	%result = call double @llvm.experimental.constrained.fpext.f64.f32(float 42.0, metadata !"fpexcept.strict")
+	ret double %result
+}
+
 declare double @llvm.experimental.constrained.fdiv.f64(double, double, metadata, metadata)
 
 declare double @llvm.experimental.constrained.fmul.f64(double, double, metadata, metadata)
@@ -145,3 +157,7 @@ declare double @llvm.experimental.constrained.rint.f64(double, metadata, metadat
 declare double @llvm.experimental.constrained.nearbyint.f64(double, metadata, metadata)
 
 declare double @llvm.experimental.constrained.fma.f64(double, double, double, metadata, metadata)
+
+declare float @llvm.experimental.constrained.fptrunc.f32.f64(double, metadata, metadata)
+
+declare double @llvm.experimental.constrained.fpext.f64.f32(float, metadata)

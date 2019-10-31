@@ -1,6 +1,6 @@
 @foo = global i32 0
 
-!named = !{!0, !1, !2, !3, !4, !5, !6, !7, !8}
+!named = !{!0, !1, !2, !3, !4, !5, !6, !7, !8, !9, !10, !11, !12}
 
 !0 = !DIFile(filename: "scope.h", directory: "/path/to/dir")
 !1 = distinct !{}
@@ -12,3 +12,6 @@
 !7 = !DIDerivedType(tag: DW_TAG_member, name: "mem", scope: !6, baseType: !3, flags: DIFlagStaticMember)
 !8 = !DIGlobalVariable(name: "mem", scope: !0, type: !9, declaration: !7)
 !9 = !DIBasicType(name: "int", size: 32, encoding: DW_ATE_signed)
+!10 = !DITemplateTypeParameter(name: "Ty", type: !3)
+!11 = distinct !{!10}
+!12 = !DIGlobalVariable(name: "bar", scope: !0, linkageName: "bar", file: !2, line: 8, type: !3, isLocal: true, templateParams: !11, align: 32)

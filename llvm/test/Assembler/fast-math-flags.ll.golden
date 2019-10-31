@@ -20,7 +20,9 @@ entry:
 	%d_vec = fdiv <3 x float> %vec, %vec
 	%e = frem float %x, %y
 	%e_vec = frem <3 x float> %vec, %vec
-	ret float %e
+	%f = fneg float %x
+	%f_vec = fneg <3 x float> %vec
+	ret float %f
 }
 
 define float @no_nan(float %x, float %y) {
@@ -38,7 +40,9 @@ entry:
 	%d_vec = fdiv nnan <3 x float> %vec, %vec
 	%e = frem nnan float %x, %y
 	%e_vec = frem nnan <3 x float> %vec, %vec
-	ret float %e
+	%f = fneg nnan float %x
+	%f_vec = fneg nnan <3 x float> %vec
+	ret float %f
 }
 
 define float @contract(float %x, float %y) {
@@ -98,5 +102,7 @@ entry:
 	%d_vec = fdiv fast nnan arcp <3 x float> %vec, %vec
 	%e = frem nnan nsz float %x, %y
 	%e_vec = frem nnan <3 x float> %vec, %vec
-	ret float %e
+	%f = fneg nnan nsz float %x
+	%f_vec = fneg fast <3 x float> %vec
+	ret float %f
 }

@@ -5,6 +5,7 @@ module asm "beep boop"
 
 %const.struct.type = type { i32, i8 }
 %const.struct.type.packed = type <{ i32, i8 }>
+%named_type = type [8 x i8]
 %opaquety = type opaque
 %pri.func.data = type { i32, void ()*, i8* }
 
@@ -102,6 +103,7 @@ $comdat2 = comdat any
 @a.localexec = thread_local(localexec) alias i32, i32* @g.localexec
 @a.unnamed_addr = unnamed_addr alias i32, i32* @g.unnamed_addr
 @a.local_unnamed_addr = local_unnamed_addr alias i32, i32* @g.local_unnamed_addr
+@alias.partition = alias i32, i32* @g.partition, partition "part"
 
 @ifunc.external = external ifunc void (), i8* ()* @ifunc_resolver
 @ifunc.private = private ifunc void (), i8* ()* @ifunc_resolver
@@ -109,6 +111,7 @@ $comdat2 = comdat any
 @ifunc.default = default ifunc void (), i8* ()* @ifunc_resolver
 @ifunc.hidden = hidden ifunc void (), i8* ()* @ifunc_resolver
 @ifunc.protected = protected ifunc void (), i8* ()* @ifunc_resolver
+@ifunc.partition = ifunc void (), i8* ()* @ifunc_resolver, partition "part"
 
 declare void @g.f1()
 
@@ -433,6 +436,11 @@ declare void @f.strictfp() #35
 
 declare void @f.section() section "80"
 
+define void @f.partition() partition "part" {
+; <label>:0
+	ret void
+}
+
 define void @f.comdat_any() comdat($comdat.any) {
 entry:
 	ret void
@@ -534,7 +542,28 @@ define void @atomics(i32* %word) {
 	ret void
 }
 
-define void @fastmathflags(float %op1, float %op2) {
+define void @fp_atomics(float* %word) {
+; <label>:0
+	%atomicrmw.xchg = atomicrmw xchg float* %word, float 1.0 monotonic
+	%atomicrmw.fadd = atomicrmw fadd float* %word, float 1.0 monotonic
+	%atomicrmw.fsub = atomicrmw fsub float* %word, float 1.0 monotonic
+	ret void
+}
+
+define void @fastmathflags_unop(float %op1) {
+; <label>:0
+	%f.nnan = fneg nnan float %op1
+	%f.ninf = fneg ninf float %op1
+	%f.nsz = fneg nsz float %op1
+	%f.arcp = fneg arcp float %op1
+	%f.contract = fneg contract float %op1
+	%f.afn = fneg afn float %op1
+	%f.reassoc = fneg reassoc float %op1
+	%f.fast = fneg fast float %op1
+	ret void
+}
+
+define void @fastmathflags_binops(float %op1, float %op2) {
 ; <label>:0
 	%f.nnan = fadd nnan float %op1, %op2
 	%f.ninf = fadd ninf float %op1, %op2
@@ -544,6 +573,26 @@ define void @fastmathflags(float %op1, float %op2) {
 	%f.afn = fadd afn float %op1, %op2
 	%f.reassoc = fadd reassoc float %op1, %op2
 	%f.fast = fadd fast float %op1, %op2
+	ret void
+}
+
+define void @fastmathflags_select(i1 %cond, float %op1, float %op2) {
+; <label>:0
+	%f.nnan = select nnan i1 %cond, float %op1, float %op2
+	%f.ninf = select ninf i1 %cond, float %op1, float %op2
+	%f.nsz = select nsz i1 %cond, float %op1, float %op2
+	%f.arcp = select arcp i1 %cond, float %op1, float %op2
+	%f.contract = select contract i1 %cond, float %op1, float %op2
+	%f.afn = select afn i1 %cond, float %op1, float %op2
+	%f.reassoc = select reassoc i1 %cond, float %op1, float %op2
+	%f.fast = select fast i1 %cond, float %op1, float %op2
+	ret void
+}
+
+define void @fastmathflags_vector_select(<2 x i1> %cond, <2 x double> %op1, <2 x double> %op2) {
+; <label>:0
+	%f.nnan.nsz = select nnan nsz <2 x i1> %cond, <2 x double> %op1, <2 x double> %op2
+	%f.fast = select fast <2 x i1> %cond, <2 x double> %op1, <2 x double> %op2
 	ret void
 }
 
@@ -578,6 +627,8 @@ define void @typesystem() {
 	%t6 = alloca ppc_fp128
 	%t7 = alloca x86_mmx
 	%t8 = alloca %opaquety*
+	%t9 = alloca <4 x i32>
+	%t10 = alloca <vscale x 4 x i32>
 	ret void
 }
 
@@ -722,6 +773,12 @@ terminate:
 
 continue:
 	ret i32 0
+}
+
+define void @instructions.unops(double %op1) {
+; <label>:0
+	%1 = fneg double %op1
+	ret void
 }
 
 define void @instructions.binops(i8 %op1, i8 %op2) {
@@ -1200,6 +1257,14 @@ define i8** @constexpr() {
 ; <label>:0
 	ret i8** getelementptr inbounds ({ [4 x i8*], [4 x i8*] }, { [4 x i8*], [4 x i8*] }* null, i32 0, inrange i32 1, i32 2)
 }
+
+declare void @llvm.test.immarg.intrinsic(i32 immarg)
+
+declare void @byval_type(i32* byval(i32) align 2)
+
+declare void @byval_type2({ i8, i8* }* byval({ i8, i8* }))
+
+declare void @byval_named_type(%named_type* byval(%named_type))
 
 !llvm.module.flags = !{!0, !1, !2, !4, !5, !6}
 

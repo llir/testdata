@@ -1,4 +1,4 @@
-target datalayout = "p:32:32"
+target datalayout = "p:32:32-p1:64:64"
 
 %gept = type { i32, i32 }
 
@@ -1084,6 +1084,14 @@ define i1 @constant_fold_null_inttoptr() {
 ; <label>:0
 	%x = icmp eq i32* null, inttoptr (i64 32 to i32*)
 	ret i1 %x
+}
+
+define i1 @cmp_through_addrspacecast(i32 addrspace(1)* %p1) {
+; <label>:0
+	%p0 = addrspacecast i32 addrspace(1)* %p1 to i32*
+	%p0.1 = getelementptr inbounds i32, i32* %p0, i64 1
+	%cmp = icmp ne i32* %p0, %p0.1
+	ret i1 %cmp
 }
 
 attributes #0 = { "null-pointer-is-valid"="true" }
