@@ -51,14 +51,47 @@ define double @test4(double %a, double %b, double %c) {
   ret double %add2
 }
 
-define <4 x float> @test5(<4 x float> %a, <4 x float> %b) {
-; CHECK-LABEL: test5:
+define <4 x float> @fmulnegtwo_vec(<4 x float> %a, <4 x float> %b) {
+; CHECK-LABEL: fmulnegtwo_vec:
 ; CHECK:       // %bb.0:
 ; CHECK-NEXT:    fadd v1.4s, v1.4s, v1.4s
 ; CHECK-NEXT:    fsub v0.4s, v0.4s, v1.4s
 ; CHECK-NEXT:    ret
   %mul = fmul <4 x float> %b, <float -2.0, float -2.0, float -2.0, float -2.0>
   %add = fadd <4 x float> %a, %mul
+  ret <4 x float> %add
+}
+
+define <4 x float> @fmulnegtwo_vec_commute(<4 x float> %a, <4 x float> %b) {
+; CHECK-LABEL: fmulnegtwo_vec_commute:
+; CHECK:       // %bb.0:
+; CHECK-NEXT:    fadd v1.4s, v1.4s, v1.4s
+; CHECK-NEXT:    fsub v0.4s, v0.4s, v1.4s
+; CHECK-NEXT:    ret
+  %mul = fmul <4 x float> %b, <float -2.0, float -2.0, float -2.0, float -2.0>
+  %add = fadd <4 x float> %mul, %a
+  ret <4 x float> %add
+}
+
+define <4 x float> @fmulnegtwo_vec_undefs(<4 x float> %a, <4 x float> %b) {
+; CHECK-LABEL: fmulnegtwo_vec_undefs:
+; CHECK:       // %bb.0:
+; CHECK-NEXT:    fadd v1.4s, v1.4s, v1.4s
+; CHECK-NEXT:    fsub v0.4s, v0.4s, v1.4s
+; CHECK-NEXT:    ret
+  %mul = fmul <4 x float> %b, <float undef, float -2.0, float undef, float -2.0>
+  %add = fadd <4 x float> %a, %mul
+  ret <4 x float> %add
+}
+
+define <4 x float> @fmulnegtwo_vec_commute_undefs(<4 x float> %a, <4 x float> %b) {
+; CHECK-LABEL: fmulnegtwo_vec_commute_undefs:
+; CHECK:       // %bb.0:
+; CHECK-NEXT:    fadd v1.4s, v1.4s, v1.4s
+; CHECK-NEXT:    fsub v0.4s, v0.4s, v1.4s
+; CHECK-NEXT:    ret
+  %mul = fmul <4 x float> %b, <float -2.0, float undef, float -2.0, float -2.0>
+  %add = fadd <4 x float> %mul, %a
   ret <4 x float> %add
 }
 
@@ -99,13 +132,13 @@ define double @test7(double %a, double %b) nounwind {
 define float @fadd_const_multiuse_fmf(float %x) {
 ; CHECK-LABEL: fadd_const_multiuse_fmf:
 ; CHECK:       // %bb.0:
-; CHECK-NEXT:    adrp x8, .LCPI7_0
-; CHECK-NEXT:    adrp x9, .LCPI7_1
-; CHECK-NEXT:    ldr s1, [x8, :lo12:.LCPI7_0]
-; CHECK-NEXT:    ldr s2, [x9, :lo12:.LCPI7_1]
-; CHECK-NEXT:    fadd s1, s0, s1
-; CHECK-NEXT:    fadd s0, s0, s2
-; CHECK-NEXT:    fadd s0, s1, s0
+; CHECK-DAG:     mov  [[W59:w[0-9]+]], #1114374144
+; CHECK-DAG:     mov  [[W42:w[0-9]+]], #1109917696
+; CHECK-DAG:     fmov [[FP59:s[0-9]+]], [[W59]]
+; CHECK-DAG:     fmov [[FP42:s[0-9]+]], [[W42]]
+; CHECK-NEXT:    fadd [[TMP1:s[0-9]+]], s0, [[FP42]]
+; CHECK-NEXT:    fadd [[TMP2:s[0-9]+]], s0, [[FP59]]
+; CHECK-NEXT:    fadd s0, [[TMP1]], [[TMP2]]
 ; CHECK-NEXT:    ret
   %a1 = fadd float %x, 42.0
   %a2 = fadd nsz reassoc float %a1, 17.0
@@ -120,13 +153,13 @@ define float @fadd_const_multiuse_fmf(float %x) {
 define float @fadd_const_multiuse_attr(float %x) #0 {
 ; CHECK-LABEL: fadd_const_multiuse_attr:
 ; CHECK:       // %bb.0:
-; CHECK-NEXT:    adrp x9, .LCPI8_1
-; CHECK-NEXT:    adrp x8, .LCPI8_0
-; CHECK-NEXT:    ldr s1, [x9, :lo12:.LCPI8_1]
-; CHECK-NEXT:    ldr s2, [x8, :lo12:.LCPI8_0]
-; CHECK-NEXT:    fadd s1, s0, s1
-; CHECK-NEXT:    fadd s1, s2, s1
-; CHECK-NEXT:    fadd s0, s0, s1
+; CHECK-DAG:     mov  [[W59:w[0-9]+]], #1114374144
+; CHECK-DAG:     mov  [[W17:w[0-9]+]], #1109917696
+; CHECK-NEXT:    fmov [[FP59:s[0-9]+]], [[W59]]
+; CHECK-NEXT:    fmov [[FP17:s[0-9]+]], [[W17]]
+; CHECK-NEXT:    fadd [[TMP1:s[0-9]+]], s0, [[FP59]]
+; CHECK-NEXT:    fadd [[TMP2:s[0-9]+]], [[FP17]], [[TMP1]]
+; CHECK-NEXT:    fadd s0, s0, [[TMP2]]
 ; CHECK-NEXT:    ret
   %a1 = fadd float %x, 42.0
   %a2 = fadd float %a1, 17.0
