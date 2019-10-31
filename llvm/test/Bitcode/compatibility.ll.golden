@@ -66,6 +66,7 @@ $comdat2 = comdat any
 @g.addrspace = addrspace(1) global i32 0
 @g.externally_initialized = external externally_initialized global i32
 @g.section = global i32 0, section "_DATA"
+@g.partition = global i32 0, partition "part"
 @comdat.any = global i32 0, comdat
 @comdat.exactmatch = global i32 0, comdat
 @comdat.largest = global i32 0, comdat
