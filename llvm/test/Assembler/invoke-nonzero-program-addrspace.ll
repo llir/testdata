@@ -18,7 +18,10 @@ lpad:
     unreachable
 }
 
-declare i32 @__gxx_personality_v0(...)
+; Note: we add addrspace(200) to the @__gxx_personality_v0 function declaration,
+; as it is used in the personality function of @test_invoke within an address
+; space of 200.
+declare i32 @__gxx_personality_v0(...) addrspace(200)
 
 
 ; PROGAS200:  target datalayout = "P200"
