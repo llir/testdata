@@ -114,7 +114,7 @@ entry:
 
 define float @f20() {
 entry:
-	%result = call float @llvm.experimental.constrained.fptrunc.f32.f64(double 42.1, metadata !"round.dynamic", metadata !"fpexcept.strict")
+	%result = call float @llvm.experimental.constrained.fptrunc.f32.f64(double 0x40450CCCCCCCCCCD, metadata !"round.dynamic", metadata !"fpexcept.strict")
 	ret float %result
 }
 
