@@ -74,6 +74,8 @@ mv "test/Linker/debug-info-version-b.ll" "test/Linker/debug-info-version-b.ll.x"
 mv "test/Verifier/DILocation-parents.ll" "test/Verifier/DILocation-parents.ll.x"
 mv "test/Verifier/dbg.ll" "test/Verifier/dbg.ll.x"
 mv "test/Verifier/mdcompositetype-templateparams-tuple.ll" "test/Verifier/mdcompositetype-templateparams-tuple.ll.x"
+mv "test/Bitcode/DISubprogram-v5.ll" "test/Bitcode/DISubprogram-v5.ll.x"
+mv "test/Bitcode/upgrade-dbg-checksum.ll" "test/Bitcode/upgrade-dbg-checksum.ll.x"
 
 # --- [ Incorrect .ll extension ] ----------------------------------------------
 
