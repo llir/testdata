@@ -16,6 +16,8 @@ mv "llvm/test/Verifier/swifterror3.ll" "llvm/test/Verifier/swifterror3.ll.x"
 mv "llvm/test/CodeGen/AVR/progmem-extended.ll" "llvm/test/CodeGen/AVR/progmem-extended.ll.x"
 mv "llvm/test/CodeGen/X86/GC/badrootproto.ll" "llvm/test/CodeGen/X86/GC/badrootproto.ll.x"
 mv "llvm/test/CodeGen/X86/GC/badwriteproto.ll" "llvm/test/CodeGen/X86/GC/badwriteproto.ll.x"
+mv "test/Verifier/dbg-difile-crash.ll" "test/Verifier/dbg-difile-crash.ll.x"
+mv "test/Verifier/dbg-invalid-retaintypes.ll" "test/Verifier/dbg-invalid-retaintypes.ll.x"
 
 # --- [ Require pre-processing ] -----------------------------------------------
 
@@ -58,6 +60,20 @@ mv "test/DebugInfo/X86/no-public-sections.ll" "test/DebugInfo/X86/no-public-sect
 mv "test/Bitcode/DISubprogram-distinct-definitions.ll" "test/Bitcode/DISubprogram-distinct-definitions.ll.x"
 mv "test/Bitcode/DIGlobalVariableExpression2.ll" "test/Bitcode/DIGlobalVariableExpression2.ll.x"
 mv "test/Bitcode/DILocalVariable-explicit-tags.ll" "test/Bitcode/DILocalVariable-explicit-tags.ll.x"
+mv "test/CodeGen/ARM/2009-10-16-Scope.ll" "test/CodeGen/ARM/2009-10-16-Scope.ll.x"
+mv "test/CodeGen/X86/2009-02-12-DebugInfoVLA.ll" "test/CodeGen/X86/2009-02-12-DebugInfoVLA.ll.x"
+mv "test/CodeGen/X86/2009-10-16-Scope.ll" "test/CodeGen/X86/2009-10-16-Scope.ll.x"
+mv "test/CodeGen/X86/2010-02-01-DbgValueCrash.ll" "test/CodeGen/X86/2010-02-01-DbgValueCrash.ll.x"
+mv "test/DebugInfo/Generic/inheritance.ll" "test/DebugInfo/Generic/inheritance.ll.x"
+mv "test/CodeGen/ARM/2009-10-16-Scope.ll" "test/CodeGen/ARM/2009-10-16-Scope.ll.x"
+mv "test/CodeGen/X86/2009-02-12-DebugInfoVLA.ll" "test/CodeGen/X86/2009-02-12-DebugInfoVLA.ll.x"
+mv "test/CodeGen/X86/2009-10-16-Scope.ll" "test/CodeGen/X86/2009-10-16-Scope.ll.x"
+mv "test/CodeGen/X86/2010-02-01-DbgValueCrash.ll" "test/CodeGen/X86/2010-02-01-DbgValueCrash.ll.x"
+mv "test/DebugInfo/Generic/inheritance.ll" "test/DebugInfo/Generic/inheritance.ll.x"
+mv "test/Linker/debug-info-version-b.ll" "test/Linker/debug-info-version-b.ll.x"
+mv "test/Verifier/DILocation-parents.ll" "test/Verifier/DILocation-parents.ll.x"
+mv "test/Verifier/dbg.ll" "test/Verifier/dbg.ll.x"
+mv "test/Verifier/mdcompositetype-templateparams-tuple.ll" "test/Verifier/mdcompositetype-templateparams-tuple.ll.x"
 
 # --- [ Incorrect .ll extension ] ----------------------------------------------
 
