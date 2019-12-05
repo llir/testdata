@@ -57,6 +57,8 @@ mv "test/MC/ARM/thumb2-narrow-dp.ll" "test/MC/ARM/thumb2-narrow-dp.ll.x"
 mv "test/MC/Disassembler/AMDGPU/aperture-regs.ll" "test/MC/Disassembler/AMDGPU/aperture-regs.ll.x"
 mv "test/Other/lit-globbing.ll" "test/Other/lit-globbing.ll.x"
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 mv "test/Assembler/2003-11-11-ImplicitRename.ll" "test/Assembler/2003-11-11-ImplicitRename.ll.x"
 mv "test/Assembler/2004-03-30-UnclosedFunctionCrash.ll" "test/Assembler/2004-03-30-UnclosedFunctionCrash.ll.x"
 mv "test/Assembler/2003-11-24-SymbolTableCrash.ll" "test/Assembler/2003-11-24-SymbolTableCrash.ll.x"
