@@ -1,5 +1,62 @@
 #!/bin/bash
 
+# ref: https://github.com/llir/llvm/issues/111#issuecomment-561880694
+
+# === [ Broken as intended ] ===================================================
+#
+# These test cases fail because they contain invalid LLVM IR. As such, reporting
+# a syntax error is the right thing to do.
+
+# --- [ Invalid syntax ] -------------------------------------------------------
+
+mv "llvm/test/Assembler/invalid-immarg2.ll" "llvm/test/Assembler/invalid-immarg2.ll.x"
+mv "llvm/test/Assembler/invalid-immarg3.ll" "llvm/test/Assembler/invalid-immarg3.ll.x"
+mv "llvm/test/Verifier/swifterror2.ll" "llvm/test/Verifier/swifterror2.ll.x"
+mv "llvm/test/Verifier/swifterror3.ll" "llvm/test/Verifier/swifterror3.ll.x"
+mv "llvm/test/CodeGen/AVR/progmem-extended.ll" "llvm/test/CodeGen/AVR/progmem-extended.ll.x"
+mv "llvm/test/CodeGen/X86/GC/badrootproto.ll" "llvm/test/CodeGen/X86/GC/badrootproto.ll.x"
+mv "llvm/test/CodeGen/X86/GC/badwriteproto.ll" "llvm/test/CodeGen/X86/GC/badwriteproto.ll.x"
+
+# --- [ Require pre-processing ] -----------------------------------------------
+
+mv "llvm/test/CodeGen/Hexagon/intrinsics/atomic_load.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomic_load.ll.x"
+mv "llvm/test/CodeGen/Hexagon/intrinsics/atomic_store.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomic_store.ll.x"
+mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll.x"
+mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll.x"
+mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll.x"
+mv "llvm/test/CodeGen/Hexagon/intrinsics/fence.ll" "llvm/test/CodeGen/Hexagon/intrinsics/fence.ll.x"
+mv "llvm/test/CodeGen/WinEH/wineh-noret-cleanup.ll" "llvm/test/CodeGen/WinEH/wineh-noret-cleanup.ll.x"
+mv "llvm/test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll" "llvm/test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll.x"
+mv "llvm/test/DebugInfo/AArch64/line-header.ll" "llvm/test/DebugInfo/AArch64/line-header.ll.x"
+mv "llvm/test/Linker/link-flags.ll" "llvm/test/Linker/link-flags.ll.x"
+
+# --- [ Old grammar compatibility test cases ] ---------------------------------
+#
+# Test cases for compatibility with older versions of LLVM IR. We only support
+# the latest version of LLVM IR, as upgrading LLVM IR files to the latest
+# grammar is better handled by the official tools of LLVM (e.g. `ll-dis foo.bc`)
+
+
+mv "test/Bitcode/cmpxchg-upgrade.ll" "test/Bitcode/cmpxchg-upgrade.ll.x"
+mv "test/Bitcode/compatibility-3.6.ll" "test/Bitcode/compatibility-3.6.ll.x"
+mv "test/Bitcode/compatibility-3.7.ll" "test/Bitcode/compatibility-3.7.ll.x"
+mv "test/Bitcode/drop-debug-info.3.5.ll" "test/Bitcode/drop-debug-info.3.5.ll.x"
+mv "test/Bitcode/function-local-metadata.3.5.ll" "test/Bitcode/function-local-metadata.3.5.ll.x"
+mv "test/Bitcode/highLevelStructure.3.2.ll" "test/Bitcode/highLevelStructure.3.2.ll.x"
+mv "test/Bitcode/linkage-types-3.2.ll" "test/Bitcode/linkage-types-3.2.ll.x"
+mv "test/Bitcode/memInstructions.3.2.ll" "test/Bitcode/memInstructions.3.2.ll.x"
+mv "test/Bitcode/metadata.3.5.ll" "test/Bitcode/metadata.3.5.ll.x"
+mv "test/Bitcode/miscInstructions.3.2.ll" "test/Bitcode/miscInstructions.3.2.ll.x"
+mv "test/Bitcode/upgrade-loop-metadata.ll" "test/Bitcode/upgrade-loop-metadata.ll.x"
+mv "test/Bitcode/upgrade-subprogram.ll" "test/Bitcode/upgrade-subprogram.ll.x"
+mv "test/Verifier/2004-05-21-SwitchConstantMismatch.ll" "test/Verifier/2004-05-21-SwitchConstantMismatch.ll.x"
+
+# --- [ Incorrect .ll extension ] ----------------------------------------------
+
+mv "test/MC/ARM/thumb2-narrow-dp.ll" "test/MC/ARM/thumb2-narrow-dp.ll.x"
+mv "test/MC/Disassembler/AMDGPU/aperture-regs.ll" "test/MC/Disassembler/AMDGPU/aperture-regs.ll.x"
+mv "test/Other/lit-globbing.ll" "test/Other/lit-globbing.ll.x"
+
 mv "test/Assembler/2003-11-11-ImplicitRename.ll" "test/Assembler/2003-11-11-ImplicitRename.ll.x"
 mv "test/Assembler/2004-03-30-UnclosedFunctionCrash.ll" "test/Assembler/2004-03-30-UnclosedFunctionCrash.ll.x"
 mv "test/Assembler/2003-11-24-SymbolTableCrash.ll" "test/Assembler/2003-11-24-SymbolTableCrash.ll.x"
