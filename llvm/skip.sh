@@ -36,7 +36,6 @@ mv "llvm/test/Linker/link-flags.ll" "llvm/test/Linker/link-flags.ll.x"
 # the latest version of LLVM IR, as upgrading LLVM IR files to the latest
 # grammar is better handled by the official tools of LLVM (e.g. `ll-dis foo.bc`)
 
-
 mv "test/Bitcode/cmpxchg-upgrade.ll" "test/Bitcode/cmpxchg-upgrade.ll.x"
 mv "test/Bitcode/compatibility-3.6.ll" "test/Bitcode/compatibility-3.6.ll.x"
 mv "test/Bitcode/compatibility-3.7.ll" "test/Bitcode/compatibility-3.7.ll.x"
@@ -50,6 +49,15 @@ mv "test/Bitcode/miscInstructions.3.2.ll" "test/Bitcode/miscInstructions.3.2.ll.
 mv "test/Bitcode/upgrade-loop-metadata.ll" "test/Bitcode/upgrade-loop-metadata.ll.x"
 mv "test/Bitcode/upgrade-subprogram.ll" "test/Bitcode/upgrade-subprogram.ll.x"
 mv "test/Verifier/2004-05-21-SwitchConstantMismatch.ll" "test/Verifier/2004-05-21-SwitchConstantMismatch.ll.x"
+mv "test/Bitcode/local-linkage-default-visibility.3.4.ll" "test/Bitcode/local-linkage-default-visibility.3.4.ll.x"
+mv "test/Bitcode/DIExpression-4.0.ll" "test/Bitcode/DIExpression-4.0.ll.x"
+mv "test/Bitcode/DIGlobalVariableExpression.ll" "test/Bitcode/DIGlobalVariableExpression.ll.x"
+mv "test/Bitcode/diglobalvariable-3.8.ll" "test/Bitcode/diglobalvariable-3.8.ll.x"
+mv "test/Bitcode/dityperefs-3.8.ll" "test/Bitcode/dityperefs-3.8.ll.x"
+mv "test/DebugInfo/X86/no-public-sections.ll" "test/DebugInfo/X86/no-public-sections.ll.x"
+mv "test/Bitcode/DISubprogram-distinct-definitions.ll" "test/Bitcode/DISubprogram-distinct-definitions.ll.x"
+mv "test/Bitcode/DIGlobalVariableExpression2.ll" "test/Bitcode/DIGlobalVariableExpression2.ll.x"
+mv "test/Bitcode/DILocalVariable-explicit-tags.ll" "test/Bitcode/DILocalVariable-explicit-tags.ll.x"
 
 # --- [ Incorrect .ll extension ] ----------------------------------------------
 
