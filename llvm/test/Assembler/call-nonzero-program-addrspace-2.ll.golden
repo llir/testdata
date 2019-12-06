@@ -1,7 +1,0 @@
-define i8 @test_unnamed(i8 (i32)*, i8 (i32) addrspace(42)*) {
-; <label>:2
-	%3 = call i8 %0(i32 0)
-	%4 = call addrspace(42) i8 %1(i32 0)
-	%5 = call i8 %1(i32 0)
-	ret i8 0
-}

@@ -1,7 +1,0 @@
-define i8 @test(i8 (i32)* %fnptr0, i8 (i32) addrspace(42)* %fnptr42) {
-; <label>:0
-	%explicit_as_0 = call i8 %fnptr0(i32 0)
-	%explicit_as_42 = call addrspace(42) i8 %fnptr42(i32 0)
-	%call_no_as = call i8 %fnptr42(i32 0)
-	ret i8 0
-}

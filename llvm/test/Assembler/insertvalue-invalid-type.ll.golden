@@ -1,5 +1,0 @@
-define void @test() {
-entry:
-	%0 = insertvalue { i32, i32 } undef, i8* null, 0
-	ret void
-}

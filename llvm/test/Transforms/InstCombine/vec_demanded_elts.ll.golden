@@ -328,7 +328,7 @@ define <3 x float> @shuf_frem_const_op1(<3 x float> %x) {
 define i32* @gep_vbase_w_s_idx(<2 x i32*> %base) {
 ; <label>:0
 	%gep = getelementptr i32, <2 x i32*> %base, i64 1
-	%ee = extractelement i32* %gep, i32 1
+	%ee = extractelement <2 x i32*> %gep, i32 1
 	ret i32* %ee
 }
 
@@ -337,7 +337,7 @@ define i32* @gep_splat_base_w_s_idx(i32* %base) {
 	%basevec1 = insertelement <2 x i32*> undef, i32* %base, i32 0
 	%basevec2 = shufflevector <2 x i32*> %basevec1, <2 x i32*> undef, <2 x i32> zeroinitializer
 	%gep = getelementptr i32, <2 x i32*> %basevec2, i64 1
-	%ee = extractelement i32* %gep, i32 1
+	%ee = extractelement <2 x i32*> %gep, i32 1
 	ret i32* %ee
 }
 
@@ -362,7 +362,7 @@ define i32* @gep_splat_base_w_vidx(i32* %base, <2 x i64> %idxvec) {
 define i32* @gep_cvbase_w_s_idx(<2 x i32*> %base, i64 %raw_addr) {
 ; <label>:0
 	%gep = getelementptr i32, <2 x i32*> <i32* @GLOBAL, i32* @GLOBAL>, i64 %raw_addr
-	%ee = extractelement i32* %gep, i32 1
+	%ee = extractelement <2 x i32*> %gep, i32 1
 	ret i32* %ee
 }
 

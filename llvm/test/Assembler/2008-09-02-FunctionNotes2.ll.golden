@@ -1,4 +1,0 @@
-define void @fn1() alwaysinline noinline {
-; <label>:0
-	ret void
-}

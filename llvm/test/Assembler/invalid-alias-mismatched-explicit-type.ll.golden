@@ -1,3 +1,0 @@
-@y = global i2 0
-
-@x = alias i1, i2* @y
