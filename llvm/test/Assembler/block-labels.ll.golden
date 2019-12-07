@@ -1,0 +1,29 @@
+define i32 @test1(i32 %X) {
+; <label>:0
+	%1 = alloca i32
+	br label %2
+
+; <label>:2
+	br label %3
+
+; <label>:3
+	br label %"2"
+
+"2":
+	br label %-3
+
+-3:
+	br label %-N-
+
+-N-:
+	br label %$N
+
+$N:
+	%4 = add i32 1, 1
+	ret i32 %4
+}
+
+define void @test2(i32, i32) {
+; <label>:2
+	ret void
+}
