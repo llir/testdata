@@ -9,28 +9,36 @@
 
 # --- [ Invalid syntax ] -------------------------------------------------------
 
-mv "llvm/test/Assembler/invalid-immarg2.ll" "llvm/test/Assembler/invalid-immarg2.ll.x"
-mv "llvm/test/Assembler/invalid-immarg3.ll" "llvm/test/Assembler/invalid-immarg3.ll.x"
-mv "llvm/test/CodeGen/AVR/progmem-extended.ll" "llvm/test/CodeGen/AVR/progmem-extended.ll.x"
-mv "llvm/test/CodeGen/X86/GC/badrootproto.ll" "llvm/test/CodeGen/X86/GC/badrootproto.ll.x"
-mv "llvm/test/CodeGen/X86/GC/badwriteproto.ll" "llvm/test/CodeGen/X86/GC/badwriteproto.ll.x"
-mv "llvm/test/Verifier/swifterror2.ll" "llvm/test/Verifier/swifterror2.ll.x"
-mv "llvm/test/Verifier/swifterror3.ll" "llvm/test/Verifier/swifterror3.ll.x"
+mv "test/Assembler/invalid-immarg2.ll" "test/Assembler/invalid-immarg2.ll.x"
+mv "test/Assembler/invalid-immarg3.ll" "test/Assembler/invalid-immarg3.ll.x"
+mv "test/CodeGen/AVR/progmem-extended.ll" "test/CodeGen/AVR/progmem-extended.ll.x"
+mv "test/CodeGen/X86/GC/badrootproto.ll" "test/CodeGen/X86/GC/badrootproto.ll.x"
+mv "test/CodeGen/X86/GC/badwriteproto.ll" "test/CodeGen/X86/GC/badwriteproto.ll.x"
+mv "test/Verifier/swifterror2.ll" "test/Verifier/swifterror2.ll.x"
+mv "test/Verifier/swifterror3.ll" "test/Verifier/swifterror3.ll.x"
 mv "test/Verifier/dbg-difile-crash.ll" "test/Verifier/dbg-difile-crash.ll.x"
 mv "test/Verifier/dbg-invalid-retaintypes.ll" "test/Verifier/dbg-invalid-retaintypes.ll.x"
+mv "test/Bitcode/weak-cmpxchg-upgrade.ll" "test/Bitcode/weak-cmpxchg-upgrade.ll.x"
+mv "test/CodeGen/WebAssembly/inline-asm-m.ll" "test/CodeGen/WebAssembly/inline-asm-m.ll.x"
+mv "test/Transforms/NewGVN/invariant.group.ll" "test/Transforms/NewGVN/invariant.group.ll.x"
 
 # --- [ Require pre-processing ] -----------------------------------------------
 
-mv "llvm/test/CodeGen/Hexagon/intrinsics/atomic_load.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomic_load.ll.x"
-mv "llvm/test/CodeGen/Hexagon/intrinsics/atomic_store.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomic_store.ll.x"
-mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll.x"
-mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll.x"
-mv "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll" "llvm/test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll.x"
-mv "llvm/test/CodeGen/Hexagon/intrinsics/fence.ll" "llvm/test/CodeGen/Hexagon/intrinsics/fence.ll.x"
-mv "llvm/test/CodeGen/WinEH/wineh-noret-cleanup.ll" "llvm/test/CodeGen/WinEH/wineh-noret-cleanup.ll.x"
-mv "llvm/test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll" "llvm/test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll.x"
-mv "llvm/test/DebugInfo/AArch64/line-header.ll" "llvm/test/DebugInfo/AArch64/line-header.ll.x"
-mv "llvm/test/Linker/link-flags.ll" "llvm/test/Linker/link-flags.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/atomic_load.ll" "test/CodeGen/Hexagon/intrinsics/atomic_load.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/atomic_store.ll" "test/CodeGen/Hexagon/intrinsics/atomic_store.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll" "test/CodeGen/Hexagon/intrinsics/atomicrmw_addsub_native.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll" "test/CodeGen/Hexagon/intrinsics/atomicrmw_bitwise_native.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll" "test/CodeGen/Hexagon/intrinsics/atomicrmw_nand.ll.x"
+mv "test/CodeGen/Hexagon/intrinsics/fence.ll" "test/CodeGen/Hexagon/intrinsics/fence.ll.x"
+mv "test/CodeGen/WinEH/wineh-noret-cleanup.ll" "test/CodeGen/WinEH/wineh-noret-cleanup.ll.x"
+mv "test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll" "test/CodeGen/WinEH/wineh-statenumbering-cleanups.ll.x"
+mv "test/DebugInfo/AArch64/line-header.ll" "test/DebugInfo/AArch64/line-header.ll.x"
+mv "test/Linker/link-flags.ll" "test/Linker/link-flags.ll.x"
+mv "test/Transforms/GCOVProfiling/function-numbering.ll" "test/Transforms/GCOVProfiling/function-numbering.ll.x"
+mv "test/Transforms/GCOVProfiling/global-ctor.ll" "test/Transforms/GCOVProfiling/global-ctor.ll.x"
+mv "test/Transforms/GCOVProfiling/linkagename.ll" "test/Transforms/GCOVProfiling/linkagename.ll.x"
+mv "test/Transforms/GCOVProfiling/return-block.ll" "test/Transforms/GCOVProfiling/return-block.ll.x"
+mv "test/Transforms/GCOVProfiling/three-element-mdnode.ll" "test/Transforms/GCOVProfiling/three-element-mdnode.ll.x"
 
 # --- [ Old grammar compatibility test cases ] ---------------------------------
 #
