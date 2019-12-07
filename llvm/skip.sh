@@ -39,6 +39,7 @@ mv "test/Transforms/GCOVProfiling/global-ctor.ll" "test/Transforms/GCOVProfiling
 mv "test/Transforms/GCOVProfiling/linkagename.ll" "test/Transforms/GCOVProfiling/linkagename.ll.x"
 mv "test/Transforms/GCOVProfiling/return-block.ll" "test/Transforms/GCOVProfiling/return-block.ll.x"
 mv "test/Transforms/GCOVProfiling/three-element-mdnode.ll" "test/Transforms/GCOVProfiling/three-element-mdnode.ll.x"
+mv "test/CodeGen/NVPTX/nvvm-reflect.ll" "test/CodeGen/NVPTX/nvvm-reflect.ll.x"
 
 # --- [ Old grammar compatibility test cases ] ---------------------------------
 #
