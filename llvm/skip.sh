@@ -87,6 +87,10 @@ mv "test/Other/lit-globbing.ll" "test/Other/lit-globbing.ll.x"
 
 # --- [ invalid LLVM IR ] ------------------------------------------------------
 
+mv "test/CodeGen/X86/nonconst-static-iv.ll" "test/CodeGen/X86/nonconst-static-iv.ll.x"
+
+# --- [ invalid LLVM IR ] ------------------------------------------------------
+
 # Located by running `sift -x ll -l "RUN: not llvm-as" test/`
 
 mv "test/Assembler/2003-04-15-ConstantInitAssertion.ll" "test/Assembler/2003-04-15-ConstantInitAssertion.ll.x"
