@@ -2,6 +2,6 @@ declare void (i32)* @foo()
 
 define void @test() {
 ; <label>:0
-	call void (i32)* () @foo()
+	%1 = call void (i32)* @foo()
 	ret void
 }

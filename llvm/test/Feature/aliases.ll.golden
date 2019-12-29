@@ -1,0 +1,35 @@
+%FunTy = type i32 ()
+
+@llvm.used = appending global [1 x i8*] [i8* bitcast (i32* @foo1 to i8*)], section "llvm.metadata"
+@bar = global i32 0
+@decl = external global i32
+@ptr = global i32* @decl
+
+@foo1 = alias i32, i32* @bar
+@foo2 = alias i32, i32* @bar
+@foo3 = alias i32, i32* @foo2
+@foo4 = unnamed_addr alias i32, i32* @foo2
+@ptr_a = alias i32*, i32** @ptr
+@bar_f = weak_odr alias %FunTy, i32 ()* @foo_f
+@bar_ff = alias i32 (), %FunTy* @bar_f
+@bar_i = internal alias i32, i32* @bar
+@A = alias i64, bitcast (i32* @bar to i64*)
+
+define i32 @foo_f() {
+; <label>:0
+	ret i32 0
+}
+
+define i32 @test() {
+entry:
+	%tmp = load i32, i32* @foo1
+	%tmp1 = load i32, i32* @foo2
+	%tmp0 = load i32, i32* @bar_i
+	%tmp2 = call i32 @foo_f()
+	%tmp3 = add i32 %tmp, %tmp2
+	%tmp4 = call i32 @bar_f()
+	%tmp5 = add i32 %tmp3, %tmp4
+	%tmp6 = add i32 %tmp1, %tmp5
+	%tmp7 = add i32 %tmp6, %tmp0
+	ret i32 %tmp7
+}

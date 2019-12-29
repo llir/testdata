@@ -1,8 +1,8 @@
-%SType = type { i32, { float, { i8 } }, i64 }
 %SAType = type { i32, { [2 x float], i64 } }
+%SType = type { i32, { float, { i8 } }, i64 }
 
 @0 = global i64 1
-@1 = global i64 s0x0012312
+@1 = global i64 74514
 @t2 = global i32* @t1
 @t3 = global i32* bitcast (i32* @t1 to i32*)
 @t1 = global i32 4
