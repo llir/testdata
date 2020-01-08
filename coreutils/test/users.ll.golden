@@ -334,7 +334,7 @@ define internal fastcc void @users(i8*, i32) unnamed_addr #7 !dbg !737 {
 	call void @llvm.dbg.value(metadata i64 %14, metadata !797, metadata !DIExpression()) #11, !dbg !816
 	call void @llvm.dbg.value(metadata i64 %14, metadata !818, metadata !DIExpression()) #11, !dbg !824
 	call void @llvm.dbg.value(metadata i64 8, metadata !823, metadata !DIExpression()) #11, !dbg !826
-	%15 = icmp ugt i64 %14, 1152921504606846975, !dbg !827
+	%15 = icmp ugt i64 %14, u0xFFFFFFFFFFFFFFF, !dbg !827
 	br i1 %15, label %16, label %17, !dbg !829
 
 ; <label>:16

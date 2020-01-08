@@ -19013,7 +19013,7 @@ define dso_local noalias %struct.hash_table* @hash_initialize(i64, %struct.hash_
 	call void @llvm.dbg.value(metadata i64 %60, metadata !11865, metadata !DIExpression()), !dbg !11870
 	call void @llvm.dbg.value(metadata i64 %60, metadata !11865, metadata !DIExpression()), !dbg !11870
 	call void @llvm.dbg.value(metadata i64 %60, metadata !11843, metadata !DIExpression()), !dbg !11852
-	%81 = icmp ugt i64 %60, 1152921504606846975, !dbg !11906
+	%81 = icmp ugt i64 %60, u0xFFFFFFFFFFFFFFF, !dbg !11906
 	br i1 %81, label %104, label %82, !dbg !11908
 
 ; <label>:82

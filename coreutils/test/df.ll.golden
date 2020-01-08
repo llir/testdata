@@ -1016,7 +1016,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %245, i64* @ncolumns, align 8, !dbg !1441, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %245, metadata !1442, metadata !DIExpression()) #13, !dbg !1449
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1451
-	%246 = icmp ugt i64 %245, 1152921504606846975, !dbg !1452
+	%246 = icmp ugt i64 %245, u0xFFFFFFFFFFFFFFF, !dbg !1452
 	br i1 %246, label %247, label %248, !dbg !1454
 
 ; <label>:247
@@ -1054,7 +1054,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %262, i64* @ncolumns, align 8, !dbg !1481, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %262, metadata !1442, metadata !DIExpression()) #13, !dbg !1482
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1484
-	%263 = icmp ugt i64 %262, 1152921504606846975, !dbg !1485
+	%263 = icmp ugt i64 %262, u0xFFFFFFFFFFFFFFF, !dbg !1485
 	br i1 %263, label %264, label %265, !dbg !1486
 
 ; <label>:264
@@ -1092,7 +1092,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %279, i64* @ncolumns, align 8, !dbg !1502, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %279, metadata !1442, metadata !DIExpression()) #13, !dbg !1506
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1508
-	%280 = icmp ugt i64 %279, 1152921504606846975, !dbg !1509
+	%280 = icmp ugt i64 %279, u0xFFFFFFFFFFFFFFF, !dbg !1509
 	br i1 %280, label %281, label %282, !dbg !1510
 
 ; <label>:281
@@ -1125,7 +1125,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %293, i64* @ncolumns, align 8, !dbg !1528, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %293, metadata !1442, metadata !DIExpression()) #13, !dbg !1529
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1531
-	%294 = icmp ugt i64 %293, 1152921504606846975, !dbg !1532
+	%294 = icmp ugt i64 %293, u0xFFFFFFFFFFFFFFF, !dbg !1532
 	br i1 %294, label %295, label %296, !dbg !1533
 
 ; <label>:295
@@ -1158,7 +1158,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %307, i64* @ncolumns, align 8, !dbg !1551, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %307, metadata !1442, metadata !DIExpression()) #13, !dbg !1552
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1554
-	%308 = icmp ugt i64 %307, 1152921504606846975, !dbg !1555
+	%308 = icmp ugt i64 %307, u0xFFFFFFFFFFFFFFF, !dbg !1555
 	br i1 %308, label %309, label %310, !dbg !1556
 
 ; <label>:309
@@ -1191,7 +1191,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %321, i64* @ncolumns, align 8, !dbg !1574, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %321, metadata !1442, metadata !DIExpression()) #13, !dbg !1575
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1577
-	%322 = icmp ugt i64 %321, 1152921504606846975, !dbg !1578
+	%322 = icmp ugt i64 %321, u0xFFFFFFFFFFFFFFF, !dbg !1578
 	br i1 %322, label %323, label %324, !dbg !1579
 
 ; <label>:323
@@ -1224,7 +1224,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %335, i64* @ncolumns, align 8, !dbg !1597, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %335, metadata !1442, metadata !DIExpression()) #13, !dbg !1598
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1600
-	%336 = icmp ugt i64 %335, 1152921504606846975, !dbg !1601
+	%336 = icmp ugt i64 %335, u0xFFFFFFFFFFFFFFF, !dbg !1601
 	br i1 %336, label %337, label %338, !dbg !1602
 
 ; <label>:337
@@ -1261,7 +1261,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %351, i64* @ncolumns, align 8, !dbg !1621, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %351, metadata !1442, metadata !DIExpression()) #13, !dbg !1622
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1624
-	%352 = icmp ugt i64 %351, 1152921504606846975, !dbg !1625
+	%352 = icmp ugt i64 %351, u0xFFFFFFFFFFFFFFF, !dbg !1625
 	br i1 %352, label %353, label %354, !dbg !1626
 
 ; <label>:353
@@ -1299,7 +1299,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %368, i64* @ncolumns, align 8, !dbg !1647, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %368, metadata !1442, metadata !DIExpression()) #13, !dbg !1648
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1650
-	%369 = icmp ugt i64 %368, 1152921504606846975, !dbg !1651
+	%369 = icmp ugt i64 %368, u0xFFFFFFFFFFFFFFF, !dbg !1651
 	br i1 %369, label %370, label %371, !dbg !1652
 
 ; <label>:370
@@ -1337,7 +1337,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %385, i64* @ncolumns, align 8, !dbg !1668, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %385, metadata !1442, metadata !DIExpression()) #13, !dbg !1672
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1674
-	%386 = icmp ugt i64 %385, 1152921504606846975, !dbg !1675
+	%386 = icmp ugt i64 %385, u0xFFFFFFFFFFFFFFF, !dbg !1675
 	br i1 %386, label %387, label %388, !dbg !1676
 
 ; <label>:387
@@ -1371,7 +1371,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %399, i64* @ncolumns, align 8, !dbg !1697, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %399, metadata !1442, metadata !DIExpression()) #13, !dbg !1698
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1700
-	%400 = icmp ugt i64 %399, 1152921504606846975, !dbg !1701
+	%400 = icmp ugt i64 %399, u0xFFFFFFFFFFFFFFF, !dbg !1701
 	br i1 %400, label %401, label %402, !dbg !1702
 
 ; <label>:401
@@ -1404,7 +1404,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %413, i64* @ncolumns, align 8, !dbg !1720, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %413, metadata !1442, metadata !DIExpression()) #13, !dbg !1721
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1723
-	%414 = icmp ugt i64 %413, 1152921504606846975, !dbg !1724
+	%414 = icmp ugt i64 %413, u0xFFFFFFFFFFFFFFF, !dbg !1724
 	br i1 %414, label %415, label %416, !dbg !1725
 
 ; <label>:415
@@ -1438,7 +1438,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %427, i64* @ncolumns, align 8, !dbg !1744, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %427, metadata !1442, metadata !DIExpression()) #13, !dbg !1745
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1747
-	%428 = icmp ugt i64 %427, 1152921504606846975, !dbg !1748
+	%428 = icmp ugt i64 %427, u0xFFFFFFFFFFFFFFF, !dbg !1748
 	br i1 %428, label %429, label %430, !dbg !1749
 
 ; <label>:429
@@ -1471,7 +1471,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %441, i64* @ncolumns, align 8, !dbg !1767, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %441, metadata !1442, metadata !DIExpression()) #13, !dbg !1768
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1770
-	%442 = icmp ugt i64 %441, 1152921504606846975, !dbg !1771
+	%442 = icmp ugt i64 %441, u0xFFFFFFFFFFFFFFF, !dbg !1771
 	br i1 %442, label %443, label %444, !dbg !1772
 
 ; <label>:443
@@ -1508,7 +1508,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %457, i64* @ncolumns, align 8, !dbg !1791, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %457, metadata !1442, metadata !DIExpression()) #13, !dbg !1792
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1794
-	%458 = icmp ugt i64 %457, 1152921504606846975, !dbg !1795
+	%458 = icmp ugt i64 %457, u0xFFFFFFFFFFFFFFF, !dbg !1795
 	br i1 %458, label %459, label %460, !dbg !1796
 
 ; <label>:459
@@ -1546,7 +1546,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %474, i64* @ncolumns, align 8, !dbg !1817, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %474, metadata !1442, metadata !DIExpression()) #13, !dbg !1818
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1820
-	%475 = icmp ugt i64 %474, 1152921504606846975, !dbg !1821
+	%475 = icmp ugt i64 %474, u0xFFFFFFFFFFFFFFF, !dbg !1821
 	br i1 %475, label %476, label %477, !dbg !1822
 
 ; <label>:476
@@ -1584,7 +1584,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %491, i64* @ncolumns, align 8, !dbg !1838, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %491, metadata !1442, metadata !DIExpression()) #13, !dbg !1842
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1844
-	%492 = icmp ugt i64 %491, 1152921504606846975, !dbg !1845
+	%492 = icmp ugt i64 %491, u0xFFFFFFFFFFFFFFF, !dbg !1845
 	br i1 %492, label %493, label %494, !dbg !1846
 
 ; <label>:493
@@ -1617,7 +1617,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %505, i64* @ncolumns, align 8, !dbg !1864, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %505, metadata !1442, metadata !DIExpression()) #13, !dbg !1865
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1867
-	%506 = icmp ugt i64 %505, 1152921504606846975, !dbg !1868
+	%506 = icmp ugt i64 %505, u0xFFFFFFFFFFFFFFF, !dbg !1868
 	br i1 %506, label %507, label %508, !dbg !1869
 
 ; <label>:507
@@ -1650,7 +1650,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %519, i64* @ncolumns, align 8, !dbg !1887, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %519, metadata !1442, metadata !DIExpression()) #13, !dbg !1888
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1890
-	%520 = icmp ugt i64 %519, 1152921504606846975, !dbg !1891
+	%520 = icmp ugt i64 %519, u0xFFFFFFFFFFFFFFF, !dbg !1891
 	br i1 %520, label %521, label %522, !dbg !1892
 
 ; <label>:521
@@ -1683,7 +1683,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %533, i64* @ncolumns, align 8, !dbg !1910, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %533, metadata !1442, metadata !DIExpression()) #13, !dbg !1911
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1913
-	%534 = icmp ugt i64 %533, 1152921504606846975, !dbg !1914
+	%534 = icmp ugt i64 %533, u0xFFFFFFFFFFFFFFF, !dbg !1914
 	br i1 %534, label %535, label %536, !dbg !1915
 
 ; <label>:535
@@ -1716,7 +1716,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %547, i64* @ncolumns, align 8, !dbg !1933, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %547, metadata !1442, metadata !DIExpression()) #13, !dbg !1934
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1936
-	%548 = icmp ugt i64 %547, 1152921504606846975, !dbg !1937
+	%548 = icmp ugt i64 %547, u0xFFFFFFFFFFFFFFF, !dbg !1937
 	br i1 %548, label %549, label %550, !dbg !1938
 
 ; <label>:549
@@ -1753,7 +1753,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %563, i64* @ncolumns, align 8, !dbg !1957, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %563, metadata !1442, metadata !DIExpression()) #13, !dbg !1958
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1960
-	%564 = icmp ugt i64 %563, 1152921504606846975, !dbg !1961
+	%564 = icmp ugt i64 %563, u0xFFFFFFFFFFFFFFF, !dbg !1961
 	br i1 %564, label %565, label %566, !dbg !1962
 
 ; <label>:565
@@ -1791,7 +1791,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %580, i64* @ncolumns, align 8, !dbg !1983, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %580, metadata !1442, metadata !DIExpression()) #13, !dbg !1984
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !1986
-	%581 = icmp ugt i64 %580, 1152921504606846975, !dbg !1987
+	%581 = icmp ugt i64 %580, u0xFFFFFFFFFFFFFFF, !dbg !1987
 	br i1 %581, label %582, label %583, !dbg !1988
 
 ; <label>:582
@@ -1829,7 +1829,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %597, i64* @ncolumns, align 8, !dbg !2004, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %597, metadata !1442, metadata !DIExpression()) #13, !dbg !2008
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2010
-	%598 = icmp ugt i64 %597, 1152921504606846975, !dbg !2011
+	%598 = icmp ugt i64 %597, u0xFFFFFFFFFFFFFFF, !dbg !2011
 	br i1 %598, label %599, label %600, !dbg !2012
 
 ; <label>:599
@@ -1862,7 +1862,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %611, i64* @ncolumns, align 8, !dbg !2030, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %611, metadata !1442, metadata !DIExpression()) #13, !dbg !2031
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2033
-	%612 = icmp ugt i64 %611, 1152921504606846975, !dbg !2034
+	%612 = icmp ugt i64 %611, u0xFFFFFFFFFFFFFFF, !dbg !2034
 	br i1 %612, label %613, label %614, !dbg !2035
 
 ; <label>:613
@@ -1895,7 +1895,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %625, i64* @ncolumns, align 8, !dbg !2053, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %625, metadata !1442, metadata !DIExpression()) #13, !dbg !2054
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2056
-	%626 = icmp ugt i64 %625, 1152921504606846975, !dbg !2057
+	%626 = icmp ugt i64 %625, u0xFFFFFFFFFFFFFFF, !dbg !2057
 	br i1 %626, label %627, label %628, !dbg !2058
 
 ; <label>:627
@@ -1928,7 +1928,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %639, i64* @ncolumns, align 8, !dbg !2076, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %639, metadata !1442, metadata !DIExpression()) #13, !dbg !2077
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2079
-	%640 = icmp ugt i64 %639, 1152921504606846975, !dbg !2080
+	%640 = icmp ugt i64 %639, u0xFFFFFFFFFFFFFFF, !dbg !2080
 	br i1 %640, label %641, label %642, !dbg !2081
 
 ; <label>:641
@@ -1962,7 +1962,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %653, i64* @ncolumns, align 8, !dbg !2100, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %653, metadata !1442, metadata !DIExpression()) #13, !dbg !2101
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2103
-	%654 = icmp ugt i64 %653, 1152921504606846975, !dbg !2104
+	%654 = icmp ugt i64 %653, u0xFFFFFFFFFFFFFFF, !dbg !2104
 	br i1 %654, label %655, label %656, !dbg !2105
 
 ; <label>:655
@@ -2010,7 +2010,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	store i64 %674, i64* @nrows, align 8, !dbg !2130, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %674, metadata !1442, metadata !DIExpression()) #13, !dbg !2133
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !2135
-	%675 = icmp ugt i64 %674, 1152921504606846975, !dbg !2136
+	%675 = icmp ugt i64 %674, u0xFFFFFFFFFFFFFFF, !dbg !2136
 	br i1 %675, label %676, label %677, !dbg !2137
 
 ; <label>:676
@@ -2026,7 +2026,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	%681 = load i64, i64* @ncolumns, align 8, !dbg !2144, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %681, metadata !1341, metadata !DIExpression()) #13, !dbg !2145
 	call void @llvm.dbg.value(metadata i64 8, metadata !1336, metadata !DIExpression()) #13, !dbg !2147
-	%682 = icmp ugt i64 %681, 1152921504606846975, !dbg !2148
+	%682 = icmp ugt i64 %681, u0xFFFFFFFFFFFFFFF, !dbg !2148
 	br i1 %682, label %683, label %684, !dbg !2149
 
 ; <label>:683
@@ -3587,7 +3587,7 @@ define internal fastcc void @decode_output_arg(i8*) unnamed_addr #7 !dbg !2975 {
 	store i64 %34, i64* @ncolumns, align 8, !dbg !3022, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %34, metadata !1442, metadata !DIExpression()) #13, !dbg !3023
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !3025
-	%35 = icmp ugt i64 %34, 1152921504606846975, !dbg !3026
+	%35 = icmp ugt i64 %34, u0xFFFFFFFFFFFFFFF, !dbg !3026
 	br i1 %35, label %36, label %37, !dbg !3027
 
 ; <label>:36
@@ -3624,7 +3624,7 @@ define internal fastcc void @decode_output_arg(i8*) unnamed_addr #7 !dbg !2975 {
 	store i64 %53, i64* @ncolumns, align 8, !dbg !3046, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %53, metadata !1442, metadata !DIExpression()) #13, !dbg !3047
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !3049
-	%54 = icmp ugt i64 %53, 1152921504606846975, !dbg !3050
+	%54 = icmp ugt i64 %53, u0xFFFFFFFFFFFFFFF, !dbg !3050
 	br i1 %54, label %55, label %56, !dbg !3051
 
 ; <label>:55
@@ -3659,7 +3659,7 @@ define internal fastcc void @decode_output_arg(i8*) unnamed_addr #7 !dbg !2975 {
 	store i64 %69, i64* @ncolumns, align 8, !dbg !3070, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %69, metadata !1442, metadata !DIExpression()) #13, !dbg !3071
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !3073
-	%70 = icmp ugt i64 %69, 1152921504606846975, !dbg !3074
+	%70 = icmp ugt i64 %69, u0xFFFFFFFFFFFFFFF, !dbg !3074
 	br i1 %70, label %71, label %72, !dbg !3075
 
 ; <label>:71
@@ -4087,7 +4087,7 @@ define internal fastcc void @get_dev(i8*, i8*, i8*, i8*, i8*, i1 zeroext, i1 zer
 	store i64 %146, i64* @nrows, align 8, !dbg !3309, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %146, metadata !1442, metadata !DIExpression()) #13, !dbg !3311
 	call void @llvm.dbg.value(metadata i64 8, metadata !1448, metadata !DIExpression()) #13, !dbg !3313
-	%147 = icmp ugt i64 %146, 1152921504606846975, !dbg !3314
+	%147 = icmp ugt i64 %146, u0xFFFFFFFFFFFFFFF, !dbg !3314
 	br i1 %147, label %148, label %149, !dbg !3315
 
 ; <label>:148
@@ -4103,7 +4103,7 @@ define internal fastcc void @get_dev(i8*, i8*, i8*, i8*, i8*, i1 zeroext, i1 zer
 	%153 = load i64, i64* @ncolumns, align 8, !dbg !3322, !tbaa !1182
 	call void @llvm.dbg.value(metadata i64 %153, metadata !1341, metadata !DIExpression()) #13, !dbg !3323
 	call void @llvm.dbg.value(metadata i64 8, metadata !1336, metadata !DIExpression()) #13, !dbg !3325
-	%154 = icmp ugt i64 %153, 1152921504606846975, !dbg !3326
+	%154 = icmp ugt i64 %153, u0xFFFFFFFFFFFFFFF, !dbg !3326
 	br i1 %154, label %155, label %156, !dbg !3327
 
 ; <label>:155
@@ -7181,7 +7181,7 @@ define dso_local noalias %struct.hash_table* @hash_initialize(i64, %struct.hash_
 	call void @llvm.dbg.value(metadata i64 %60, metadata !5244, metadata !DIExpression()), !dbg !5249
 	call void @llvm.dbg.value(metadata i64 %60, metadata !5244, metadata !DIExpression()), !dbg !5249
 	call void @llvm.dbg.value(metadata i64 %60, metadata !5222, metadata !DIExpression()), !dbg !5231
-	%81 = icmp ugt i64 %60, 1152921504606846975, !dbg !5285
+	%81 = icmp ugt i64 %60, u0xFFFFFFFFFFFFFFF, !dbg !5285
 	br i1 %81, label %104, label %82, !dbg !5287
 
 ; <label>:82

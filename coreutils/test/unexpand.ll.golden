@@ -862,7 +862,7 @@ define dso_local void @add_tab_stop(i64) local_unnamed_addr #7 !dbg !1082 {
 
 ; <label>:22
 	call void @llvm.dbg.value(metadata i64 %14, metadata !90, metadata !DIExpression()) #10, !dbg !1106
-	%23 = icmp ugt i64 %2, 1152921504606846975, !dbg !1112
+	%23 = icmp ugt i64 %2, u0xFFFFFFFFFFFFFFF, !dbg !1112
 	br i1 %23, label %24, label %32, !dbg !1114
 
 ; <label>:24

@@ -4747,7 +4747,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 	call void @llvm.dbg.value(metadata i64 %11, metadata !3638, metadata !DIExpression()), !dbg !3657
 	call void @llvm.dbg.value(metadata i64 %11, metadata !3658, metadata !DIExpression()) #10, !dbg !3664
 	call void @llvm.dbg.value(metadata i64 8, metadata !3663, metadata !DIExpression()) #10, !dbg !3666
-	%12 = icmp ugt i64 %11, 1152921504606846975, !dbg !3667
+	%12 = icmp ugt i64 %11, u0xFFFFFFFFFFFFFFF, !dbg !3667
 	br i1 %12, label %13, label %14, !dbg !3669
 
 ; <label>:13
@@ -4816,7 +4816,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 
 ; <label>:37
 	call void @llvm.dbg.value(metadata i64 %22, metadata !220, metadata !DIExpression()) #10, !dbg !3699
-	%38 = icmp ugt i64 %22, 1152921504606846975, !dbg !3717
+	%38 = icmp ugt i64 %22, u0xFFFFFFFFFFFFFFF, !dbg !3717
 	br i1 %38, label %42, label %39, !dbg !3718
 
 ; <label>:39
@@ -4855,7 +4855,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 	call void @llvm.dbg.value(metadata i8* %24, metadata !3705, metadata !DIExpression()) #10, !dbg !3712
 	call void @llvm.dbg.value(metadata i64 %49, metadata !3710, metadata !DIExpression()) #10, !dbg !3714
 	call void @llvm.dbg.value(metadata i64 8, metadata !3711, metadata !DIExpression()) #10, !dbg !3715
-	%52 = icmp ugt i64 %49, 1152921504606846975, !dbg !3727
+	%52 = icmp ugt i64 %49, u0xFFFFFFFFFFFFFFF, !dbg !3727
 	br i1 %52, label %53, label %54, !dbg !3716
 
 ; <label>:53

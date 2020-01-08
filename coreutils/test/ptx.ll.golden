@@ -13370,7 +13370,7 @@ define internal fastcc zeroext i1 @knuth_morris_pratt(i8*, i8* nocapture readonl
 	call void @llvm.dbg.value(metadata i64 %2, metadata !7826, metadata !DIExpression()), !dbg !7843
 	call void @llvm.dbg.value(metadata i8** %3, metadata !7827, metadata !DIExpression()), !dbg !7844
 	call void @llvm.dbg.value(metadata i64 %2, metadata !7828, metadata !DIExpression()), !dbg !7845
-	%5 = icmp ugt i64 %2, 1152921504606846975, !dbg !7846
+	%5 = icmp ugt i64 %2, u0xFFFFFFFFFFFFFFF, !dbg !7846
 	br i1 %5, label %88, label %6, !dbg !7846
 
 ; <label>:6

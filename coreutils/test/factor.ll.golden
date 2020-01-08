@@ -13696,7 +13696,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 	call void @llvm.dbg.value(metadata i64 %11, metadata !7049, metadata !DIExpression()), !dbg !7068
 	call void @llvm.dbg.value(metadata i64 %11, metadata !7069, metadata !DIExpression()) #10, !dbg !7075
 	call void @llvm.dbg.value(metadata i64 8, metadata !7074, metadata !DIExpression()) #10, !dbg !7077
-	%12 = icmp ugt i64 %11, 1152921504606846975, !dbg !7078
+	%12 = icmp ugt i64 %11, u0xFFFFFFFFFFFFFFF, !dbg !7078
 	br i1 %12, label %13, label %14, !dbg !7080
 
 ; <label>:13
@@ -13765,7 +13765,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 
 ; <label>:37
 	call void @llvm.dbg.value(metadata i64 %22, metadata !253, metadata !DIExpression()) #10, !dbg !7110
-	%38 = icmp ugt i64 %22, 1152921504606846975, !dbg !7128
+	%38 = icmp ugt i64 %22, u0xFFFFFFFFFFFFFFF, !dbg !7128
 	br i1 %38, label %42, label %39, !dbg !7129
 
 ; <label>:39
@@ -13804,7 +13804,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 	call void @llvm.dbg.value(metadata i8* %24, metadata !7116, metadata !DIExpression()) #10, !dbg !7123
 	call void @llvm.dbg.value(metadata i64 %49, metadata !7121, metadata !DIExpression()) #10, !dbg !7125
 	call void @llvm.dbg.value(metadata i64 8, metadata !7122, metadata !DIExpression()) #10, !dbg !7126
-	%52 = icmp ugt i64 %49, 1152921504606846975, !dbg !7138
+	%52 = icmp ugt i64 %49, u0xFFFFFFFFFFFFFFF, !dbg !7138
 	br i1 %52, label %53, label %54, !dbg !7127
 
 ; <label>:53
@@ -16586,7 +16586,7 @@ define internal fastcc zeroext i1 @knuth_morris_pratt(i8*, i8* nocapture readonl
 	call void @llvm.dbg.value(metadata i64 %2, metadata !8745, metadata !DIExpression()), !dbg !8762
 	call void @llvm.dbg.value(metadata i8** %3, metadata !8746, metadata !DIExpression()), !dbg !8763
 	call void @llvm.dbg.value(metadata i64 %2, metadata !8747, metadata !DIExpression()), !dbg !8764
-	%5 = icmp ugt i64 %2, 1152921504606846975, !dbg !8765
+	%5 = icmp ugt i64 %2, u0xFFFFFFFFFFFFFFF, !dbg !8765
 	br i1 %5, label %88, label %6, !dbg !8765
 
 ; <label>:6

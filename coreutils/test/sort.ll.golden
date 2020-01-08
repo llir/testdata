@@ -2296,7 +2296,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 
 ; <label>:797
 	call void @llvm.dbg.value(metadata i64 %788, metadata !864, metadata !DIExpression()) #13, !dbg !2878
-	%798 = icmp ugt i64 %787, 1152921504606846975, !dbg !2886
+	%798 = icmp ugt i64 %787, u0xFFFFFFFFFFFFFFF, !dbg !2886
 	br i1 %798, label %799, label %807, !dbg !2888
 
 ; <label>:799
@@ -10466,7 +10466,7 @@ define internal fastcc i64 @open_input_files(%struct.sortfile* nocapture readonl
 	call void @llvm.dbg.value(metadata %struct._IO_FILE*** %2, metadata !7593, metadata !DIExpression()), !dbg !7616
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2202, metadata !DIExpression()) #13, !dbg !7617
 	call void @llvm.dbg.value(metadata i64 8, metadata !2203, metadata !DIExpression()) #13, !dbg !7619
-	%6 = icmp ugt i64 %1, 1152921504606846975, !dbg !7620
+	%6 = icmp ugt i64 %1, u0xFFFFFFFFFFFFFFF, !dbg !7620
 	br i1 %6, label %7, label %8, !dbg !7621
 
 ; <label>:7
@@ -16072,7 +16072,7 @@ define dso_local noalias %struct.hash_table* @hash_initialize(i64, %struct.hash_
 	call void @llvm.dbg.value(metadata i64 %60, metadata !10346, metadata !DIExpression()), !dbg !10351
 	call void @llvm.dbg.value(metadata i64 %60, metadata !10346, metadata !DIExpression()), !dbg !10351
 	call void @llvm.dbg.value(metadata i64 %60, metadata !10324, metadata !DIExpression()), !dbg !10333
-	%81 = icmp ugt i64 %60, 1152921504606846975, !dbg !10387
+	%81 = icmp ugt i64 %60, u0xFFFFFFFFFFFFFFF, !dbg !10387
 	br i1 %81, label %104, label %82, !dbg !10389
 
 ; <label>:82
@@ -17499,7 +17499,7 @@ define dso_local noalias %struct.heap* @heap_alloc(i32 (i8*, i8*)*, i64) local_u
 	call void @llvm.dbg.value(metadata i64 %5, metadata !11284, metadata !DIExpression()), !dbg !11287
 	call void @llvm.dbg.value(metadata i64 %5, metadata !11292, metadata !DIExpression()) #13, !dbg !11296
 	call void @llvm.dbg.value(metadata i64 8, metadata !11295, metadata !DIExpression()) #13, !dbg !11298
-	%6 = icmp ugt i64 %5, 1152921504606846975, !dbg !11299
+	%6 = icmp ugt i64 %5, u0xFFFFFFFFFFFFFFF, !dbg !11299
 	br i1 %6, label %7, label %8, !dbg !11301
 
 ; <label>:7
@@ -17580,7 +17580,7 @@ define dso_local i32 @heap_insert(%struct.heap* nocapture, i8*) local_unnamed_ad
 
 ; <label>:18
 	call void @llvm.dbg.value(metadata i64 %4, metadata !1358, metadata !DIExpression()) #13, !dbg !11360
-	%19 = icmp ugt i64 %4, 1152921504606846975, !dbg !11368
+	%19 = icmp ugt i64 %4, u0xFFFFFFFFFFFFFFF, !dbg !11368
 	br i1 %19, label %20, label %28, !dbg !11370
 
 ; <label>:20

@@ -842,7 +842,7 @@ define internal zeroext i1 @paste_parallel(i64, i8** nocapture readonly) unnamed
 	%5 = add i64 %0, 1, !dbg !1071
 	call void @llvm.dbg.value(metadata i64 %5, metadata !1072, metadata !DIExpression()) #10, !dbg !1078
 	call void @llvm.dbg.value(metadata i64 8, metadata !1077, metadata !DIExpression()) #10, !dbg !1080
-	%6 = icmp ugt i64 %5, 1152921504606846975, !dbg !1081
+	%6 = icmp ugt i64 %5, u0xFFFFFFFFFFFFFFF, !dbg !1081
 	br i1 %6, label %7, label %8, !dbg !1083
 
 ; <label>:7

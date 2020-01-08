@@ -873,7 +873,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !845 {
 	call void @llvm.dbg.value(metadata i64 %231, metadata !1256, metadata !DIExpression()) #11, !dbg !1283
 	call void @llvm.dbg.value(metadata i64 undef, metadata !1309, metadata !DIExpression()) #11, !dbg !1315
 	call void @llvm.dbg.value(metadata i64 8, metadata !1314, metadata !DIExpression()) #11, !dbg !1317
-	%240 = icmp ugt i64 %238, 1152921504606846975, !dbg !1318
+	%240 = icmp ugt i64 %238, u0xFFFFFFFFFFFFFFF, !dbg !1318
 	br i1 %240, label %241, label %242, !dbg !1320
 
 ; <label>:241
@@ -5215,7 +5215,7 @@ define dso_local i64* @randperm_new(%struct.randint_source*, i64, i64) local_unn
 ; <label>:21
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4265, metadata !DIExpression()) #11, !dbg !4269
 	call void @llvm.dbg.value(metadata i64 8, metadata !4268, metadata !DIExpression()) #11, !dbg !4271
-	%22 = icmp ugt i64 %1, 1152921504606846975, !dbg !4272
+	%22 = icmp ugt i64 %1, u0xFFFFFFFFFFFFFFF, !dbg !4272
 	br i1 %22, label %23, label %24, !dbg !4274
 
 ; <label>:23
@@ -5233,7 +5233,7 @@ define dso_local i64* @randperm_new(%struct.randint_source*, i64, i64) local_unn
 	call void @llvm.dbg.value(metadata %struct.hash_table* null, metadata !4218, metadata !DIExpression()), !dbg !4260
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4265, metadata !DIExpression()) #11, !dbg !4280
 	call void @llvm.dbg.value(metadata i64 8, metadata !4268, metadata !DIExpression()) #11, !dbg !4283
-	%29 = icmp ugt i64 %2, 1152921504606846975, !dbg !4284
+	%29 = icmp ugt i64 %2, u0xFFFFFFFFFFFFFFF, !dbg !4284
 	br i1 %29, label %34, label %30, !dbg !4285
 
 ; <label>:30
@@ -5512,7 +5512,7 @@ define dso_local i64* @randperm_new(%struct.randint_source*, i64, i64) local_unn
 	call void @llvm.dbg.value(metadata i8* %42, metadata !4414, metadata !DIExpression()) #11, !dbg !4419
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4417, metadata !DIExpression()) #11, !dbg !4421
 	call void @llvm.dbg.value(metadata i64 8, metadata !4418, metadata !DIExpression()) #11, !dbg !4422
-	%181 = icmp ugt i64 %1, 1152921504606846975, !dbg !4423
+	%181 = icmp ugt i64 %1, u0xFFFFFFFFFFFFFFF, !dbg !4423
 	br i1 %181, label %182, label %183, !dbg !4425
 
 ; <label>:182
@@ -10403,7 +10403,7 @@ define dso_local noalias %struct.hash_table* @hash_initialize(i64, %struct.hash_
 	call void @llvm.dbg.value(metadata i64 %60, metadata !7391, metadata !DIExpression()), !dbg !7394
 	call void @llvm.dbg.value(metadata i64 %60, metadata !7391, metadata !DIExpression()), !dbg !7394
 	call void @llvm.dbg.value(metadata i64 %60, metadata !7369, metadata !DIExpression()), !dbg !7378
-	%81 = icmp ugt i64 %60, 1152921504606846975, !dbg !7430
+	%81 = icmp ugt i64 %60, u0xFFFFFFFFFFFFFFF, !dbg !7430
 	br i1 %81, label %104, label %82, !dbg !7432
 
 ; <label>:82
