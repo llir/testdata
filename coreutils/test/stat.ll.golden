@@ -9394,7 +9394,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%3112 = bitcast i8* %3111 to i64*, !dbg !3545
 	%3113 = load i64, i64* %3112, align 8, !dbg !3545, !tbaa !3546
 	%3114 = icmp sgt i64 %3113, 0, !dbg !3545
-	%3115 = icmp ult i64 %3113, 2305843009213693953, !dbg !3545
+	%3115 = icmp ult i64 %3113, u0x2000000000000001, !dbg !3545
 	%3116 = and i1 %3114, %3115, !dbg !3545
 	%3117 = select i1 %3116, i64 %3113, i64 512, !dbg !3545
 	call void @llvm.dbg.value(metadata i8* %0, metadata !1513, metadata !DIExpression()) #10, !dbg !3547

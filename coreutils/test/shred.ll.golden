@@ -1039,7 +1039,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%76 = getelementptr inbounds %struct.stat, %struct.stat* %11, i64 0, i32 9, !dbg !1505
 	%77 = load i64, i64* %76, align 8, !dbg !1505, !tbaa !1506
 	%78 = icmp sgt i64 %77, 0, !dbg !1505
-	%79 = icmp ult i64 %77, 2305843009213693953, !dbg !1505
+	%79 = icmp ult i64 %77, u0x2000000000000001, !dbg !1505
 	%80 = and i1 %78, %79, !dbg !1505
 	%81 = select i1 %80, i64 %77, i64 512, !dbg !1505
 	%82 = srem i64 %71, %81, !dbg !1507
@@ -1081,7 +1081,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%102 = getelementptr inbounds %struct.stat, %struct.stat* %11, i64 0, i32 9, !dbg !1528
 	%103 = load i64, i64* %102, align 8, !dbg !1528, !tbaa !1506
 	%104 = icmp sgt i64 %103, 0, !dbg !1528
-	%105 = icmp ult i64 %103, 2305843009213693953, !dbg !1528
+	%105 = icmp ult i64 %103, u0x2000000000000001, !dbg !1528
 	%106 = and i1 %104, %105, !dbg !1528
 	%107 = select i1 %106, i64 %103, i64 512, !dbg !1528
 	%108 = icmp slt i64 %107, %63, !dbg !1528
@@ -9691,7 +9691,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:80
 	call void @llvm.dbg.value(metadata i32 1024, metadata !6778, metadata !DIExpression()), !dbg !6793
-	%81 = icmp ugt i64 %49, 18014398509481983, !dbg !6795
+	%81 = icmp ugt i64 %49, u0x3FFFFFFFFFFFFF, !dbg !6795
 	%82 = shl i64 %49, 10, !dbg !6796
 	%83 = select i1 %81, i64 -1, i64 %82, !dbg !6797
 	%84 = zext i1 %81 to i32, !dbg !6797

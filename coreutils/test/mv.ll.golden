@@ -5084,7 +5084,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1408 = getelementptr inbounds %struct.stat, %struct.stat* %21, i64 0, i32 9, !dbg !4893
 	%1409 = load i64, i64* %1408, align 8, !dbg !4893, !tbaa !4894
 	%1410 = icmp sgt i64 %1409, 0, !dbg !4893
-	%1411 = icmp ult i64 %1409, 2305843009213693953, !dbg !4893
+	%1411 = icmp ult i64 %1409, u0x2000000000000001, !dbg !4893
 	%1412 = and i1 %1410, %1411, !dbg !4893
 	%1413 = and i1 %1410, %1411, !dbg !4893
 	%1414 = xor i1 %1413, true, !dbg !4893
@@ -5137,7 +5137,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1445 = getelementptr inbounds %struct.stat, %struct.stat* %22, i64 0, i32 9, !dbg !4927
 	%1446 = load i64, i64* %1445, align 8, !dbg !4927, !tbaa !4894
 	%1447 = icmp sgt i64 %1446, 0, !dbg !4927
-	%1448 = icmp ult i64 %1446, 2305843009213693953, !dbg !4927
+	%1448 = icmp ult i64 %1446, u0x2000000000000001, !dbg !4927
 	%1449 = and i1 %1447, %1448, !dbg !4927
 	%1450 = and i1 %1447, %1448, !dbg !4927
 	%1451 = xor i1 %1450, true, !dbg !4927

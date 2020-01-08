@@ -4077,7 +4077,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 ; <label>:19
 	call void @llvm.dbg.value(metadata i64 %15, metadata !3836, metadata !DIExpression()) #15, !dbg !3843
 	call void @llvm.dbg.value(metadata i64 400, metadata !3842, metadata !DIExpression()) #15, !dbg !3846
-	%20 = icmp ugt i64 %14, 23058430092136939, !dbg !3847
+	%20 = icmp ugt i64 %14, u0x51EB851EB851EB, !dbg !3847
 	br i1 %20, label %21, label %22, !dbg !3849
 
 ; <label>:21
@@ -29842,7 +29842,7 @@ define dso_local i32 @xstrtoul(i8*, i8**, i32, i64* nocapture, i8* readonly) loc
 
 ; <label>:80
 	call void @llvm.dbg.value(metadata i32 1024, metadata !17991, metadata !DIExpression()), !dbg !18006
-	%81 = icmp ugt i64 %49, 18014398509481983, !dbg !18008
+	%81 = icmp ugt i64 %49, u0x3FFFFFFFFFFFFF, !dbg !18008
 	%82 = shl i64 %49, 10, !dbg !18009
 	%83 = select i1 %81, i64 -1, i64 %82, !dbg !18010
 	%84 = zext i1 %81 to i32, !dbg !18010
@@ -30439,7 +30439,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:80
 	call void @llvm.dbg.value(metadata i32 1024, metadata !18285, metadata !DIExpression()), !dbg !18300
-	%81 = icmp ugt i64 %49, 18014398509481983, !dbg !18302
+	%81 = icmp ugt i64 %49, u0x3FFFFFFFFFFFFF, !dbg !18302
 	%82 = shl i64 %49, 10, !dbg !18303
 	%83 = select i1 %81, i64 -1, i64 %82, !dbg !18304
 	%84 = zext i1 %81 to i32, !dbg !18304

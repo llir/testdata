@@ -1080,7 +1080,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	call void @llvm.dbg.declare(metadata %struct.stat* @in_stat_buf, metadata !1430, metadata !DIExpression()), !dbg !1435
 	%348 = load i64, i64* getelementptr inbounds (%struct.stat, %struct.stat* @in_stat_buf, i64 0, i32 9), align 8, !dbg !1438, !tbaa !1439
 	%349 = icmp sgt i64 %348, 0, !dbg !1438
-	%350 = icmp ult i64 %348, 2305843009213693953, !dbg !1438
+	%350 = icmp ult i64 %348, u0x2000000000000001, !dbg !1438
 	%351 = and i1 %349, %350, !dbg !1438
 	%352 = and i1 %349, %350, !dbg !1438
 	%353 = xor i1 %352, true, !dbg !1438
@@ -8488,7 +8488,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:80
 	call void @llvm.dbg.value(metadata i32 1024, metadata !5693, metadata !DIExpression()), !dbg !5708
-	%81 = icmp ugt i64 %49, 18014398509481983, !dbg !5710
+	%81 = icmp ugt i64 %49, u0x3FFFFFFFFFFFFF, !dbg !5710
 	%82 = shl i64 %49, 10, !dbg !5711
 	%83 = select i1 %81, i64 -1, i64 %82, !dbg !5712
 	%84 = zext i1 %81 to i32, !dbg !5712

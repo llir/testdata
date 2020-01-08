@@ -1159,7 +1159,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	%66 = getelementptr inbounds %struct.fstatus, %struct.fstatus* %2, i64 0, i32 1, i32 9, !dbg !1757
 	%67 = load i64, i64* %66, align 8, !dbg !1757, !tbaa !1758
 	%68 = icmp sgt i64 %67, 0, !dbg !1757
-	%69 = icmp ult i64 %67, 2305843009213693953, !dbg !1757
+	%69 = icmp ult i64 %67, u0x2000000000000001, !dbg !1757
 	%70 = and i1 %68, %69, !dbg !1757
 	%71 = add i64 %67, 1, !dbg !1757
 	%72 = select i1 %70, i64 %71, i64 513, !dbg !1757

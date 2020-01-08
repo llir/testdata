@@ -454,7 +454,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !2 {
 	%50 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 9, !dbg !851
 	%51 = load i64, i64* %50, align 8, !dbg !851, !tbaa !852
 	%52 = icmp sgt i64 %51, 0, !dbg !851
-	%53 = icmp ult i64 %51, 2305843009213693953, !dbg !851
+	%53 = icmp ult i64 %51, u0x2000000000000001, !dbg !851
 	%54 = and i1 %52, %53, !dbg !851
 	%55 = and i1 %52, %53, !dbg !851
 	%56 = xor i1 %55, true, !dbg !851
@@ -573,7 +573,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !2 {
 	call void @llvm.dbg.value(metadata %struct.stat* %4, metadata !87, metadata !DIExpression(DW_OP_deref)), !dbg !823
 	%126 = load i64, i64* %50, align 8, !dbg !909, !tbaa !852
 	%127 = icmp sgt i64 %126, 0, !dbg !909
-	%128 = icmp ult i64 %126, 2305843009213693953, !dbg !909
+	%128 = icmp ult i64 %126, u0x2000000000000001, !dbg !909
 	%129 = and i1 %127, %128, !dbg !909
 	%130 = and i1 %127, %128, !dbg !909
 	%131 = xor i1 %130, true, !dbg !909
