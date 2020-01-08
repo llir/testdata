@@ -1977,8 +1977,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:117
 	%118 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1684
 	%119 = load i32, i32* %118, align 8, !dbg !1684, !tbaa !1685
-	%120 = and i32 %119, 61440, !dbg !1684
-	%121 = icmp eq i32 %120, 32768, !dbg !1684
+	%120 = and i32 %119, u0xF000, !dbg !1684
+	%121 = icmp eq i32 %120, u0x8000, !dbg !1684
 	br label %336
 
 ; <label>:122
@@ -2009,8 +2009,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:134
 	%135 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1701
 	%136 = load i32, i32* %135, align 8, !dbg !1701, !tbaa !1685
-	%137 = and i32 %136, 61440, !dbg !1701
-	%138 = icmp eq i32 %137, 16384, !dbg !1701
+	%137 = and i32 %136, u0xF000, !dbg !1701
+	%138 = icmp eq i32 %137, u0x4000, !dbg !1701
 	br label %336
 
 ; <label>:139
@@ -2070,8 +2070,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:167
 	%168 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1735
 	%169 = load i32, i32* %168, align 8, !dbg !1735, !tbaa !1685
-	%170 = and i32 %169, 61440, !dbg !1735
-	%171 = icmp eq i32 %170, 49152, !dbg !1735
+	%170 = and i32 %169, u0xF000, !dbg !1735
+	%171 = icmp eq i32 %170, u0xC000, !dbg !1735
 	br label %336
 
 ; <label>:172
@@ -2102,8 +2102,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:184
 	%185 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1751
 	%186 = load i32, i32* %185, align 8, !dbg !1751, !tbaa !1685
-	%187 = and i32 %186, 61440, !dbg !1751
-	%188 = icmp eq i32 %187, 8192, !dbg !1751
+	%187 = and i32 %186, u0xF000, !dbg !1751
+	%188 = icmp eq i32 %187, u0x2000, !dbg !1751
 	br label %336
 
 ; <label>:189
@@ -2134,8 +2134,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:201
 	%202 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1767
 	%203 = load i32, i32* %202, align 8, !dbg !1767, !tbaa !1685
-	%204 = and i32 %203, 61440, !dbg !1767
-	%205 = icmp eq i32 %204, 24576, !dbg !1767
+	%204 = and i32 %203, u0xF000, !dbg !1767
+	%205 = icmp eq i32 %204, u0x6000, !dbg !1767
 	br label %336
 
 ; <label>:206
@@ -2166,8 +2166,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:218
 	%219 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1783
 	%220 = load i32, i32* %219, align 8, !dbg !1783, !tbaa !1685
-	%221 = and i32 %220, 61440, !dbg !1783
-	%222 = icmp eq i32 %221, 4096, !dbg !1783
+	%221 = and i32 %220, u0xF000, !dbg !1783
+	%222 = icmp eq i32 %221, u0x1000, !dbg !1783
 	br label %336
 
 ; <label>:223
@@ -2198,8 +2198,8 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:235
 	%236 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1803
 	%237 = load i32, i32* %236, align 8, !dbg !1803, !tbaa !1685
-	%238 = and i32 %237, 61440, !dbg !1803
-	%239 = icmp eq i32 %238, 40960, !dbg !1803
+	%238 = and i32 %237, u0xF000, !dbg !1803
+	%239 = icmp eq i32 %238, u0xA000, !dbg !1803
 	br label %336
 
 ; <label>:240
@@ -2324,7 +2324,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 	call void @llvm.dbg.value(metadata i64 %303, metadata !1550, metadata !DIExpression()), !dbg !1870
 	%304 = load i32, i32* %302, align 4, !dbg !1871, !tbaa !716
 	%305 = icmp ne i32 %304, 34, !dbg !1872
-	%306 = icmp ult i64 %303, 2147483648, !dbg !1873
+	%306 = icmp ult i64 %303, u0x80000000, !dbg !1873
 	%307 = and i1 %306, %305, !dbg !1873
 	br i1 %307, label %308, label %336, !dbg !1873
 
@@ -4948,8 +4948,8 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !3219
-	call void @llvm.dbg.value(metadata i32 2147483646, metadata !3198, metadata !DIExpression()), !dbg !3220
-	%15 = icmp eq i32 %0, 2147483647, !dbg !3221
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !3198, metadata !DIExpression()), !dbg !3220
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !3221
 	br i1 %15, label %16, label %17, !dbg !3223
 
 ; <label>:16
@@ -5282,7 +5282,7 @@ define dso_local i8* @quotearg_colon(i8*) local_unnamed_addr #7 !dbg !3510 {
 	call void @llvm.dbg.value(metadata i32* %4, metadata !2115, metadata !DIExpression()) #11, !dbg !3530
 	call void @llvm.dbg.value(metadata i32 26, metadata !2117, metadata !DIExpression()) #11, !dbg !3531
 	%5 = load i32, i32* %4, align 4, !dbg !3532, !tbaa !716
-	%6 = or i32 %5, 67108864, !dbg !3533
+	%6 = or i32 %5, u0x4000000, !dbg !3533
 	store i32 %6, i32* %4, align 4, !dbg !3533, !tbaa !716
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %2, metadata !3447, metadata !DIExpression(DW_OP_deref)) #11, !dbg !3523
 	%7 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 -1, %struct.quoting_options* nonnull %2) #11, !dbg !3534
@@ -5310,7 +5310,7 @@ define dso_local i8* @quotearg_colon_mem(i8*, i64) local_unnamed_addr #7 !dbg !3
 	call void @llvm.dbg.value(metadata i32* %5, metadata !2115, metadata !DIExpression()) #11, !dbg !3556
 	call void @llvm.dbg.value(metadata i32 26, metadata !2117, metadata !DIExpression()) #11, !dbg !3557
 	%6 = load i32, i32* %5, align 4, !dbg !3558, !tbaa !716
-	%7 = or i32 %6, 67108864, !dbg !3559
+	%7 = or i32 %6, u0x4000000, !dbg !3559
 	store i32 %7, i32* %5, align 4, !dbg !3559, !tbaa !716
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %3, metadata !3447, metadata !DIExpression(DW_OP_deref)) #11, !dbg !3549
 	%8 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 %1, %struct.quoting_options* nonnull %3) #11, !dbg !3560
@@ -5357,7 +5357,7 @@ define dso_local i8* @quotearg_n_style_colon(i32, i32, i8*) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i32* %14, metadata !2115, metadata !DIExpression()), !dbg !3590
 	call void @llvm.dbg.value(metadata i32 26, metadata !2117, metadata !DIExpression()), !dbg !3591
 	%15 = load i32, i32* %14, align 4, !dbg !3592, !tbaa !716
-	%16 = or i32 %15, 67108864, !dbg !3593
+	%16 = or i32 %15, u0x4000000, !dbg !3593
 	store i32 %16, i32* %14, align 4, !dbg !3593, !tbaa !716
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %4, metadata !3568, metadata !DIExpression(DW_OP_deref)), !dbg !3583
 	%17 = call fastcc i8* @quotearg_n_options(i32 %0, i8* %2, i64 -1, %struct.quoting_options* nonnull %4), !dbg !3594
@@ -6532,7 +6532,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !42
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4244, metadata !DIExpression()), !dbg !4246
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4245, metadata !DIExpression()), !dbg !4247
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4248
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4248
 	%4 = icmp ult i64 %3, %0, !dbg !4248
 	br i1 %4, label %5, label %6, !dbg !4250
 
@@ -6583,7 +6583,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4282, metadata !DIExpression()), !dbg !4285
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4283, metadata !DIExpression()), !dbg !4286
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4284, metadata !DIExpression()), !dbg !4287
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4288
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4288
 	%5 = icmp ult i64 %4, %1, !dbg !4288
 	br i1 %5, label %6, label %7, !dbg !4290
 
@@ -6679,7 +6679,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4348
 	call void @llvm.dbg.value(metadata i64 %14, metadata !186, metadata !DIExpression()), !dbg !4335
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4349
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4349
 	%16 = icmp ult i64 %15, %14, !dbg !4349
 	br i1 %16, label %19, label %17, !dbg !4351
 
@@ -6696,7 +6696,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 	unreachable, !dbg !4358
 
 ; <label>:20
-	%21 = udiv i64 6148914691236517204, %2, !dbg !4359
+	%21 = udiv i64 u0x5555555555555554, %2, !dbg !4359
 	%22 = icmp ugt i64 %21, %4, !dbg !4362
 	br i1 %22, label %24, label %23, !dbg !4363
 
@@ -6792,7 +6792,7 @@ define dso_local noalias i8* @x2realloc(i8*, i64* nocapture) local_unnamed_addr 
 	unreachable, !dbg !4416
 
 ; <label>:12
-	%13 = icmp ult i64 %3, 6148914691236517204, !dbg !4417
+	%13 = icmp ult i64 %3, u0x5555555555555554, !dbg !4417
 	br i1 %13, label %15, label %14, !dbg !4418
 
 ; <label>:14
@@ -6857,7 +6857,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4447
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4449, metadata !DIExpression()), !dbg !4452
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4450, metadata !DIExpression()), !dbg !4453
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4454
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4454
 	%4 = icmp ult i64 %3, %0, !dbg !4454
 	br i1 %4, label %8, label %5, !dbg !4456
 
@@ -7082,7 +7082,7 @@ define internal fastcc noalias i8* @xstrcat(i64, %struct.__va_list_tag*) unnamed
 ; <label>:38
 	call void @llvm.dbg.value(metadata i64 %35, metadata !4590, metadata !DIExpression()), !dbg !4606
 	call void @llvm.va_end(i8* nonnull %4), !dbg !4611
-	%39 = icmp ugt i64 %35, 2147483647, !dbg !4637
+	%39 = icmp ugt i64 %35, u0x7FFFFFFF, !dbg !4637
 	br i1 %39, label %40, label %42, !dbg !4639
 
 ; <label>:40

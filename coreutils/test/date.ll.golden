@@ -1956,11 +1956,11 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	%84 = phi i8* [ %97, %95 ], [ %64, %77 ], !dbg !2408
 	call void @llvm.dbg.value(metadata i8* %84, metadata !2071, metadata !DIExpression()), !dbg !2368
 	call void @llvm.dbg.value(metadata i32 %83, metadata !2090, metadata !DIExpression()), !dbg !2381
-	%85 = icmp sgt i32 %83, 214748364, !dbg !2409
+	%85 = icmp sgt i32 %83, u0xCCCCCCC, !dbg !2409
 	br i1 %85, label %95, label %86, !dbg !2410
 
 ; <label>:86
-	%87 = icmp eq i32 %83, 214748364, !dbg !2411
+	%87 = icmp eq i32 %83, u0xCCCCCCC, !dbg !2411
 	%88 = icmp sgt i8 %82, 55, !dbg !2412
 	%89 = and i1 %87, %88, !dbg !2413
 	br i1 %89, label %95, label %90, !dbg !2413
@@ -1975,7 +1975,7 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	br label %95
 
 ; <label>:95
-	%96 = phi i32 [ %94, %90 ], [ 2147483647, %81 ], [ 2147483647, %86 ], !dbg !2419
+	%96 = phi i32 [ %94, %90 ], [ u0x7FFFFFFF, %81 ], [ u0x7FFFFFFF, %86 ], !dbg !2419
 	call void @llvm.dbg.value(metadata i32 %96, metadata !2090, metadata !DIExpression()), !dbg !2381
 	%97 = getelementptr inbounds i8, i8* %84, i64 1, !dbg !2420
 	call void @llvm.dbg.value(metadata i8* %97, metadata !2071, metadata !DIExpression()), !dbg !2368
@@ -3854,7 +3854,7 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	%1025 = trunc i64 %1017 to i32, !dbg !3164
 	call void @llvm.dbg.value(metadata i32 %1025, metadata !2326, metadata !DIExpression()), !dbg !3164
 	call void @llvm.dbg.value(metadata i64 %1017, metadata !2326, metadata !DIExpression()), !dbg !3164
-	%1026 = and i64 %1017, 4294967295, !dbg !3176
+	%1026 = and i64 %1017, u0xFFFFFFFF, !dbg !3176
 	call void @llvm.dbg.value(metadata i64 %1026, metadata !2328, metadata !DIExpression()), !dbg !3176
 	%1027 = icmp sgt i32 %107, 0, !dbg !3176
 	%1028 = select i1 %1027, i32 %107, i32 0, !dbg !3176
@@ -4371,7 +4371,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %120, label %578, label %123, !dbg !3429
 
 ; <label>:121
-	%122 = icmp sgt i64 %117, 922337203685477580, !dbg !3429
+	%122 = icmp sgt i64 %117, u0xCCCCCCCCCCCCCCC, !dbg !3429
 	br i1 %122, label %578, label %123, !dbg !3429
 
 ; <label>:123
@@ -4391,7 +4391,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %133, label %578, label %137, !dbg !3431
 
 ; <label>:134
-	%135 = sub nsw i64 9223372036854775807, %130, !dbg !3431
+	%135 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %130, !dbg !3431
 	%136 = icmp slt i64 %135, %124, !dbg !3431
 	br i1 %136, label %578, label %137, !dbg !3431
 
@@ -5830,7 +5830,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %770, label %774, label %773, !dbg !3940
 
 ; <label>:771
-	%772 = icmp sgt i64 %761, 153722867280912930, !dbg !3940
+	%772 = icmp sgt i64 %761, u0x222222222222222, !dbg !3940
 	br i1 %772, label %774, label %773, !dbg !3940
 
 ; <label>:773
@@ -5850,7 +5850,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br label %786, !dbg !3944
 
 ; <label>:782
-	%783 = sub nsw i64 9223372036854775807, %750, !dbg !3945
+	%783 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %750, !dbg !3945
 	%784 = icmp slt i64 %783, %776, !dbg !3945
 	%785 = add i64 %776, %750, !dbg !3945
 	br label %786, !dbg !3945
@@ -5968,7 +5968,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %848, label %852, label %851, !dbg !4013
 
 ; <label>:849
-	%850 = icmp sgt i64 %839, 153722867280912930, !dbg !4013
+	%850 = icmp sgt i64 %839, u0x222222222222222, !dbg !4013
 	br i1 %850, label %852, label %851, !dbg !4013
 
 ; <label>:851
@@ -5988,7 +5988,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br label %864, !dbg !4016
 
 ; <label>:860
-	%861 = sub nsw i64 9223372036854775807, %828, !dbg !4017
+	%861 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %828, !dbg !4017
 	%862 = icmp slt i64 %861, %854, !dbg !4017
 	%863 = add i64 %854, %828, !dbg !4017
 	br label %864, !dbg !4017
@@ -6026,16 +6026,16 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %884, label %894, label %889, !dbg !4023
 
 ; <label>:885
-	%886 = sub nsw i64 9223372036854775807, %879, !dbg !4023
+	%886 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %879, !dbg !4023
 	%887 = sext i32 %877 to i64, !dbg !4023
 	%888 = icmp slt i64 %886, %887, !dbg !4023
 	br i1 %888, label %894, label %889, !dbg !4023
 
 ; <label>:889
 	%890 = phi i64 [ %882, %881 ], [ %887, %885 ], !dbg !4023
-	%891 = add i64 %879, 2147483648, !dbg !4023
+	%891 = add i64 %879, u0x80000000, !dbg !4023
 	%892 = add i64 %891, %890, !dbg !4023
-	%893 = icmp ugt i64 %892, 4294967295, !dbg !4023
+	%893 = icmp ugt i64 %892, u0xFFFFFFFF, !dbg !4023
 	br i1 %893, label %894, label %897, !dbg !4023
 
 ; <label>:894
@@ -6392,7 +6392,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1060, label %1061, label %1064, !dbg !4191
 
 ; <label>:1061
-	%1062 = sdiv i64 9223372036854775807, %1056, !dbg !4191
+	%1062 = sdiv i64 u0x7FFFFFFFFFFFFFFF, %1056, !dbg !4191
 	%1063 = icmp slt i64 %1059, %1062, !dbg !4191
 	br i1 %1063, label %1343, label %1080, !dbg !4191
 
@@ -6420,7 +6420,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1076, label %1343, label %1080, !dbg !4191
 
 ; <label>:1077
-	%1078 = udiv i64 9223372036854775807, %1056
+	%1078 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1056
 	%1079 = icmp slt i64 %1078, %1071, !dbg !4191
 	br i1 %1079, label %1343, label %1080, !dbg !4191
 
@@ -6451,7 +6451,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1090, label %1091, label %1094, !dbg !4195
 
 ; <label>:1091
-	%1092 = sdiv i64 9223372036854775807, %1086, !dbg !4195
+	%1092 = sdiv i64 u0x7FFFFFFFFFFFFFFF, %1086, !dbg !4195
 	%1093 = icmp slt i64 %1089, %1092, !dbg !4195
 	br i1 %1093, label %1343, label %1110, !dbg !4195
 
@@ -6479,7 +6479,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1106, label %1343, label %1110, !dbg !4195
 
 ; <label>:1107
-	%1108 = udiv i64 9223372036854775807, %1086
+	%1108 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1086
 	%1109 = icmp slt i64 %1108, %1101, !dbg !4195
 	br i1 %1109, label %1343, label %1110, !dbg !4195
 
@@ -6708,7 +6708,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1162, label %1163, label %1166, !dbg !4239
 
 ; <label>:1163
-	%1164 = sdiv i64 9223372036854775807, %1158, !dbg !4239
+	%1164 = sdiv i64 u0x7FFFFFFFFFFFFFFF, %1158, !dbg !4239
 	%1165 = icmp slt i64 %1161, %1164, !dbg !4239
 	br i1 %1165, label %1343, label %1182, !dbg !4239
 
@@ -6736,7 +6736,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %1178, label %1343, label %1182, !dbg !4239
 
 ; <label>:1179
-	%1180 = udiv i64 9223372036854775807, %1158
+	%1180 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1158
 	%1181 = icmp slt i64 %1180, %1173, !dbg !4239
 	br i1 %1181, label %1343, label %1182, !dbg !4239
 
@@ -7710,7 +7710,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %9, label %11, label %15, !dbg !4843
 
 ; <label>:11
-	%12 = add nsw i32 %8, 2147483647, !dbg !4843
+	%12 = add nsw i32 %8, u0x7FFFFFFF, !dbg !4843
 	%13 = load i32, i32* %7, align 8, !dbg !4843, !tbaa !4744
 	%14 = icmp slt i32 %12, %13, !dbg !4843
 	br i1 %14, label %21, label %19, !dbg !4843
@@ -7737,7 +7737,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %28, label %29, label %33, !dbg !4844
 
 ; <label>:29
-	%30 = add nsw i64 %27, 9223372036854775807, !dbg !4844
+	%30 = add nsw i64 %27, u0x7FFFFFFFFFFFFFFF, !dbg !4844
 	%31 = load i64, i64* %26, align 8, !dbg !4844, !tbaa !4740
 	%32 = icmp slt i64 %30, %31, !dbg !4844
 	br i1 %32, label %39, label %37, !dbg !4844
@@ -7765,7 +7765,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %47, label %48, label %52, !dbg !4847
 
 ; <label>:48
-	%49 = add nsw i64 %46, 9223372036854775807, !dbg !4847
+	%49 = add nsw i64 %46, u0x7FFFFFFFFFFFFFFF, !dbg !4847
 	%50 = load i64, i64* %45, align 8, !dbg !4847, !tbaa !4736
 	%51 = icmp slt i64 %49, %50, !dbg !4847
 	br i1 %51, label %58, label %56, !dbg !4847
@@ -7793,7 +7793,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %66, label %67, label %71, !dbg !4850
 
 ; <label>:67
-	%68 = add nsw i64 %65, 9223372036854775807, !dbg !4850
+	%68 = add nsw i64 %65, u0x7FFFFFFFFFFFFFFF, !dbg !4850
 	%69 = load i64, i64* %64, align 8, !dbg !4850, !tbaa !4732
 	%70 = icmp slt i64 %68, %69, !dbg !4850
 	br i1 %70, label %77, label %75, !dbg !4850
@@ -7821,7 +7821,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %85, label %86, label %90, !dbg !4853
 
 ; <label>:86
-	%87 = add nsw i64 %84, 9223372036854775807, !dbg !4853
+	%87 = add nsw i64 %84, u0x7FFFFFFFFFFFFFFF, !dbg !4853
 	%88 = load i64, i64* %83, align 8, !dbg !4853, !tbaa !4728
 	%89 = icmp slt i64 %87, %88, !dbg !4853
 	br i1 %89, label %96, label %94, !dbg !4853
@@ -7849,7 +7849,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %104, label %105, label %109, !dbg !4856
 
 ; <label>:105
-	%106 = add nsw i64 %103, 9223372036854775807, !dbg !4856
+	%106 = add nsw i64 %103, u0x7FFFFFFFFFFFFFFF, !dbg !4856
 	%107 = load i64, i64* %102, align 8, !dbg !4856, !tbaa !4724
 	%108 = icmp slt i64 %106, %107, !dbg !4856
 	br i1 %108, label %115, label %113, !dbg !4856
@@ -7877,7 +7877,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %123, label %124, label %128, !dbg !4859
 
 ; <label>:124
-	%125 = add nsw i64 %122, 9223372036854775807, !dbg !4859
+	%125 = add nsw i64 %122, u0x7FFFFFFFFFFFFFFF, !dbg !4859
 	%126 = load i64, i64* %121, align 8, !dbg !4859, !tbaa !4720
 	%127 = icmp slt i64 %125, %126, !dbg !4859
 	br i1 %127, label %134, label %132, !dbg !4859
@@ -7911,7 +7911,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %144, label %151, label %149, !dbg !4863
 
 ; <label>:145
-	%146 = sub nsw i32 2147483647, %8, !dbg !4863
+	%146 = sub nsw i32 u0x7FFFFFFF, %8, !dbg !4863
 	%147 = load i32, i32* %7, align 8, !dbg !4863, !tbaa !4744
 	%148 = icmp slt i32 %146, %147, !dbg !4863
 	br i1 %148, label %151, label %149, !dbg !4863
@@ -7938,7 +7938,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %162, label %169, label %167, !dbg !4864
 
 ; <label>:163
-	%164 = sub nsw i64 9223372036854775807, %157, !dbg !4864
+	%164 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %157, !dbg !4864
 	%165 = load i64, i64* %156, align 8, !dbg !4864, !tbaa !4740
 	%166 = icmp slt i64 %164, %165, !dbg !4864
 	br i1 %166, label %169, label %167, !dbg !4864
@@ -7966,7 +7966,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %181, label %188, label %186, !dbg !4866
 
 ; <label>:182
-	%183 = sub nsw i64 9223372036854775807, %176, !dbg !4866
+	%183 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %176, !dbg !4866
 	%184 = load i64, i64* %175, align 8, !dbg !4866, !tbaa !4736
 	%185 = icmp slt i64 %183, %184, !dbg !4866
 	br i1 %185, label %188, label %186, !dbg !4866
@@ -7994,7 +7994,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %200, label %207, label %205, !dbg !4868
 
 ; <label>:201
-	%202 = sub nsw i64 9223372036854775807, %195, !dbg !4868
+	%202 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %195, !dbg !4868
 	%203 = load i64, i64* %194, align 8, !dbg !4868, !tbaa !4732
 	%204 = icmp slt i64 %202, %203, !dbg !4868
 	br i1 %204, label %207, label %205, !dbg !4868
@@ -8022,7 +8022,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %219, label %226, label %224, !dbg !4870
 
 ; <label>:220
-	%221 = sub nsw i64 9223372036854775807, %214, !dbg !4870
+	%221 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %214, !dbg !4870
 	%222 = load i64, i64* %213, align 8, !dbg !4870, !tbaa !4728
 	%223 = icmp slt i64 %221, %222, !dbg !4870
 	br i1 %223, label %226, label %224, !dbg !4870
@@ -8050,7 +8050,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %238, label %245, label %243, !dbg !4872
 
 ; <label>:239
-	%240 = sub nsw i64 9223372036854775807, %233, !dbg !4872
+	%240 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %233, !dbg !4872
 	%241 = load i64, i64* %232, align 8, !dbg !4872, !tbaa !4724
 	%242 = icmp slt i64 %240, %241, !dbg !4872
 	br i1 %242, label %245, label %243, !dbg !4872
@@ -8078,7 +8078,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %257, label %264, label %262, !dbg !4874
 
 ; <label>:258
-	%259 = sub nsw i64 9223372036854775807, %252, !dbg !4874
+	%259 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %252, !dbg !4874
 	%260 = load i64, i64* %251, align 8, !dbg !4874, !tbaa !4720
 	%261 = icmp slt i64 %259, %260, !dbg !4874
 	br i1 %261, label %264, label %262, !dbg !4874
@@ -8918,7 +8918,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:381
 	%382 = phi i64 [ %376, %379 ], [ %368, %365 ]
 	%383 = sub i64 2147481748, %382, !dbg !5406
-	%384 = icmp ugt i64 %383, 4294967295, !dbg !5406
+	%384 = icmp ugt i64 %383, u0xFFFFFFFF, !dbg !5406
 	%385 = trunc i64 %382 to i32, !dbg !5406
 	%386 = sub i32 -1900, %385, !dbg !5406
 	br i1 %384, label %392, label %397, !dbg !5406
@@ -8945,8 +8945,8 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%398 = phi i32 [ %391, %387 ], [ %386, %381 ]
 	store i32 %398, i32* %367, align 4, !dbg !5408, !tbaa !1265
 	%399 = load i64, i64* %126, align 8, !dbg !5414, !tbaa !4071
-	%400 = add i64 %399, 2147483647, !dbg !5414
-	%401 = icmp ugt i64 %400, 4294967295, !dbg !5414
+	%400 = add i64 %399, u0x7FFFFFFF, !dbg !5414
+	%401 = icmp ugt i64 %400, u0xFFFFFFFF, !dbg !5414
 	%402 = trunc i64 %399 to i32, !dbg !5414
 	%403 = add i32 %402, -1, !dbg !5414
 	%404 = getelementptr inbounds %struct.tm, %struct.tm* %14, i64 0, i32 4, !dbg !5414
@@ -8955,8 +8955,8 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 
 ; <label>:405
 	%406 = load i64, i64* %130, align 8, !dbg !5415, !tbaa !4074
-	%407 = add i64 %406, 2147483648, !dbg !5415
-	%408 = icmp ugt i64 %407, 4294967295, !dbg !5415
+	%407 = add i64 %406, u0x80000000, !dbg !5415
+	%408 = icmp ugt i64 %407, u0xFFFFFFFF, !dbg !5415
 	%409 = trunc i64 %406 to i32, !dbg !5415
 	%410 = getelementptr inbounds %struct.tm, %struct.tm* %14, i64 0, i32 3, !dbg !5415
 	store i32 %409, i32* %410, align 4, !dbg !5415, !tbaa !2632
@@ -9486,7 +9486,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%725 = shl i64 %715, 32, !dbg !5750
 	%726 = ashr exact i64 %725, 32, !dbg !5750
 	%727 = getelementptr inbounds [100 x i8], [100 x i8]* %9, i64 0, i64 %726, !dbg !5750
-	%728 = sub i64 429496729600, %725, !dbg !5750
+	%728 = sub i64 u0x6400000000, %725, !dbg !5750
 	%729 = ashr exact i64 %728, 32, !dbg !5750
 	%730 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %727, i1 false, i1 true) #12, !dbg !5750
 	call void @llvm.dbg.value(metadata i32 %723, metadata !4625, metadata !DIExpression()) #12, !dbg !5751
@@ -9588,7 +9588,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%784 = shl i64 %774, 32, !dbg !5812
 	%785 = ashr exact i64 %784, 32, !dbg !5812
 	%786 = getelementptr inbounds [100 x i8], [100 x i8]* %9, i64 0, i64 %785, !dbg !5812
-	%787 = sub i64 429496729600, %784, !dbg !5812
+	%787 = sub i64 u0x6400000000, %784, !dbg !5812
 	%788 = ashr exact i64 %787, 32, !dbg !5812
 	%789 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %786, i1 false, i1 true) #12, !dbg !5812
 	call void @llvm.dbg.value(metadata i32 %782, metadata !4625, metadata !DIExpression()) #12, !dbg !5813
@@ -9818,7 +9818,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%911 = phi i1 [ false, %903 ], [ %909, %904 ], !dbg !5908
 	%912 = zext i1 %911 to i64, !dbg !5906
 	%913 = sub nsw i64 %879, %912, !dbg !5906
-	%914 = icmp sgt i64 %913, 1317624576693539401, !dbg !5906
+	%914 = icmp sgt i64 %913, u0x1249249249249249, !dbg !5906
 	br i1 %914, label %970, label %915, !dbg !5906
 
 ; <label>:915
@@ -9860,7 +9860,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %941, label %970, label %951, !dbg !5909
 
 ; <label>:942
-	%943 = sub nsw i64 9223372036854775807, %931, !dbg !5909
+	%943 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %931, !dbg !5909
 	%944 = load i32, i32* %927, align 8, !dbg !5909, !tbaa !4043
 	%945 = load i32, i32* %926, align 8, !dbg !5909, !tbaa !2960
 	%946 = add i32 %944, 7, !dbg !5909
@@ -9885,14 +9885,14 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %959, label %967, label %963, !dbg !5911
 
 ; <label>:960
-	%961 = sub nsw i64 9223372036854775807, %956, !dbg !5911
+	%961 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %956, !dbg !5911
 	%962 = icmp slt i64 %961, %953, !dbg !5911
 	br i1 %962, label %967, label %963, !dbg !5911
 
 ; <label>:963
-	%964 = add nsw i64 %956, 2147483648, !dbg !5911
+	%964 = add nsw i64 %956, u0x80000000, !dbg !5911
 	%965 = add i64 %964, %953, !dbg !5911
-	%966 = icmp ugt i64 %965, 4294967295, !dbg !5911
+	%966 = icmp ugt i64 %965, u0xFFFFFFFF, !dbg !5911
 	br i1 %966, label %967, label %975, !dbg !5911
 
 ; <label>:967
@@ -9959,7 +9959,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%999 = shl i64 %989, 32, !dbg !5935
 	%1000 = ashr exact i64 %999, 32, !dbg !5935
 	%1001 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1000, !dbg !5935
-	%1002 = sub i64 429496729600, %999, !dbg !5935
+	%1002 = sub i64 u0x6400000000, %999, !dbg !5935
 	%1003 = ashr exact i64 %1002, 32, !dbg !5935
 	%1004 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1001, i1 false, i1 true) #12, !dbg !5935
 	call void @llvm.dbg.value(metadata i32 %997, metadata !4625, metadata !DIExpression()) #12, !dbg !5936
@@ -10071,7 +10071,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1061 = shl i64 %1051, 32, !dbg !5999
 	%1062 = ashr exact i64 %1061, 32, !dbg !5999
 	%1063 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1062, !dbg !5999
-	%1064 = sub i64 429496729600, %1061, !dbg !5999
+	%1064 = sub i64 u0x6400000000, %1061, !dbg !5999
 	%1065 = ashr exact i64 %1064, 32, !dbg !5999
 	%1066 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1063, i1 false, i1 true) #12, !dbg !5999
 	call void @llvm.dbg.value(metadata i32 %1059, metadata !4625, metadata !DIExpression()) #12, !dbg !6000
@@ -10241,7 +10241,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1162 = shl i64 %1152, 32, !dbg !6091
 	%1163 = ashr exact i64 %1162, 32, !dbg !6091
 	%1164 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1163, !dbg !6091
-	%1165 = sub i64 429496729600, %1162, !dbg !6091
+	%1165 = sub i64 u0x6400000000, %1162, !dbg !6091
 	%1166 = ashr exact i64 %1165, 32, !dbg !6091
 	%1167 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1164, i1 false, i1 true) #12, !dbg !6091
 	call void @llvm.dbg.value(metadata i32 %1160, metadata !4625, metadata !DIExpression()) #12, !dbg !6092
@@ -10379,7 +10379,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1247, label %1312, label %1253, !dbg !6165
 
 ; <label>:1248
-	%1249 = sub nsw i64 9223372036854775807, %1241, !dbg !6165
+	%1249 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1241, !dbg !6165
 	%1250 = load i32, i32* %367, align 4, !dbg !6165, !tbaa !2610
 	%1251 = sext i32 %1250 to i64, !dbg !6165
 	%1252 = icmp slt i64 %1249, %1251, !dbg !6165
@@ -10388,9 +10388,9 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1253
 	%1254 = phi i64 [ %1245, %1243 ], [ %1251, %1248 ], !dbg !6165
 	%1255 = phi i32 [ %1244, %1243 ], [ %1250, %1248 ], !dbg !6165
-	%1256 = add i64 %1241, 2147483648, !dbg !6165
+	%1256 = add i64 %1241, u0x80000000, !dbg !6165
 	%1257 = add i64 %1256, %1254, !dbg !6165
-	%1258 = icmp ugt i64 %1257, 4294967295, !dbg !6165
+	%1258 = icmp ugt i64 %1257, u0xFFFFFFFF, !dbg !6165
 	br i1 %1258, label %1312, label %1259, !dbg !6165
 
 ; <label>:1259
@@ -10409,7 +10409,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1268, label %1312, label %1274, !dbg !6168
 
 ; <label>:1269
-	%1270 = sub nsw i64 9223372036854775807, %1262, !dbg !6168
+	%1270 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1262, !dbg !6168
 	%1271 = load i32, i32* %404, align 16, !dbg !6168, !tbaa !2866
 	%1272 = sext i32 %1271 to i64, !dbg !6168
 	%1273 = icmp slt i64 %1270, %1272, !dbg !6168
@@ -10418,9 +10418,9 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1274
 	%1275 = phi i64 [ %1266, %1264 ], [ %1272, %1269 ], !dbg !6168
 	%1276 = phi i32 [ %1265, %1264 ], [ %1271, %1269 ], !dbg !6168
-	%1277 = add i64 %1262, 2147483648, !dbg !6168
+	%1277 = add i64 %1262, u0x80000000, !dbg !6168
 	%1278 = add i64 %1277, %1275, !dbg !6168
-	%1279 = icmp ugt i64 %1278, 4294967295, !dbg !6168
+	%1279 = icmp ugt i64 %1278, u0xFFFFFFFF, !dbg !6168
 	br i1 %1279, label %1312, label %1280, !dbg !6168
 
 ; <label>:1280
@@ -10439,7 +10439,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1289, label %1312, label %1295, !dbg !6170
 
 ; <label>:1290
-	%1291 = sub nsw i64 9223372036854775807, %1283, !dbg !6170
+	%1291 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1283, !dbg !6170
 	%1292 = load i32, i32* %410, align 4, !dbg !6170, !tbaa !2632
 	%1293 = sext i32 %1292 to i64, !dbg !6170
 	%1294 = icmp slt i64 %1291, %1293, !dbg !6170
@@ -10448,9 +10448,9 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1295
 	%1296 = phi i64 [ %1287, %1285 ], [ %1293, %1290 ], !dbg !6170
 	%1297 = phi i32 [ %1286, %1285 ], [ %1292, %1290 ], !dbg !6170
-	%1298 = add i64 %1283, 2147483648, !dbg !6170
+	%1298 = add i64 %1283, u0x80000000, !dbg !6170
 	%1299 = add i64 %1298, %1296, !dbg !6170
-	%1300 = icmp ugt i64 %1299, 4294967295, !dbg !6170
+	%1300 = icmp ugt i64 %1299, u0xFFFFFFFF, !dbg !6170
 	br i1 %1300, label %1312, label %1301, !dbg !6170
 
 ; <label>:1301
@@ -10515,7 +10515,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1330 = shl i64 %1320, 32, !dbg !6207
 	%1331 = ashr exact i64 %1330, 32, !dbg !6207
 	%1332 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1331, !dbg !6207
-	%1333 = sub i64 429496729600, %1330, !dbg !6207
+	%1333 = sub i64 u0x6400000000, %1330, !dbg !6207
 	%1334 = ashr exact i64 %1333, 32, !dbg !6207
 	%1335 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1332, i1 false, i1 true) #12, !dbg !6207
 	call void @llvm.dbg.value(metadata i32 %1328, metadata !4625, metadata !DIExpression()) #12, !dbg !6208
@@ -10630,7 +10630,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1395 = shl i64 %1385, 32, !dbg !6275
 	%1396 = ashr exact i64 %1395, 32, !dbg !6275
 	%1397 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1396, !dbg !6275
-	%1398 = sub i64 429496729600, %1395, !dbg !6275
+	%1398 = sub i64 u0x6400000000, %1395, !dbg !6275
 	%1399 = ashr exact i64 %1398, 32, !dbg !6275
 	%1400 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1397, i1 false, i1 true) #12, !dbg !6275
 	call void @llvm.dbg.value(metadata i32 %1393, metadata !4625, metadata !DIExpression()) #12, !dbg !6276
@@ -10807,7 +10807,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1508, label %1509, label %1512, !dbg !6376
 
 ; <label>:1509
-	%1510 = add nsw i64 %1507, 9223372036854775807, !dbg !6376
+	%1510 = add nsw i64 %1507, u0x7FFFFFFFFFFFFFFF, !dbg !6376
 	%1511 = icmp slt i64 %1510, %1505, !dbg !6376
 	br i1 %1511, label %1516, label %1515, !dbg !6376
 
@@ -10827,7 +10827,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1519, label %1520, label %1523, !dbg !6377
 
 ; <label>:1520
-	%1521 = add nsw i64 %1518, 9223372036854775807, !dbg !6377
+	%1521 = add nsw i64 %1518, u0x7FFFFFFFFFFFFFFF, !dbg !6377
 	%1522 = icmp slt i64 %1521, %1499, !dbg !6377
 	br i1 %1522, label %1527, label %1526, !dbg !6377
 
@@ -10892,7 +10892,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1554 = shl i64 %1544, 32, !dbg !6405
 	%1555 = ashr exact i64 %1554, 32, !dbg !6405
 	%1556 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1555, !dbg !6405
-	%1557 = sub i64 429496729600, %1554, !dbg !6405
+	%1557 = sub i64 u0x6400000000, %1554, !dbg !6405
 	%1558 = ashr exact i64 %1557, 32, !dbg !6405
 	%1559 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1556, i1 false, i1 true) #12, !dbg !6405
 	call void @llvm.dbg.value(metadata i32 %1552, metadata !4625, metadata !DIExpression()) #12, !dbg !6406
@@ -11013,7 +11013,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1626, label %1676, label %1630, !dbg !6471
 
 ; <label>:1627
-	%1628 = sub nsw i64 9223372036854775807, %1622, !dbg !6471
+	%1628 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1622, !dbg !6471
 	%1629 = icmp slt i64 %1628, %1539, !dbg !6471
 	br i1 %1629, label %1676, label %1630, !dbg !6471
 
@@ -11030,7 +11030,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1636, label %1676, label %1639, !dbg !6473
 
 ; <label>:1637
-	%1638 = icmp sgt i64 %1633, 153722867280912930, !dbg !6473
+	%1638 = icmp sgt i64 %1633, u0x222222222222222, !dbg !6473
 	br i1 %1638, label %1676, label %1639, !dbg !6473
 
 ; <label>:1639
@@ -11045,7 +11045,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1644, label %1676, label %1648, !dbg !6475
 
 ; <label>:1645
-	%1646 = sub nsw i64 9223372036854775807, %1640, !dbg !6475
+	%1646 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1640, !dbg !6475
 	%1647 = icmp slt i64 %1646, %1631, !dbg !6475
 	br i1 %1647, label %1676, label %1648, !dbg !6475
 
@@ -11063,7 +11063,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1655, label %1676, label %1659, !dbg !6477
 
 ; <label>:1656
-	%1657 = sub nsw i64 9223372036854775807, %1651, !dbg !6477
+	%1657 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1651, !dbg !6477
 	%1658 = icmp slt i64 %1657, %1649, !dbg !6477
 	br i1 %1658, label %1676, label %1659, !dbg !6477
 
@@ -11081,7 +11081,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1666, label %1676, label %1670, !dbg !6479
 
 ; <label>:1667
-	%1668 = sub nsw i64 9223372036854775807, %1663, !dbg !6479
+	%1668 = sub nsw i64 u0x7FFFFFFFFFFFFFFF, %1663, !dbg !6479
 	%1669 = icmp slt i64 %1668, %1660, !dbg !6479
 	br i1 %1669, label %1676, label %1670, !dbg !6479
 
@@ -11496,7 +11496,7 @@ define dso_local zeroext i1 @posixtime(i64* nocapture, i8*, i32) local_unnamed_a
 	br i1 %48, label %110, label %49, !dbg !6730
 
 ; <label>:49
-	%50 = and i64 %45, 9223372036854775804, !dbg !6730
+	%50 = and i64 %45, u0x7FFFFFFFFFFFFFFC, !dbg !6730
 	%51 = add nsw i64 %50, -4, !dbg !6730
 	%52 = lshr exact i64 %51, 2, !dbg !6730
 	%53 = add nuw nsw i64 %52, 1, !dbg !6730
@@ -14246,8 +14246,8 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !8125
-	call void @llvm.dbg.value(metadata i32 2147483646, metadata !8104, metadata !DIExpression()), !dbg !8126
-	%15 = icmp eq i32 %0, 2147483647, !dbg !8127
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !8104, metadata !DIExpression()), !dbg !8126
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !8127
 	br i1 %15, label %16, label %17, !dbg !8129
 
 ; <label>:16
@@ -14578,7 +14578,7 @@ define dso_local i8* @quotearg_colon(i8*) local_unnamed_addr #7 !dbg !8416 {
 	call void @llvm.dbg.value(metadata i32* %4, metadata !7025, metadata !DIExpression()) #12, !dbg !8436
 	call void @llvm.dbg.value(metadata i32 26, metadata !7027, metadata !DIExpression()) #12, !dbg !8437
 	%5 = load i32, i32* %4, align 4, !dbg !8438, !tbaa !1265
-	%6 = or i32 %5, 67108864, !dbg !8439
+	%6 = or i32 %5, u0x4000000, !dbg !8439
 	store i32 %6, i32* %4, align 4, !dbg !8439, !tbaa !1265
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %2, metadata !8353, metadata !DIExpression(DW_OP_deref)) #12, !dbg !8429
 	%7 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 -1, %struct.quoting_options* nonnull %2) #12, !dbg !8440
@@ -14606,7 +14606,7 @@ define dso_local i8* @quotearg_colon_mem(i8*, i64) local_unnamed_addr #7 !dbg !8
 	call void @llvm.dbg.value(metadata i32* %5, metadata !7025, metadata !DIExpression()) #12, !dbg !8462
 	call void @llvm.dbg.value(metadata i32 26, metadata !7027, metadata !DIExpression()) #12, !dbg !8463
 	%6 = load i32, i32* %5, align 4, !dbg !8464, !tbaa !1265
-	%7 = or i32 %6, 67108864, !dbg !8465
+	%7 = or i32 %6, u0x4000000, !dbg !8465
 	store i32 %7, i32* %5, align 4, !dbg !8465, !tbaa !1265
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %3, metadata !8353, metadata !DIExpression(DW_OP_deref)) #12, !dbg !8455
 	%8 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 %1, %struct.quoting_options* nonnull %3) #12, !dbg !8466
@@ -14653,7 +14653,7 @@ define dso_local i8* @quotearg_n_style_colon(i32, i32, i8*) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i32* %14, metadata !7025, metadata !DIExpression()), !dbg !8496
 	call void @llvm.dbg.value(metadata i32 26, metadata !7027, metadata !DIExpression()), !dbg !8497
 	%15 = load i32, i32* %14, align 4, !dbg !8498, !tbaa !1265
-	%16 = or i32 %15, 67108864, !dbg !8499
+	%16 = or i32 %15, u0x4000000, !dbg !8499
 	store i32 %16, i32* %14, align 4, !dbg !8499, !tbaa !1265
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %4, metadata !8474, metadata !DIExpression(DW_OP_deref)), !dbg !8489
 	%17 = call fastcc i8* @quotearg_n_options(i32 %0, i8* %2, i64 -1, %struct.quoting_options* nonnull %4), !dbg !8500
@@ -15425,7 +15425,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !89
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !8929, metadata !DIExpression()), !dbg !8931
 	call void @llvm.dbg.value(metadata i64 %1, metadata !8930, metadata !DIExpression()), !dbg !8932
-	%3 = udiv i64 9223372036854775807, %1, !dbg !8933
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !8933
 	%4 = icmp ult i64 %3, %0, !dbg !8933
 	br i1 %4, label %5, label %6, !dbg !8935
 
@@ -15474,7 +15474,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !8967, metadata !DIExpression()), !dbg !8970
 	call void @llvm.dbg.value(metadata i64 %1, metadata !8968, metadata !DIExpression()), !dbg !8971
 	call void @llvm.dbg.value(metadata i64 %2, metadata !8969, metadata !DIExpression()), !dbg !8972
-	%4 = udiv i64 9223372036854775807, %2, !dbg !8973
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !8973
 	%5 = icmp ult i64 %4, %1, !dbg !8973
 	br i1 %5, label %6, label %7, !dbg !8975
 
@@ -15570,7 +15570,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !9033
 	call void @llvm.dbg.value(metadata i64 %14, metadata !1082, metadata !DIExpression()), !dbg !9020
-	%15 = udiv i64 9223372036854775807, %2, !dbg !9034
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !9034
 	%16 = icmp ult i64 %15, %14, !dbg !9034
 	br i1 %16, label %19, label %17, !dbg !9036
 
@@ -15587,7 +15587,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 	unreachable, !dbg !9043
 
 ; <label>:20
-	%21 = udiv i64 6148914691236517204, %2, !dbg !9044
+	%21 = udiv i64 u0x5555555555555554, %2, !dbg !9044
 	%22 = icmp ugt i64 %21, %4, !dbg !9047
 	br i1 %22, label %24, label %23, !dbg !9048
 
@@ -15683,7 +15683,7 @@ define dso_local noalias i8* @x2realloc(i8*, i64* nocapture) local_unnamed_addr 
 	unreachable, !dbg !9101
 
 ; <label>:12
-	%13 = icmp ult i64 %3, 6148914691236517204, !dbg !9102
+	%13 = icmp ult i64 %3, u0x5555555555555554, !dbg !9102
 	br i1 %13, label %15, label %14, !dbg !9103
 
 ; <label>:14
@@ -15748,7 +15748,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !9132
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !9134, metadata !DIExpression()), !dbg !9137
 	call void @llvm.dbg.value(metadata i64 %1, metadata !9135, metadata !DIExpression()), !dbg !9138
-	%3 = udiv i64 9223372036854775807, %1, !dbg !9139
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !9139
 	%4 = icmp ult i64 %3, %0, !dbg !9139
 	br i1 %4, label %8, label %5, !dbg !9141
 
@@ -16986,11 +16986,11 @@ define internal fastcc i64 @__strftime_internal.361(i8*, i64, i8* readonly, %str
 	%86 = phi i8* [ %99, %97 ], [ %66, %79 ], !dbg !10385
 	call void @llvm.dbg.value(metadata i8* %86, metadata !10127, metadata !DIExpression()), !dbg !10343
 	call void @llvm.dbg.value(metadata i32 %85, metadata !10143, metadata !DIExpression()), !dbg !10356
-	%87 = icmp sgt i32 %85, 214748364, !dbg !10386
+	%87 = icmp sgt i32 %85, u0xCCCCCCC, !dbg !10386
 	br i1 %87, label %97, label %88, !dbg !10387
 
 ; <label>:88
-	%89 = icmp eq i32 %85, 214748364, !dbg !10388
+	%89 = icmp eq i32 %85, u0xCCCCCCC, !dbg !10388
 	%90 = icmp sgt i8 %84, 55, !dbg !10389
 	%91 = and i1 %89, %90, !dbg !10390
 	br i1 %91, label %97, label %92, !dbg !10390
@@ -17005,7 +17005,7 @@ define internal fastcc i64 @__strftime_internal.361(i8*, i64, i8* readonly, %str
 	br label %97
 
 ; <label>:97
-	%98 = phi i32 [ %96, %92 ], [ 2147483647, %83 ], [ 2147483647, %88 ], !dbg !10396
+	%98 = phi i32 [ %96, %92 ], [ u0x7FFFFFFF, %83 ], [ u0x7FFFFFFF, %88 ], !dbg !10396
 	call void @llvm.dbg.value(metadata i32 %98, metadata !10143, metadata !DIExpression()), !dbg !10356
 	%99 = getelementptr inbounds i8, i8* %86, i64 1, !dbg !10397
 	call void @llvm.dbg.value(metadata i8* %99, metadata !10127, metadata !DIExpression()), !dbg !10343
@@ -19154,7 +19154,7 @@ define internal fastcc i64 @__strftime_internal.361(i8*, i64, i8* readonly, %str
 	%1199 = trunc i64 %1191 to i32, !dbg !11024
 	call void @llvm.dbg.value(metadata i32 %1199, metadata !10309, metadata !DIExpression()), !dbg !11024
 	call void @llvm.dbg.value(metadata i64 %1191, metadata !10309, metadata !DIExpression()), !dbg !11024
-	%1200 = and i64 %1191, 4294967295, !dbg !11036
+	%1200 = and i64 %1191, u0xFFFFFFFF, !dbg !11036
 	call void @llvm.dbg.value(metadata i64 %1200, metadata !10311, metadata !DIExpression()), !dbg !11036
 	%1201 = icmp sgt i32 %109, 0, !dbg !11036
 	%1202 = select i1 %1201, i32 %109, i32 0, !dbg !11036

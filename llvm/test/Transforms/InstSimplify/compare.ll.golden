@@ -504,7 +504,7 @@ define i1 @srem2(i16 %X, i32 %Y) {
 define i1 @srem3(i16 %X, i32 %Y) {
 ; <label>:0
 	%A = zext i16 %X to i32
-	%B = or i32 2147483648, %A
+	%B = or i32 u0x80000000, %A
 	%C = sub nsw i32 1, %B
 	%D = srem i32 %C, %Y
 	%E = icmp slt i32 %D, 0
@@ -685,7 +685,7 @@ define i1 @non_inbounds_gep_compare(i64* %a) {
 
 define i1 @non_inbounds_gep_compare2(i64* %a) {
 ; <label>:0
-	%x = getelementptr i64, i64* %a, i64 4294967297
+	%x = getelementptr i64, i64* %a, i64 u0x100000001
 	%y = getelementptr i64, i64* %a, i64 1
 	%cmp = icmp eq i64* %y, %y
 	ret i1 %cmp
@@ -869,14 +869,14 @@ define i1 @icmp_sdiv_int_min(i32 %a) {
 define i1 @icmp_sdiv_pr20288(i64 %a) {
 ; <label>:0
 	%div = sdiv i64 %a, -8589934592
-	%cmp = icmp ne i64 %div, 1073741824
+	%cmp = icmp ne i64 %div, u0x40000000
 	ret i1 %cmp
 }
 
 define i1 @icmp_sdiv_neg1(i64 %a) {
 ; <label>:0
 	%div = sdiv i64 %a, -1
-	%cmp = icmp ne i64 %div, 1073741824
+	%cmp = icmp ne i64 %div, u0x40000000
 	ret i1 %cmp
 }
 
@@ -901,14 +901,14 @@ define i1 @icmp_shl_nuw_1(i64 %a) {
 define i1 @icmp_shl_1_V_ugt_2147483648(i32 %V) {
 ; <label>:0
 	%shl = shl i32 1, %V
-	%cmp = icmp ugt i32 %shl, 2147483648
+	%cmp = icmp ugt i32 %shl, u0x80000000
 	ret i1 %cmp
 }
 
 define i1 @icmp_shl_1_V_ule_2147483648(i32 %V) {
 ; <label>:0
 	%shl = shl i32 1, %V
-	%cmp = icmp ule i32 %shl, 2147483648
+	%cmp = icmp ule i32 %shl, u0x80000000
 	ret i1 %cmp
 }
 
@@ -986,10 +986,10 @@ declare void @helper_i1(i1)
 
 define void @icmp_slt_sge_or(i32 %Ax, i32 %Bx) {
 ; <label>:0
-	%Aneg = or i32 %Ax, 2147483648
-	%Apos = and i32 %Ax, 2147483647
-	%Bneg = or i32 %Bx, 2147483648
-	%Bpos = and i32 %Bx, 2147483647
+	%Aneg = or i32 %Ax, u0x80000000
+	%Apos = and i32 %Ax, u0x7FFFFFFF
+	%Bneg = or i32 %Bx, u0x80000000
+	%Bpos = and i32 %Bx, u0x7FFFFFFF
 	%Cpp = or i32 %Apos, %Bpos
 	%Dpp = icmp slt i32 %Cpp, %Apos
 	%Epp = icmp sge i32 %Cpp, %Apos

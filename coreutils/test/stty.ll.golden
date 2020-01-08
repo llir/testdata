@@ -167,7 +167,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.299 = private unnamed_addr constant [9 x i8] c"%s = %s;\00", align 1
 @.str.250 = private unnamed_addr constant [4 x i8] c"min\00", align 1
 @.str.300 = private unnamed_addr constant [24 x i8] c"min = %lu; time = %lu;\0A\00", align 1
-@mode_info = internal unnamed_addr constant [90 x %struct.mode_info] [%struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.143, i32 0, i32 0), i32 0, i8 4, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.144, i32 0, i32 0), i32 0, i8 4, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.145, i32 0, i32 0), i32 0, i8 4, i64 1073741824, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.146, i32 0, i32 0), i32 0, i8 0, i64 0, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.147, i32 0, i32 0), i32 0, i8 0, i64 16, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.148, i32 0, i32 0), i32 0, i8 0, i64 32, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.149, i32 0, i32 0), i32 0, i8 0, i64 48, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.150, i32 0, i32 0), i32 0, i8 4, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.151, i32 0, i32 0), i32 0, i8 12, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.152, i32 0, i32 0), i32 0, i8 4, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.153, i32 0, i32 0), i32 0, i8 5, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.154, i32 0, i32 0), i32 0, i8 4, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.155, i32 0, i32 0), i32 0, i8 4, i64 2147483648, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.156, i32 0, i32 0), i32 1, i8 6, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.157, i32 0, i32 0), i32 1, i8 5, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.158, i32 0, i32 0), i32 1, i8 4, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.159, i32 0, i32 0), i32 1, i8 4, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.160, i32 0, i32 0), i32 1, i8 4, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.161, i32 0, i32 0), i32 1, i8 4, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.162, i32 0, i32 0), i32 1, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.163, i32 0, i32 0), i32 1, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.164, i32 0, i32 0), i32 1, i8 5, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.165, i32 0, i32 0), i32 1, i8 4, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.166, i32 0, i32 0), i32 1, i8 6, i64 4096, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.167, i32 0, i32 0), i32 1, i8 12, i64 4096, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.168, i32 0, i32 0), i32 1, i8 6, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.169, i32 0, i32 0), i32 1, i8 6, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.170, i32 0, i32 0), i32 1, i8 5, i64 8192, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.171, i32 0, i32 0), i32 1, i8 6, i64 16384, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.172, i32 0, i32 0), i32 2, i8 5, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.173, i32 0, i32 0), i32 2, i8 6, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.174, i32 0, i32 0), i32 2, i8 6, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.175, i32 0, i32 0), i32 2, i8 5, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.176, i32 0, i32 0), i32 2, i8 6, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.177, i32 0, i32 0), i32 2, i8 6, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.178, i32 0, i32 0), i32 2, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.179, i32 0, i32 0), i32 2, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.180, i32 0, i32 0), i32 2, i8 2, i64 256, i64 256 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.181, i32 0, i32 0), i32 2, i8 1, i64 0, i64 256 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.182, i32 0, i32 0), i32 2, i8 2, i64 1536, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.183, i32 0, i32 0), i32 2, i8 2, i64 1024, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.184, i32 0, i32 0), i32 2, i8 2, i64 512, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.185, i32 0, i32 0), i32 2, i8 1, i64 0, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.186, i32 0, i32 0), i32 2, i8 2, i64 6144, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.187, i32 0, i32 0), i32 2, i8 2, i64 4096, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.188, i32 0, i32 0), i32 2, i8 2, i64 2048, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.189, i32 0, i32 0), i32 2, i8 1, i64 0, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.190, i32 0, i32 0), i32 2, i8 2, i64 8192, i64 8192 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.191, i32 0, i32 0), i32 2, i8 1, i64 0, i64 8192 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.192, i32 0, i32 0), i32 2, i8 2, i64 16384, i64 16384 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.193, i32 0, i32 0), i32 2, i8 1, i64 0, i64 16384 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.194, i32 0, i32 0), i32 2, i8 2, i64 32768, i64 32768 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.195, i32 0, i32 0), i32 2, i8 1, i64 0, i64 32768 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.196, i32 0, i32 0), i32 3, i8 5, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.197, i32 0, i32 0), i32 3, i8 5, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.198, i32 0, i32 0), i32 3, i8 5, i64 32768, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.199, i32 0, i32 0), i32 3, i8 5, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.200, i32 0, i32 0), i32 3, i8 5, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.201, i32 0, i32 0), i32 3, i8 12, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.202, i32 0, i32 0), i32 3, i8 5, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.203, i32 0, i32 0), i32 3, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.204, i32 0, i32 0), i32 3, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.205, i32 0, i32 0), i32 3, i8 6, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.206, i32 0, i32 0), i32 3, i8 6, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.207, i32 0, i32 0), i32 3, i8 6, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.208, i32 0, i32 0), i32 3, i8 12, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.209, i32 0, i32 0), i32 3, i8 5, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.210, i32 0, i32 0), i32 3, i8 12, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.211, i32 0, i32 0), i32 3, i8 5, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.212, i32 0, i32 0), i32 3, i8 12, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.213, i32 0, i32 0), i32 3, i8 6, i64 4096, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.214, i32 0, i32 0), i32 3, i8 6, i64 65536, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.215, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.216, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.217, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.218, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.219, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.220, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.221, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.222, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.223, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.224, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.225, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.226, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.227, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.228, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.229, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.230, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.231, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info zeroinitializer], align 16, !dbg !118
+@mode_info = internal unnamed_addr constant [90 x %struct.mode_info] [%struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.143, i32 0, i32 0), i32 0, i8 4, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.144, i32 0, i32 0), i32 0, i8 4, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.145, i32 0, i32 0), i32 0, i8 4, i64 u0x40000000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.146, i32 0, i32 0), i32 0, i8 0, i64 0, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.147, i32 0, i32 0), i32 0, i8 0, i64 16, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.148, i32 0, i32 0), i32 0, i8 0, i64 32, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.149, i32 0, i32 0), i32 0, i8 0, i64 48, i64 48 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.150, i32 0, i32 0), i32 0, i8 4, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.151, i32 0, i32 0), i32 0, i8 12, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.152, i32 0, i32 0), i32 0, i8 4, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.153, i32 0, i32 0), i32 0, i8 5, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.154, i32 0, i32 0), i32 0, i8 4, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.155, i32 0, i32 0), i32 0, i8 4, i64 u0x80000000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.156, i32 0, i32 0), i32 1, i8 6, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.157, i32 0, i32 0), i32 1, i8 5, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.158, i32 0, i32 0), i32 1, i8 4, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.159, i32 0, i32 0), i32 1, i8 4, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.160, i32 0, i32 0), i32 1, i8 4, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.161, i32 0, i32 0), i32 1, i8 4, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.162, i32 0, i32 0), i32 1, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.163, i32 0, i32 0), i32 1, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.164, i32 0, i32 0), i32 1, i8 5, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.165, i32 0, i32 0), i32 1, i8 4, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.166, i32 0, i32 0), i32 1, i8 6, i64 u0x1000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.167, i32 0, i32 0), i32 1, i8 12, i64 u0x1000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.168, i32 0, i32 0), i32 1, i8 6, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.169, i32 0, i32 0), i32 1, i8 6, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.170, i32 0, i32 0), i32 1, i8 5, i64 u0x2000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.171, i32 0, i32 0), i32 1, i8 6, i64 u0x4000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.172, i32 0, i32 0), i32 2, i8 5, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.173, i32 0, i32 0), i32 2, i8 6, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.174, i32 0, i32 0), i32 2, i8 6, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.175, i32 0, i32 0), i32 2, i8 5, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.176, i32 0, i32 0), i32 2, i8 6, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.177, i32 0, i32 0), i32 2, i8 6, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.178, i32 0, i32 0), i32 2, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.179, i32 0, i32 0), i32 2, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.180, i32 0, i32 0), i32 2, i8 2, i64 256, i64 256 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.181, i32 0, i32 0), i32 2, i8 1, i64 0, i64 256 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.182, i32 0, i32 0), i32 2, i8 2, i64 1536, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.183, i32 0, i32 0), i32 2, i8 2, i64 1024, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.184, i32 0, i32 0), i32 2, i8 2, i64 512, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.185, i32 0, i32 0), i32 2, i8 1, i64 0, i64 1536 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.186, i32 0, i32 0), i32 2, i8 2, i64 6144, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.187, i32 0, i32 0), i32 2, i8 2, i64 u0x1000, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.188, i32 0, i32 0), i32 2, i8 2, i64 2048, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.189, i32 0, i32 0), i32 2, i8 1, i64 0, i64 6144 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.190, i32 0, i32 0), i32 2, i8 2, i64 u0x2000, i64 u0x2000 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.191, i32 0, i32 0), i32 2, i8 1, i64 0, i64 u0x2000 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.192, i32 0, i32 0), i32 2, i8 2, i64 u0x4000, i64 u0x4000 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.193, i32 0, i32 0), i32 2, i8 1, i64 0, i64 u0x4000 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.194, i32 0, i32 0), i32 2, i8 2, i64 u0x8000, i64 u0x8000 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.195, i32 0, i32 0), i32 2, i8 1, i64 0, i64 u0x8000 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.196, i32 0, i32 0), i32 3, i8 5, i64 1, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.197, i32 0, i32 0), i32 3, i8 5, i64 2, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.198, i32 0, i32 0), i32 3, i8 5, i64 u0x8000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.199, i32 0, i32 0), i32 3, i8 5, i64 8, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.200, i32 0, i32 0), i32 3, i8 5, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.201, i32 0, i32 0), i32 3, i8 12, i64 16, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.202, i32 0, i32 0), i32 3, i8 5, i64 32, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.203, i32 0, i32 0), i32 3, i8 6, i64 64, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.204, i32 0, i32 0), i32 3, i8 6, i64 128, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.205, i32 0, i32 0), i32 3, i8 6, i64 4, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.206, i32 0, i32 0), i32 3, i8 6, i64 256, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.207, i32 0, i32 0), i32 3, i8 6, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.208, i32 0, i32 0), i32 3, i8 12, i64 1024, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.209, i32 0, i32 0), i32 3, i8 5, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.210, i32 0, i32 0), i32 3, i8 12, i64 512, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.211, i32 0, i32 0), i32 3, i8 5, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.212, i32 0, i32 0), i32 3, i8 12, i64 2048, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.213, i32 0, i32 0), i32 3, i8 6, i64 u0x1000, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.214, i32 0, i32 0), i32 3, i8 6, i64 65536, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.215, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.216, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.217, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.218, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.219, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.220, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.221, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.222, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.223, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.224, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.225, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.226, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.227, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.228, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.229, i32 0, i32 0), i32 4, i8 12, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.230, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.231, i32 0, i32 0), i32 4, i8 8, i64 0, i64 0 }, %struct.mode_info zeroinitializer], align 16, !dbg !118
 @switch.table.main.306 = private unnamed_addr constant [5 x i32*] [i32* getelementptr inbounds (%struct.termios, %struct.termios* @main.mode, i64 0, i32 2), i32* getelementptr inbounds (%struct.termios, %struct.termios* @main.mode, i64 0, i32 0), i32* getelementptr inbounds (%struct.termios, %struct.termios* @main.mode, i64 0, i32 1), i32* getelementptr inbounds (%struct.termios, %struct.termios* @main.mode, i64 0, i32 3), i32* null]
 @.str.232 = private unnamed_addr constant [6 x i8] c"bitsp\00", align 1
 @.str.233 = private unnamed_addr constant [11 x i8] c"src/stty.c\00", align 1
@@ -286,7 +286,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.251 = private unnamed_addr constant [5 x i8] c"time\00", align 1
 @.str.259 = private unnamed_addr constant [16 x i8] c"speed %lu baud;\00", align 1
 @.str.260 = private unnamed_addr constant [5 x i8] c"%lu\0A\00", align 1
-@speeds = internal unnamed_addr constant [35 x %struct.speed_map] [%struct.speed_map { i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.263, i32 0, i32 0), i32 0, i64 0 }, %struct.speed_map { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.264, i32 0, i32 0), i32 1, i64 50 }, %struct.speed_map { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.265, i32 0, i32 0), i32 2, i64 75 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.266, i32 0, i32 0), i32 3, i64 110 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.267, i32 0, i32 0), i32 4, i64 134 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.268, i32 0, i32 0), i32 4, i64 134 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.269, i32 0, i32 0), i32 5, i64 150 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.270, i32 0, i32 0), i32 6, i64 200 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.271, i32 0, i32 0), i32 7, i64 300 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.272, i32 0, i32 0), i32 8, i64 600 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.273, i32 0, i32 0), i32 9, i64 1200 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.274, i32 0, i32 0), i32 10, i64 1800 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.275, i32 0, i32 0), i32 11, i64 2400 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.276, i32 0, i32 0), i32 12, i64 4800 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.277, i32 0, i32 0), i32 13, i64 9600 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.278, i32 0, i32 0), i32 14, i64 19200 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.279, i32 0, i32 0), i32 15, i64 38400 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.280, i32 0, i32 0), i32 14, i64 19200 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.281, i32 0, i32 0), i32 15, i64 38400 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.282, i32 0, i32 0), i32 4097, i64 57600 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.283, i32 0, i32 0), i32 4098, i64 115200 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.284, i32 0, i32 0), i32 4099, i64 230400 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.285, i32 0, i32 0), i32 4100, i64 460800 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.286, i32 0, i32 0), i32 4101, i64 500000 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.287, i32 0, i32 0), i32 4102, i64 576000 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.288, i32 0, i32 0), i32 4103, i64 921600 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.289, i32 0, i32 0), i32 4104, i64 1000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.290, i32 0, i32 0), i32 4105, i64 1152000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.291, i32 0, i32 0), i32 4106, i64 1500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.292, i32 0, i32 0), i32 4107, i64 2000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.293, i32 0, i32 0), i32 4108, i64 2500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.294, i32 0, i32 0), i32 4109, i64 3000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.295, i32 0, i32 0), i32 4110, i64 3500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.296, i32 0, i32 0), i32 4111, i64 4000000 }, %struct.speed_map zeroinitializer], align 16, !dbg !144
+@speeds = internal unnamed_addr constant [35 x %struct.speed_map] [%struct.speed_map { i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.263, i32 0, i32 0), i32 0, i64 0 }, %struct.speed_map { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.264, i32 0, i32 0), i32 1, i64 50 }, %struct.speed_map { i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.265, i32 0, i32 0), i32 2, i64 75 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.266, i32 0, i32 0), i32 3, i64 110 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.267, i32 0, i32 0), i32 4, i64 134 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.268, i32 0, i32 0), i32 4, i64 134 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.269, i32 0, i32 0), i32 5, i64 150 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.270, i32 0, i32 0), i32 6, i64 200 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.271, i32 0, i32 0), i32 7, i64 300 }, %struct.speed_map { i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.272, i32 0, i32 0), i32 8, i64 600 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.273, i32 0, i32 0), i32 9, i64 1200 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.274, i32 0, i32 0), i32 10, i64 1800 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.275, i32 0, i32 0), i32 11, i64 2400 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.276, i32 0, i32 0), i32 12, i64 4800 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.277, i32 0, i32 0), i32 13, i64 9600 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.278, i32 0, i32 0), i32 14, i64 19200 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.279, i32 0, i32 0), i32 15, i64 38400 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.280, i32 0, i32 0), i32 14, i64 19200 }, %struct.speed_map { i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.281, i32 0, i32 0), i32 15, i64 38400 }, %struct.speed_map { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.282, i32 0, i32 0), i32 u0x1001, i64 57600 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.283, i32 0, i32 0), i32 4098, i64 115200 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.284, i32 0, i32 0), i32 4099, i64 230400 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.285, i32 0, i32 0), i32 4100, i64 460800 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.286, i32 0, i32 0), i32 4101, i64 500000 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.287, i32 0, i32 0), i32 4102, i64 576000 }, %struct.speed_map { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.288, i32 0, i32 0), i32 4103, i64 921600 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.289, i32 0, i32 0), i32 4104, i64 1000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.290, i32 0, i32 0), i32 4105, i64 1152000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.291, i32 0, i32 0), i32 4106, i64 1500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.292, i32 0, i32 0), i32 4107, i64 2000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.293, i32 0, i32 0), i32 4108, i64 2500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.294, i32 0, i32 0), i32 4109, i64 3000000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.295, i32 0, i32 0), i32 4110, i64 3500000 }, %struct.speed_map { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.296, i32 0, i32 0), i32 4111, i64 4000000 }, %struct.speed_map zeroinitializer], align 16, !dbg !144
 @.str.261 = private unnamed_addr constant [34 x i8] c"ispeed %lu baud; ospeed %lu baud;\00", align 1
 @.str.262 = private unnamed_addr constant [9 x i8] c"%lu %lu\0A\00", align 1
 @.str.263 = private unnamed_addr constant [2 x i8] c"0\00", align 1
@@ -1136,7 +1136,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !60 {
 	%165 = load i64, i64* %5, align 8, !dbg !1068
 	call void @llvm.dbg.value(metadata i64 %165, metadata !1030, metadata !DIExpression()) #9, !dbg !1065
 	%166 = add i64 %165, -1, !dbg !1069
-	%167 = icmp ult i64 %166, 2147483647, !dbg !1069
+	%167 = icmp ult i64 %166, u0x7FFFFFFF, !dbg !1069
 	%168 = and i1 %164, %167, !dbg !1069
 	br i1 %168, label %170, label %169, !dbg !1069
 
@@ -2343,7 +2343,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%157 = zext i32 %156 to i64, !dbg !1760
 	%158 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 4, !dbg !1761
 	%159 = load i64, i64* %158, align 8, !dbg !1761, !tbaa !1265
-	%160 = xor i64 %159, 4294967295, !dbg !1762
+	%160 = xor i64 %159, u0xFFFFFFFF, !dbg !1762
 	%161 = and i64 %160, %157, !dbg !1763
 	%162 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 3, !dbg !1764
 	%163 = load i64, i64* %162, align 16, !dbg !1764, !tbaa !1268
@@ -2394,11 +2394,11 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%180 = zext i32 %179 to i64, !dbg !1785
 	%181 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 4, !dbg !1786
 	%182 = load i64, i64* %181, align 8, !dbg !1786, !tbaa !1265
-	%183 = xor i64 %182, 4294967295, !dbg !1787
+	%183 = xor i64 %182, u0xFFFFFFFF, !dbg !1787
 	%184 = and i64 %183, %180, !dbg !1788
 	%185 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 3, !dbg !1789
 	%186 = load i64, i64* %185, align 16, !dbg !1789, !tbaa !1268
-	%187 = xor i64 %186, 4294967295, !dbg !1790
+	%187 = xor i64 %186, u0xFFFFFFFF, !dbg !1790
 	%188 = and i64 %184, %187, !dbg !1791
 	%189 = trunc i64 %188 to i32, !dbg !1785
 	store i32 %189, i32* %178, align 4, !dbg !1792, !tbaa !817
@@ -2646,7 +2646,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	br i1 %57, label %322, label %326, !dbg !1922
 
 ; <label>:322
-	%323 = xor i64 %321, 4294967295, !dbg !1923
+	%323 = xor i64 %321, u0xFFFFFFFF, !dbg !1923
 	%324 = and i64 %323, %319, !dbg !1924
 	%325 = trunc i64 %324 to i32, !dbg !1925
 	store i32 %325, i32* %313, align 4, !dbg !1926, !tbaa !817
@@ -2967,9 +2967,9 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 
 ; <label>:475
 	call void @llvm.dbg.value(metadata i8* %469, metadata !1976, metadata !DIExpression()) #9, !dbg !2109
-	call void @llvm.dbg.value(metadata i64 2147483647, metadata !1981, metadata !DIExpression()) #9, !dbg !2111
+	call void @llvm.dbg.value(metadata i64 u0x7FFFFFFF, metadata !1981, metadata !DIExpression()) #9, !dbg !2111
 	%476 = call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.255, i64 0, i64 0), i32 5) #9, !dbg !2112
-	%477 = call i64 @xnumtoumax(i8* nonnull %469, i32 0, i64 0, i64 2147483647, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %476, i32 0) #9, !dbg !2113
+	%477 = call i64 @xnumtoumax(i8* nonnull %469, i32 0, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %476, i32 0) #9, !dbg !2113
 	%478 = trunc i64 %477 to i32, !dbg !2114
 	call fastcc void @set_window_size(i32 %478, i32 -1, i8* %1), !dbg !2115
 	br label %695, !dbg !2116
@@ -3009,9 +3009,9 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 
 ; <label>:497
 	call void @llvm.dbg.value(metadata i8* %491, metadata !1976, metadata !DIExpression()) #9, !dbg !2129
-	call void @llvm.dbg.value(metadata i64 2147483647, metadata !1981, metadata !DIExpression()) #9, !dbg !2131
+	call void @llvm.dbg.value(metadata i64 u0x7FFFFFFF, metadata !1981, metadata !DIExpression()) #9, !dbg !2131
 	%498 = call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.255, i64 0, i64 0), i32 5) #9, !dbg !2132
-	%499 = call i64 @xnumtoumax(i8* nonnull %491, i32 0, i64 0, i64 2147483647, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %498, i32 0) #9, !dbg !2133
+	%499 = call i64 @xnumtoumax(i8* nonnull %491, i32 0, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %498, i32 0) #9, !dbg !2133
 	%500 = trunc i64 %499 to i32, !dbg !2134
 	call fastcc void @set_window_size(i32 -1, i32 %500, i8* %1), !dbg !2135
 	br label %695, !dbg !2136
@@ -3057,7 +3057,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%519 = load i64, i64* %13, align 8, !dbg !2164
 	call void @llvm.dbg.value(metadata i64 %519, metadata !1030, metadata !DIExpression()) #9, !dbg !2161
 	%520 = add i64 %519, -1, !dbg !2165
-	%521 = icmp ult i64 %520, 2147483647, !dbg !2165
+	%521 = icmp ult i64 %520, u0x7FFFFFFF, !dbg !2165
 	%522 = and i1 %518, %521, !dbg !2165
 	br i1 %522, label %524, label %523, !dbg !2165
 
@@ -3169,7 +3169,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%571 = load i64, i64* %11, align 8, !dbg !2229
 	call void @llvm.dbg.value(metadata i64 %571, metadata !1030, metadata !DIExpression()) #9, !dbg !2226
 	%572 = add i64 %571, -1, !dbg !2230
-	%573 = icmp ult i64 %572, 2147483647, !dbg !2230
+	%573 = icmp ult i64 %572, u0x7FFFFFFF, !dbg !2230
 	%574 = and i1 %570, %573, !dbg !2230
 	br i1 %574, label %576, label %575, !dbg !2230
 
@@ -3280,7 +3280,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%615 = icmp ne i8 %614, 58, !dbg !2323
 	%616 = icmp eq i8* %613, %59, !dbg !2324
 	%617 = or i1 %616, %615, !dbg !2325
-	%618 = icmp ugt i64 %609, 4294967295, !dbg !2326
+	%618 = icmp ugt i64 %609, u0xFFFFFFFF, !dbg !2326
 	%619 = or i1 %618, %617, !dbg !2325
 	br i1 %619, label %620, label %621, !dbg !2325
 
@@ -3367,7 +3367,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%653 = icmp ne i8 %652, 58, !dbg !2323
 	%654 = icmp eq i8* %651, %623, !dbg !2324
 	%655 = or i1 %654, %653, !dbg !2325
-	%656 = icmp ugt i64 %624, 4294967295, !dbg !2326
+	%656 = icmp ugt i64 %624, u0xFFFFFFFF, !dbg !2326
 	%657 = or i1 %656, %655, !dbg !2325
 	br i1 %657, label %658, label %659, !dbg !2325
 
@@ -3405,7 +3405,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%668 = icmp ne i8 %667, 58, !dbg !2323
 	%669 = icmp eq i8* %666, %661, !dbg !2324
 	%670 = or i1 %669, %668, !dbg !2325
-	%671 = icmp ugt i64 %662, 4294967295, !dbg !2326
+	%671 = icmp ugt i64 %662, u0xFFFFFFFF, !dbg !2326
 	%672 = or i1 %671, %670, !dbg !2325
 	br i1 %672, label %673, label %674, !dbg !2325
 
@@ -3443,7 +3443,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%683 = icmp ne i8 %682, 58, !dbg !2323
 	%684 = icmp eq i8* %681, %676, !dbg !2324
 	%685 = or i1 %684, %683, !dbg !2325
-	%686 = icmp ugt i64 %677, 4294967295, !dbg !2326
+	%686 = icmp ugt i64 %677, u0xFFFFFFFF, !dbg !2326
 	%687 = or i1 %686, %685, !dbg !2325
 	br i1 %687, label %688, label %689, !dbg !2325
 
@@ -6490,8 +6490,8 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !3881
-	call void @llvm.dbg.value(metadata i32 2147483646, metadata !3860, metadata !DIExpression()), !dbg !3882
-	%15 = icmp eq i32 %0, 2147483647, !dbg !3883
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !3860, metadata !DIExpression()), !dbg !3882
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !3883
 	br i1 %15, label %16, label %17, !dbg !3885
 
 ; <label>:16
@@ -6822,7 +6822,7 @@ define dso_local i8* @quotearg_colon(i8*) local_unnamed_addr #7 !dbg !4172 {
 	call void @llvm.dbg.value(metadata i32* %4, metadata !2779, metadata !DIExpression()) #9, !dbg !4192
 	call void @llvm.dbg.value(metadata i32 26, metadata !2781, metadata !DIExpression()) #9, !dbg !4193
 	%5 = load i32, i32* %4, align 4, !dbg !4194, !tbaa !817
-	%6 = or i32 %5, 67108864, !dbg !4195
+	%6 = or i32 %5, u0x4000000, !dbg !4195
 	store i32 %6, i32* %4, align 4, !dbg !4195, !tbaa !817
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %2, metadata !4109, metadata !DIExpression(DW_OP_deref)) #9, !dbg !4185
 	%7 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 -1, %struct.quoting_options* nonnull %2) #9, !dbg !4196
@@ -6850,7 +6850,7 @@ define dso_local i8* @quotearg_colon_mem(i8*, i64) local_unnamed_addr #7 !dbg !4
 	call void @llvm.dbg.value(metadata i32* %5, metadata !2779, metadata !DIExpression()) #9, !dbg !4218
 	call void @llvm.dbg.value(metadata i32 26, metadata !2781, metadata !DIExpression()) #9, !dbg !4219
 	%6 = load i32, i32* %5, align 4, !dbg !4220, !tbaa !817
-	%7 = or i32 %6, 67108864, !dbg !4221
+	%7 = or i32 %6, u0x4000000, !dbg !4221
 	store i32 %7, i32* %5, align 4, !dbg !4221, !tbaa !817
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %3, metadata !4109, metadata !DIExpression(DW_OP_deref)) #9, !dbg !4211
 	%8 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 %1, %struct.quoting_options* nonnull %3) #9, !dbg !4222
@@ -6897,7 +6897,7 @@ define dso_local i8* @quotearg_n_style_colon(i32, i32, i8*) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i32* %14, metadata !2779, metadata !DIExpression()), !dbg !4252
 	call void @llvm.dbg.value(metadata i32 26, metadata !2781, metadata !DIExpression()), !dbg !4253
 	%15 = load i32, i32* %14, align 4, !dbg !4254, !tbaa !817
-	%16 = or i32 %15, 67108864, !dbg !4255
+	%16 = or i32 %15, u0x4000000, !dbg !4255
 	store i32 %16, i32* %14, align 4, !dbg !4255, !tbaa !817
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %4, metadata !4230, metadata !DIExpression(DW_OP_deref)), !dbg !4245
 	%17 = call fastcc i8* @quotearg_n_options(i32 %0, i8* %2, i64 -1, %struct.quoting_options* nonnull %4), !dbg !4256
@@ -7628,7 +7628,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !46
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4661, metadata !DIExpression()), !dbg !4663
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4662, metadata !DIExpression()), !dbg !4664
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4665
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4665
 	%4 = icmp ult i64 %3, %0, !dbg !4665
 	br i1 %4, label %5, label %6, !dbg !4667
 
@@ -7679,7 +7679,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4699, metadata !DIExpression()), !dbg !4702
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4700, metadata !DIExpression()), !dbg !4703
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4701, metadata !DIExpression()), !dbg !4704
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4705
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4705
 	%5 = icmp ult i64 %4, %1, !dbg !4705
 	br i1 %5, label %6, label %7, !dbg !4707
 
@@ -7775,7 +7775,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4765
 	call void @llvm.dbg.value(metadata i64 %14, metadata !330, metadata !DIExpression()), !dbg !4752
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4766
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4766
 	%16 = icmp ult i64 %15, %14, !dbg !4766
 	br i1 %16, label %19, label %17, !dbg !4768
 
@@ -7792,7 +7792,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 	unreachable, !dbg !4775
 
 ; <label>:20
-	%21 = udiv i64 6148914691236517204, %2, !dbg !4776
+	%21 = udiv i64 u0x5555555555555554, %2, !dbg !4776
 	%22 = icmp ugt i64 %21, %4, !dbg !4779
 	br i1 %22, label %24, label %23, !dbg !4780
 
@@ -7888,7 +7888,7 @@ define dso_local noalias i8* @x2realloc(i8*, i64* nocapture) local_unnamed_addr 
 	unreachable, !dbg !4833
 
 ; <label>:12
-	%13 = icmp ult i64 %3, 6148914691236517204, !dbg !4834
+	%13 = icmp ult i64 %3, u0x5555555555555554, !dbg !4834
 	br i1 %13, label %15, label %14, !dbg !4835
 
 ; <label>:14
@@ -7953,7 +7953,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4864
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4866, metadata !DIExpression()), !dbg !4869
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4867, metadata !DIExpression()), !dbg !4870
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4871
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4871
 	%4 = icmp ult i64 %3, %0, !dbg !4871
 	br i1 %4, label %8, label %5, !dbg !4873
 
@@ -8061,7 +8061,7 @@ define dso_local i64 @xnumtoumax(i8*, i32, i64, i64, i8*, i8*, i32) local_unname
 ; <label>:18
 	call void @llvm.dbg.value(metadata i32 1, metadata !4940, metadata !DIExpression()), !dbg !4953
 	call void @llvm.dbg.value(metadata i64 %14, metadata !4942, metadata !DIExpression()), !dbg !4951
-	%19 = icmp ugt i64 %14, 1073741823, !dbg !4965
+	%19 = icmp ugt i64 %14, u0x3FFFFFFF, !dbg !4965
 	%20 = tail call i32* @__errno_location() #17, !dbg !4968
 	br i1 %19, label %21, label %22, !dbg !4969
 
@@ -8273,9 +8273,9 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %62, label %184, label %63, !dbg !5102
 
 ; <label>:63
-	%64 = icmp sgt i64 %35, 18014398509481983, !dbg !5103
+	%64 = icmp sgt i64 %35, u0x3FFFFFFFFFFFFF, !dbg !5103
 	%65 = shl nsw i64 %35, 9, !dbg !5105
-	%66 = select i1 %64, i64 9223372036854775807, i64 %65, !dbg !5106
+	%66 = select i1 %64, i64 u0x7FFFFFFFFFFFFFFF, i64 %65, !dbg !5106
 	%67 = zext i1 %64 to i32, !dbg !5106
 	br label %184, !dbg !5106
 
@@ -8285,9 +8285,9 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %69, label %184, label %70, !dbg !5110
 
 ; <label>:70
-	%71 = icmp sgt i64 %35, 9007199254740991, !dbg !5111
+	%71 = icmp sgt i64 %35, u0x1FFFFFFFFFFFFF, !dbg !5111
 	%72 = shl nsw i64 %35, 10, !dbg !5112
-	%73 = select i1 %71, i64 9223372036854775807, i64 %72, !dbg !5113
+	%73 = select i1 %71, i64 u0x7FFFFFFFFFFFFFFF, i64 %72, !dbg !5113
 	%74 = zext i1 %71 to i32, !dbg !5113
 	br label %184, !dbg !5113
 
@@ -8301,10 +8301,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %77, label %84, label %78, !dbg !5127
 
 ; <label>:78
-	%79 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%79 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%80 = icmp slt i64 %79, %35, !dbg !5129
 	%81 = mul nsw i64 %35, %59, !dbg !5130
-	%82 = select i1 %80, i64 9223372036854775807, i64 %81, !dbg !5131
+	%82 = select i1 %80, i64 u0x7FFFFFFFFFFFFFFF, i64 %81, !dbg !5131
 	%83 = zext i1 %80 to i32, !dbg !5131
 	br label %84, !dbg !5131
 
@@ -8328,10 +8328,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %90, label %97, label %91, !dbg !5138
 
 ; <label>:91
-	%92 = udiv i64 9223372036854775807, %59, !dbg !5139
+	%92 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5139
 	%93 = icmp slt i64 %92, %35, !dbg !5140
 	%94 = mul nsw i64 %35, %59, !dbg !5141
-	%95 = select i1 %93, i64 9223372036854775807, i64 %94, !dbg !5142
+	%95 = select i1 %93, i64 u0x7FFFFFFFFFFFFFFF, i64 %94, !dbg !5142
 	%96 = zext i1 %93 to i32, !dbg !5142
 	br label %97, !dbg !5142
 
@@ -8355,10 +8355,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %103, label %184, label %104, !dbg !5149
 
 ; <label>:104
-	%105 = udiv i64 9223372036854775807, %59, !dbg !5150
+	%105 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5150
 	%106 = icmp slt i64 %105, %35, !dbg !5151
 	%107 = mul nsw i64 %35, %59, !dbg !5152
-	%108 = select i1 %106, i64 9223372036854775807, i64 %107, !dbg !5153
+	%108 = select i1 %106, i64 u0x7FFFFFFFFFFFFFFF, i64 %107, !dbg !5153
 	%109 = zext i1 %106 to i32, !dbg !5153
 	br label %184, !dbg !5153
 
@@ -8372,10 +8372,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %112, label %119, label %113, !dbg !5159
 
 ; <label>:113
-	%114 = udiv i64 9223372036854775807, %59, !dbg !5160
+	%114 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5160
 	%115 = icmp slt i64 %114, %35, !dbg !5161
 	%116 = mul nsw i64 %35, %59, !dbg !5162
-	%117 = select i1 %115, i64 9223372036854775807, i64 %116, !dbg !5163
+	%117 = select i1 %115, i64 u0x7FFFFFFFFFFFFFFF, i64 %116, !dbg !5163
 	%118 = zext i1 %115 to i32, !dbg !5163
 	br label %119, !dbg !5163
 
@@ -8399,10 +8399,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %125, label %132, label %126, !dbg !5170
 
 ; <label>:126
-	%127 = udiv i64 9223372036854775807, %59, !dbg !5171
+	%127 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5171
 	%128 = icmp slt i64 %127, %35, !dbg !5172
 	%129 = mul nsw i64 %35, %59, !dbg !5173
-	%130 = select i1 %128, i64 9223372036854775807, i64 %129, !dbg !5174
+	%130 = select i1 %128, i64 u0x7FFFFFFFFFFFFFFF, i64 %129, !dbg !5174
 	%131 = zext i1 %128 to i32, !dbg !5174
 	br label %132, !dbg !5174
 
@@ -8426,10 +8426,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %138, label %145, label %139, !dbg !5181
 
 ; <label>:139
-	%140 = udiv i64 9223372036854775807, %59, !dbg !5182
+	%140 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5182
 	%141 = icmp slt i64 %140, %35, !dbg !5183
 	%142 = mul nsw i64 %35, %59, !dbg !5184
-	%143 = select i1 %141, i64 9223372036854775807, i64 %142, !dbg !5185
+	%143 = select i1 %141, i64 u0x7FFFFFFFFFFFFFFF, i64 %142, !dbg !5185
 	%144 = zext i1 %141 to i32, !dbg !5185
 	br label %145, !dbg !5185
 
@@ -8449,9 +8449,9 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %150, label %184, label %151, !dbg !5190
 
 ; <label>:151
-	%152 = icmp sgt i64 %35, 4611686018427387903, !dbg !5191
+	%152 = icmp sgt i64 %35, u0x3FFFFFFFFFFFFFFF, !dbg !5191
 	%153 = shl nsw i64 %35, 1, !dbg !5192
-	%154 = select i1 %152, i64 9223372036854775807, i64 %153, !dbg !5193
+	%154 = select i1 %152, i64 u0x7FFFFFFFFFFFFFFF, i64 %153, !dbg !5193
 	%155 = zext i1 %152 to i32, !dbg !5193
 	br label %184, !dbg !5193
 
@@ -8465,10 +8465,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %158, label %165, label %159, !dbg !5199
 
 ; <label>:159
-	%160 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%160 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%161 = icmp slt i64 %160, %35, !dbg !5201
 	%162 = mul nsw i64 %35, %59, !dbg !5202
-	%163 = select i1 %161, i64 9223372036854775807, i64 %162, !dbg !5203
+	%163 = select i1 %161, i64 u0x7FFFFFFFFFFFFFFF, i64 %162, !dbg !5203
 	%164 = zext i1 %161 to i32, !dbg !5203
 	br label %165, !dbg !5203
 
@@ -8492,10 +8492,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %171, label %178, label %172, !dbg !5210
 
 ; <label>:172
-	%173 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%173 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%174 = icmp slt i64 %173, %35, !dbg !5212
 	%175 = mul nsw i64 %35, %59, !dbg !5213
-	%176 = select i1 %174, i64 9223372036854775807, i64 %175, !dbg !5214
+	%176 = select i1 %174, i64 u0x7FFFFFFFFFFFFFFF, i64 %175, !dbg !5214
 	%177 = zext i1 %174 to i32, !dbg !5214
 	br label %178, !dbg !5214
 
@@ -8545,10 +8545,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	ret i32 %197, !dbg !5232
 
 ; <label>:198
-	%199 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%199 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%200 = icmp slt i64 %199, %85, !dbg !5129
 	%201 = mul nsw i64 %85, %59, !dbg !5130
-	%202 = select i1 %200, i64 9223372036854775807, i64 %201, !dbg !5131
+	%202 = select i1 %200, i64 u0x7FFFFFFFFFFFFFFF, i64 %201, !dbg !5131
 	%203 = zext i1 %200 to i32, !dbg !5131
 	br label %204, !dbg !5131
 
@@ -8564,10 +8564,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %208, label %215, label %209, !dbg !5127
 
 ; <label>:209
-	%210 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%210 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%211 = icmp slt i64 %210, %205, !dbg !5129
 	%212 = mul nsw i64 %205, %59, !dbg !5130
-	%213 = select i1 %211, i64 9223372036854775807, i64 %212, !dbg !5131
+	%213 = select i1 %211, i64 u0x7FFFFFFFFFFFFFFF, i64 %212, !dbg !5131
 	%214 = zext i1 %211 to i32, !dbg !5131
 	br label %215, !dbg !5131
 
@@ -8583,10 +8583,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %219, label %226, label %220, !dbg !5127
 
 ; <label>:220
-	%221 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%221 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%222 = icmp slt i64 %221, %216, !dbg !5129
 	%223 = mul nsw i64 %216, %59, !dbg !5130
-	%224 = select i1 %222, i64 9223372036854775807, i64 %223, !dbg !5131
+	%224 = select i1 %222, i64 u0x7FFFFFFFFFFFFFFF, i64 %223, !dbg !5131
 	%225 = zext i1 %222 to i32, !dbg !5131
 	br label %226, !dbg !5131
 
@@ -8602,10 +8602,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %230, label %237, label %231, !dbg !5127
 
 ; <label>:231
-	%232 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%232 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%233 = icmp slt i64 %232, %227, !dbg !5129
 	%234 = mul nsw i64 %227, %59, !dbg !5130
-	%235 = select i1 %233, i64 9223372036854775807, i64 %234, !dbg !5131
+	%235 = select i1 %233, i64 u0x7FFFFFFFFFFFFFFF, i64 %234, !dbg !5131
 	%236 = zext i1 %233 to i32, !dbg !5131
 	br label %237, !dbg !5131
 
@@ -8621,10 +8621,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %241, label %248, label %242, !dbg !5127
 
 ; <label>:242
-	%243 = udiv i64 9223372036854775807, %59, !dbg !5128
+	%243 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5128
 	%244 = icmp slt i64 %243, %238, !dbg !5129
 	%245 = mul nsw i64 %238, %59, !dbg !5130
-	%246 = select i1 %244, i64 9223372036854775807, i64 %245, !dbg !5131
+	%246 = select i1 %244, i64 u0x7FFFFFFFFFFFFFFF, i64 %245, !dbg !5131
 	%247 = zext i1 %244 to i32, !dbg !5131
 	br label %248, !dbg !5131
 
@@ -8637,10 +8637,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:252
-	%253 = udiv i64 9223372036854775807, %59, !dbg !5139
+	%253 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5139
 	%254 = icmp slt i64 %253, %98, !dbg !5140
 	%255 = mul nsw i64 %98, %59, !dbg !5141
-	%256 = select i1 %254, i64 9223372036854775807, i64 %255, !dbg !5142
+	%256 = select i1 %254, i64 u0x7FFFFFFFFFFFFFFF, i64 %255, !dbg !5142
 	%257 = zext i1 %254 to i32, !dbg !5142
 	br label %258, !dbg !5142
 
@@ -8656,10 +8656,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %262, label %269, label %263, !dbg !5138
 
 ; <label>:263
-	%264 = udiv i64 9223372036854775807, %59, !dbg !5139
+	%264 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5139
 	%265 = icmp slt i64 %264, %259, !dbg !5140
 	%266 = mul nsw i64 %259, %59, !dbg !5141
-	%267 = select i1 %265, i64 9223372036854775807, i64 %266, !dbg !5142
+	%267 = select i1 %265, i64 u0x7FFFFFFFFFFFFFFF, i64 %266, !dbg !5142
 	%268 = zext i1 %265 to i32, !dbg !5142
 	br label %269, !dbg !5142
 
@@ -8672,10 +8672,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:273
-	%274 = udiv i64 9223372036854775807, %59, !dbg !5160
+	%274 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5160
 	%275 = icmp slt i64 %274, %120, !dbg !5161
 	%276 = mul nsw i64 %120, %59, !dbg !5162
-	%277 = select i1 %275, i64 9223372036854775807, i64 %276, !dbg !5163
+	%277 = select i1 %275, i64 u0x7FFFFFFFFFFFFFFF, i64 %276, !dbg !5163
 	%278 = zext i1 %275 to i32, !dbg !5163
 	br label %279, !dbg !5163
 
@@ -8688,10 +8688,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:283
-	%284 = udiv i64 9223372036854775807, %59, !dbg !5171
+	%284 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5171
 	%285 = icmp slt i64 %284, %133, !dbg !5172
 	%286 = mul nsw i64 %133, %59, !dbg !5173
-	%287 = select i1 %285, i64 9223372036854775807, i64 %286, !dbg !5174
+	%287 = select i1 %285, i64 u0x7FFFFFFFFFFFFFFF, i64 %286, !dbg !5174
 	%288 = zext i1 %285 to i32, !dbg !5174
 	br label %289, !dbg !5174
 
@@ -8707,10 +8707,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %293, label %300, label %294, !dbg !5170
 
 ; <label>:294
-	%295 = udiv i64 9223372036854775807, %59, !dbg !5171
+	%295 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5171
 	%296 = icmp slt i64 %295, %290, !dbg !5172
 	%297 = mul nsw i64 %290, %59, !dbg !5173
-	%298 = select i1 %296, i64 9223372036854775807, i64 %297, !dbg !5174
+	%298 = select i1 %296, i64 u0x7FFFFFFFFFFFFFFF, i64 %297, !dbg !5174
 	%299 = zext i1 %296 to i32, !dbg !5174
 	br label %300, !dbg !5174
 
@@ -8726,10 +8726,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %304, label %311, label %305, !dbg !5170
 
 ; <label>:305
-	%306 = udiv i64 9223372036854775807, %59, !dbg !5171
+	%306 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5171
 	%307 = icmp slt i64 %306, %301, !dbg !5172
 	%308 = mul nsw i64 %301, %59, !dbg !5173
-	%309 = select i1 %307, i64 9223372036854775807, i64 %308, !dbg !5174
+	%309 = select i1 %307, i64 u0x7FFFFFFFFFFFFFFF, i64 %308, !dbg !5174
 	%310 = zext i1 %307 to i32, !dbg !5174
 	br label %311, !dbg !5174
 
@@ -8745,10 +8745,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %315, label %322, label %316, !dbg !5170
 
 ; <label>:316
-	%317 = udiv i64 9223372036854775807, %59, !dbg !5171
+	%317 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5171
 	%318 = icmp slt i64 %317, %312, !dbg !5172
 	%319 = mul nsw i64 %312, %59, !dbg !5173
-	%320 = select i1 %318, i64 9223372036854775807, i64 %319, !dbg !5174
+	%320 = select i1 %318, i64 u0x7FFFFFFFFFFFFFFF, i64 %319, !dbg !5174
 	%321 = zext i1 %318 to i32, !dbg !5174
 	br label %322, !dbg !5174
 
@@ -8761,10 +8761,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:326
-	%327 = udiv i64 9223372036854775807, %59, !dbg !5182
+	%327 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5182
 	%328 = icmp slt i64 %327, %146, !dbg !5183
 	%329 = mul nsw i64 %146, %59, !dbg !5184
-	%330 = select i1 %328, i64 9223372036854775807, i64 %329, !dbg !5185
+	%330 = select i1 %328, i64 u0x7FFFFFFFFFFFFFFF, i64 %329, !dbg !5185
 	%331 = zext i1 %328 to i32, !dbg !5185
 	br label %332, !dbg !5185
 
@@ -8780,10 +8780,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %336, label %343, label %337, !dbg !5181
 
 ; <label>:337
-	%338 = udiv i64 9223372036854775807, %59, !dbg !5182
+	%338 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5182
 	%339 = icmp slt i64 %338, %333, !dbg !5183
 	%340 = mul nsw i64 %333, %59, !dbg !5184
-	%341 = select i1 %339, i64 9223372036854775807, i64 %340, !dbg !5185
+	%341 = select i1 %339, i64 u0x7FFFFFFFFFFFFFFF, i64 %340, !dbg !5185
 	%342 = zext i1 %339 to i32, !dbg !5185
 	br label %343, !dbg !5185
 
@@ -8799,10 +8799,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %347, label %354, label %348, !dbg !5181
 
 ; <label>:348
-	%349 = udiv i64 9223372036854775807, %59, !dbg !5182
+	%349 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5182
 	%350 = icmp slt i64 %349, %344, !dbg !5183
 	%351 = mul nsw i64 %344, %59, !dbg !5184
-	%352 = select i1 %350, i64 9223372036854775807, i64 %351, !dbg !5185
+	%352 = select i1 %350, i64 u0x7FFFFFFFFFFFFFFF, i64 %351, !dbg !5185
 	%353 = zext i1 %350 to i32, !dbg !5185
 	br label %354, !dbg !5185
 
@@ -8815,10 +8815,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:358
-	%359 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%359 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%360 = icmp slt i64 %359, %166, !dbg !5201
 	%361 = mul nsw i64 %166, %59, !dbg !5202
-	%362 = select i1 %360, i64 9223372036854775807, i64 %361, !dbg !5203
+	%362 = select i1 %360, i64 u0x7FFFFFFFFFFFFFFF, i64 %361, !dbg !5203
 	%363 = zext i1 %360 to i32, !dbg !5203
 	br label %364, !dbg !5203
 
@@ -8834,10 +8834,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %368, label %375, label %369, !dbg !5199
 
 ; <label>:369
-	%370 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%370 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%371 = icmp slt i64 %370, %365, !dbg !5201
 	%372 = mul nsw i64 %365, %59, !dbg !5202
-	%373 = select i1 %371, i64 9223372036854775807, i64 %372, !dbg !5203
+	%373 = select i1 %371, i64 u0x7FFFFFFFFFFFFFFF, i64 %372, !dbg !5203
 	%374 = zext i1 %371 to i32, !dbg !5203
 	br label %375, !dbg !5203
 
@@ -8853,10 +8853,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %379, label %386, label %380, !dbg !5199
 
 ; <label>:380
-	%381 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%381 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%382 = icmp slt i64 %381, %376, !dbg !5201
 	%383 = mul nsw i64 %376, %59, !dbg !5202
-	%384 = select i1 %382, i64 9223372036854775807, i64 %383, !dbg !5203
+	%384 = select i1 %382, i64 u0x7FFFFFFFFFFFFFFF, i64 %383, !dbg !5203
 	%385 = zext i1 %382 to i32, !dbg !5203
 	br label %386, !dbg !5203
 
@@ -8872,10 +8872,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %390, label %397, label %391, !dbg !5199
 
 ; <label>:391
-	%392 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%392 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%393 = icmp slt i64 %392, %387, !dbg !5201
 	%394 = mul nsw i64 %387, %59, !dbg !5202
-	%395 = select i1 %393, i64 9223372036854775807, i64 %394, !dbg !5203
+	%395 = select i1 %393, i64 u0x7FFFFFFFFFFFFFFF, i64 %394, !dbg !5203
 	%396 = zext i1 %393 to i32, !dbg !5203
 	br label %397, !dbg !5203
 
@@ -8891,10 +8891,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %401, label %408, label %402, !dbg !5199
 
 ; <label>:402
-	%403 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%403 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%404 = icmp slt i64 %403, %398, !dbg !5201
 	%405 = mul nsw i64 %398, %59, !dbg !5202
-	%406 = select i1 %404, i64 9223372036854775807, i64 %405, !dbg !5203
+	%406 = select i1 %404, i64 u0x7FFFFFFFFFFFFFFF, i64 %405, !dbg !5203
 	%407 = zext i1 %404 to i32, !dbg !5203
 	br label %408, !dbg !5203
 
@@ -8910,10 +8910,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %412, label %419, label %413, !dbg !5199
 
 ; <label>:413
-	%414 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%414 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%415 = icmp slt i64 %414, %409, !dbg !5201
 	%416 = mul nsw i64 %409, %59, !dbg !5202
-	%417 = select i1 %415, i64 9223372036854775807, i64 %416, !dbg !5203
+	%417 = select i1 %415, i64 u0x7FFFFFFFFFFFFFFF, i64 %416, !dbg !5203
 	%418 = zext i1 %415 to i32, !dbg !5203
 	br label %419, !dbg !5203
 
@@ -8929,10 +8929,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %423, label %430, label %424, !dbg !5199
 
 ; <label>:424
-	%425 = udiv i64 9223372036854775807, %59, !dbg !5200
+	%425 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5200
 	%426 = icmp slt i64 %425, %420, !dbg !5201
 	%427 = mul nsw i64 %420, %59, !dbg !5202
-	%428 = select i1 %426, i64 9223372036854775807, i64 %427, !dbg !5203
+	%428 = select i1 %426, i64 u0x7FFFFFFFFFFFFFFF, i64 %427, !dbg !5203
 	%429 = zext i1 %426 to i32, !dbg !5203
 	br label %430, !dbg !5203
 
@@ -8945,10 +8945,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br label %184, !dbg !5221
 
 ; <label>:434
-	%435 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%435 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%436 = icmp slt i64 %435, %179, !dbg !5212
 	%437 = mul nsw i64 %179, %59, !dbg !5213
-	%438 = select i1 %436, i64 9223372036854775807, i64 %437, !dbg !5214
+	%438 = select i1 %436, i64 u0x7FFFFFFFFFFFFFFF, i64 %437, !dbg !5214
 	%439 = zext i1 %436 to i32, !dbg !5214
 	br label %440, !dbg !5214
 
@@ -8964,10 +8964,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %444, label %451, label %445, !dbg !5210
 
 ; <label>:445
-	%446 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%446 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%447 = icmp slt i64 %446, %441, !dbg !5212
 	%448 = mul nsw i64 %441, %59, !dbg !5213
-	%449 = select i1 %447, i64 9223372036854775807, i64 %448, !dbg !5214
+	%449 = select i1 %447, i64 u0x7FFFFFFFFFFFFFFF, i64 %448, !dbg !5214
 	%450 = zext i1 %447 to i32, !dbg !5214
 	br label %451, !dbg !5214
 
@@ -8983,10 +8983,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %455, label %462, label %456, !dbg !5210
 
 ; <label>:456
-	%457 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%457 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%458 = icmp slt i64 %457, %452, !dbg !5212
 	%459 = mul nsw i64 %452, %59, !dbg !5213
-	%460 = select i1 %458, i64 9223372036854775807, i64 %459, !dbg !5214
+	%460 = select i1 %458, i64 u0x7FFFFFFFFFFFFFFF, i64 %459, !dbg !5214
 	%461 = zext i1 %458 to i32, !dbg !5214
 	br label %462, !dbg !5214
 
@@ -9002,10 +9002,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %466, label %473, label %467, !dbg !5210
 
 ; <label>:467
-	%468 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%468 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%469 = icmp slt i64 %468, %463, !dbg !5212
 	%470 = mul nsw i64 %463, %59, !dbg !5213
-	%471 = select i1 %469, i64 9223372036854775807, i64 %470, !dbg !5214
+	%471 = select i1 %469, i64 u0x7FFFFFFFFFFFFFFF, i64 %470, !dbg !5214
 	%472 = zext i1 %469 to i32, !dbg !5214
 	br label %473, !dbg !5214
 
@@ -9021,10 +9021,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %477, label %484, label %478, !dbg !5210
 
 ; <label>:478
-	%479 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%479 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%480 = icmp slt i64 %479, %474, !dbg !5212
 	%481 = mul nsw i64 %474, %59, !dbg !5213
-	%482 = select i1 %480, i64 9223372036854775807, i64 %481, !dbg !5214
+	%482 = select i1 %480, i64 u0x7FFFFFFFFFFFFFFF, i64 %481, !dbg !5214
 	%483 = zext i1 %480 to i32, !dbg !5214
 	br label %484, !dbg !5214
 
@@ -9040,10 +9040,10 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %488, label %495, label %489, !dbg !5210
 
 ; <label>:489
-	%490 = udiv i64 9223372036854775807, %59, !dbg !5211
+	%490 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !5211
 	%491 = icmp slt i64 %490, %485, !dbg !5212
 	%492 = mul nsw i64 %485, %59, !dbg !5213
-	%493 = select i1 %491, i64 9223372036854775807, i64 %492, !dbg !5214
+	%493 = select i1 %491, i64 u0x7FFFFFFFFFFFFFFF, i64 %492, !dbg !5214
 	%494 = zext i1 %491 to i32, !dbg !5214
 	br label %495, !dbg !5214
 
@@ -9097,7 +9097,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !5279
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !5279
 	%20 = load i16, i16* %19, align 2, !dbg !5279, !tbaa !3171
-	%21 = and i16 %20, 8192, !dbg !5279
+	%21 = and i16 %20, u0x2000, !dbg !5279
 	%22 = icmp eq i16 %21, 0, !dbg !5280
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !5282
 	call void @llvm.dbg.value(metadata i8* %23, metadata !5254, metadata !DIExpression()), !dbg !5277
@@ -9244,7 +9244,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:75
 	call void @llvm.dbg.value(metadata i32 512, metadata !5349, metadata !DIExpression()), !dbg !5355
-	%76 = icmp ugt i64 %49, 36028797018963967, !dbg !5358
+	%76 = icmp ugt i64 %49, u0x7FFFFFFFFFFFFF, !dbg !5358
 	%77 = shl i64 %49, 9, !dbg !5360
 	%78 = select i1 %76, i64 -1, i64 %77, !dbg !5361
 	%79 = zext i1 %76 to i32, !dbg !5361
@@ -9253,7 +9253,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:80
 	call void @llvm.dbg.value(metadata i32 1024, metadata !5349, metadata !DIExpression()), !dbg !5364
-	%81 = icmp ugt i64 %49, 18014398509481983, !dbg !5366
+	%81 = icmp ugt i64 %49, u0x3FFFFFFFFFFFFF, !dbg !5366
 	%82 = shl i64 %49, 10, !dbg !5367
 	%83 = select i1 %81, i64 -1, i64 %82, !dbg !5368
 	%84 = zext i1 %81 to i32, !dbg !5368
