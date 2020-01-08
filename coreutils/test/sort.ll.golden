@@ -18207,7 +18207,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	%92 = getelementptr inbounds i16, i16* %90, i64 %91, !dbg !11722
 	%93 = load i16, i16* %92, align 2, !dbg !11722, !tbaa !2093
 	%94 = zext i16 %93 to i32, !dbg !11722
-	%95 = and i32 %94, 16384, !dbg !11722
+	%95 = and i32 %94, u0x4000, !dbg !11722
 	%96 = icmp eq i32 %95, 0, !dbg !11722
 	br i1 %96, label %102, label %97, !dbg !11724
 

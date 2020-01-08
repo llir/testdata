@@ -1926,7 +1926,7 @@ define internal zeroext i1 @print_statfs(i8*, i64, i32, i32, i8*, i8* nocapture 
 		i64 732765674, label %645
 		i64 38496, label %646
 		i64 16388, label %647
-		i64 16384, label %648
+		i64 u0x4000, label %648
 		i64 1984, label %649
 		i64 29366, label %650
 		i64 827541066, label %651
@@ -11589,7 +11589,7 @@ define dso_local i8* @find_mount_point(i8*, %struct.stat* nocapture readonly) lo
 	%15 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !4288
 	%16 = load i32, i32* %15, align 8, !dbg !4288, !tbaa !1292
 	%17 = and i32 %16, u0xF000, !dbg !4288
-	%18 = icmp eq i32 %17, 16384, !dbg !4288
+	%18 = icmp eq i32 %17, u0x4000, !dbg !4288
 	br i1 %18, label %19, label %28, !dbg !4289
 
 ; <label>:19

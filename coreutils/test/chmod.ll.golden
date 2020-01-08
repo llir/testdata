@@ -179,7 +179,7 @@ target triple = "x86_64-pc-linux-gnu"
 @__PRETTY_FUNCTION__.xfts_open = private unnamed_addr constant [78 x i8] c"FTS *xfts_open(char *const *, int, int (*)(const FTSENT **, const FTSENT **))\00", align 1
 @.str.165 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.170 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 16384, i32 0, i32 24576, i32 0, i32 32768, i32 0, i32 40960, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 32768, i32 0, i32 40960, i32 0, i32 49152]
 @.str.181 = private unnamed_addr constant [24 x i8] c"state->magic == 9827862\00", align 1
 @.str.1.182 = private unnamed_addr constant [18 x i8] c"lib/cycle-check.c\00", align 1
 @__PRETTY_FUNCTION__.cycle_check = private unnamed_addr constant [67 x i8] c"_Bool cycle_check(struct cycle_check_state *, const struct stat *)\00", align 1
@@ -837,7 +837,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !39 {
 	%237 = load i32, i32* %236, align 8, !dbg !1377, !tbaa !1380
 	call void @llvm.dbg.value(metadata i32 %237, metadata !1116, metadata !DIExpression()) #11, !dbg !1381
 	%238 = and i32 %237, u0xF000, !dbg !1382
-	%239 = icmp eq i32 %238, 16384, !dbg !1382
+	%239 = icmp eq i32 %238, u0x4000, !dbg !1382
 	%240 = load i32, i32* @umask_value, align 4, !dbg !1383, !tbaa !1170
 	%241 = load %struct.mode_change*, %struct.mode_change** @change, align 8, !dbg !1384, !tbaa !951
 	%242 = call i32 @mode_adjust(i32 %237, i1 zeroext %239, i32 %240, %struct.mode_change* %241, i32* null) #11, !dbg !1385
@@ -1017,7 +1017,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !39 {
 
 ; <label>:323
 	%324 = and i32 %259, u0xF000, !dbg !1515
-	%325 = icmp eq i32 %324, 16384, !dbg !1515
+	%325 = icmp eq i32 %324, u0x4000, !dbg !1515
 	%326 = load %struct.mode_change*, %struct.mode_change** @change, align 8, !dbg !1516, !tbaa !951
 	%327 = call i32 @mode_adjust(i32 %259, i1 zeroext %325, i32 0, %struct.mode_change* %326, i32* null) #11, !dbg !1517
 	call void @llvm.dbg.value(metadata i32 %327, metadata !1126, metadata !DIExpression()) #11, !dbg !1518
@@ -6488,7 +6488,7 @@ define internal fastcc zeroext i16 @fts_stat(%struct.FTS* nocapture readonly, %s
 	%52 = trunc i32 %51 to i16, !dbg !5024
 	%53 = and i16 %52, -4096, !dbg !5024
 	switch i16 %53, label %86 [
-		i16 16384, label %54
+		i16 u0x4000, label %54
 		i16 -24576, label %87
 		i16 -32768, label %85
 	], !dbg !5024
@@ -7028,7 +7028,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 ; <label>:5
 	%6 = getelementptr inbounds %struct.FTS, %struct.FTS* %0, i64 0, i32 10, !dbg !5337
 	%7 = load i32, i32* %6, align 8, !dbg !5337, !tbaa !4504
-	%8 = and i32 %7, 16384, !dbg !5337
+	%8 = and i32 %7, u0x4000, !dbg !5337
 	%9 = icmp eq i32 %8, 0, !dbg !5337
 	br i1 %9, label %10, label %473, !dbg !5338
 
@@ -7284,7 +7284,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 
 ; <label>:151
 	%152 = load i32, i32* %6, align 8, !dbg !5482, !tbaa !4504
-	%153 = and i32 %152, 16384, !dbg !5482
+	%153 = and i32 %152, u0x4000, !dbg !5482
 	%154 = icmp eq i32 %153, 0, !dbg !5482
 	br i1 %154, label %155, label %473, !dbg !5485
 
@@ -7352,7 +7352,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 
 ; <label>:185
 	%186 = load i32, i32* %6, align 8, !dbg !5521, !tbaa !4504
-	%187 = and i32 %186, 16384, !dbg !5521
+	%187 = and i32 %186, u0x4000, !dbg !5521
 	%188 = icmp eq i32 %187, 0, !dbg !5521
 	br i1 %188, label %189, label %473, !dbg !5524
 
@@ -7382,7 +7382,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	br i1 %200, label %204, label %202, !dbg !5541
 
 ; <label>:202
-	%203 = or i32 %201, 16384, !dbg !5542
+	%203 = or i32 %201, u0x4000, !dbg !5542
 	store i32 %203, i32* %6, align 8, !dbg !5542, !tbaa !4504
 	br label %473, !dbg !5543
 
@@ -7630,7 +7630,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%340 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %317, i64 0, i32 18, i64 0, i32 3, !dbg !5687
 	%341 = load i32, i32* %340, align 8, !dbg !5687, !tbaa !1380
 	%342 = and i32 %341, u0xF000, !dbg !5687
-	%343 = icmp eq i32 %342, 16384, !dbg !5687
+	%343 = icmp eq i32 %342, u0x4000, !dbg !5687
 	br i1 %343, label %344, label %355, !dbg !5689
 
 ; <label>:344
@@ -7737,7 +7737,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%398 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %371, i64 0, i32 8, !dbg !5750
 	store i32 %397, i32* %398, align 8, !dbg !5751, !tbaa !1170
 	%399 = load i32, i32* %6, align 8, !dbg !5752, !tbaa !4504
-	%400 = or i32 %399, 16384, !dbg !5752
+	%400 = or i32 %399, u0x4000, !dbg !5752
 	store i32 %400, i32* %6, align 8, !dbg !5752, !tbaa !4504
 	br label %459, !dbg !5753
 
@@ -7808,7 +7808,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%438 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %371, i64 0, i32 8, !dbg !5794
 	store i32 %437, i32* %438, align 8, !dbg !5795, !tbaa !1170
 	%439 = load i32, i32* %6, align 8, !dbg !5796, !tbaa !4504
-	%440 = or i32 %439, 16384, !dbg !5796
+	%440 = or i32 %439, u0x4000, !dbg !5796
 	store i32 %440, i32* %6, align 8, !dbg !5796, !tbaa !4504
 	br label %441, !dbg !5797
 
@@ -7836,7 +7836,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%456 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %371, i64 0, i32 8, !dbg !5808
 	store i32 %455, i32* %456, align 8, !dbg !5809, !tbaa !1170
 	%457 = load i32, i32* %6, align 8, !dbg !5810, !tbaa !4504
-	%458 = or i32 %457, 16384, !dbg !5810
+	%458 = or i32 %457, u0x4000, !dbg !5810
 	store i32 %458, i32* %6, align 8, !dbg !5810, !tbaa !4504
 	br label %459, !dbg !5811
 
@@ -7859,7 +7859,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 
 ; <label>:468
 	%469 = load i32, i32* %6, align 8, !dbg !5824, !tbaa !4504
-	%470 = and i32 %469, 16384, !dbg !5824
+	%470 = and i32 %469, u0x4000, !dbg !5824
 	%471 = icmp eq i32 %470, 0, !dbg !5824
 	%472 = select i1 %471, %struct._ftsent* %371, %struct._ftsent* null, !dbg !5824
 	br label %473, !dbg !5825
@@ -8732,7 +8732,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	%272 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %4, i64 0, i32 15, !dbg !6341
 	store i16 7, i16* %272, align 8, !dbg !6342, !tbaa !1316
 	%273 = load i32, i32* %140, align 8, !dbg !6343, !tbaa !4504
-	%274 = or i32 %273, 16384, !dbg !6343
+	%274 = or i32 %273, u0x4000, !dbg !6343
 	store i32 %274, i32* %140, align 8, !dbg !6343, !tbaa !4504
 	store i32 %255, i32* %174, align 4, !dbg !6344, !tbaa !1170
 	br label %550, !dbg !6345
@@ -8814,7 +8814,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	%310 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %4, i64 0, i32 15, !dbg !6379
 	store i16 7, i16* %310, align 8, !dbg !6380, !tbaa !1316
 	%311 = load i32, i32* %140, align 8, !dbg !6381, !tbaa !4504
-	%312 = or i32 %311, 16384, !dbg !6381
+	%312 = or i32 %311, u0x4000, !dbg !6381
 	store i32 %312, i32* %140, align 8, !dbg !6381, !tbaa !4504
 	store i32 36, i32* %174, align 4, !dbg !6382, !tbaa !1170
 	br label %550, !dbg !6383
@@ -9148,7 +9148,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	%500 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %4, i64 0, i32 15, !dbg !6558
 	store i16 7, i16* %500, align 8, !dbg !6560, !tbaa !1316
 	%501 = load i32, i32* %140, align 8, !dbg !6561, !tbaa !4504
-	%502 = or i32 %501, 16384, !dbg !6561
+	%502 = or i32 %501, u0x4000, !dbg !6561
 	store i32 %502, i32* %140, align 8, !dbg !6561, !tbaa !4504
 	call void @llvm.dbg.value(metadata %struct._ftsent* %412, metadata !4915, metadata !DIExpression()) #11, !dbg !6562
 	call void @llvm.dbg.value(metadata %struct._ftsent* %412, metadata !4920, metadata !DIExpression()) #11, !dbg !6564
@@ -9608,7 +9608,7 @@ define dso_local %struct._ftsent* @fts_children(%struct.FTS*, i32) local_unnamed
 	store i32 0, i32* %10, align 4, !dbg !6900, !tbaa !1170
 	%11 = getelementptr inbounds %struct.FTS, %struct.FTS* %0, i64 0, i32 10, !dbg !6901
 	%12 = load i32, i32* %11, align 8, !dbg !6901, !tbaa !4504
-	%13 = and i32 %12, 16384, !dbg !6901
+	%13 = and i32 %12, u0x4000, !dbg !6901
 	%14 = icmp eq i32 %13, 0, !dbg !6901
 	br i1 %14, label %15, label %106, !dbg !6903
 

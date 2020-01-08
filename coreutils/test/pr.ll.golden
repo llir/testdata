@@ -5274,7 +5274,7 @@ define internal void @print_char(i8 signext) #0 !dbg !2999 {
 	%14 = zext i8 %0 to i64, !dbg !3017
 	%15 = getelementptr inbounds i16, i16* %13, i64 %14, !dbg !3017
 	%16 = load i16, i16* %15, align 2, !dbg !3017, !tbaa !3019
-	%17 = and i16 %16, 16384, !dbg !3017
+	%17 = and i16 %16, u0x4000, !dbg !3017
 	%18 = icmp eq i16 %17, 0, !dbg !3017
 	br i1 %18, label %19, label %24, !dbg !3020
 
@@ -6390,7 +6390,7 @@ define internal zeroext i1 @print_stored(%struct.COLUMN* nocapture) #0 !dbg !332
 	%114 = zext i8 %101 to i64, !dbg !3420
 	%115 = getelementptr inbounds i16, i16* %113, i64 %114, !dbg !3420
 	%116 = load i16, i16* %115, align 2, !dbg !3420, !tbaa !3019
-	%117 = and i16 %116, 16384, !dbg !3420
+	%117 = and i16 %116, u0x4000, !dbg !3420
 	%118 = icmp eq i16 %117, 0, !dbg !3420
 	br i1 %118, label %119, label %124, !dbg !3421
 
@@ -7292,7 +7292,7 @@ define internal fastcc i32 @char_to_clump(i8 signext) unnamed_addr #0 !dbg !3760
 	%28 = zext i8 %0 to i64, !dbg !3807
 	%29 = getelementptr inbounds i16, i16* %26, i64 %28, !dbg !3807
 	%30 = load i16, i16* %29, align 2, !dbg !3807, !tbaa !3019
-	%31 = and i16 %30, 16384, !dbg !3807
+	%31 = and i16 %30, u0x4000, !dbg !3807
 	%32 = icmp eq i16 %31, 0, !dbg !3807
 	br i1 %32, label %33, label %66, !dbg !3809
 
@@ -8065,7 +8065,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #0 !dbg !4188 
 	%92 = getelementptr inbounds i16, i16* %90, i64 %91, !dbg !4307
 	%93 = load i16, i16* %92, align 2, !dbg !4307, !tbaa !3019
 	%94 = zext i16 %93 to i32, !dbg !4307
-	%95 = and i32 %94, 16384, !dbg !4307
+	%95 = and i32 %94, u0x4000, !dbg !4307
 	%96 = icmp eq i32 %95, 0, !dbg !4307
 	br i1 %96, label %102, label %97, !dbg !4309
 

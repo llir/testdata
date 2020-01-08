@@ -4899,7 +4899,7 @@ define dso_local i8* @find_mount_point(i8*, %struct.stat* nocapture readonly) lo
 	%15 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !3903
 	%16 = load i32, i32* %15, align 8, !dbg !3903, !tbaa !1381
 	%17 = and i32 %16, u0xF000, !dbg !3903
-	%18 = icmp eq i32 %17, 16384, !dbg !3903
+	%18 = icmp eq i32 %17, u0x4000, !dbg !3903
 	br i1 %18, label %19, label %28, !dbg !3904
 
 ; <label>:19
@@ -5380,7 +5380,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	%151 = and i16 %150, -4096, !dbg !4228
 	switch i16 %151, label %211 [
 		i16 -24576, label %152
-		i16 16384, label %216
+		i16 u0x4000, label %216
 	], !dbg !4228
 
 ; <label>:152
@@ -10427,7 +10427,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !7174 
 	%92 = getelementptr inbounds i16, i16* %90, i64 %91, !dbg !7295
 	%93 = load i16, i16* %92, align 2, !dbg !7295, !tbaa !2248
 	%94 = zext i16 %93 to i32, !dbg !7295
-	%95 = and i32 %94, 16384, !dbg !7295
+	%95 = and i32 %94, u0x4000, !dbg !7295
 	%96 = icmp eq i32 %95, 0, !dbg !7295
 	br i1 %96, label %102, label %97, !dbg !7297
 

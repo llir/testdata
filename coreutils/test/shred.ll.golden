@@ -1475,7 +1475,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	br i1 %289, label %290, label %295, !dbg !1790
 
 ; <label>:290
-	%291 = or i32 %288, 16384, !dbg !1791
+	%291 = or i32 %288, u0x4000, !dbg !1791
 	call void @llvm.dbg.value(metadata i32 %291, metadata !1780, metadata !DIExpression()) #13, !dbg !1792
 	%292 = icmp eq i32 %291, %288, !dbg !1793
 	br i1 %292, label %295, label %293, !dbg !1795
@@ -8398,7 +8398,7 @@ define dso_local i32 @renameat2(i32, i8*, i32, i8*, i32) local_unnamed_addr #7 !
 	%50 = getelementptr inbounds %struct.stat, %struct.stat* %6, i64 0, i32 3, !dbg !6093
 	%51 = load i32, i32* %50, align 8, !dbg !6093, !tbaa !1456
 	%52 = and i32 %51, u0xF000, !dbg !6093
-	%53 = icmp eq i32 %52, 16384, !dbg !6093
+	%53 = icmp eq i32 %52, u0x4000, !dbg !6093
 	br i1 %53, label %78, label %54, !dbg !6097
 
 ; <label>:54
@@ -8428,14 +8428,14 @@ define dso_local i32 @renameat2(i32, i8*, i32, i8*, i32) local_unnamed_addr #7 !
 	%62 = getelementptr inbounds %struct.stat, %struct.stat* %6, i64 0, i32 3, !dbg !6117
 	%63 = load i32, i32* %62, align 8, !dbg !6117, !tbaa !1456
 	%64 = and i32 %63, u0xF000, !dbg !6117
-	%65 = icmp eq i32 %64, 16384, !dbg !6117
+	%65 = icmp eq i32 %64, u0x4000, !dbg !6117
 	br i1 %65, label %78, label %80, !dbg !6118
 
 ; <label>:66
 	%67 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 3, !dbg !6119
 	%68 = load i32, i32* %67, align 8, !dbg !6119, !tbaa !1456
 	%69 = and i32 %68, u0xF000, !dbg !6119
-	%70 = icmp eq i32 %69, 16384, !dbg !6119
+	%70 = icmp eq i32 %69, u0x4000, !dbg !6119
 	br i1 %70, label %72, label %71, !dbg !6121
 
 ; <label>:71
@@ -8447,7 +8447,7 @@ define dso_local i32 @renameat2(i32, i8*, i32, i8*, i32) local_unnamed_addr #7 !
 	%73 = getelementptr inbounds %struct.stat, %struct.stat* %6, i64 0, i32 3, !dbg !6126
 	%74 = load i32, i32* %73, align 8, !dbg !6126, !tbaa !1456
 	%75 = and i32 %74, u0xF000, !dbg !6126
-	%76 = icmp eq i32 %75, 16384, !dbg !6126
+	%76 = icmp eq i32 %75, u0x4000, !dbg !6126
 	br i1 %76, label %78, label %77, !dbg !6128
 
 ; <label>:77

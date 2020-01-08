@@ -4550,7 +4550,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%236 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4112
 	%237 = load i32, i32* %236, align 8, !dbg !4112, !tbaa !4113
 	%238 = and i32 %237, u0xF000, !dbg !4112
-	%239 = icmp eq i32 %238, 16384, !dbg !4112
+	%239 = icmp eq i32 %238, u0x4000, !dbg !4112
 	br i1 %239, label %242, label %240
 
 ; <label>:240
@@ -4966,7 +4966,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%442 = load i32, i32* %441, align 8, !dbg !4431, !tbaa !4432
 	%443 = and i1 %440, %2, !dbg !4433
 	%444 = and i32 %442, u0xF000, !dbg !4434
-	%445 = icmp eq i32 %444, 16384, !dbg !4434
+	%445 = icmp eq i32 %444, u0x4000, !dbg !4434
 	%446 = and i1 %443, %445, !dbg !4433
 	br i1 %446, label %449, label %447, !dbg !4433
 
@@ -4988,7 +4988,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%455 = and i16 %454, -4096, !dbg !4445
 	switch i16 %455, label %460 [
 		i16 -24576, label %461
-		i16 16384, label %456
+		i16 u0x4000, label %456
 	], !dbg !4445
 
 ; <label>:456
@@ -7298,7 +7298,7 @@ define internal fastcc void @print_current_files() unnamed_addr #0 !dbg !4921 {
 	%745 = and i16 %744, -4096, !dbg !5713
 	switch i16 %745, label %751 [
 		i16 -32768, label %746
-		i16 16384, label %756
+		i16 u0x4000, label %756
 	], !dbg !5713
 
 ; <label>:746
@@ -10162,7 +10162,7 @@ define internal fastcc i64 @quote_name_buf(i8** nocapture, i8*, %struct.quoting_
 	%267 = zext i8 %266 to i64, !dbg !6896
 	%268 = getelementptr inbounds i16, i16* %265, i64 %267, !dbg !6896
 	%269 = load i16, i16* %268, align 2, !dbg !6896, !tbaa !6974
-	%270 = and i16 %269, 16384, !dbg !6896
+	%270 = and i16 %269, u0x4000, !dbg !6896
 	%271 = icmp eq i16 %270, 0, !dbg !6896
 	br i1 %271, label %272, label %273, !dbg !6975
 
@@ -11266,7 +11266,7 @@ define internal fastcc i64 @length_of_file_name_and_frills(%struct.fileinfo* noc
 	%100 = and i16 %99, -4096, !dbg !7469
 	switch i16 %100, label %109 [
 		i16 -32768, label %102
-		i16 16384, label %123
+		i16 u0x4000, label %123
 	], !dbg !7469
 
 ; <label>:101
@@ -12056,7 +12056,7 @@ define internal fastcc zeroext i1 @print_type_indicator(i1 zeroext, i32, i32) un
 	%6 = and i16 %5, -4096, !dbg !7901
 	switch i16 %6, label %16 [
 		i16 -32768, label %8
-		i16 16384, label %28
+		i16 u0x4000, label %28
 	], !dbg !7901
 
 ; <label>:7
@@ -16207,7 +16207,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	%151 = and i16 %150, -4096, !dbg !10258
 	switch i16 %151, label %211 [
 		i16 -24576, label %152
-		i16 16384, label %216
+		i16 u0x4000, label %216
 	], !dbg !10258
 
 ; <label>:152
@@ -16890,7 +16890,7 @@ define dso_local i32 @file_has_acl(i8*, %struct.stat* nocapture readonly) local_
 	call void @llvm.dbg.value(metadata i64 %8, metadata !10591, metadata !DIExpression()), !dbg !10599
 	%17 = load i32, i32* %3, align 8, !dbg !10609, !tbaa !4432
 	%18 = and i32 %17, u0xF000, !dbg !10609
-	%19 = icmp eq i32 %18, 16384, !dbg !10609
+	%19 = icmp eq i32 %18, u0x4000, !dbg !10609
 	br i1 %19, label %20, label %34, !dbg !10611
 
 ; <label>:20
@@ -22675,7 +22675,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #0 !dbg !14092
 	%92 = getelementptr inbounds i16, i16* %90, i64 %91, !dbg !14208
 	%93 = load i16, i16* %92, align 2, !dbg !14208, !tbaa !6974
 	%94 = zext i16 %93 to i32, !dbg !14208
-	%95 = and i32 %94, 16384, !dbg !14208
+	%95 = and i32 %94, u0x4000, !dbg !14208
 	%96 = icmp eq i32 %95, 0, !dbg !14208
 	br i1 %96, label %102, label %97, !dbg !14210
 

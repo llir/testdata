@@ -4467,7 +4467,7 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 732765674, label %18
 		i64 38496, label %18
 		i64 16388, label %18
-		i64 16384, label %18
+		i64 u0x4000, label %18
 		i64 1984, label %18
 		i64 29366, label %18
 		i64 827541066, label %18

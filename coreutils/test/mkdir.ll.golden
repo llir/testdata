@@ -863,7 +863,7 @@ define dso_local zeroext i1 @make_dir_parents(i8*, %struct.savewd*, i32 (i8*, i8
 	%72 = getelementptr inbounds %struct.stat, %struct.stat* %11, i64 0, i32 3, !dbg !1399
 	%73 = load i32, i32* %72, align 8, !dbg !1399, !tbaa !1400
 	%74 = and i32 %73, u0xF000, !dbg !1399
-	%75 = icmp eq i32 %74, 16384, !dbg !1399
+	%75 = icmp eq i32 %74, u0x4000, !dbg !1399
 	br i1 %75, label %76, label %78, !dbg !1403
 
 ; <label>:76
@@ -6404,7 +6404,7 @@ define dso_local i32 @dirchownmod(i32, i8*, i32, i32, i32, i32, i32) local_unnam
 	%20 = load i32, i32* %19, align 8, !dbg !4797, !tbaa !1400
 	call void @llvm.dbg.value(metadata i32 %20, metadata !4750, metadata !DIExpression()), !dbg !4798
 	%21 = and i32 %20, u0xF000, !dbg !4799
-	%22 = icmp eq i32 %21, 16384, !dbg !4799
+	%22 = icmp eq i32 %21, u0x4000, !dbg !4799
 	br i1 %22, label %25, label %23, !dbg !4800
 
 ; <label>:23

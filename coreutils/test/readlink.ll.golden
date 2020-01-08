@@ -904,7 +904,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	%151 = and i16 %150, -4096, !dbg !1144
 	switch i16 %151, label %211 [
 		i16 -24576, label %152
-		i16 16384, label %216
+		i16 u0x4000, label %216
 	], !dbg !1144
 
 ; <label>:152

@@ -1912,7 +1912,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !105 {
 	%686 = sext i32 %657 to i64, !dbg !1798
 	%687 = getelementptr inbounds i16, i16* %685, i64 %686, !dbg !1798
 	%688 = load i16, i16* %687, align 2, !dbg !1798, !tbaa !1800
-	%689 = and i16 %688, 16384, !dbg !1798
+	%689 = and i16 %688, u0x4000, !dbg !1798
 	%690 = icmp eq i16 %689, 0, !dbg !1798
 	br i1 %690, label %618, label %691, !dbg !1801
 
@@ -2017,7 +2017,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !105 {
 	%744 = sext i32 %713 to i64, !dbg !1841
 	%745 = getelementptr inbounds i16, i16* %743, i64 %744, !dbg !1841
 	%746 = load i16, i16* %745, align 2, !dbg !1841, !tbaa !1800
-	%747 = and i16 %746, 16384, !dbg !1841
+	%747 = and i16 %746, u0x4000, !dbg !1841
 	%748 = icmp eq i16 %747, 0, !dbg !1841
 	br i1 %748, label %608, label %749, !dbg !1843
 
@@ -3916,7 +3916,7 @@ define internal fastcc void @write_block(i64, i64, i8* nocapture readonly, i8*) 
 	%92 = zext i8 %90 to i64, !dbg !2756
 	%93 = getelementptr inbounds i16, i16* %91, i64 %92, !dbg !2756
 	%94 = load i16, i16* %93, align 2, !dbg !2756, !tbaa !1800
-	%95 = and i16 %94, 16384, !dbg !2756
+	%95 = and i16 %94, u0x4000, !dbg !2756
 	%96 = icmp eq i16 %95, 0, !dbg !2756
 	%97 = zext i8 %90 to i32, !dbg !2763
 	%98 = select i1 %96, i32 46, i32 %97, !dbg !2763
@@ -5001,7 +5001,7 @@ define internal void @print_ascii(i64, i64, i8* nocapture readonly, i8* nocaptur
 	%27 = zext i8 %21 to i64, !dbg !3236
 	%28 = getelementptr inbounds i16, i16* %26, i64 %27, !dbg !3236
 	%29 = load i16, i16* %28, align 2, !dbg !3236, !tbaa !1800
-	%30 = and i16 %29, 16384, !dbg !3236
+	%30 = and i16 %29, u0x4000, !dbg !3236
 	%31 = icmp eq i16 %30, 0, !dbg !3236
 	%32 = select i1 %31, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.105, i64 0, i64 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.104, i64 0, i64 0), !dbg !3236
 	%33 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %11, i32 1, i64 4, i8* %32, i32 %24) #13, !dbg !3236

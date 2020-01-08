@@ -99,7 +99,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.97 = private unnamed_addr constant [12 x i8] c"i < N_CHARS\00", align 1
 @__PRETTY_FUNCTION__.get_next = private unnamed_addr constant [59 x i8] c"int get_next(struct Spec_list *, enum Upper_Lower_class *)\00", align 1
 @.str.98 = private unnamed_addr constant [49 x i8] c"is_char_class_member (p->u.char_class, s->state)\00", align 1
-@switch.table.is_char_class_member = private unnamed_addr constant [12 x i16] [i16 8, i16 1024, i16 1, i16 2, i16 2048, i16 -32768, i16 512, i16 16384, i16 4, i16 8192, i16 256, i16 4096]
+@switch.table.is_char_class_member = private unnamed_addr constant [12 x i16] [i16 8, i16 1024, i16 1, i16 2, i16 2048, i16 -32768, i16 512, i16 u0x4000, i16 4, i16 8192, i16 256, i16 4096]
 @.str.88 = private unnamed_addr constant [46 x i8] c"p->u.range.last_char >= p->u.range.first_char\00", align 1
 @__PRETTY_FUNCTION__.get_spec_stats = private unnamed_addr constant [40 x i8] c"void get_spec_stats(struct Spec_list *)\00", align 1
 @.str.89 = private unnamed_addr constant [27 x i8] c"too many characters in set\00", align 1
@@ -2538,7 +2538,7 @@ define internal fastcc zeroext i1 @parse_str(i8* nocapture readonly, %struct.Spe
 	%355 = zext i8 %101 to i64, !dbg !2192
 	%356 = getelementptr inbounds i16, i16* %354, i64 %355, !dbg !2192
 	%357 = load i16, i16* %356, align 2, !dbg !2192, !tbaa !1141
-	%358 = and i16 %357, 16384, !dbg !2192
+	%358 = and i16 %357, u0x4000, !dbg !2192
 	%359 = icmp eq i16 %358, 0, !dbg !2192
 	br i1 %359, label %362, label %360, !dbg !2194
 
@@ -2563,7 +2563,7 @@ define internal fastcc zeroext i1 @parse_str(i8* nocapture readonly, %struct.Spe
 	%369 = zext i8 %349 to i64, !dbg !2207
 	%370 = getelementptr inbounds i16, i16* %368, i64 %369, !dbg !2207
 	%371 = load i16, i16* %370, align 2, !dbg !2207, !tbaa !1141
-	%372 = and i16 %371, 16384, !dbg !2207
+	%372 = and i16 %371, u0x4000, !dbg !2207
 	%373 = icmp eq i16 %372, 0, !dbg !2207
 	br i1 %373, label %376, label %374, !dbg !2208
 
@@ -3806,7 +3806,7 @@ define internal fastcc i8* @make_printable_str(i8* nocapture readonly, i64) unna
 	%31 = zext i8 %19 to i64, !dbg !2807
 	%32 = getelementptr inbounds i16, i16* %30, i64 %31, !dbg !2807
 	%33 = load i16, i16* %32, align 2, !dbg !2807, !tbaa !1141
-	%34 = and i16 %33, 16384, !dbg !2807
+	%34 = and i16 %33, u0x4000, !dbg !2807
 	%35 = icmp eq i16 %34, 0, !dbg !2807
 	br i1 %35, label %37, label %36, !dbg !2809
 

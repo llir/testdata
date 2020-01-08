@@ -1447,7 +1447,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	call void @llvm.dbg.value(metadata i64 %202, metadata !1631, metadata !DIExpression()), !dbg !1705
 	call void @llvm.dbg.value(metadata i64 %201, metadata !1632, metadata !DIExpression()), !dbg !1704
 	%210 = getelementptr inbounds [16385 x i8], [16385 x i8]* %5, i64 0, i64 %209, !dbg !1849
-	%211 = sub i64 16384, %209, !dbg !1850
+	%211 = sub i64 u0x4000, %209, !dbg !1850
 	%212 = call i64 @safe_read(i32 %0, i8* nonnull %210, i64 %211) #13, !dbg !1851
 	call void @llvm.dbg.value(metadata i64 %212, metadata !1627, metadata !DIExpression()), !dbg !1780
 	switch i64 %212, label %217 [
@@ -1778,7 +1778,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	%321 = zext i8 %320 to i64, !dbg !1947
 	%322 = getelementptr inbounds i16, i16* %319, i64 %321, !dbg !1947
 	%323 = load i16, i16* %322, align 2, !dbg !1947, !tbaa !1949
-	%324 = and i16 %323, 16384, !dbg !1947
+	%324 = and i16 %323, u0x4000, !dbg !1947
 	%325 = icmp eq i16 %324, 0, !dbg !1947
 	br i1 %325, label %330, label %326, !dbg !1951
 
@@ -1834,7 +1834,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	br i1 %351, label %250, label %220, !llvm.loop !1964
 
 ; <label>:352
-	%353 = icmp eq i64 %225, 16384, !dbg !1966
+	%353 = icmp eq i64 %225, u0x4000, !dbg !1966
 	%354 = getelementptr inbounds i8, i8* %229, i64 1, !dbg !1970
 	call void @llvm.dbg.value(metadata i8* %354, metadata !1675, metadata !DIExpression()), !dbg !1858
 	call void @llvm.dbg.value(metadata i64 %225, metadata !1627, metadata !DIExpression(DW_OP_constu, 1, DW_OP_minus, DW_OP_stack_value)), !dbg !1780
@@ -2041,7 +2041,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	%412 = zext i8 %388 to i64, !dbg !2020
 	%413 = getelementptr inbounds i16, i16* %411, i64 %412, !dbg !2020
 	%414 = load i16, i16* %413, align 2, !dbg !2020, !tbaa !1949
-	%415 = and i16 %414, 16384, !dbg !2020
+	%415 = and i16 %414, u0x4000, !dbg !2020
 	%416 = icmp eq i16 %415, 0, !dbg !2020
 	br i1 %416, label %421, label %417, !dbg !2021
 

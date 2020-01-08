@@ -759,7 +759,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 	%119 = zext i8 %109 to i64, !dbg !1330
 	%120 = getelementptr inbounds i16, i16* %118, i64 %119, !dbg !1330
 	%121 = load i16, i16* %120, align 2, !dbg !1330, !tbaa !1332
-	%122 = and i16 %121, 16384, !dbg !1330
+	%122 = and i16 %121, u0x4000, !dbg !1330
 	%123 = icmp eq i16 %122, 0, !dbg !1330
 	br i1 %123, label %126, label %124, !dbg !1333
 
