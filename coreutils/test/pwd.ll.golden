@@ -955,7 +955,7 @@ define internal fastcc noalias i8* @nth_parent(i64) unnamed_addr #7 !dbg !1193 {
 	call void @llvm.dbg.value(metadata i64 %0, metadata !1197, metadata !DIExpression()), !dbg !1202
 	call void @llvm.dbg.value(metadata i64 3, metadata !1096, metadata !DIExpression()) #11, !dbg !1203
 	call void @llvm.dbg.value(metadata i64 %0, metadata !1101, metadata !DIExpression()) #11, !dbg !1205
-	%2 = icmp ugt i64 %0, 3074457345618258602, !dbg !1206
+	%2 = icmp ugt i64 %0, u0x2AAAAAAAAAAAAAAA, !dbg !1206
 	br i1 %2, label %3, label %4, !dbg !1207
 
 ; <label>:3

@@ -8740,7 +8740,7 @@ define internal fastcc i64 @quote_name(i8*, %struct.quoting_options*, i32, %stru
 	%621 = add i64 %620, 1, !dbg !6487
 	call void @llvm.dbg.value(metadata i64 3, metadata !2729, metadata !DIExpression()) #15, !dbg !6488
 	call void @llvm.dbg.value(metadata i64 %621, metadata !2734, metadata !DIExpression()) #15, !dbg !6490
-	%622 = icmp ugt i64 %621, 3074457345618258602, !dbg !6491
+	%622 = icmp ugt i64 %621, u0x2AAAAAAAAAAAAAAA, !dbg !6491
 	br i1 %622, label %623, label %624, !dbg !6492
 
 ; <label>:623
@@ -8806,7 +8806,7 @@ define internal fastcc i64 @quote_name(i8*, %struct.quoting_options*, i32, %stru
 	%653 = add i64 %652, 1, !dbg !6522
 	call void @llvm.dbg.value(metadata i64 3, metadata !2729, metadata !DIExpression()) #15, !dbg !6523
 	call void @llvm.dbg.value(metadata i64 %653, metadata !2734, metadata !DIExpression()) #15, !dbg !6525
-	%654 = icmp ugt i64 %653, 3074457345618258602, !dbg !6526
+	%654 = icmp ugt i64 %653, u0x2AAAAAAAAAAAAAAA, !dbg !6526
 	br i1 %654, label %655, label %656, !dbg !6527
 
 ; <label>:655
