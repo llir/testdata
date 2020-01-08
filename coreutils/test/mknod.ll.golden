@@ -503,7 +503,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !701 {
 	br label %110, !dbg !848
 
 ; <label>:110
-	%111 = phi i32 [ u0x2000, %109 ], [ 24576, %102 ], !dbg !849
+	%111 = phi i32 [ u0x2000, %109 ], [ u0x6000, %102 ], !dbg !849
 	call void @llvm.dbg.value(metadata i32 %111, metadata !714, metadata !DIExpression()), !dbg !847
 	%112 = add nsw i32 %45, 2, !dbg !850
 	%113 = sext i32 %112 to i64, !dbg !851

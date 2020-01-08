@@ -5223,7 +5223,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%579 = and i16 %578, -4096, !dbg !4576
 	switch i16 %579, label %616 [
 		i16 u0x2000, label %580
-		i16 24576, label %580
+		i16 u0x6000, label %580
 	], !dbg !4576
 
 ; <label>:580
@@ -6900,7 +6900,7 @@ define internal fastcc void @print_current_files() unnamed_addr #0 !dbg !4921 {
 	%531 = and i16 %530, -4096, !dbg !5462
 	switch i16 %531, label %563 [
 		i16 u0x2000, label %532
-		i16 24576, label %532
+		i16 u0x6000, label %532
 	], !dbg !5462
 
 ; <label>:532

@@ -2324,7 +2324,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	%855 = trunc i32 %854 to i16, !dbg !2297
 	%856 = and i16 %855, -4096, !dbg !2297
 	switch i16 %856, label %988 [
-		i16 24576, label %857
+		i16 u0x6000, label %857
 		i16 u0x2000, label %857
 	], !dbg !2297
 
