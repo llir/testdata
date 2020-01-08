@@ -1341,7 +1341,7 @@ define internal fastcc void @getoptarg(i8*, i8 signext, i8* nocapture, i32* noca
 	%21 = load i64, i64* %5, align 8, !dbg !1555
 	call void @llvm.dbg.value(metadata i64 %21, metadata !1535, metadata !DIExpression()), !dbg !1551
 	%22 = add i64 %21, -1, !dbg !1556
-	%23 = icmp ugt i64 %22, 2147483646, !dbg !1556
+	%23 = icmp ugt i64 %22, u0x7FFFFFFE, !dbg !1556
 	%24 = or i1 %20, %23, !dbg !1556
 	br i1 %24, label %25, label %35, !dbg !1556
 
@@ -13007,7 +13007,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !6542
-	call void @llvm.dbg.value(metadata i32 2147483646, metadata !6521, metadata !DIExpression()), !dbg !6543
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !6521, metadata !DIExpression()), !dbg !6543
 	%15 = icmp eq i32 %0, 2147483647, !dbg !6544
 	br i1 %15, label %16, label %17, !dbg !6546
 

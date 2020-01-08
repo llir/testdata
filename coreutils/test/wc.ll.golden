@@ -113,7 +113,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.1.70 = private unnamed_addr constant [7 x i8] c"%s: %s\00", align 1
 @.str.2.71 = private unnamed_addr constant [3 x i8] c"%s\00", align 1
 @exit_failure = dso_local global i32 1, align 4, !dbg !338
-@is_basic_table = dso_local local_unnamed_addr constant [8 x i32] [i32 6656, i32 -17, i32 -2, i32 2147483646, i32 0, i32 0, i32 0, i32 0], align 16, !dbg !345
+@is_basic_table = dso_local local_unnamed_addr constant [8 x i32] [i32 6656, i32 -17, i32 -2, i32 u0x7FFFFFFE, i32 0, i32 0, i32 0, i32 0], align 16, !dbg !345
 @program_name = dso_local local_unnamed_addr global i8* null, align 8, !dbg !356
 @.str.86 = private unnamed_addr constant [56 x i8] c"A NULL argv[0] was passed through an exec system call.\0A\00", align 1
 @.str.1.87 = private unnamed_addr constant [8 x i8] c"/.libs/\00", align 1
@@ -5131,7 +5131,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !3804
-	call void @llvm.dbg.value(metadata i32 2147483646, metadata !3783, metadata !DIExpression()), !dbg !3805
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !3783, metadata !DIExpression()), !dbg !3805
 	%15 = icmp eq i32 %0, 2147483647, !dbg !3806
 	br i1 %15, label %16, label %17, !dbg !3808
 
