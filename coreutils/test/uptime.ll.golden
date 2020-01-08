@@ -567,7 +567,7 @@ define internal fastcc void @uptime(i8*, i32) unnamed_addr #7 !dbg !812 {
 	%123 = sdiv i64 %122, 3600, !dbg !1041
 	%124 = trunc i64 %123 to i32, !dbg !1042
 	call void @llvm.dbg.value(metadata i32 %124, metadata !871, metadata !DIExpression()) #11, !dbg !1043
-	%125 = mul i64 %123, 15461882265600, !dbg !1044
+	%125 = mul i64 %123, u0xE1000000000, !dbg !1044
 	%126 = ashr exact i64 %125, 32, !dbg !1044
 	%127 = sub nsw i64 %122, %126, !dbg !1045
 	%128 = sdiv i64 %127, 60, !dbg !1046
@@ -7344,7 +7344,7 @@ define dso_local i32 @read_utmp(i8*, i64* nocapture, %struct.utmpx** nocapture, 
 	unreachable, !dbg !5141
 
 ; <label>:52
-	%53 = icmp ult i64 %15, 16012798675095096, !dbg !5142
+	%53 = icmp ult i64 %15, u0x38E38E38E38E38, !dbg !5142
 	br i1 %53, label %55, label %54, !dbg !5145
 
 ; <label>:54

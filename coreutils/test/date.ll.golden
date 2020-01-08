@@ -9486,7 +9486,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%725 = shl i64 %715, 32, !dbg !5750
 	%726 = ashr exact i64 %725, 32, !dbg !5750
 	%727 = getelementptr inbounds [100 x i8], [100 x i8]* %9, i64 0, i64 %726, !dbg !5750
-	%728 = sub i64 429496729600, %725, !dbg !5750
+	%728 = sub i64 u0x6400000000, %725, !dbg !5750
 	%729 = ashr exact i64 %728, 32, !dbg !5750
 	%730 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %727, i1 false, i1 true) #12, !dbg !5750
 	call void @llvm.dbg.value(metadata i32 %723, metadata !4625, metadata !DIExpression()) #12, !dbg !5751
@@ -9588,7 +9588,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%784 = shl i64 %774, 32, !dbg !5812
 	%785 = ashr exact i64 %784, 32, !dbg !5812
 	%786 = getelementptr inbounds [100 x i8], [100 x i8]* %9, i64 0, i64 %785, !dbg !5812
-	%787 = sub i64 429496729600, %784, !dbg !5812
+	%787 = sub i64 u0x6400000000, %784, !dbg !5812
 	%788 = ashr exact i64 %787, 32, !dbg !5812
 	%789 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %786, i1 false, i1 true) #12, !dbg !5812
 	call void @llvm.dbg.value(metadata i32 %782, metadata !4625, metadata !DIExpression()) #12, !dbg !5813
@@ -9959,7 +9959,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%999 = shl i64 %989, 32, !dbg !5935
 	%1000 = ashr exact i64 %999, 32, !dbg !5935
 	%1001 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1000, !dbg !5935
-	%1002 = sub i64 429496729600, %999, !dbg !5935
+	%1002 = sub i64 u0x6400000000, %999, !dbg !5935
 	%1003 = ashr exact i64 %1002, 32, !dbg !5935
 	%1004 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1001, i1 false, i1 true) #12, !dbg !5935
 	call void @llvm.dbg.value(metadata i32 %997, metadata !4625, metadata !DIExpression()) #12, !dbg !5936
@@ -10071,7 +10071,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1061 = shl i64 %1051, 32, !dbg !5999
 	%1062 = ashr exact i64 %1061, 32, !dbg !5999
 	%1063 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1062, !dbg !5999
-	%1064 = sub i64 429496729600, %1061, !dbg !5999
+	%1064 = sub i64 u0x6400000000, %1061, !dbg !5999
 	%1065 = ashr exact i64 %1064, 32, !dbg !5999
 	%1066 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1063, i1 false, i1 true) #12, !dbg !5999
 	call void @llvm.dbg.value(metadata i32 %1059, metadata !4625, metadata !DIExpression()) #12, !dbg !6000
@@ -10241,7 +10241,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1162 = shl i64 %1152, 32, !dbg !6091
 	%1163 = ashr exact i64 %1162, 32, !dbg !6091
 	%1164 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1163, !dbg !6091
-	%1165 = sub i64 429496729600, %1162, !dbg !6091
+	%1165 = sub i64 u0x6400000000, %1162, !dbg !6091
 	%1166 = ashr exact i64 %1165, 32, !dbg !6091
 	%1167 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1164, i1 false, i1 true) #12, !dbg !6091
 	call void @llvm.dbg.value(metadata i32 %1160, metadata !4625, metadata !DIExpression()) #12, !dbg !6092
@@ -10515,7 +10515,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1330 = shl i64 %1320, 32, !dbg !6207
 	%1331 = ashr exact i64 %1330, 32, !dbg !6207
 	%1332 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1331, !dbg !6207
-	%1333 = sub i64 429496729600, %1330, !dbg !6207
+	%1333 = sub i64 u0x6400000000, %1330, !dbg !6207
 	%1334 = ashr exact i64 %1333, 32, !dbg !6207
 	%1335 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1332, i1 false, i1 true) #12, !dbg !6207
 	call void @llvm.dbg.value(metadata i32 %1328, metadata !4625, metadata !DIExpression()) #12, !dbg !6208
@@ -10630,7 +10630,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1395 = shl i64 %1385, 32, !dbg !6275
 	%1396 = ashr exact i64 %1395, 32, !dbg !6275
 	%1397 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1396, !dbg !6275
-	%1398 = sub i64 429496729600, %1395, !dbg !6275
+	%1398 = sub i64 u0x6400000000, %1395, !dbg !6275
 	%1399 = ashr exact i64 %1398, 32, !dbg !6275
 	%1400 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1397, i1 false, i1 true) #12, !dbg !6275
 	call void @llvm.dbg.value(metadata i32 %1393, metadata !4625, metadata !DIExpression()) #12, !dbg !6276
@@ -10892,7 +10892,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1554 = shl i64 %1544, 32, !dbg !6405
 	%1555 = ashr exact i64 %1554, 32, !dbg !6405
 	%1556 = getelementptr inbounds [100 x i8], [100 x i8]* %17, i64 0, i64 %1555, !dbg !6405
-	%1557 = sub i64 429496729600, %1554, !dbg !6405
+	%1557 = sub i64 u0x6400000000, %1554, !dbg !6405
 	%1558 = ashr exact i64 %1557, 32, !dbg !6405
 	%1559 = call i64 @llvm.objectsize.i64.p0i8(i8* nonnull %1556, i1 false, i1 true) #12, !dbg !6405
 	call void @llvm.dbg.value(metadata i32 %1552, metadata !4625, metadata !DIExpression()) #12, !dbg !6406

@@ -352,7 +352,7 @@ define internal fastcc void @print_wide_uint(i64, i32, i32) unnamed_addr #0 !dbg
 	call void @llvm.dbg.value(metadata i32 7, metadata !285, metadata !DIExpression()), !dbg !294
 	call void @llvm.dbg.value(metadata i32 28, metadata !286, metadata !DIExpression()), !dbg !295
 	%4 = trunc i64 %0 to i32, !dbg !296
-	%5 = and i32 %4, 268435455, !dbg !296
+	%5 = and i32 %4, u0xFFFFFFF, !dbg !296
 	call void @llvm.dbg.value(metadata i32 %5, metadata !287, metadata !DIExpression()), !dbg !297
 	%6 = zext i32 %5 to i64, !dbg !298
 	%7 = icmp eq i64 %6, %0, !dbg !299

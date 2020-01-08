@@ -6108,7 +6108,7 @@ define dso_local i32 @read_utmp(i8*, i64* nocapture, %struct.utmpx** nocapture, 
 	unreachable, !dbg !4449
 
 ; <label>:52
-	%53 = icmp ult i64 %15, 16012798675095096, !dbg !4450
+	%53 = icmp ult i64 %15, u0x38E38E38E38E38, !dbg !4450
 	br i1 %53, label %55, label %54, !dbg !4453
 
 ; <label>:54

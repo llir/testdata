@@ -7481,7 +7481,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %69, label %184, label %70, !dbg !5410
 
 ; <label>:70
-	%71 = icmp sgt i64 %35, 9007199254740991, !dbg !5411
+	%71 = icmp sgt i64 %35, u0x1FFFFFFFFFFFFF, !dbg !5411
 	%72 = shl nsw i64 %35, 10, !dbg !5412
 	%73 = select i1 %71, i64 u0x7FFFFFFFFFFFFFFF, i64 %72, !dbg !5413
 	%74 = zext i1 %71 to i32, !dbg !5413

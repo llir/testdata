@@ -410,7 +410,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !34 {
 
 ; <label>:48
 	%49 = shl i64 %45, 1, !dbg !951
-	%50 = and i64 %45, 9223372036854775806, !dbg !952
+	%50 = and i64 %45, u0x7FFFFFFFFFFFFFFE, !dbg !952
 	%51 = icmp ult i64 %42, %50, !dbg !945
 	br i1 %51, label %52, label %44, !dbg !946, !llvm.loop !953
 

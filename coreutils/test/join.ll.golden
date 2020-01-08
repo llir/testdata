@@ -1338,7 +1338,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !853 {
 	call void @llvm.dbg.value(metadata i32 1, metadata !1321, metadata !DIExpression()) #12, !dbg !1510
 	%452 = shl i64 %445, 3, !dbg !1511
 	%453 = add i64 %452, 16, !dbg !1511
-	%454 = sub i64 2305843009213693950, %445, !dbg !1511
+	%454 = sub i64 u0x1FFFFFFFFFFFFFFE, %445, !dbg !1511
 	%455 = icmp eq i64 %451, %450, !dbg !1511
 	br i1 %455, label %456, label %484, !dbg !1512
 
@@ -1448,7 +1448,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !853 {
 	call void @llvm.dbg.value(metadata i32 2, metadata !1321, metadata !DIExpression()) #12, !dbg !1577
 	%511 = shl i64 %504, 3, !dbg !1578
 	%512 = add i64 %511, 16, !dbg !1578
-	%513 = sub i64 2305843009213693950, %504, !dbg !1578
+	%513 = sub i64 u0x1FFFFFFFFFFFFFFE, %504, !dbg !1578
 	%514 = icmp eq i64 %510, %509, !dbg !1578
 	br i1 %514, label %515, label %543, !dbg !1579
 

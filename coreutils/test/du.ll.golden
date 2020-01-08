@@ -3010,7 +3010,7 @@ define dso_local i32 @di_set_insert(%struct.di_set* nocapture nonnull, i64, i64)
 	call void @llvm.dbg.value(metadata %struct.di_set* %0, metadata !3173, metadata !DIExpression()) #14, !dbg !3179
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3178, metadata !DIExpression()) #14, !dbg !3181
 	%46 = add i64 %2, -1, !dbg !3182
-	%47 = icmp ult i64 %46, 9223372036854775806, !dbg !3182
+	%47 = icmp ult i64 %46, u0x7FFFFFFFFFFFFFFE, !dbg !3182
 	br i1 %47, label %59, label %48, !dbg !3182
 
 ; <label>:48
@@ -3134,7 +3134,7 @@ define dso_local i32 @di_set_lookup(%struct.di_set* nocapture nonnull, i64, i64)
 	call void @llvm.dbg.value(metadata %struct.di_set* %0, metadata !3173, metadata !DIExpression()) #14, !dbg !3264
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3178, metadata !DIExpression()) #14, !dbg !3266
 	%46 = add i64 %2, -1, !dbg !3267
-	%47 = icmp ult i64 %46, 9223372036854775806, !dbg !3267
+	%47 = icmp ult i64 %46, u0x7FFFFFFFFFFFFFFE, !dbg !3267
 	br i1 %47, label %59, label %48, !dbg !3267
 
 ; <label>:48
@@ -15075,7 +15075,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %69, label %184, label %70, !dbg !10806
 
 ; <label>:70
-	%71 = icmp sgt i64 %35, 9007199254740991, !dbg !10807
+	%71 = icmp sgt i64 %35, u0x1FFFFFFFFFFFFF, !dbg !10807
 	%72 = shl nsw i64 %35, 10, !dbg !10808
 	%73 = select i1 %71, i64 u0x7FFFFFFFFFFFFFFF, i64 %72, !dbg !10809
 	%74 = zext i1 %71 to i32, !dbg !10809

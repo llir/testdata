@@ -2141,7 +2141,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 ; <label>:717
 	%718 = load i64, i64* %11, align 8, !dbg !2795, !tbaa !2301
 	call void @llvm.dbg.value(metadata i64 %718, metadata !2775, metadata !DIExpression()) #13, !dbg !2787
-	%719 = icmp ult i64 %718, 18014398509481984, !dbg !2798
+	%719 = icmp ult i64 %718, u0x40000000000000, !dbg !2798
 	br i1 %719, label %720, label %755, !dbg !2799
 
 ; <label>:720
@@ -5682,7 +5682,7 @@ define internal fastcc zeroext i1 @fillbuf(%struct.buffer* nocapture, %struct._I
 	unreachable, !dbg !4826
 
 ; <label>:192
-	%193 = icmp ult i64 %172, 6148914691236517184, !dbg !4827
+	%193 = icmp ult i64 %172, u0x5555555555555540, !dbg !4827
 	br i1 %193, label %195, label %194, !dbg !4828
 
 ; <label>:194

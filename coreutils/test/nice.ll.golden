@@ -4649,7 +4649,7 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %69, label %184, label %70, !dbg !3300
 
 ; <label>:70
-	%71 = icmp sgt i64 %35, 9007199254740991, !dbg !3301
+	%71 = icmp sgt i64 %35, u0x1FFFFFFFFFFFFF, !dbg !3301
 	%72 = shl nsw i64 %35, 10, !dbg !3302
 	%73 = select i1 %71, i64 u0x7FFFFFFFFFFFFFFF, i64 %72, !dbg !3303
 	%74 = zext i1 %71 to i32, !dbg !3303
