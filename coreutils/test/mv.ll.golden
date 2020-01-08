@@ -8593,7 +8593,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 
 ; <label>:22
 	tail call void @free(i8* nonnull %9) #12, !dbg !7177
-	%23 = icmp ult i64 %10, 4611686018427387904, !dbg !7178
+	%23 = icmp ult i64 %10, u0x4000000000000000, !dbg !7178
 	br i1 %23, label %24, label %26, !dbg !7180
 
 ; <label>:24
@@ -8900,7 +8900,7 @@ define dso_local i8* @backupfile_internal(i8*, i32, i1 zeroext) local_unnamed_ad
 	br i1 %132, label %133, label %139, !dbg !7380
 
 ; <label>:133
-	%134 = icmp ult i64 %131, 4611686018427387904, !dbg !7381
+	%134 = icmp ult i64 %131, u0x4000000000000000, !dbg !7381
 	%135 = zext i1 %134 to i64, !dbg !7383
 	%136 = shl i64 %131, %135, !dbg !7383
 	call void @llvm.dbg.value(metadata i64 %136, metadata !7291, metadata !DIExpression()) #12, !dbg !7378

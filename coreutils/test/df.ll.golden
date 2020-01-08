@@ -16588,7 +16588,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 
 ; <label>:22
 	tail call void @free(i8* nonnull %9) #13, !dbg !10939
-	%23 = icmp ult i64 %10, 4611686018427387904, !dbg !10940
+	%23 = icmp ult i64 %10, u0x4000000000000000, !dbg !10940
 	br i1 %23, label %24, label %26, !dbg !10942
 
 ; <label>:24
