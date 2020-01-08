@@ -10662,7 +10662,7 @@ define internal fastcc i64 @calculate_columns(i1 zeroext) unnamed_addr #0 !dbg !
 ; <label>:12
 	call void @llvm.dbg.value(metadata i64 %5, metadata !3836, metadata !DIExpression()) #15, !dbg !7224
 	call void @llvm.dbg.value(metadata i64 48, metadata !3842, metadata !DIExpression()) #15, !dbg !7225
-	%13 = icmp ugt i64 %5, 192153584101141162, !dbg !7226
+	%13 = icmp ugt i64 %5, u0x2AAAAAAAAAAAAAA, !dbg !7226
 	br i1 %13, label %14, label %15, !dbg !7227
 
 ; <label>:14
