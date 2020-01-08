@@ -16188,7 +16188,7 @@ define dso_local i64 @safe_write(i32, i8* nocapture readonly, i64) local_unnamed
 	br label %4, !dbg !11811
 
 ; <label>:4
-	%5 = phi i64 [ 2146435072, %13 ], [ %2, %3 ]
+	%5 = phi i64 [ u0x7FF00000, %13 ], [ %2, %3 ]
 	br label %6, !dbg !11812
 
 ; <label>:6
@@ -16206,7 +16206,7 @@ define dso_local i64 @safe_write(i32, i8* nocapture readonly, i64) local_unnamed
 
 ; <label>:13
 	%14 = icmp eq i32 %11, 22, !dbg !11823
-	%15 = icmp ugt i64 %5, 2146435072, !dbg !11825
+	%15 = icmp ugt i64 %5, u0x7FF00000, !dbg !11825
 	%16 = and i1 %15, %14, !dbg !11826
 	call void @llvm.dbg.value(metadata i64 %5, metadata !11803, metadata !DIExpression()), !dbg !11810
 	br i1 %16, label %4, label %17
