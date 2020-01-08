@@ -5104,7 +5104,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%294 = getelementptr inbounds i8, i8* %5, i64 24, !dbg !2513
 	%295 = bitcast i8* %294 to i32*, !dbg !2513
 	%296 = load i32, i32* %295, align 8, !dbg !2513, !tbaa !1292
-	%297 = and i32 %296, 61440, !dbg !2513
+	%297 = and i32 %296, u0xF000, !dbg !2513
 	%298 = icmp eq i32 %297, 40960, !dbg !2513
 	br i1 %298, label %299, label %3885, !dbg !2514
 
@@ -8241,7 +8241,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%2357 = getelementptr inbounds i8, i8* %5, i64 24, !dbg !3267
 	%2358 = bitcast i8* %2357 to i32*, !dbg !3267
 	%2359 = load i32, i32* %2358, align 8, !dbg !3267, !tbaa !1292
-	%2360 = and i32 %2359, 61440, !dbg !3267
+	%2360 = and i32 %2359, u0xF000, !dbg !3267
 	%2361 = icmp eq i32 %2360, 40960, !dbg !3267
 	br i1 %2361, label %2373, label %2362, !dbg !3268
 
@@ -11588,7 +11588,7 @@ define dso_local i8* @find_mount_point(i8*, %struct.stat* nocapture readonly) lo
 ; <label>:14
 	%15 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !4288
 	%16 = load i32, i32* %15, align 8, !dbg !4288, !tbaa !1292
-	%17 = and i32 %16, 61440, !dbg !4288
+	%17 = and i32 %16, u0xF000, !dbg !4288
 	%18 = icmp eq i32 %17, 16384, !dbg !4288
 	br i1 %18, label %19, label %28, !dbg !4289
 
@@ -12497,7 +12497,7 @@ define dso_local i8* @file_type(%struct.stat* nocapture readonly) local_unnamed_
 	call void @llvm.dbg.value(metadata %struct.stat* %0, metadata !4920, metadata !DIExpression()), !dbg !4921
 	%2 = getelementptr inbounds %struct.stat, %struct.stat* %0, i64 0, i32 3, !dbg !4922
 	%3 = load i32, i32* %2, align 8, !dbg !4922, !tbaa !1292
-	%4 = and i32 %3, 61440, !dbg !4922
+	%4 = and i32 %3, u0xF000, !dbg !4922
 	%5 = add nsw i32 %4, -4096, !dbg !4924
 	%6 = lshr exact i32 %5, 12, !dbg !4924
 	%7 = trunc i32 %6 to i20, !dbg !4924
@@ -12547,7 +12547,7 @@ define dso_local void @strmode(i32, i8* nocapture) local_unnamed_addr #7 !dbg !4
 	call void @llvm.dbg.value(metadata i32 %0, metadata !4948, metadata !DIExpression()), !dbg !4950
 	call void @llvm.dbg.value(metadata i8* %1, metadata !4949, metadata !DIExpression()), !dbg !4951
 	call void @llvm.dbg.value(metadata i32 %0, metadata !4952, metadata !DIExpression()), !dbg !4957
-	%3 = and i32 %0, 61440, !dbg !4959
+	%3 = and i32 %0, u0xF000, !dbg !4959
 	%4 = add nsw i32 %3, -4096, !dbg !4961
 	%5 = lshr exact i32 %4, 12, !dbg !4961
 	%6 = trunc i32 %5 to i20, !dbg !4961

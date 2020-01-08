@@ -903,7 +903,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	%182 = sext i32 %181 to i64, !dbg !1380
 	%183 = getelementptr inbounds %struct.stat, %struct.stat* %158, i64 %182, i32 3, !dbg !1380
 	%184 = load i32, i32* %183, align 8, !dbg !1380, !tbaa !1381
-	%185 = and i32 %184, 61440, !dbg !1380
+	%185 = and i32 %184, u0xF000, !dbg !1380
 	%186 = icmp eq i32 %185, 4096, !dbg !1380
 	br i1 %186, label %193, label %187, !dbg !1384
 
@@ -4898,7 +4898,7 @@ define dso_local i8* @find_mount_point(i8*, %struct.stat* nocapture readonly) lo
 ; <label>:14
 	%15 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !3903
 	%16 = load i32, i32* %15, align 8, !dbg !3903, !tbaa !1381
-	%17 = and i32 %16, 61440, !dbg !3903
+	%17 = and i32 %16, u0xF000, !dbg !3903
 	%18 = icmp eq i32 %17, 16384, !dbg !3903
 	br i1 %18, label %19, label %28, !dbg !3904
 

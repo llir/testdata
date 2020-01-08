@@ -481,7 +481,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !727 {
 ; <label>:79
 	%80 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 3, !dbg !895
 	%81 = load i32, i32* %80, align 8, !dbg !895, !tbaa !896
-	%82 = and i32 %81, 61440, !dbg !895
+	%82 = and i32 %81, u0xF000, !dbg !895
 	%83 = icmp eq i32 %82, 16384, !dbg !895
 	call void @llvm.lifetime.end.p0i8(i64 144, i8* nonnull %71) #13, !dbg !900
 	br i1 %83, label %86, label %84, !dbg !901
@@ -557,7 +557,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !727 {
 ; <label>:116
 	%117 = getelementptr inbounds %struct.stat, %struct.stat* %3, i64 0, i32 3, !dbg !937
 	%118 = load i32, i32* %117, align 8, !dbg !937, !tbaa !896
-	%119 = and i32 %118, 61440, !dbg !937
+	%119 = and i32 %118, u0xF000, !dbg !937
 	%120 = icmp eq i32 %119, 16384, !dbg !937
 	call void @llvm.lifetime.end.p0i8(i64 144, i8* nonnull %108) #13, !dbg !938
 	br i1 %120, label %123, label %121, !dbg !939

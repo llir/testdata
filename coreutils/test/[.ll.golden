@@ -1977,7 +1977,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:117
 	%118 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1684
 	%119 = load i32, i32* %118, align 8, !dbg !1684, !tbaa !1685
-	%120 = and i32 %119, 61440, !dbg !1684
+	%120 = and i32 %119, u0xF000, !dbg !1684
 	%121 = icmp eq i32 %120, 32768, !dbg !1684
 	br label %336
 
@@ -2009,7 +2009,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:134
 	%135 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1701
 	%136 = load i32, i32* %135, align 8, !dbg !1701, !tbaa !1685
-	%137 = and i32 %136, 61440, !dbg !1701
+	%137 = and i32 %136, u0xF000, !dbg !1701
 	%138 = icmp eq i32 %137, 16384, !dbg !1701
 	br label %336
 
@@ -2070,7 +2070,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:167
 	%168 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1735
 	%169 = load i32, i32* %168, align 8, !dbg !1735, !tbaa !1685
-	%170 = and i32 %169, 61440, !dbg !1735
+	%170 = and i32 %169, u0xF000, !dbg !1735
 	%171 = icmp eq i32 %170, 49152, !dbg !1735
 	br label %336
 
@@ -2102,7 +2102,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:184
 	%185 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1751
 	%186 = load i32, i32* %185, align 8, !dbg !1751, !tbaa !1685
-	%187 = and i32 %186, 61440, !dbg !1751
+	%187 = and i32 %186, u0xF000, !dbg !1751
 	%188 = icmp eq i32 %187, 8192, !dbg !1751
 	br label %336
 
@@ -2134,7 +2134,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:201
 	%202 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1767
 	%203 = load i32, i32* %202, align 8, !dbg !1767, !tbaa !1685
-	%204 = and i32 %203, 61440, !dbg !1767
+	%204 = and i32 %203, u0xF000, !dbg !1767
 	%205 = icmp eq i32 %204, 24576, !dbg !1767
 	br label %336
 
@@ -2166,7 +2166,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:218
 	%219 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1783
 	%220 = load i32, i32* %219, align 8, !dbg !1783, !tbaa !1685
-	%221 = and i32 %220, 61440, !dbg !1783
+	%221 = and i32 %220, u0xF000, !dbg !1783
 	%222 = icmp eq i32 %221, 4096, !dbg !1783
 	br label %336
 
@@ -2198,7 +2198,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 ; <label>:235
 	%236 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1803
 	%237 = load i32, i32* %236, align 8, !dbg !1803, !tbaa !1685
-	%238 = and i32 %237, 61440, !dbg !1803
+	%238 = and i32 %237, u0xF000, !dbg !1803
 	%239 = icmp eq i32 %238, 40960, !dbg !1803
 	br label %336
 

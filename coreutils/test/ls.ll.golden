@@ -4549,7 +4549,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 ; <label>:235
 	%236 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4112
 	%237 = load i32, i32* %236, align 8, !dbg !4112, !tbaa !4113
-	%238 = and i32 %237, 61440, !dbg !4112
+	%238 = and i32 %237, u0xF000, !dbg !4112
 	%239 = icmp eq i32 %238, 16384, !dbg !4112
 	br i1 %239, label %242, label %240
 
@@ -4610,7 +4610,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 ; <label>:263
 	%264 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4155
 	%265 = load i32, i32* %264, align 8, !dbg !4155, !tbaa !4113
-	%266 = and i32 %265, 61440, !dbg !4155
+	%266 = and i32 %265, u0xF000, !dbg !4155
 	%267 = icmp ne i32 %266, 32768, !dbg !4155
 	%268 = load i8, i8* @print_with_color, align 1, !dbg !4156
 	%269 = icmp eq i8 %268, 0, !dbg !4156
@@ -4806,7 +4806,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 ; <label>:355
 	%356 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4300
 	%357 = load i32, i32* %356, align 8, !dbg !4300, !tbaa !4113
-	%358 = and i32 %357, 61440, !dbg !4300
+	%358 = and i32 %357, u0xF000, !dbg !4300
 	%359 = icmp eq i32 %358, 40960, !dbg !4300
 	br i1 %359, label %360, label %452, !dbg !4301
 
@@ -4965,7 +4965,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%441 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 3
 	%442 = load i32, i32* %441, align 8, !dbg !4431, !tbaa !4432
 	%443 = and i1 %440, %2, !dbg !4433
-	%444 = and i32 %442, 61440, !dbg !4434
+	%444 = and i32 %442, u0xF000, !dbg !4434
 	%445 = icmp eq i32 %444, 16384, !dbg !4434
 	%446 = and i1 %443, %445, !dbg !4433
 	br i1 %446, label %449, label %447, !dbg !4433
@@ -11484,7 +11484,7 @@ define internal fastcc i64 @print_name_with_quoting(%struct.fileinfo* nocapture 
 	br i1 %47, label %161, label %48, !dbg !7581
 
 ; <label>:48
-	%49 = and i32 %42, 61440, !dbg !7582
+	%49 = and i32 %42, u0xF000, !dbg !7582
 	%50 = add nsw i32 %49, -4096, !dbg !7585
 	%51 = lshr exact i32 %50, 12, !dbg !7585
 	%52 = trunc i32 %51 to i20, !dbg !7585
@@ -16866,7 +16866,7 @@ define dso_local i32 @file_has_acl(i8*, %struct.stat* nocapture readonly) local_
 	call void @llvm.dbg.value(metadata %struct.stat* %1, metadata !10590, metadata !DIExpression()), !dbg !10595
 	%3 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !10596
 	%4 = load i32, i32* %3, align 8, !dbg !10596, !tbaa !4432
-	%5 = and i32 %4, 61440, !dbg !10596
+	%5 = and i32 %4, u0xF000, !dbg !10596
 	%6 = icmp eq i32 %5, 40960, !dbg !10596
 	br i1 %6, label %35, label %7, !dbg !10597
 
@@ -16889,7 +16889,7 @@ define dso_local i32 @file_has_acl(i8*, %struct.stat* nocapture readonly) local_
 ; <label>:16
 	call void @llvm.dbg.value(metadata i64 %8, metadata !10591, metadata !DIExpression()), !dbg !10599
 	%17 = load i32, i32* %3, align 8, !dbg !10609, !tbaa !4432
-	%18 = and i32 %17, 61440, !dbg !10609
+	%18 = and i32 %17, u0xF000, !dbg !10609
 	%19 = icmp eq i32 %18, 16384, !dbg !10609
 	br i1 %19, label %20, label %34, !dbg !10611
 
@@ -17002,7 +17002,7 @@ define dso_local void @strmode(i32, i8* nocapture) local_unnamed_addr #0 !dbg !1
 	call void @llvm.dbg.value(metadata i32 %0, metadata !10734, metadata !DIExpression()), !dbg !10736
 	call void @llvm.dbg.value(metadata i8* %1, metadata !10735, metadata !DIExpression()), !dbg !10737
 	call void @llvm.dbg.value(metadata i32 %0, metadata !10738, metadata !DIExpression()), !dbg !10743
-	%3 = and i32 %0, 61440, !dbg !10745
+	%3 = and i32 %0, u0xF000, !dbg !10745
 	%4 = add nsw i32 %3, -4096, !dbg !10747
 	%5 = lshr exact i32 %4, 12, !dbg !10747
 	%6 = trunc i32 %5 to i20, !dbg !10747

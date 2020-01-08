@@ -6925,7 +6925,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	store i16 %339, i16* %318, align 8, !dbg !5158, !tbaa !1310
 	%340 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %317, i64 0, i32 18, i64 0, i32 3, !dbg !5159
 	%341 = load i32, i32* %340, align 8, !dbg !5159, !tbaa !4495
-	%342 = and i32 %341, 61440, !dbg !5159
+	%342 = and i32 %341, u0xF000, !dbg !5159
 	%343 = icmp eq i32 %342, 16384, !dbg !5159
 	br i1 %343, label %344, label %355, !dbg !5161
 

@@ -471,7 +471,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !2 {
 	call void @llvm.dbg.value(metadata i64 %64, metadata !82, metadata !DIExpression()), !dbg !862
 	%65 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 3, !dbg !863
 	%66 = load i32, i32* %65, align 8, !dbg !863, !tbaa !864
-	%67 = and i32 %66, 61440, !dbg !863
+	%67 = and i32 %66, u0xF000, !dbg !863
 	%68 = icmp eq i32 %67, 32768, !dbg !863
 	%69 = icmp eq i8 %14, 0, !dbg !865
 	call void @llvm.dbg.value(metadata i32 0, metadata !130, metadata !DIExpression()), !dbg !796

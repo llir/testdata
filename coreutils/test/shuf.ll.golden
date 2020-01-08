@@ -6693,7 +6693,7 @@ define dso_local noalias i8* @fread_file(%struct._IO_FILE* nocapture, i64* nocap
 ; <label>:8
 	%9 = getelementptr inbounds %struct.stat, %struct.stat* %3, i64 0, i32 3, !dbg !5233
 	%10 = load i32, i32* %9, align 8, !dbg !5233, !tbaa !1176
-	%11 = and i32 %10, 61440, !dbg !5233
+	%11 = and i32 %10, u0xF000, !dbg !5233
 	%12 = icmp eq i32 %11, 32768, !dbg !5233
 	br i1 %12, label %13, label %27, !dbg !5234
 

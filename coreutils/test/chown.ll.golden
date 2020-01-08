@@ -1100,7 +1100,7 @@ define dso_local zeroext i1 @chown_files(i8**, i32, i32, i32, i32, i32, %struct.
 	%158 = phi %struct.stat* [ %155, %153 ], [ %152, %149 ]
 	%159 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %61, i64 0, i32 18, i64 0, i32 3, !dbg !1671
 	%160 = load i32, i32* %159, align 8, !dbg !1671, !tbaa !1672
-	%161 = and i32 %160, 61440, !dbg !1671
+	%161 = and i32 %160, u0xF000, !dbg !1671
 	%162 = icmp eq i32 %161, 40960, !dbg !1671
 	br i1 %162, label %163, label %175, !dbg !1673
 
@@ -1286,7 +1286,7 @@ define dso_local zeroext i1 @chown_files(i8**, i32, i32, i32, i32, i32, %struct.
 
 ; <label>:253
 	%254 = load i32, i32* %240, align 8, !dbg !1796, !tbaa !1672
-	%255 = and i32 %254, 61440, !dbg !1796
+	%255 = and i32 %254, u0xF000, !dbg !1796
 	%256 = icmp eq i32 %255, 32768, !dbg !1796
 	br i1 %256, label %257, label %298, !dbg !1797
 
@@ -8488,7 +8488,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	store i16 %339, i16* %318, align 8, !dbg !6121, !tbaa !1592
 	%340 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %317, i64 0, i32 18, i64 0, i32 3, !dbg !6122
 	%341 = load i32, i32* %340, align 8, !dbg !6122, !tbaa !1672
-	%342 = and i32 %341, 61440, !dbg !6122
+	%342 = and i32 %341, u0xF000, !dbg !6122
 	%343 = icmp eq i32 %342, 16384, !dbg !6122
 	br i1 %343, label %344, label %355, !dbg !6124
 

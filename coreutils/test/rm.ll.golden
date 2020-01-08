@@ -1522,7 +1522,7 @@ define internal fastcc i32 @prompt(%struct.FTS* nocapture readonly, %struct._fts
 ; <label>:73
 	%74 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 3, !dbg !1965
 	%75 = load i32, i32* %74, align 8, !dbg !1965, !tbaa !1967
-	%76 = and i32 %75, 61440, !dbg !1965
+	%76 = and i32 %75, u0xF000, !dbg !1965
 	%77 = icmp eq i32 %76, 40960, !dbg !1965
 	br i1 %77, label %86, label %78, !dbg !1968
 
@@ -2537,7 +2537,7 @@ define dso_local i8* @file_type(%struct.stat* nocapture readonly) local_unnamed_
 	call void @llvm.dbg.value(metadata %struct.stat* %0, metadata !2640, metadata !DIExpression()), !dbg !2641
 	%2 = getelementptr inbounds %struct.stat, %struct.stat* %0, i64 0, i32 3, !dbg !2642
 	%3 = load i32, i32* %2, align 8, !dbg !2642, !tbaa !1967
-	%4 = and i32 %3, 61440, !dbg !2642
+	%4 = and i32 %3, u0xF000, !dbg !2642
 	%5 = add nsw i32 %4, -4096, !dbg !2644
 	%6 = lshr exact i32 %5, 12, !dbg !2644
 	%7 = trunc i32 %6 to i20, !dbg !2644
@@ -8676,7 +8676,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	store i16 %339, i16* %318, align 8, !dbg !6623, !tbaa !1471
 	%340 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %317, i64 0, i32 18, i64 0, i32 3, !dbg !6624
 	%341 = load i32, i32* %340, align 8, !dbg !6624, !tbaa !1967
-	%342 = and i32 %341, 61440, !dbg !6624
+	%342 = and i32 %341, u0xF000, !dbg !6624
 	%343 = icmp eq i32 %342, 16384, !dbg !6624
 	br i1 %343, label %344, label %355, !dbg !6626
 

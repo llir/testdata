@@ -836,7 +836,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !39 {
 	%236 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %158, i64 0, i32 18, i64 0, i32 3, !dbg !1377
 	%237 = load i32, i32* %236, align 8, !dbg !1377, !tbaa !1380
 	call void @llvm.dbg.value(metadata i32 %237, metadata !1116, metadata !DIExpression()) #11, !dbg !1381
-	%238 = and i32 %237, 61440, !dbg !1382
+	%238 = and i32 %237, u0xF000, !dbg !1382
 	%239 = icmp eq i32 %238, 16384, !dbg !1382
 	%240 = load i32, i32* @umask_value, align 4, !dbg !1383, !tbaa !1170
 	%241 = load %struct.mode_change*, %struct.mode_change** @change, align 8, !dbg !1384, !tbaa !951
@@ -1016,7 +1016,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !39 {
 	br i1 %322, label %323, label %334, !dbg !1514
 
 ; <label>:323
-	%324 = and i32 %259, 61440, !dbg !1515
+	%324 = and i32 %259, u0xF000, !dbg !1515
 	%325 = icmp eq i32 %324, 16384, !dbg !1515
 	%326 = load %struct.mode_change*, %struct.mode_change** @change, align 8, !dbg !1516, !tbaa !951
 	%327 = call i32 @mode_adjust(i32 %259, i1 zeroext %325, i32 0, %struct.mode_change* %326, i32* null) #11, !dbg !1517
@@ -1189,7 +1189,7 @@ define dso_local void @strmode(i32, i8* nocapture) local_unnamed_addr #7 !dbg !1
 	call void @llvm.dbg.value(metadata i32 %0, metadata !1609, metadata !DIExpression()), !dbg !1611
 	call void @llvm.dbg.value(metadata i8* %1, metadata !1610, metadata !DIExpression()), !dbg !1612
 	call void @llvm.dbg.value(metadata i32 %0, metadata !1613, metadata !DIExpression()), !dbg !1618
-	%3 = and i32 %0, 61440, !dbg !1620
+	%3 = and i32 %0, u0xF000, !dbg !1620
 	%4 = add nsw i32 %3, -4096, !dbg !1622
 	%5 = lshr exact i32 %4, 12, !dbg !1622
 	%6 = trunc i32 %5 to i20, !dbg !1622
@@ -7629,7 +7629,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	store i16 %339, i16* %318, align 8, !dbg !5686, !tbaa !1316
 	%340 = getelementptr inbounds %struct._ftsent, %struct._ftsent* %317, i64 0, i32 18, i64 0, i32 3, !dbg !5687
 	%341 = load i32, i32* %340, align 8, !dbg !5687, !tbaa !1380
-	%342 = and i32 %341, 61440, !dbg !5687
+	%342 = and i32 %341, u0xF000, !dbg !5687
 	%343 = icmp eq i32 %342, 16384, !dbg !5687
 	br i1 %343, label %344, label %355, !dbg !5689
 
