@@ -426,7 +426,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !766 {
 	%58 = getelementptr inbounds %struct.sigaction, %struct.sigaction* %5, i64 0, i32 0, i32 0, !dbg !966
 	store void (i32)* @cleanup, void (i32)** %58, align 8, !dbg !967, !tbaa !968
 	%59 = getelementptr inbounds %struct.sigaction, %struct.sigaction* %5, i64 0, i32 2, !dbg !969
-	store i32 268435456, i32* %59, align 8, !dbg !970, !tbaa !971
+	store i32 u0x10000000, i32* %59, align 8, !dbg !970, !tbaa !971
 	call void @llvm.dbg.value(metadata %struct.sigaction* %5, metadata !869, metadata !DIExpression(DW_OP_deref)) #12, !dbg !974
 	%60 = call i32 @sigaction(i32 14, %struct.sigaction* nonnull %5, %struct.sigaction* null) #12, !dbg !975
 	call void @llvm.dbg.value(metadata %struct.sigaction* %5, metadata !869, metadata !DIExpression(DW_OP_deref)) #12, !dbg !974
@@ -449,7 +449,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !766 {
 	%71 = getelementptr inbounds %struct.sigaction, %struct.sigaction* %4, i64 0, i32 0, i32 0, !dbg !991
 	store void (i32)* @chld, void (i32)** %71, align 8, !dbg !992, !tbaa !968
 	%72 = getelementptr inbounds %struct.sigaction, %struct.sigaction* %4, i64 0, i32 2, !dbg !993
-	store i32 268435456, i32* %72, align 8, !dbg !994, !tbaa !971
+	store i32 u0x10000000, i32* %72, align 8, !dbg !994, !tbaa !971
 	call void @llvm.dbg.value(metadata %struct.sigaction* %4, metadata !987, metadata !DIExpression(DW_OP_deref)) #12, !dbg !995
 	%73 = call i32 @sigaction(i32 17, %struct.sigaction* nonnull %4, %struct.sigaction* null) #12, !dbg !996
 	call fastcc void @unblock_signal(i32 17) #12, !dbg !997

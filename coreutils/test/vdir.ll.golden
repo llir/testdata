@@ -9185,7 +9185,7 @@ define internal fastcc void @signal_setup(i1 zeroext) unnamed_addr #0 !dbg !88 {
 	%24 = bitcast %struct.__sigset_t* %23 to i8*, !dbg !6672
 	call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 8 %24, i8* align 8 bitcast (%struct.__sigset_t* @caught_signals to i8*), i64 128, i1 false), !dbg !6672, !tbaa.struct !6673
 	%25 = getelementptr inbounds %struct.sigaction, %struct.sigaction* %2, i64 0, i32 2, !dbg !6674
-	store i32 268435456, i32* %25, align 8, !dbg !6675, !tbaa !6676
+	store i32 u0x10000000, i32* %25, align 8, !dbg !6675, !tbaa !6676
 	call void @llvm.dbg.value(metadata i32 0, metadata !94, metadata !DIExpression()), !dbg !6646
 	br label %26, !dbg !6679
 

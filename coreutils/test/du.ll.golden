@@ -738,7 +738,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !83 {
 ; <label>:81
 	%82 = load %struct.exclude*, %struct.exclude** @exclude, align 8, !dbg !1555, !tbaa !1387
 	%83 = load i8*, i8** @optarg, align 8, !dbg !1557, !tbaa !1387
-	%84 = call i32 @add_exclude_file(void (%struct.exclude*, i8*, i32)* nonnull @add_exclude, %struct.exclude* %82, i8* %83, i32 268435456, i8 signext 10) #14, !dbg !1558
+	%84 = call i32 @add_exclude_file(void (%struct.exclude*, i8*, i32)* nonnull @add_exclude, %struct.exclude* %82, i8* %83, i32 u0x10000000, i8 signext 10) #14, !dbg !1558
 	%85 = icmp eq i32 %84, 0, !dbg !1558
 	br i1 %85, label %116, label %86, !dbg !1559
 
@@ -3384,7 +3384,7 @@ define dso_local zeroext i1 @exclude_fnmatch(i8*, i8*, i32) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3491, metadata !DIExpression()), !dbg !3500
 	call void @llvm.dbg.value(metadata i8* %1, metadata !3492, metadata !DIExpression()), !dbg !3501
 	call void @llvm.dbg.value(metadata i32 %2, metadata !3493, metadata !DIExpression()), !dbg !3502
-	%4 = and i32 %2, 268435456, !dbg !3503
+	%4 = and i32 %2, u0x10000000, !dbg !3503
 	%5 = icmp eq i32 %4, 0, !dbg !3504
 	%6 = select i1 %5, i32 (i8*, i8*, i32)* @fnmatch_no_wildcards, i32 (i8*, i8*, i32)* @fnmatch, !dbg !3504
 	call void @llvm.dbg.value(metadata i32 (i8*, i8*, i32)* %6, metadata !3494, metadata !DIExpression()), !dbg !3505
@@ -3655,7 +3655,7 @@ define dso_local zeroext i1 @excluded_file_name(%struct.exclude* nocapture reado
 	call void @llvm.dbg.value(metadata i8* %66, metadata !3491, metadata !DIExpression()) #14, !dbg !3741
 	call void @llvm.dbg.value(metadata i8* %1, metadata !3492, metadata !DIExpression()) #14, !dbg !3743
 	call void @llvm.dbg.value(metadata i32 %56, metadata !3493, metadata !DIExpression()) #14, !dbg !3744
-	%67 = and i32 %56, 268435456, !dbg !3745
+	%67 = and i32 %56, u0x10000000, !dbg !3745
 	%68 = icmp eq i32 %67, 0, !dbg !3746
 	%69 = select i1 %68, i32 (i8*, i8*, i32)* @fnmatch_no_wildcards, i32 (i8*, i8*, i32)* @fnmatch, !dbg !3746
 	call void @llvm.dbg.value(metadata i32 (i8*, i8*, i32)* %69, metadata !3494, metadata !DIExpression()) #14, !dbg !3747
@@ -4042,7 +4042,7 @@ define dso_local void @add_exclude(%struct.exclude* nocapture, i8*, i32) #7 !dbg
 	%157 = tail call noalias i8* @xstrdup(i8* %1) #14, !dbg !3987
 	call void @llvm.dbg.value(metadata i8* %157, metadata !3808, metadata !DIExpression()), !dbg !3988
 	%158 = and i32 %2, 268435458, !dbg !3989
-	%159 = icmp eq i32 %158, 268435456, !dbg !3991
+	%159 = icmp eq i32 %158, u0x10000000, !dbg !3991
 	br i1 %159, label %160, label %180, !dbg !3992
 
 ; <label>:160

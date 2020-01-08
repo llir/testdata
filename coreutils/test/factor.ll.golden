@@ -17268,7 +17268,7 @@ define dso_local i8* @str_cd_iconv(i8*, i8*) local_unnamed_addr #7 !dbg !9181 {
 	store i64 %9, i64* %4, align 8, !dbg !9229, !tbaa !1148
 	call void @llvm.dbg.value(metadata i64 %9, metadata !9186, metadata !DIExpression()), !dbg !9230
 	call void @llvm.dbg.value(metadata i64 4294967295, metadata !9190, metadata !DIExpression()), !dbg !9231
-	%10 = icmp ult i64 %9, 268435456, !dbg !9232
+	%10 = icmp ult i64 %9, u0x10000000, !dbg !9232
 	%11 = shl i64 %9, 4, !dbg !9234
 	%12 = select i1 %10, i64 %11, i64 %9, !dbg !9235
 	call void @llvm.dbg.value(metadata i64 %12, metadata !9186, metadata !DIExpression()), !dbg !9230
