@@ -3955,7 +3955,7 @@ define dso_local void @add_exclude(%struct.exclude* nocapture, i8*, i32) #7 !dbg
 	br label %187
 
 ; <label>:106
-	%107 = and i32 %2, 67108864, !dbg !3933
+	%107 = and i32 %2, u0x4000000, !dbg !3933
 	%108 = icmp eq i32 %107, 0, !dbg !3933
 	br i1 %108, label %119, label %109, !dbg !3936
 
@@ -13623,7 +13623,7 @@ define dso_local i8* @quotearg_colon(i8*) local_unnamed_addr #7 !dbg !9812 {
 	call void @llvm.dbg.value(metadata i32* %4, metadata !8426, metadata !DIExpression()) #14, !dbg !9832
 	call void @llvm.dbg.value(metadata i32 26, metadata !8428, metadata !DIExpression()) #14, !dbg !9833
 	%5 = load i32, i32* %4, align 4, !dbg !9834, !tbaa !1473
-	%6 = or i32 %5, 67108864, !dbg !9835
+	%6 = or i32 %5, u0x4000000, !dbg !9835
 	store i32 %6, i32* %4, align 4, !dbg !9835, !tbaa !1473
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %2, metadata !9749, metadata !DIExpression(DW_OP_deref)) #14, !dbg !9825
 	%7 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 -1, %struct.quoting_options* nonnull %2) #14, !dbg !9836
@@ -13651,7 +13651,7 @@ define dso_local i8* @quotearg_colon_mem(i8*, i64) local_unnamed_addr #7 !dbg !9
 	call void @llvm.dbg.value(metadata i32* %5, metadata !8426, metadata !DIExpression()) #14, !dbg !9858
 	call void @llvm.dbg.value(metadata i32 26, metadata !8428, metadata !DIExpression()) #14, !dbg !9859
 	%6 = load i32, i32* %5, align 4, !dbg !9860, !tbaa !1473
-	%7 = or i32 %6, 67108864, !dbg !9861
+	%7 = or i32 %6, u0x4000000, !dbg !9861
 	store i32 %7, i32* %5, align 4, !dbg !9861, !tbaa !1473
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %3, metadata !9749, metadata !DIExpression(DW_OP_deref)) #14, !dbg !9851
 	%8 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 %1, %struct.quoting_options* nonnull %3) #14, !dbg !9862
@@ -13698,7 +13698,7 @@ define dso_local i8* @quotearg_n_style_colon(i32, i32, i8*) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i32* %14, metadata !8426, metadata !DIExpression()), !dbg !9892
 	call void @llvm.dbg.value(metadata i32 26, metadata !8428, metadata !DIExpression()), !dbg !9893
 	%15 = load i32, i32* %14, align 4, !dbg !9894, !tbaa !1473
-	%16 = or i32 %15, 67108864, !dbg !9895
+	%16 = or i32 %15, u0x4000000, !dbg !9895
 	store i32 %16, i32* %14, align 4, !dbg !9895, !tbaa !1473
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %4, metadata !9870, metadata !DIExpression(DW_OP_deref)), !dbg !9885
 	%17 = call fastcc i8* @quotearg_n_options(i32 %0, i8* %2, i64 -1, %struct.quoting_options* nonnull %4), !dbg !9896

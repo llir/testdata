@@ -3126,7 +3126,7 @@ define dso_local i8* @quotearg_colon(i8*) local_unnamed_addr #7 !dbg !2325 {
 	call void @llvm.dbg.value(metadata i32* %4, metadata !926, metadata !DIExpression()) #10, !dbg !2345
 	call void @llvm.dbg.value(metadata i32 26, metadata !928, metadata !DIExpression()) #10, !dbg !2346
 	%5 = load i32, i32* %4, align 4, !dbg !2347, !tbaa !703
-	%6 = or i32 %5, 67108864, !dbg !2348
+	%6 = or i32 %5, u0x4000000, !dbg !2348
 	store i32 %6, i32* %4, align 4, !dbg !2348, !tbaa !703
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %2, metadata !2262, metadata !DIExpression(DW_OP_deref)) #10, !dbg !2338
 	%7 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 -1, %struct.quoting_options* nonnull %2) #10, !dbg !2349
@@ -3154,7 +3154,7 @@ define dso_local i8* @quotearg_colon_mem(i8*, i64) local_unnamed_addr #7 !dbg !2
 	call void @llvm.dbg.value(metadata i32* %5, metadata !926, metadata !DIExpression()) #10, !dbg !2371
 	call void @llvm.dbg.value(metadata i32 26, metadata !928, metadata !DIExpression()) #10, !dbg !2372
 	%6 = load i32, i32* %5, align 4, !dbg !2373, !tbaa !703
-	%7 = or i32 %6, 67108864, !dbg !2374
+	%7 = or i32 %6, u0x4000000, !dbg !2374
 	store i32 %7, i32* %5, align 4, !dbg !2374, !tbaa !703
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %3, metadata !2262, metadata !DIExpression(DW_OP_deref)) #10, !dbg !2364
 	%8 = call fastcc i8* @quotearg_n_options(i32 0, i8* %0, i64 %1, %struct.quoting_options* nonnull %3) #10, !dbg !2375
@@ -3201,7 +3201,7 @@ define dso_local i8* @quotearg_n_style_colon(i32, i32, i8*) local_unnamed_addr #
 	call void @llvm.dbg.value(metadata i32* %14, metadata !926, metadata !DIExpression()), !dbg !2405
 	call void @llvm.dbg.value(metadata i32 26, metadata !928, metadata !DIExpression()), !dbg !2406
 	%15 = load i32, i32* %14, align 4, !dbg !2407, !tbaa !703
-	%16 = or i32 %15, 67108864, !dbg !2408
+	%16 = or i32 %15, u0x4000000, !dbg !2408
 	store i32 %16, i32* %14, align 4, !dbg !2408, !tbaa !703
 	call void @llvm.dbg.value(metadata %struct.quoting_options* %4, metadata !2383, metadata !DIExpression(DW_OP_deref)), !dbg !2398
 	%17 = call fastcc i8* @quotearg_n_options(i32 %0, i8* %2, i64 -1, %struct.quoting_options* nonnull %4), !dbg !2409
