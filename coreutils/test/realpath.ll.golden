@@ -1020,7 +1020,7 @@ define dso_local zeroext i1 @relpath(i8* nocapture readonly, i8* nocapture reado
 
 ; <label>:86
 	%87 = bitcast i8* %77 to i32*, !dbg !1193
-	store i32 u0x2E2E2F, i32* %87, align 1, !dbg !1193
+	store i32 3026479, i32* %87, align 1, !dbg !1193
 	%88 = getelementptr inbounds i8, i8* %77, i64 3, !dbg !1194
 	%89 = add i64 %78, -3, !dbg !1195
 	br label %93
