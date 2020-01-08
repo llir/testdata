@@ -4077,7 +4077,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 ; <label>:19
 	call void @llvm.dbg.value(metadata i64 %15, metadata !3836, metadata !DIExpression()) #15, !dbg !3843
 	call void @llvm.dbg.value(metadata i64 400, metadata !3842, metadata !DIExpression()) #15, !dbg !3846
-	%20 = icmp ugt i64 %14, u0x51EB851EB851EB, !dbg !3847
+	%20 = icmp ugt i64 %14, 23058430092136939, !dbg !3847
 	br i1 %20, label %21, label %22, !dbg !3849
 
 ; <label>:21
