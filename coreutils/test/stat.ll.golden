@@ -12878,11 +12878,11 @@ define internal fastcc i64 @__strftime_internal(i8*, i64, i8* readonly, %struct.
 	%86 = phi i8* [ %99, %97 ], [ %66, %79 ], !dbg !5418
 	call void @llvm.dbg.value(metadata i8* %86, metadata !5148, metadata !DIExpression()), !dbg !5376
 	call void @llvm.dbg.value(metadata i32 %85, metadata !5167, metadata !DIExpression()), !dbg !5389
-	%87 = icmp sgt i32 %85, 214748364, !dbg !5419
+	%87 = icmp sgt i32 %85, u0xCCCCCCC, !dbg !5419
 	br i1 %87, label %97, label %88, !dbg !5420
 
 ; <label>:88
-	%89 = icmp eq i32 %85, 214748364, !dbg !5421
+	%89 = icmp eq i32 %85, u0xCCCCCCC, !dbg !5421
 	%90 = icmp sgt i8 %84, 55, !dbg !5422
 	%91 = and i1 %89, %90, !dbg !5423
 	br i1 %91, label %97, label %92, !dbg !5423

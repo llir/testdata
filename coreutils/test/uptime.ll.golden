@@ -1016,11 +1016,11 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	%84 = phi i8* [ %97, %95 ], [ %64, %77 ], !dbg !1631
 	call void @llvm.dbg.value(metadata i8* %84, metadata !1292, metadata !DIExpression()), !dbg !1591
 	call void @llvm.dbg.value(metadata i32 %83, metadata !1311, metadata !DIExpression()), !dbg !1604
-	%85 = icmp sgt i32 %83, 214748364, !dbg !1632
+	%85 = icmp sgt i32 %83, u0xCCCCCCC, !dbg !1632
 	br i1 %85, label %95, label %86, !dbg !1633
 
 ; <label>:86
-	%87 = icmp eq i32 %83, 214748364, !dbg !1634
+	%87 = icmp eq i32 %83, u0xCCCCCCC, !dbg !1634
 	%88 = icmp sgt i8 %82, 55, !dbg !1635
 	%89 = and i1 %87, %88, !dbg !1636
 	br i1 %89, label %95, label %90, !dbg !1636

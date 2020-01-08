@@ -1956,11 +1956,11 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	%84 = phi i8* [ %97, %95 ], [ %64, %77 ], !dbg !2408
 	call void @llvm.dbg.value(metadata i8* %84, metadata !2071, metadata !DIExpression()), !dbg !2368
 	call void @llvm.dbg.value(metadata i32 %83, metadata !2090, metadata !DIExpression()), !dbg !2381
-	%85 = icmp sgt i32 %83, 214748364, !dbg !2409
+	%85 = icmp sgt i32 %83, u0xCCCCCCC, !dbg !2409
 	br i1 %85, label %95, label %86, !dbg !2410
 
 ; <label>:86
-	%87 = icmp eq i32 %83, 214748364, !dbg !2411
+	%87 = icmp eq i32 %83, u0xCCCCCCC, !dbg !2411
 	%88 = icmp sgt i8 %82, 55, !dbg !2412
 	%89 = and i1 %87, %88, !dbg !2413
 	br i1 %89, label %95, label %90, !dbg !2413
@@ -16986,11 +16986,11 @@ define internal fastcc i64 @__strftime_internal.361(i8*, i64, i8* readonly, %str
 	%86 = phi i8* [ %99, %97 ], [ %66, %79 ], !dbg !10385
 	call void @llvm.dbg.value(metadata i8* %86, metadata !10127, metadata !DIExpression()), !dbg !10343
 	call void @llvm.dbg.value(metadata i32 %85, metadata !10143, metadata !DIExpression()), !dbg !10356
-	%87 = icmp sgt i32 %85, 214748364, !dbg !10386
+	%87 = icmp sgt i32 %85, u0xCCCCCCC, !dbg !10386
 	br i1 %87, label %97, label %88, !dbg !10387
 
 ; <label>:88
-	%89 = icmp eq i32 %85, 214748364, !dbg !10388
+	%89 = icmp eq i32 %85, u0xCCCCCCC, !dbg !10388
 	%90 = icmp sgt i8 %84, 55, !dbg !10389
 	%91 = and i1 %89, %90, !dbg !10390
 	br i1 %91, label %97, label %92, !dbg !10390
