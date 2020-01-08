@@ -6576,7 +6576,7 @@ define internal fastcc %struct._ftsent* @fts_sort(%struct.FTS* nocapture, %struc
 ; <label>:14
 	%15 = add i64 %2, 40, !dbg !5078
 	store i64 %15, i64* %7, align 8, !dbg !5079, !tbaa !5072
-	%16 = icmp ugt i64 %15, 2305843009213693951, !dbg !5080
+	%16 = icmp ugt i64 %15, u0x1FFFFFFFFFFFFFFF, !dbg !5080
 	%17 = getelementptr inbounds %struct.FTS, %struct.FTS* %0, i64 0, i32 2, !dbg !5082
 	%18 = bitcast %struct._ftsent*** %17 to i8**, !dbg !5082
 	br i1 %16, label %24, label %19, !dbg !5083

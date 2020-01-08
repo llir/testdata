@@ -1002,7 +1002,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%55 = load i64, i64* %54, align 8, !dbg !1477, !tbaa !997
 	call void @llvm.dbg.value(metadata i64 %55, metadata !1478, metadata !DIExpression()) #13, !dbg !1484
 	call void @llvm.dbg.value(metadata i64 4, metadata !1483, metadata !DIExpression()) #13, !dbg !1486
-	%56 = icmp ugt i64 %55, 2305843009213693951, !dbg !1487
+	%56 = icmp ugt i64 %55, u0x1FFFFFFFFFFFFFFF, !dbg !1487
 	br i1 %56, label %57, label %58, !dbg !1489
 
 ; <label>:57

@@ -1029,7 +1029,7 @@ define internal fastcc i32 @parse_additional_groups(i8*, i32** nocapture, i64* n
 
 ; <label>:63
 	call void @llvm.dbg.value(metadata i64 %17, metadata !64, metadata !DIExpression()) #11, !dbg !1289
-	%64 = icmp ugt i64 %16, 2305843009213693951, !dbg !1297
+	%64 = icmp ugt i64 %16, u0x1FFFFFFFFFFFFFFF, !dbg !1297
 	br i1 %64, label %65, label %73, !dbg !1299
 
 ; <label>:65

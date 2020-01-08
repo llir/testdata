@@ -3732,7 +3732,7 @@ define internal fastcc i8* @make_printable_str(i8* nocapture readonly, i64) unna
 	%4 = add i64 %1, 1, !dbg !2770
 	call void @llvm.dbg.value(metadata i64 %4, metadata !2771, metadata !DIExpression()) #12, !dbg !2777
 	call void @llvm.dbg.value(metadata i64 4, metadata !2776, metadata !DIExpression()) #12, !dbg !2779
-	%5 = icmp ugt i64 %4, 2305843009213693951, !dbg !2780
+	%5 = icmp ugt i64 %4, u0x1FFFFFFFFFFFFFFF, !dbg !2780
 	br i1 %5, label %6, label %7, !dbg !2782
 
 ; <label>:6
