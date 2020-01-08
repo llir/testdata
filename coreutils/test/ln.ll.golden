@@ -1156,9 +1156,9 @@ define internal fastcc zeroext i1 @do_link(i8*, i8*) unnamed_addr #7 !dbg !1298 
 	br i1 %143, label %144, label %148, !dbg !1483
 
 ; <label>:144
-	%145 = call noalias i8* @xmalloc(i64 4096) #13, !dbg !1484
+	%145 = call noalias i8* @xmalloc(i64 u0x1000) #13, !dbg !1484
 	call void @llvm.dbg.value(metadata i8* %145, metadata !1468, metadata !DIExpression()) #13, !dbg !1479
-	%146 = call zeroext i1 @relpath(i8* nonnull %140, i8* nonnull %139, i8* %145, i64 4096) #13, !dbg !1486
+	%146 = call zeroext i1 @relpath(i8* nonnull %140, i8* nonnull %139, i8* %145, i64 u0x1000) #13, !dbg !1486
 	br i1 %146, label %148, label %147, !dbg !1488
 
 ; <label>:147
@@ -2623,7 +2623,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br i1 %26, label %27, label %35, !dbg !2500
 
 ; <label>:27
-	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 4096) #13, !dbg !2501
+	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 u0x1000) #13, !dbg !2501
 	call void @llvm.dbg.value(metadata i8* %28, metadata !2416, metadata !DIExpression()), !dbg !2502
 	%29 = getelementptr inbounds i8, i8* %28, i64 %24, !dbg !2503
 	call void @llvm.dbg.value(metadata i8* %29, metadata !2405, metadata !DIExpression()), !dbg !2498
@@ -2633,7 +2633,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br label %35, !dbg !2506
 
 ; <label>:31
-	%32 = tail call noalias i8* @xmalloc(i64 4096) #13, !dbg !2507
+	%32 = tail call noalias i8* @xmalloc(i64 u0x1000) #13, !dbg !2507
 	call void @llvm.dbg.value(metadata i8* %32, metadata !2404, metadata !DIExpression()), !dbg !2493
 	call void @llvm.dbg.value(metadata i8* %32, metadata !2405, metadata !DIExpression()), !dbg !2498
 	%33 = getelementptr inbounds i8, i8* %32, i64 u0x1000, !dbg !2509

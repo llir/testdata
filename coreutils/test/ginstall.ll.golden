@@ -1699,13 +1699,13 @@ define internal fastcc zeroext i1 @install_file_in_file(i8*, i8*, %struct.cp_opt
 	br label %112, !dbg !2417
 
 ; <label>:103
-	%104 = call i64 @full_read(i32 %96, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @have_same_content.a_buff, i64 0, i64 0), i64 4096) #10, !dbg !2418
+	%104 = call i64 @full_read(i32 %96, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @have_same_content.a_buff, i64 0, i64 0), i64 u0x1000) #10, !dbg !2418
 	call void @llvm.dbg.value(metadata i64 %104, metadata !193, metadata !DIExpression()) #10, !dbg !2420
 	%105 = icmp eq i64 %104, 0, !dbg !2421
 	br i1 %105, label %113, label %106, !dbg !2422
 
 ; <label>:106
-	%107 = call i64 @full_read(i32 %99, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @have_same_content.b_buff, i64 0, i64 0), i64 4096) #10, !dbg !2423
+	%107 = call i64 @full_read(i32 %99, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @have_same_content.b_buff, i64 0, i64 0), i64 u0x1000) #10, !dbg !2423
 	%108 = icmp eq i64 %104, %107, !dbg !2426
 	br i1 %108, label %109, label %116, !dbg !2427
 

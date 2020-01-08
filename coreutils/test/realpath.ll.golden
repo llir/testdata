@@ -1209,7 +1209,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br i1 %26, label %27, label %35, !dbg !1361
 
 ; <label>:27
-	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 4096) #13, !dbg !1362
+	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 u0x1000) #13, !dbg !1362
 	call void @llvm.dbg.value(metadata i8* %28, metadata !1276, metadata !DIExpression()), !dbg !1363
 	%29 = getelementptr inbounds i8, i8* %28, i64 %24, !dbg !1364
 	call void @llvm.dbg.value(metadata i8* %29, metadata !1262, metadata !DIExpression()), !dbg !1359
@@ -1219,7 +1219,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br label %35, !dbg !1367
 
 ; <label>:31
-	%32 = tail call noalias i8* @xmalloc(i64 4096) #13, !dbg !1368
+	%32 = tail call noalias i8* @xmalloc(i64 u0x1000) #13, !dbg !1368
 	call void @llvm.dbg.value(metadata i8* %32, metadata !1261, metadata !DIExpression()), !dbg !1354
 	call void @llvm.dbg.value(metadata i8* %32, metadata !1262, metadata !DIExpression()), !dbg !1359
 	%33 = getelementptr inbounds i8, i8* %32, i64 u0x1000, !dbg !1370

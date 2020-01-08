@@ -5118,7 +5118,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br i1 %26, label %27, label %35, !dbg !4106
 
 ; <label>:27
-	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 4096) #13, !dbg !4107
+	%28 = tail call i8* @xrealloc(i8* nonnull %21, i64 u0x1000) #13, !dbg !4107
 	call void @llvm.dbg.value(metadata i8* %28, metadata !4021, metadata !DIExpression()), !dbg !4108
 	%29 = getelementptr inbounds i8, i8* %28, i64 %24, !dbg !4109
 	call void @llvm.dbg.value(metadata i8* %29, metadata !4010, metadata !DIExpression()), !dbg !4104
@@ -5128,7 +5128,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br label %35, !dbg !4112
 
 ; <label>:31
-	%32 = tail call noalias i8* @xmalloc(i64 4096) #13, !dbg !4113
+	%32 = tail call noalias i8* @xmalloc(i64 u0x1000) #13, !dbg !4113
 	call void @llvm.dbg.value(metadata i8* %32, metadata !4009, metadata !DIExpression()), !dbg !4099
 	call void @llvm.dbg.value(metadata i8* %32, metadata !4010, metadata !DIExpression()), !dbg !4104
 	%33 = getelementptr inbounds i8, i8* %32, i64 u0x1000, !dbg !4115
@@ -15305,7 +15305,7 @@ define dso_local i32 @chdir_long(i8*) local_unnamed_addr #7 !dbg !10043 {
 	%52 = phi i8* [ %75, %72 ], [ %38, %44 ]
 	%53 = phi i32 [ %63, %72 ], [ %37, %44 ]
 	call void @llvm.dbg.value(metadata i8* %52, metadata !10048, metadata !DIExpression()), !dbg !10067
-	%54 = tail call i8* @memrchr(i8* %52, i32 47, i64 4096) #15, !dbg !10161
+	%54 = tail call i8* @memrchr(i8* %52, i32 47, i64 u0x1000) #15, !dbg !10161
 	call void @llvm.dbg.value(metadata i8* %54, metadata !10064, metadata !DIExpression()), !dbg !10162
 	%55 = icmp eq i8* %54, null, !dbg !10163
 	br i1 %55, label %56, label %57, !dbg !10165

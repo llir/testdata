@@ -12700,7 +12700,7 @@ define dso_local i32 @chdir_long(i8*) local_unnamed_addr #7 !dbg !8920 {
 	%52 = phi i8* [ %75, %72 ], [ %38, %44 ]
 	%53 = phi i32 [ %63, %72 ], [ %37, %44 ]
 	call void @llvm.dbg.value(metadata i8* %52, metadata !8925, metadata !DIExpression()), !dbg !8944
-	%54 = tail call i8* @memrchr(i8* %52, i32 47, i64 4096) #15, !dbg !9038
+	%54 = tail call i8* @memrchr(i8* %52, i32 47, i64 u0x1000) #15, !dbg !9038
 	call void @llvm.dbg.value(metadata i8* %54, metadata !8941, metadata !DIExpression()), !dbg !9039
 	%55 = icmp eq i8* %54, null, !dbg !9040
 	br i1 %55, label %56, label %57, !dbg !9042
