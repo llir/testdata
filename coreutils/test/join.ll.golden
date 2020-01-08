@@ -7813,7 +7813,7 @@ define dso_local i32 @xstrtoul(i8*, i8**, i32, i64* nocapture, i8* readonly) loc
 	%18 = zext i8 %17 to i64, !dbg !5538
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !5538
 	%20 = load i16, i16* %19, align 2, !dbg !5538, !tbaa !2247
-	%21 = and i16 %20, 8192, !dbg !5538
+	%21 = and i16 %20, u0x2000, !dbg !5538
 	%22 = icmp eq i16 %21, 0, !dbg !5539
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !5541
 	call void @llvm.dbg.value(metadata i8* %23, metadata !5513, metadata !DIExpression()), !dbg !5536

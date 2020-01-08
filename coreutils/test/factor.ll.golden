@@ -14189,7 +14189,7 @@ define dso_local i8* @trim2(i8* nocapture readonly, i32) local_unnamed_addr #7 !
 	%129 = zext i8 %127 to i64, !dbg !7346
 	%130 = getelementptr inbounds i16, i16* %125, i64 %129, !dbg !7346
 	%131 = load i16, i16* %130, align 2, !dbg !7346, !tbaa !4952
-	%132 = and i16 %131, 8192, !dbg !7346
+	%132 = and i16 %131, u0x2000, !dbg !7346
 	%133 = icmp eq i16 %132, 0, !dbg !7345
 	br i1 %133, label %138, label %134, !dbg !7347
 
@@ -14230,7 +14230,7 @@ define dso_local i8* @trim2(i8* nocapture readonly, i32) local_unnamed_addr #7 !
 	%154 = zext i8 %153 to i64, !dbg !7366
 	%155 = getelementptr inbounds i16, i16* %152, i64 %154, !dbg !7366
 	%156 = load i16, i16* %155, align 2, !dbg !7366, !tbaa !4952
-	%157 = and i16 %156, 8192, !dbg !7366
+	%157 = and i16 %156, u0x2000, !dbg !7366
 	%158 = icmp eq i16 %157, 0, !dbg !7365
 	br i1 %158, label %162, label %159, !dbg !7367
 

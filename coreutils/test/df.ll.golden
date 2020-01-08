@@ -2325,7 +2325,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	%856 = and i16 %855, -4096, !dbg !2297
 	switch i16 %856, label %988 [
 		i16 24576, label %857
-		i16 8192, label %857
+		i16 u0x2000, label %857
 	], !dbg !2297
 
 ; <label>:857
@@ -14650,7 +14650,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !9829
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !9829
 	%20 = load i16, i16* %19, align 2, !dbg !9829, !tbaa !2248
-	%21 = and i16 %20, 8192, !dbg !9829
+	%21 = and i16 %20, u0x2000, !dbg !9829
 	%22 = icmp eq i16 %21, 0, !dbg !9830
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !9832
 	call void @llvm.dbg.value(metadata i8* %23, metadata !9804, metadata !DIExpression()), !dbg !9827
@@ -16544,7 +16544,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	call void @llvm.dbg.value(metadata i8* %0, metadata !10893, metadata !DIExpression()), !dbg !10907
 	call void @llvm.dbg.value(metadata i64 %1, metadata !10894, metadata !DIExpression()), !dbg !10908
 	call void @llvm.dbg.value(metadata i64 1024, metadata !10895, metadata !DIExpression()), !dbg !10909
-	call void @llvm.dbg.value(metadata i64 8192, metadata !10896, metadata !DIExpression()), !dbg !10910
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !10896, metadata !DIExpression()), !dbg !10910
 	call void @llvm.dbg.value(metadata i64 1025, metadata !10897, metadata !DIExpression()), !dbg !10911
 	%3 = icmp ult i64 %1, 1025, !dbg !10912
 	%4 = add i64 %1, 1, !dbg !10913

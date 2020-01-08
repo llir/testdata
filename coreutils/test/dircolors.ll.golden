@@ -734,7 +734,7 @@ define internal fastcc zeroext i1 @dc_parse_stream(%struct._IO_FILE*, i8*) unnam
 	%49 = zext i8 %48 to i64, !dbg !1143
 	%50 = getelementptr inbounds i16, i16* %45, i64 %49, !dbg !1143
 	%51 = load i16, i16* %50, align 2, !dbg !1143, !tbaa !1148
-	%52 = and i16 %51, 8192, !dbg !1143
+	%52 = and i16 %51, u0x2000, !dbg !1143
 	%53 = icmp eq i16 %52, 0, !dbg !1150
 	%54 = getelementptr inbounds i8, i8* %47, i64 1, !dbg !1151
 	call void @llvm.dbg.value(metadata i8* %54, metadata !1137, metadata !DIExpression()) #12, !dbg !1142
@@ -766,7 +766,7 @@ define internal fastcc zeroext i1 @dc_parse_stream(%struct._IO_FILE*, i8*) unnam
 	%62 = getelementptr inbounds i16, i16* %45, i64 %61
 	%63 = load i16, i16* %62, align 2, !dbg !1161, !tbaa !1148
 	call void @llvm.dbg.value(metadata i8* %59, metadata !1137, metadata !DIExpression()) #12, !dbg !1142
-	%64 = and i16 %63, 8192, !dbg !1161
+	%64 = and i16 %63, u0x2000, !dbg !1161
 	%65 = icmp ne i16 %64, 0, !dbg !1161
 	%66 = icmp eq i8 %60, 0, !dbg !1162
 	%67 = or i1 %66, %65, !dbg !1163
@@ -799,7 +799,7 @@ define internal fastcc zeroext i1 @dc_parse_stream(%struct._IO_FILE*, i8*) unnam
 	%81 = zext i8 %80 to i64, !dbg !1176
 	%82 = getelementptr inbounds i16, i16* %76, i64 %81, !dbg !1176
 	%83 = load i16, i16* %82, align 2, !dbg !1176, !tbaa !1148
-	%84 = and i16 %83, 8192, !dbg !1176
+	%84 = and i16 %83, u0x2000, !dbg !1176
 	%85 = icmp eq i16 %84, 0, !dbg !1177
 	br i1 %85, label %86, label %77, !dbg !1177, !llvm.loop !1178
 
@@ -839,7 +839,7 @@ define internal fastcc zeroext i1 @dc_parse_stream(%struct._IO_FILE*, i8*) unnam
 	%98 = zext i8 %97 to i64, !dbg !1193
 	%99 = getelementptr inbounds i16, i16* %76, i64 %98, !dbg !1193
 	%100 = load i16, i16* %99, align 2, !dbg !1193, !tbaa !1148
-	%101 = and i16 %100, 8192, !dbg !1193
+	%101 = and i16 %100, u0x2000, !dbg !1193
 	%102 = icmp eq i16 %101, 0, !dbg !1194
 	br i1 %102, label %103, label %94, !dbg !1194, !llvm.loop !1195
 

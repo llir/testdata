@@ -365,7 +365,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !761 {
 	call void @llvm.dbg.value(metadata i32 %39, metadata !775, metadata !DIExpression()) #12, !dbg !892
 	call void @llvm.dbg.value(metadata i64 0, metadata !777, metadata !DIExpression()) #12, !dbg !893
 	%40 = getelementptr inbounds [8192 x i8], [8192 x i8]* %3, i64 0, i64 0, !dbg !894
-	call void @llvm.lifetime.start.p0i8(i64 8192, i8* nonnull %40) #12, !dbg !894
+	call void @llvm.lifetime.start.p0i8(i64 u0x2000, i8* nonnull %40) #12, !dbg !894
 	call void @llvm.dbg.value(metadata i64 0, metadata !833, metadata !DIExpression()) #12, !dbg !895
 	call void @llvm.dbg.value(metadata i8 1, metadata !838, metadata !DIExpression()) #12, !dbg !896
 	%41 = load i1, i1* @append, align 1
@@ -650,7 +650,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !761 {
 	%182 = phi i8 [ %159, %158 ], [ %178, %177 ], !dbg !1037
 	call void @llvm.dbg.value(metadata i8 %182, metadata !838, metadata !DIExpression()) #12, !dbg !896
 	tail call void @free(i8* %52) #12, !dbg !1038
-	call void @llvm.lifetime.end.p0i8(i64 8192, i8* nonnull %40) #12, !dbg !1039
+	call void @llvm.lifetime.end.p0i8(i64 u0x2000, i8* nonnull %40) #12, !dbg !1039
 	%183 = tail call i32 @close(i32 0) #12, !dbg !1040
 	%184 = icmp eq i32 %183, 0, !dbg !1042
 	br i1 %184, label %189, label %185, !dbg !1043

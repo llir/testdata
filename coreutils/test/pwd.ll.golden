@@ -452,7 +452,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !673 {
 	call void @llvm.dbg.value(metadata i8* %84, metadata !844, metadata !DIExpression()) #11, !dbg !846
 	%85 = getelementptr inbounds i8, i8* %84, i64 8, !dbg !847
 	%86 = bitcast i8* %85 to i64*, !dbg !847
-	store i64 8192, i64* %86, align 8, !dbg !848, !tbaa !849
+	store i64 u0x2000, i64* %86, align 8, !dbg !848, !tbaa !849
 	%87 = call noalias i8* @xmalloc(i64 8192) #11, !dbg !851
 	%88 = bitcast i8* %84 to i8**, !dbg !852
 	store i8* %87, i8** %88, align 8, !dbg !853, !tbaa !854

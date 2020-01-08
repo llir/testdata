@@ -8351,7 +8351,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	call void @llvm.dbg.value(metadata i8* %0, metadata !6624, metadata !DIExpression()), !dbg !6637
 	call void @llvm.dbg.value(metadata i64 %1, metadata !6625, metadata !DIExpression()), !dbg !6638
 	call void @llvm.dbg.value(metadata i64 1024, metadata !6626, metadata !DIExpression()), !dbg !6639
-	call void @llvm.dbg.value(metadata i64 8192, metadata !6627, metadata !DIExpression()), !dbg !6640
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !6627, metadata !DIExpression()), !dbg !6640
 	call void @llvm.dbg.value(metadata i64 1025, metadata !6628, metadata !DIExpression()), !dbg !6641
 	%3 = icmp ult i64 %1, 1025, !dbg !6642
 	%4 = add i64 %1, 1, !dbg !6643
@@ -9467,7 +9467,7 @@ define dso_local i64 @buffer_lcm(i64, i64, i64) local_unnamed_addr #10 !dbg !739
 	br i1 %4, label %6, label %8, !dbg !7416
 
 ; <label>:6
-	%7 = select i1 %5, i64 %1, i64 8192, !dbg !7417
+	%7 = select i1 %5, i64 %1, i64 u0x2000, !dbg !7417
 	call void @llvm.dbg.value(metadata i64 %7, metadata !7401, metadata !DIExpression()), !dbg !7418
 	br label %21, !dbg !7419
 

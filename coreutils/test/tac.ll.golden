@@ -394,12 +394,12 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !34 {
 
 ; <label>:41
 	%42 = phi i64 [ %34, %33 ], [ %40, %39 ], !dbg !937
-	store i64 8192, i64* @read_size, align 8, !dbg !943, !tbaa !901
+	store i64 u0x2000, i64* @read_size, align 8, !dbg !943, !tbaa !901
 	%43 = icmp ult i64 %42, 4096, !dbg !945
 	br i1 %43, label %53, label %44, !dbg !946
 
 ; <label>:44
-	%45 = phi i64 [ %49, %48 ], [ 8192, %41 ]
+	%45 = phi i64 [ %49, %48 ], [ u0x2000, %41 ]
 	%46 = icmp slt i64 %45, 0, !dbg !947
 	br i1 %46, label %47, label %48, !dbg !949
 
@@ -419,7 +419,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !34 {
 	br label %53, !dbg !946
 
 ; <label>:53
-	%54 = phi i64 [ %49, %52 ], [ 8192, %41 ]
+	%54 = phi i64 [ %49, %52 ], [ u0x2000, %41 ]
 	%55 = or i64 %54, 1, !dbg !955
 	%56 = add i64 %55, %42, !dbg !956
 	call void @llvm.dbg.value(metadata i64 %56, metadata !46, metadata !DIExpression()), !dbg !957
@@ -1067,7 +1067,7 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	call void @llvm.dbg.value(metadata i8* %90, metadata !199, metadata !DIExpression()) #11, !dbg !1395
 	call void @llvm.dbg.value(metadata i64 %144, metadata !200, metadata !DIExpression()) #11, !dbg !1396
 	%146 = load i64, i64* @output.bytes_in_buffer, align 8, !dbg !1397, !tbaa !901
-	%147 = sub i64 8192, %146, !dbg !1398
+	%147 = sub i64 u0x2000, %146, !dbg !1398
 	call void @llvm.dbg.value(metadata i64 %147, metadata !201, metadata !DIExpression()) #11, !dbg !1399
 	%148 = icmp eq i8* %140, null, !dbg !1400
 	br i1 %148, label %158, label %149, !dbg !1401
@@ -1088,13 +1088,13 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	%153 = sub i64 %144, %147, !dbg !1407
 	%154 = getelementptr inbounds i8, i8* %140, i64 %147, !dbg !1408
 	%155 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1409, !tbaa !839
-	%156 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %155) #11, !dbg !1409
+	%156 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %155) #11, !dbg !1409
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1410, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1399
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1399
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1399
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1399
 	call void @llvm.dbg.value(metadata i64 %153, metadata !200, metadata !DIExpression()) #11, !dbg !1396
 	call void @llvm.dbg.value(metadata i8* %154, metadata !198, metadata !DIExpression()) #11, !dbg !1392
-	%157 = icmp ult i64 %153, 8192, !dbg !1402
+	%157 = icmp ult i64 %153, u0x2000, !dbg !1402
 	br i1 %157, label %169, label %161, !dbg !1404, !llvm.loop !1411
 
 ; <label>:158
@@ -1105,20 +1105,20 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 ; <label>:161
 	%162 = phi i64 [ %164, %161 ], [ %153, %152 ]
 	%163 = phi i8* [ %165, %161 ], [ %154, %152 ]
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1399
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1399
 	call void @llvm.dbg.value(metadata i64 %162, metadata !200, metadata !DIExpression()) #11, !dbg !1396
 	call void @llvm.dbg.value(metadata i8* %163, metadata !198, metadata !DIExpression()) #11, !dbg !1392
-	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %163, i64 8192, i1 false) #11, !dbg !1405
+	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %163, i64 u0x2000, i1 false) #11, !dbg !1405
 	%164 = add i64 %162, -8192, !dbg !1407
-	%165 = getelementptr inbounds i8, i8* %163, i64 8192, !dbg !1408
+	%165 = getelementptr inbounds i8, i8* %163, i64 u0x2000, !dbg !1408
 	%166 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1409, !tbaa !839
-	%167 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %166) #11, !dbg !1409
+	%167 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %166) #11, !dbg !1409
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1410, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1399
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1399
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1399
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1399
 	call void @llvm.dbg.value(metadata i64 %164, metadata !200, metadata !DIExpression()) #11, !dbg !1396
 	call void @llvm.dbg.value(metadata i8* %165, metadata !198, metadata !DIExpression()) #11, !dbg !1392
-	%168 = icmp ult i64 %164, 8192, !dbg !1402
+	%168 = icmp ult i64 %164, u0x2000, !dbg !1402
 	br i1 %168, label %169, label %161, !dbg !1404, !llvm.loop !1416
 
 ; <label>:169
@@ -1260,7 +1260,7 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	%242 = sub i64 %240, %241, !dbg !1492
 	call void @llvm.dbg.value(metadata i64 %242, metadata !200, metadata !DIExpression()) #11, !dbg !1493
 	%243 = load i64, i64* @output.bytes_in_buffer, align 8, !dbg !1494, !tbaa !901
-	%244 = sub i64 8192, %243, !dbg !1495
+	%244 = sub i64 u0x2000, %243, !dbg !1495
 	call void @llvm.dbg.value(metadata i64 %244, metadata !201, metadata !DIExpression()) #11, !dbg !1496
 	%245 = icmp eq i8* %234, null, !dbg !1497
 	br i1 %245, label %255, label %246, !dbg !1498
@@ -1281,13 +1281,13 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	%250 = sub i64 %242, %244, !dbg !1503
 	%251 = getelementptr inbounds i8, i8* %234, i64 %244, !dbg !1504
 	%252 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1505, !tbaa !839
-	%253 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %252) #11, !dbg !1505
+	%253 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %252) #11, !dbg !1505
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1506, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1496
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1496
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1496
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1496
 	call void @llvm.dbg.value(metadata i64 %250, metadata !200, metadata !DIExpression()) #11, !dbg !1493
 	call void @llvm.dbg.value(metadata i8* %251, metadata !198, metadata !DIExpression()) #11, !dbg !1489
-	%254 = icmp ult i64 %250, 8192, !dbg !1499
+	%254 = icmp ult i64 %250, u0x2000, !dbg !1499
 	br i1 %254, label %266, label %258, !dbg !1501, !llvm.loop !1411
 
 ; <label>:255
@@ -1298,20 +1298,20 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 ; <label>:258
 	%259 = phi i64 [ %261, %258 ], [ %250, %249 ]
 	%260 = phi i8* [ %262, %258 ], [ %251, %249 ]
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1496
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1496
 	call void @llvm.dbg.value(metadata i64 %259, metadata !200, metadata !DIExpression()) #11, !dbg !1493
 	call void @llvm.dbg.value(metadata i8* %260, metadata !198, metadata !DIExpression()) #11, !dbg !1489
-	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %260, i64 8192, i1 false) #11, !dbg !1502
+	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %260, i64 u0x2000, i1 false) #11, !dbg !1502
 	%261 = add i64 %259, -8192, !dbg !1503
-	%262 = getelementptr inbounds i8, i8* %260, i64 8192, !dbg !1504
+	%262 = getelementptr inbounds i8, i8* %260, i64 u0x2000, !dbg !1504
 	%263 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1505, !tbaa !839
-	%264 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %263) #11, !dbg !1505
+	%264 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %263) #11, !dbg !1505
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1506, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1496
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1496
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1496
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1496
 	call void @llvm.dbg.value(metadata i64 %261, metadata !200, metadata !DIExpression()) #11, !dbg !1493
 	call void @llvm.dbg.value(metadata i8* %262, metadata !198, metadata !DIExpression()) #11, !dbg !1489
-	%265 = icmp ult i64 %261, 8192, !dbg !1499
+	%265 = icmp ult i64 %261, u0x2000, !dbg !1499
 	br i1 %265, label %266, label %258, !dbg !1501, !llvm.loop !1509
 
 ; <label>:266
@@ -1333,7 +1333,7 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	%275 = sub i64 %273, %274, !dbg !1518
 	call void @llvm.dbg.value(metadata i64 %275, metadata !200, metadata !DIExpression()) #11, !dbg !1519
 	%276 = load i64, i64* @output.bytes_in_buffer, align 8, !dbg !1520, !tbaa !901
-	%277 = sub i64 8192, %276, !dbg !1521
+	%277 = sub i64 u0x2000, %276, !dbg !1521
 	call void @llvm.dbg.value(metadata i64 %277, metadata !201, metadata !DIExpression()) #11, !dbg !1522
 	%278 = icmp eq i8* %137, null, !dbg !1523
 	br i1 %278, label %288, label %279, !dbg !1524
@@ -1354,13 +1354,13 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 	%283 = sub i64 %275, %277, !dbg !1529
 	%284 = getelementptr inbounds i8, i8* %137, i64 %277, !dbg !1530
 	%285 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1531, !tbaa !839
-	%286 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %285) #11, !dbg !1531
+	%286 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %285) #11, !dbg !1531
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1532, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1522
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1522
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1522
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1522
 	call void @llvm.dbg.value(metadata i64 %283, metadata !200, metadata !DIExpression()) #11, !dbg !1519
 	call void @llvm.dbg.value(metadata i8* %284, metadata !198, metadata !DIExpression()) #11, !dbg !1514
-	%287 = icmp ult i64 %283, 8192, !dbg !1525
+	%287 = icmp ult i64 %283, u0x2000, !dbg !1525
 	br i1 %287, label %299, label %291, !dbg !1527, !llvm.loop !1411
 
 ; <label>:288
@@ -1371,20 +1371,20 @@ define internal fastcc zeroext i1 @tac_seekable(i32, i8*, i64) unnamed_addr #7 !
 ; <label>:291
 	%292 = phi i64 [ %294, %291 ], [ %283, %282 ]
 	%293 = phi i8* [ %295, %291 ], [ %284, %282 ]
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1522
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1522
 	call void @llvm.dbg.value(metadata i64 %292, metadata !200, metadata !DIExpression()) #11, !dbg !1519
 	call void @llvm.dbg.value(metadata i8* %293, metadata !198, metadata !DIExpression()) #11, !dbg !1514
-	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %293, i64 8192, i1 false) #11, !dbg !1528
+	tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* nonnull align 16 getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i8* align 1 %293, i64 u0x2000, i1 false) #11, !dbg !1528
 	%294 = add i64 %292, -8192, !dbg !1529
-	%295 = getelementptr inbounds i8, i8* %293, i64 8192, !dbg !1530
+	%295 = getelementptr inbounds i8, i8* %293, i64 u0x2000, !dbg !1530
 	%296 = load %struct._IO_FILE*, %struct._IO_FILE** @stdout, align 8, !dbg !1531, !tbaa !839
-	%297 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 8192, %struct._IO_FILE* %296) #11, !dbg !1531
+	%297 = tail call i64 @fwrite_unlocked(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @output.buffer, i64 0, i64 0), i64 1, i64 u0x2000, %struct._IO_FILE* %296) #11, !dbg !1531
 	store i64 0, i64* @output.bytes_in_buffer, align 8, !dbg !1532, !tbaa !901
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1522
-	call void @llvm.dbg.value(metadata i64 8192, metadata !201, metadata !DIExpression()) #11, !dbg !1522
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1522
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !201, metadata !DIExpression()) #11, !dbg !1522
 	call void @llvm.dbg.value(metadata i64 %294, metadata !200, metadata !DIExpression()) #11, !dbg !1519
 	call void @llvm.dbg.value(metadata i8* %295, metadata !198, metadata !DIExpression()) #11, !dbg !1514
-	%298 = icmp ult i64 %294, 8192, !dbg !1525
+	%298 = icmp ult i64 %294, u0x2000, !dbg !1525
 	br i1 %298, label %299, label %291, !dbg !1527, !llvm.loop !1535
 
 ; <label>:299

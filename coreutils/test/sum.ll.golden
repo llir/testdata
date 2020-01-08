@@ -572,7 +572,7 @@ define internal zeroext i1 @sysv_sum_file(i8*, i32) unnamed_addr #7 !dbg !990 {
 	call void @llvm.dbg.value(metadata i8* %0, metadata !992, metadata !DIExpression()), !dbg !1009
 	call void @llvm.dbg.value(metadata i32 %1, metadata !993, metadata !DIExpression()), !dbg !1010
 	%5 = getelementptr inbounds [8192 x i8], [8192 x i8]* %3, i64 0, i64 0, !dbg !1011
-	call void @llvm.lifetime.start.p0i8(i64 8192, i8* nonnull %5) #11, !dbg !1011
+	call void @llvm.lifetime.start.p0i8(i64 u0x2000, i8* nonnull %5) #11, !dbg !1011
 	call void @llvm.dbg.declare(metadata [8192 x i8]* %3, metadata !995, metadata !DIExpression()), !dbg !1012
 	call void @llvm.dbg.value(metadata i64 0, metadata !999, metadata !DIExpression()), !dbg !1013
 	%6 = getelementptr inbounds [652 x i8], [652 x i8]* %4, i64 0, i64 0, !dbg !1014
@@ -811,7 +811,7 @@ define internal zeroext i1 @sysv_sum_file(i8*, i32) unnamed_addr #7 !dbg !990 {
 ; <label>:144
 	%145 = phi i1 [ false, %117 ], [ false, %13 ], [ true, %140 ], [ true, %142 ], [ false, %99 ], [ false, %95 ]
 	call void @llvm.lifetime.end.p0i8(i64 652, i8* nonnull %6) #11, !dbg !1085
-	call void @llvm.lifetime.end.p0i8(i64 8192, i8* nonnull %5) #11, !dbg !1085
+	call void @llvm.lifetime.end.p0i8(i64 u0x2000, i8* nonnull %5) #11, !dbg !1085
 	ret i1 %145, !dbg !1085
 }
 
@@ -5848,7 +5848,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !4100
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !4100
 	%20 = load i16, i16* %19, align 2, !dbg !4100, !tbaa !2288
-	%21 = and i16 %20, 8192, !dbg !4100
+	%21 = and i16 %20, u0x2000, !dbg !4100
 	%22 = icmp eq i16 %21, 0, !dbg !4101
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !4103
 	call void @llvm.dbg.value(metadata i8* %23, metadata !4075, metadata !DIExpression()), !dbg !4098

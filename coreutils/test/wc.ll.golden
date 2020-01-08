@@ -1785,7 +1785,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 ; <label>:326
 	%327 = add i64 %227, 1, !dbg !1952
 	call void @llvm.dbg.value(metadata i64 %327, metadata !1656, metadata !DIExpression()), !dbg !1839
-	%328 = and i16 %323, 8192, !dbg !1954
+	%328 = and i16 %323, u0x2000, !dbg !1954
 	%329 = icmp eq i16 %328, 0, !dbg !1954
 	br i1 %329, label %330, label %287, !dbg !1956
 
@@ -2048,7 +2048,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 ; <label>:417
 	%418 = add i64 %385, 1, !dbg !2022
 	call void @llvm.dbg.value(metadata i64 %418, metadata !1691, metadata !DIExpression()), !dbg !1983
-	%419 = and i16 %414, 8192, !dbg !2023
+	%419 = and i16 %414, u0x2000, !dbg !2023
 	%420 = icmp eq i16 %419, 0, !dbg !2023
 	br i1 %420, label %421, label %402, !dbg !2025
 

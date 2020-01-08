@@ -499,11 +499,11 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !701 {
 	], !dbg !846
 
 ; <label>:109
-	call void @llvm.dbg.value(metadata i32 8192, metadata !714, metadata !DIExpression()), !dbg !847
+	call void @llvm.dbg.value(metadata i32 u0x2000, metadata !714, metadata !DIExpression()), !dbg !847
 	br label %110, !dbg !848
 
 ; <label>:110
-	%111 = phi i32 [ 8192, %109 ], [ 24576, %102 ], !dbg !849
+	%111 = phi i32 [ u0x2000, %109 ], [ 24576, %102 ], !dbg !849
 	call void @llvm.dbg.value(metadata i32 %111, metadata !714, metadata !DIExpression()), !dbg !847
 	%112 = add nsw i32 %45, 2, !dbg !850
 	%113 = sext i32 %112 to i64, !dbg !851
@@ -5267,7 +5267,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !3670
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !3670
 	%20 = load i16, i16* %19, align 2, !dbg !3670, !tbaa !1873
-	%21 = and i16 %20, 8192, !dbg !3670
+	%21 = and i16 %20, u0x2000, !dbg !3670
 	%22 = icmp eq i16 %21, 0, !dbg !3671
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !3673
 	call void @llvm.dbg.value(metadata i8* %23, metadata !3645, metadata !DIExpression()), !dbg !3668

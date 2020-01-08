@@ -310,7 +310,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !688 {
 	call void @llvm.dbg.value(metadata i8 undef, metadata !698, metadata !DIExpression()), !dbg !744
 	call void @llvm.dbg.value(metadata i64 undef, metadata !697, metadata !DIExpression()), !dbg !743
 	%36 = icmp ult i64 %35, 4097, !dbg !756
-	%37 = select i1 %36, i64 8192, i64 %35, !dbg !758
+	%37 = select i1 %36, i64 u0x2000, i64 %35, !dbg !758
 	call void @llvm.dbg.value(metadata i64 %37, metadata !697, metadata !DIExpression()), !dbg !743
 	%38 = xor i1 %36, true, !dbg !759
 	%39 = and i1 %34, %38, !dbg !759
@@ -344,7 +344,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !688 {
 	br label %61, !dbg !759
 
 ; <label>:58
-	%59 = phi i64 [ %37, %33 ], [ 8192, %21 ]
+	%59 = phi i64 [ %37, %33 ], [ u0x2000, %21 ]
 	%60 = tail call noalias i8* @xmalloc(i64 %59) #11, !dbg !767
 	br label %61, !dbg !759
 

@@ -390,8 +390,8 @@ define internal fastcc void @uptime(i8*, i32) unnamed_addr #7 !dbg !812 {
 
 ; <label>:24
 	%25 = getelementptr inbounds [8192 x i8], [8192 x i8]* %5, i64 0, i64 0, !dbg !981
-	call void @llvm.lifetime.start.p0i8(i64 8192, i8* nonnull %25) #11, !dbg !981
-	%26 = call i8* @fgets_unlocked(i8* nonnull %25, i32 8192, %struct._IO_FILE* nonnull %22) #11, !dbg !982
+	call void @llvm.lifetime.start.p0i8(i64 u0x2000, i8* nonnull %25) #11, !dbg !981
+	%26 = call i8* @fgets_unlocked(i8* nonnull %25, i32 u0x2000, %struct._IO_FILE* nonnull %22) #11, !dbg !982
 	call void @llvm.dbg.value(metadata i8* %26, metadata !945, metadata !DIExpression()) #11, !dbg !983
 	%27 = icmp eq i8* %26, %25, !dbg !984
 	br i1 %27, label %28, label %41, !dbg !985
@@ -426,7 +426,7 @@ define internal fastcc void @uptime(i8*, i32) unnamed_addr #7 !dbg !812 {
 	%42 = phi i64 [ %40, %39 ], [ 0, %24 ], !dbg !999
 	call void @llvm.dbg.value(metadata i64 %42, metadata !869, metadata !DIExpression()) #11, !dbg !975
 	%43 = call i32 @rpl_fclose(%struct._IO_FILE* nonnull %22) #11, !dbg !1002
-	call void @llvm.lifetime.end.p0i8(i64 8192, i8* nonnull %25) #11, !dbg !1003
+	call void @llvm.lifetime.end.p0i8(i64 u0x2000, i8* nonnull %25) #11, !dbg !1003
 	br label %44, !dbg !1004
 
 ; <label>:44

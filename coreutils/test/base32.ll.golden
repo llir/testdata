@@ -420,7 +420,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !724 {
 	call void @llvm.dbg.value(metadata %struct._IO_FILE* %66, metadata !800, metadata !DIExpression()) #11, !dbg !917
 	call void @llvm.dbg.value(metadata i1 %68, metadata !801, metadata !DIExpression()) #11, !dbg !918
 	%69 = getelementptr inbounds [8192 x i8], [8192 x i8]* %3, i64 0, i64 0, !dbg !919
-	call void @llvm.lifetime.start.p0i8(i64 8192, i8* nonnull %69) #11, !dbg !919
+	call void @llvm.lifetime.start.p0i8(i64 u0x2000, i8* nonnull %69) #11, !dbg !919
 	%70 = getelementptr inbounds [5120 x i8], [5120 x i8]* %4, i64 0, i64 0, !dbg !920
 	call void @llvm.lifetime.start.p0i8(i64 5120, i8* nonnull %70) #11, !dbg !920
 	%71 = bitcast %struct.base32_decode_context* %5 to i8*, !dbg !921
@@ -441,7 +441,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !724 {
 	%77 = phi i64 [ 0, %75 ], [ %105, %113 ], !dbg !928
 	call void @llvm.dbg.value(metadata i64 %77, metadata !806, metadata !DIExpression()) #11, !dbg !926
 	%78 = getelementptr inbounds [8192 x i8], [8192 x i8]* %3, i64 0, i64 %77, !dbg !929
-	%79 = sub i64 8192, %77, !dbg !929
+	%79 = sub i64 u0x2000, %77, !dbg !929
 	%80 = call i64 @fread_unlocked(i8* nonnull %78, i64 1, i64 %79, %struct._IO_FILE* %64) #11, !dbg !929
 	call void @llvm.dbg.value(metadata i64 %80, metadata !816, metadata !DIExpression()) #11, !dbg !930
 	store i64 %80, i64* %6, align 8, !dbg !931, !tbaa !932
@@ -507,7 +507,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !724 {
 	unreachable, !dbg !976
 
 ; <label>:113
-	%114 = icmp ult i64 %105, 8192, !dbg !977
+	%114 = icmp ult i64 %105, u0x2000, !dbg !977
 	%115 = and i32 %106, 16, !dbg !978
 	%116 = icmp eq i32 %115, 0, !dbg !983
 	%117 = and i1 %114, %116, !dbg !984
@@ -574,7 +574,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !724 {
 ; <label>:146
 	call void @llvm.lifetime.end.p0i8(i64 12, i8* nonnull %71) #11, !dbg !1027
 	call void @llvm.lifetime.end.p0i8(i64 5120, i8* nonnull %70) #11, !dbg !1027
-	call void @llvm.lifetime.end.p0i8(i64 8192, i8* nonnull %69) #11, !dbg !1027
+	call void @llvm.lifetime.end.p0i8(i64 u0x2000, i8* nonnull %69) #11, !dbg !1027
 	br label %259, !dbg !1028
 
 ; <label>:147
@@ -5896,7 +5896,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !4204
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !4204
 	%20 = load i16, i16* %19, align 2, !dbg !4204, !tbaa !2349
-	%21 = and i16 %20, 8192, !dbg !4204
+	%21 = and i16 %20, u0x2000, !dbg !4204
 	%22 = icmp eq i16 %21, 0, !dbg !4205
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !4207
 	call void @llvm.dbg.value(metadata i8* %23, metadata !4179, metadata !DIExpression()), !dbg !4202

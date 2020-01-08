@@ -959,7 +959,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%32 = getelementptr inbounds %struct.stat, %struct.stat* %11, i64 0, i32 3, !dbg !1454
 	%33 = load i32, i32* %32, align 8, !dbg !1454, !tbaa !1456
 	%34 = and i32 %33, u0xF000, !dbg !1454
-	%35 = icmp eq i32 %34, 8192, !dbg !1454
+	%35 = icmp eq i32 %34, u0x2000, !dbg !1454
 	br i1 %35, label %36, label %41, !dbg !1459
 
 ; <label>:36
@@ -1489,7 +1489,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	call void @llvm.dbg.value(metadata %struct.stat* %11, metadata !1802, metadata !DIExpression()) #13, !dbg !1816
 	%296 = load i32, i32* %32, align 8, !dbg !1817, !tbaa !1456
 	%297 = and i32 %296, u0xF000, !dbg !1817
-	%298 = icmp eq i32 %297, 8192, !dbg !1817
+	%298 = icmp eq i32 %297, u0x2000, !dbg !1817
 	br i1 %298, label %299, label %302, !dbg !1818
 
 ; <label>:299
@@ -9535,7 +9535,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !6707
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !6707
 	%20 = load i16, i16* %19, align 2, !dbg !6707, !tbaa !3794
-	%21 = and i16 %20, 8192, !dbg !6707
+	%21 = and i16 %20, u0x2000, !dbg !6707
 	%22 = icmp eq i16 %21, 0, !dbg !6708
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !6710
 	call void @llvm.dbg.value(metadata i8* %23, metadata !6682, metadata !DIExpression()), !dbg !6705

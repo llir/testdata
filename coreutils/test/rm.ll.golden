@@ -225,7 +225,7 @@ target triple = "x86_64-pc-linux-gnu"
 @__PRETTY_FUNCTION__.xfts_open = private unnamed_addr constant [78 x i8] c"FTS *xfts_open(char *const *, int, int (*)(const FTSENT **, const FTSENT **))\00", align 1
 @.str.227 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.232 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 u0x2000, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
 @.str.243 = private unnamed_addr constant [24 x i8] c"state->magic == 9827862\00", align 1
 @.str.1.244 = private unnamed_addr constant [18 x i8] c"lib/cycle-check.c\00", align 1
 @__PRETTY_FUNCTION__.cycle_check = private unnamed_addr constant [67 x i8] c"_Bool cycle_check(struct cycle_check_state *, const struct stat *)\00", align 1
@@ -8247,7 +8247,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	br i1 %103, label %148, label %104, !dbg !6372
 
 ; <label>:104
-	%105 = and i32 %7, 8192, !dbg !6373
+	%105 = and i32 %7, u0x2000, !dbg !6373
 	%106 = icmp eq i32 %105, 0, !dbg !6373
 	br i1 %106, label %122, label %107, !dbg !6374
 
@@ -10634,8 +10634,8 @@ define dso_local %struct._ftsent* @fts_children(%struct.FTS*, i32) local_unnamed
 ; <label>:2
 	call void @llvm.dbg.value(metadata %struct.FTS* %0, metadata !7819, metadata !DIExpression()), !dbg !7828
 	call void @llvm.dbg.value(metadata i32 %1, metadata !7820, metadata !DIExpression()), !dbg !7829
-	%3 = or i32 %1, 8192, !dbg !7830
-	%4 = icmp eq i32 %3, 8192, !dbg !7830
+	%3 = or i32 %1, u0x2000, !dbg !7830
+	%4 = icmp eq i32 %3, u0x2000, !dbg !7830
 	br i1 %4, label %7, label %5, !dbg !7830
 
 ; <label>:5
@@ -10697,12 +10697,12 @@ define dso_local %struct._ftsent* @fts_children(%struct.FTS*, i32) local_unnamed
 	br i1 %36, label %37, label %25, !dbg !7860, !llvm.loop !5872
 
 ; <label>:37
-	%38 = icmp eq i32 %1, 8192, !dbg !7861
+	%38 = icmp eq i32 %1, u0x2000, !dbg !7861
 	br i1 %38, label %39, label %42, !dbg !7863
 
 ; <label>:39
 	%40 = load i32, i32* %11, align 8, !dbg !7864, !tbaa !5159
-	%41 = or i32 %40, 8192, !dbg !7864
+	%41 = or i32 %40, u0x2000, !dbg !7864
 	store i32 %41, i32* %11, align 8, !dbg !7864, !tbaa !5159
 	call void @llvm.dbg.value(metadata i32 2, metadata !7820, metadata !DIExpression()), !dbg !7829
 	br label %42, !dbg !7866

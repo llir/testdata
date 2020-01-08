@@ -836,7 +836,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1051 {
 	%139 = and i16 %138, -4096, !dbg !1295
 	switch i16 %139, label %141 [
 		i16 24576, label %140
-		i16 8192, label %140
+		i16 u0x2000, label %140
 	], !dbg !1295
 
 ; <label>:140
@@ -11755,7 +11755,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4390, metadata !DIExpression()), !dbg !4405
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4391, metadata !DIExpression()), !dbg !4406
 	call void @llvm.dbg.value(metadata i64 1024, metadata !4392, metadata !DIExpression()), !dbg !4407
-	call void @llvm.dbg.value(metadata i64 8192, metadata !4393, metadata !DIExpression()), !dbg !4408
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !4393, metadata !DIExpression()), !dbg !4408
 	call void @llvm.dbg.value(metadata i64 1025, metadata !4394, metadata !DIExpression()), !dbg !4409
 	%3 = icmp ult i64 %1, 1025, !dbg !4410
 	%4 = add i64 %1, 1, !dbg !4411

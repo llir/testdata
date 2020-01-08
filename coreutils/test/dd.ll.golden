@@ -10836,7 +10836,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !7261
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !7261
 	%20 = load i16, i16* %19, align 2, !dbg !7261, !tbaa !5432
-	%21 = and i16 %20, 8192, !dbg !7261
+	%21 = and i16 %20, u0x2000, !dbg !7261
 	%22 = icmp eq i16 %21, 0, !dbg !7262
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !7264
 	call void @llvm.dbg.value(metadata i8* %23, metadata !7236, metadata !DIExpression()), !dbg !7259

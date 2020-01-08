@@ -1629,7 +1629,7 @@ define internal fastcc i32 @get_line(%struct._IO_FILE*, i32) unnamed_addr #7 !db
 	%63 = sext i32 %60 to i64, !dbg !1515
 	%64 = getelementptr inbounds i16, i16* %62, i64 %63, !dbg !1515
 	%65 = load i16, i16* %64, align 2, !dbg !1515, !tbaa !1516
-	%66 = and i16 %65, 8192, !dbg !1515
+	%66 = and i16 %65, u0x2000, !dbg !1515
 	%67 = icmp eq i16 %66, 0, !dbg !1517
 	br i1 %67, label %11, label %68, !dbg !1518, !llvm.loop !1519
 
@@ -6731,7 +6731,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !4429
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !4429
 	%20 = load i16, i16* %19, align 2, !dbg !4429, !tbaa !1516
-	%21 = and i16 %20, 8192, !dbg !4429
+	%21 = and i16 %20, u0x2000, !dbg !4429
 	%22 = icmp eq i16 %21, 0, !dbg !4430
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !4432
 	call void @llvm.dbg.value(metadata i8* %23, metadata !4404, metadata !DIExpression()), !dbg !4427

@@ -1421,14 +1421,14 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !105 {
 	br label %491, !dbg !1523
 
 ; <label>:433
-	call void @llvm.lifetime.start.p0i8(i64 8192, i8* nonnull %401) #13, !dbg !1524
-	call void @llvm.dbg.value(metadata i64 8192, metadata !1078, metadata !DIExpression()) #13, !dbg !1525
+	call void @llvm.lifetime.start.p0i8(i64 u0x2000, i8* nonnull %401) #13, !dbg !1524
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !1078, metadata !DIExpression()) #13, !dbg !1525
 	call void @llvm.dbg.value(metadata i64 %406, metadata !1039, metadata !DIExpression()) #13, !dbg !1469
 	%434 = icmp eq i64 %406, 0, !dbg !1526
 	br i1 %434, label %458, label %435, !dbg !1527
 
 ; <label>:435
-	%436 = phi i64 [ %439, %456 ], [ 8192, %433 ]
+	%436 = phi i64 [ %439, %456 ], [ u0x2000, %433 ]
 	%437 = phi i64 [ %442, %456 ], [ %406, %433 ]
 	call void @llvm.dbg.value(metadata i64 %436, metadata !1078, metadata !DIExpression()) #13, !dbg !1525
 	call void @llvm.dbg.value(metadata i64 %437, metadata !1039, metadata !DIExpression()) #13, !dbg !1469
@@ -1477,7 +1477,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !105 {
 	call void @llvm.dbg.value(metadata i32 %461, metadata !1041, metadata !DIExpression()) #13, !dbg !1471
 	call void @llvm.dbg.value(metadata i8 %460, metadata !1040, metadata !DIExpression()) #13, !dbg !1470
 	call void @llvm.dbg.value(metadata i64 %459, metadata !1039, metadata !DIExpression()) #13, !dbg !1469
-	call void @llvm.lifetime.end.p0i8(i64 8192, i8* nonnull %401) #13, !dbg !1570
+	call void @llvm.lifetime.end.p0i8(i64 u0x2000, i8* nonnull %401) #13, !dbg !1570
 	br label %462
 
 ; <label>:462
@@ -9993,7 +9993,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !6327
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !6327
 	%20 = load i16, i16* %19, align 2, !dbg !6327, !tbaa !1800
-	%21 = and i16 %20, 8192, !dbg !6327
+	%21 = and i16 %20, u0x2000, !dbg !6327
 	%22 = icmp eq i16 %21, 0, !dbg !6328
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !6330
 	call void @llvm.dbg.value(metadata i8* %23, metadata !6302, metadata !DIExpression()), !dbg !6325

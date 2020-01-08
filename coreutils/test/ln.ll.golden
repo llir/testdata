@@ -11323,7 +11323,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	call void @llvm.dbg.value(metadata i8* %0, metadata !8059, metadata !DIExpression()), !dbg !8072
 	call void @llvm.dbg.value(metadata i64 %1, metadata !8060, metadata !DIExpression()), !dbg !8073
 	call void @llvm.dbg.value(metadata i64 1024, metadata !8061, metadata !DIExpression()), !dbg !8074
-	call void @llvm.dbg.value(metadata i64 8192, metadata !8062, metadata !DIExpression()), !dbg !8075
+	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !8062, metadata !DIExpression()), !dbg !8075
 	call void @llvm.dbg.value(metadata i64 1025, metadata !8063, metadata !DIExpression()), !dbg !8076
 	%3 = icmp ult i64 %1, 1025, !dbg !8077
 	%4 = add i64 %1, 1, !dbg !8078

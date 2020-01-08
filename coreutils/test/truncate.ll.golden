@@ -341,7 +341,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !712 {
 	%21 = zext i8 %20 to i64, !dbg !793
 	%22 = getelementptr inbounds i16, i16* %18, i64 %21, !dbg !793
 	%23 = load i16, i16* %22, align 2, !dbg !793, !tbaa !797
-	%24 = and i16 %23, 8192, !dbg !793
+	%24 = and i16 %23, u0x2000, !dbg !793
 	%25 = icmp eq i16 %24, 0, !dbg !799
 	br i1 %25, label %41, label %31, !dbg !799
 
@@ -370,7 +370,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !712 {
 	%36 = zext i8 %35 to i64, !dbg !793
 	%37 = getelementptr inbounds i16, i16* %34, i64 %36, !dbg !793
 	%38 = load i16, i16* %37, align 2, !dbg !793, !tbaa !797
-	%39 = and i16 %38, 8192, !dbg !793
+	%39 = and i16 %38, u0x2000, !dbg !793
 	%40 = icmp eq i16 %39, 0, !dbg !799
 	br i1 %40, label %41, label %31, !dbg !799, !llvm.loop !808
 
@@ -420,7 +420,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !712 {
 	%61 = zext i8 %60 to i64, !dbg !821
 	%62 = getelementptr inbounds i16, i16* %59, i64 %61, !dbg !821
 	%63 = load i16, i16* %62, align 2, !dbg !821, !tbaa !797
-	%64 = and i16 %63, 8192, !dbg !821
+	%64 = and i16 %63, u0x2000, !dbg !821
 	%65 = icmp eq i16 %64, 0, !dbg !822
 	br i1 %65, label %76, label %66, !dbg !822
 
@@ -433,7 +433,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !712 {
 	%71 = zext i8 %70 to i64, !dbg !821
 	%72 = getelementptr inbounds i16, i16* %69, i64 %71, !dbg !821
 	%73 = load i16, i16* %72, align 2, !dbg !821, !tbaa !797
-	%74 = and i16 %73, 8192, !dbg !821
+	%74 = and i16 %73, u0x2000, !dbg !821
 	%75 = icmp eq i16 %74, 0, !dbg !822
 	br i1 %75, label %76, label %66, !dbg !822, !llvm.loop !824
 

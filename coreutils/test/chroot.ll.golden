@@ -951,7 +951,7 @@ define internal fastcc i32 @parse_additional_groups(i8*, i32** nocapture, i64* n
 	%29 = zext i8 %28 to i64, !dbg !1241
 	%30 = getelementptr inbounds i16, i16* %25, i64 %29, !dbg !1241
 	%31 = load i16, i16* %30, align 2, !dbg !1241, !tbaa !1244
-	%32 = and i16 %31, 8192, !dbg !1241
+	%32 = and i16 %31, u0x2000, !dbg !1241
 	%33 = icmp eq i16 %32, 0, !dbg !1246
 	%34 = getelementptr inbounds i8, i8* %27, i64 1, !dbg !1247
 	call void @llvm.dbg.value(metadata i8* %34, metadata !1213, metadata !DIExpression()), !dbg !1231
@@ -5556,7 +5556,7 @@ define dso_local i32 @xstrtoul(i8*, i8**, i32, i64* nocapture, i8* readonly) loc
 	%18 = zext i8 %17 to i64, !dbg !3881
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !3881
 	%20 = load i16, i16* %19, align 2, !dbg !3881, !tbaa !1244
-	%21 = and i16 %20, 8192, !dbg !3881
+	%21 = and i16 %20, u0x2000, !dbg !3881
 	%22 = icmp eq i16 %21, 0, !dbg !3882
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !3884
 	call void @llvm.dbg.value(metadata i8* %23, metadata !3856, metadata !DIExpression()), !dbg !3879

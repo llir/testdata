@@ -544,7 +544,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	%69 = zext i8 %68 to i64, !dbg !1132
 	%70 = getelementptr inbounds i16, i16* %66, i64 %69, !dbg !1132
 	%71 = load i16, i16* %70, align 2, !dbg !1132, !tbaa !1134
-	%72 = and i16 %71, 8192, !dbg !1132
+	%72 = and i16 %71, u0x2000, !dbg !1132
 	%73 = icmp eq i16 %72, 0, !dbg !1136
 	br i1 %73, label %86, label %76, !dbg !1136
 
@@ -563,7 +563,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	%81 = zext i8 %80 to i64, !dbg !1132
 	%82 = getelementptr inbounds i16, i16* %79, i64 %81, !dbg !1132
 	%83 = load i16, i16* %82, align 2, !dbg !1132, !tbaa !1134
-	%84 = and i16 %83, 8192, !dbg !1132
+	%84 = and i16 %83, u0x2000, !dbg !1132
 	%85 = icmp eq i16 %84, 0, !dbg !1136
 	br i1 %85, label %86, label %76, !dbg !1136, !llvm.loop !1140
 
@@ -8332,7 +8332,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	%18 = zext i8 %17 to i64, !dbg !5621
 	%19 = getelementptr inbounds i16, i16* %14, i64 %18, !dbg !5621
 	%20 = load i16, i16* %19, align 2, !dbg !5621, !tbaa !1134
-	%21 = and i16 %20, 8192, !dbg !5621
+	%21 = and i16 %20, u0x2000, !dbg !5621
 	%22 = icmp eq i16 %21, 0, !dbg !5622
 	%23 = getelementptr inbounds i8, i8* %16, i64 1, !dbg !5624
 	call void @llvm.dbg.value(metadata i8* %23, metadata !5596, metadata !DIExpression()), !dbg !5619
