@@ -10140,7 +10140,7 @@ define dso_local i32 @xstrtoumax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 
 ; <label>:75
 	call void @llvm.dbg.value(metadata i32 512, metadata !6398, metadata !DIExpression()), !dbg !6404
-	%76 = icmp ugt i64 %49, 36028797018963967, !dbg !6407
+	%76 = icmp ugt i64 %49, u0x7FFFFFFFFFFFFF, !dbg !6407
 	%77 = shl i64 %49, 9, !dbg !6409
 	%78 = select i1 %76, i64 -1, i64 %77, !dbg !6410
 	%79 = zext i1 %76 to i32, !dbg !6410
