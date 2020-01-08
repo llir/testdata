@@ -42,7 +42,7 @@
 !28 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "E5", file: !3, line: 41, baseType: !29, size: 32, flags: DIFlagEnumClass, elements: !30, identifier: "_ZTS2E5")
 !29 = !DIBasicType(name: "unsigned int", size: 32, encoding: DW_ATE_unsigned)
 !30 = !{!31}
-!31 = !DIEnumerator(name: "A5", value: u0xFFFFFFFF, isUnsigned: true)
+!31 = !DIEnumerator(name: "A5", value: 4294967295, isUnsigned: true)
 !32 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "E6", file: !3, line: 47, baseType: !33, size: 64, flags: DIFlagEnumClass, elements: !34, identifier: "_ZTS2E6")
 !33 = !DIBasicType(name: "long long int", size: 64, encoding: DW_ATE_signed)
 !34 = !{!35, !36}
