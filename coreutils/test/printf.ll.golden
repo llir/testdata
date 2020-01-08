@@ -644,7 +644,7 @@ define dso_local i32 @main(i32, i8** nocapture readonly) local_unnamed_addr #7 !
 	%156 = load i8*, i8** %76, align 8, !dbg !1030, !tbaa !752
 	%157 = call fastcc i64 @vstrtoimax(i8* %156) #11, !dbg !1031
 	call void @llvm.dbg.value(metadata i64 %157, metadata !824, metadata !DIExpression()) #11, !dbg !1032
-	%158 = add i64 %157, 2147483648, !dbg !1033
+	%158 = add i64 %157, u0x80000000, !dbg !1033
 	%159 = icmp ult i64 %158, 4294967296, !dbg !1033
 	br i1 %159, label %160, label %164, !dbg !1033
 

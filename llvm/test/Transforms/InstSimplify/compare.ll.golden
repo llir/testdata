@@ -504,7 +504,7 @@ define i1 @srem2(i16 %X, i32 %Y) {
 define i1 @srem3(i16 %X, i32 %Y) {
 ; <label>:0
 	%A = zext i16 %X to i32
-	%B = or i32 2147483648, %A
+	%B = or i32 u0x80000000, %A
 	%C = sub nsw i32 1, %B
 	%D = srem i32 %C, %Y
 	%E = icmp slt i32 %D, 0

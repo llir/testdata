@@ -6033,7 +6033,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 
 ; <label>:889
 	%890 = phi i64 [ %882, %881 ], [ %887, %885 ], !dbg !4023
-	%891 = add i64 %879, 2147483648, !dbg !4023
+	%891 = add i64 %879, u0x80000000, !dbg !4023
 	%892 = add i64 %891, %890, !dbg !4023
 	%893 = icmp ugt i64 %892, 4294967295, !dbg !4023
 	br i1 %893, label %894, label %897, !dbg !4023
@@ -8955,7 +8955,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 
 ; <label>:405
 	%406 = load i64, i64* %130, align 8, !dbg !5415, !tbaa !4074
-	%407 = add i64 %406, 2147483648, !dbg !5415
+	%407 = add i64 %406, u0x80000000, !dbg !5415
 	%408 = icmp ugt i64 %407, 4294967295, !dbg !5415
 	%409 = trunc i64 %406 to i32, !dbg !5415
 	%410 = getelementptr inbounds %struct.tm, %struct.tm* %14, i64 0, i32 3, !dbg !5415
@@ -9890,7 +9890,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %962, label %967, label %963, !dbg !5911
 
 ; <label>:963
-	%964 = add nsw i64 %956, 2147483648, !dbg !5911
+	%964 = add nsw i64 %956, u0x80000000, !dbg !5911
 	%965 = add i64 %964, %953, !dbg !5911
 	%966 = icmp ugt i64 %965, 4294967295, !dbg !5911
 	br i1 %966, label %967, label %975, !dbg !5911
@@ -10388,7 +10388,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1253
 	%1254 = phi i64 [ %1245, %1243 ], [ %1251, %1248 ], !dbg !6165
 	%1255 = phi i32 [ %1244, %1243 ], [ %1250, %1248 ], !dbg !6165
-	%1256 = add i64 %1241, 2147483648, !dbg !6165
+	%1256 = add i64 %1241, u0x80000000, !dbg !6165
 	%1257 = add i64 %1256, %1254, !dbg !6165
 	%1258 = icmp ugt i64 %1257, 4294967295, !dbg !6165
 	br i1 %1258, label %1312, label %1259, !dbg !6165
@@ -10418,7 +10418,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1274
 	%1275 = phi i64 [ %1266, %1264 ], [ %1272, %1269 ], !dbg !6168
 	%1276 = phi i32 [ %1265, %1264 ], [ %1271, %1269 ], !dbg !6168
-	%1277 = add i64 %1262, 2147483648, !dbg !6168
+	%1277 = add i64 %1262, u0x80000000, !dbg !6168
 	%1278 = add i64 %1277, %1275, !dbg !6168
 	%1279 = icmp ugt i64 %1278, 4294967295, !dbg !6168
 	br i1 %1279, label %1312, label %1280, !dbg !6168
@@ -10448,7 +10448,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:1295
 	%1296 = phi i64 [ %1287, %1285 ], [ %1293, %1290 ], !dbg !6170
 	%1297 = phi i32 [ %1286, %1285 ], [ %1292, %1290 ], !dbg !6170
-	%1298 = add i64 %1283, 2147483648, !dbg !6170
+	%1298 = add i64 %1283, u0x80000000, !dbg !6170
 	%1299 = add i64 %1298, %1296, !dbg !6170
 	%1300 = icmp ugt i64 %1299, 4294967295, !dbg !6170
 	br i1 %1300, label %1312, label %1301, !dbg !6170

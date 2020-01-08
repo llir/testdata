@@ -2324,7 +2324,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1537 {
 	call void @llvm.dbg.value(metadata i64 %303, metadata !1550, metadata !DIExpression()), !dbg !1870
 	%304 = load i32, i32* %302, align 4, !dbg !1871, !tbaa !716
 	%305 = icmp ne i32 %304, 34, !dbg !1872
-	%306 = icmp ult i64 %303, 2147483648, !dbg !1873
+	%306 = icmp ult i64 %303, u0x80000000, !dbg !1873
 	%307 = and i1 %306, %305, !dbg !1873
 	br i1 %307, label %308, label %336, !dbg !1873
 

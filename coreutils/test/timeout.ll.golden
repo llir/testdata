@@ -1064,7 +1064,7 @@ define dso_local i32 @operand2sig(i8*, i8*) local_unnamed_addr #7 !dbg !1354 {
 ; <label>:20
 	%21 = load i32, i32* %12, align 4, !dbg !1387, !tbaa !819
 	%22 = icmp ne i32 %21, 0, !dbg !1387
-	%23 = add i64 %13, 2147483648, !dbg !1388
+	%23 = add i64 %13, u0x80000000, !dbg !1388
 	%24 = icmp ugt i64 %23, 4294967295, !dbg !1388
 	%25 = or i1 %24, %22, !dbg !1389
 	%26 = icmp eq i32 %14, -1, !dbg !1390

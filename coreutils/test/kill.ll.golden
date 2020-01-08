@@ -708,7 +708,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !692 {
 	call void @llvm.dbg.value(metadata i32 %186, metadata !958, metadata !DIExpression()) #12, !dbg !992
 	%187 = load i32, i32* %180, align 4, !dbg !993, !tbaa !748
 	%188 = icmp eq i32 %187, 34, !dbg !994
-	%189 = add i64 %185, 2147483648, !dbg !995
+	%189 = add i64 %185, u0x80000000, !dbg !995
 	%190 = icmp ugt i64 %189, 4294967295, !dbg !995
 	%191 = or i1 %188, %190, !dbg !996
 	br i1 %191, label %198, label %192, !dbg !996
@@ -922,7 +922,7 @@ define dso_local i32 @operand2sig(i8*, i8*) local_unnamed_addr #7 !dbg !1027 {
 ; <label>:20
 	%21 = load i32, i32* %12, align 4, !dbg !1060, !tbaa !748
 	%22 = icmp ne i32 %21, 0, !dbg !1060
-	%23 = add i64 %13, 2147483648, !dbg !1061
+	%23 = add i64 %13, u0x80000000, !dbg !1061
 	%24 = icmp ugt i64 %23, 4294967295, !dbg !1061
 	%25 = or i1 %24, %22, !dbg !1062
 	%26 = icmp eq i32 %14, -1, !dbg !1063

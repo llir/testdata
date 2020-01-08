@@ -970,7 +970,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !743 {
 	%378 = icmp ugt i64 %377, %372, !dbg !1135
 	%379 = select i1 %378, i64 %377, i64 %372, !dbg !1135
 	call void @llvm.dbg.value(metadata i64 %379, metadata !78, metadata !DIExpression()) #12, !dbg !1136
-	%380 = icmp ult i64 %379, 2147483648, !dbg !1137
+	%380 = icmp ult i64 %379, u0x80000000, !dbg !1137
 	br i1 %380, label %381, label %386, !dbg !1138
 
 ; <label>:381
@@ -1627,7 +1627,7 @@ define internal fastcc void @scan_arg(%struct.operand* noalias sret, i8*) unname
 	%49 = getelementptr inbounds i8, i8* %32, i64 1, !dbg !1545
 	%50 = tail call i64 @strcspn(i8* nonnull %49, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.56, i64 0, i64 0)) #8, !dbg !1548
 	call void @llvm.dbg.value(metadata i64 %50, metadata !1482, metadata !DIExpression()), !dbg !1541
-	%51 = icmp ult i64 %50, 2147483648, !dbg !1549
+	%51 = icmp ult i64 %50, u0x80000000, !dbg !1549
 	br i1 %51, label %52, label %55, !dbg !1551
 
 ; <label>:52
