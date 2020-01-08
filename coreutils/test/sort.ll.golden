@@ -2030,7 +2030,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 	%664 = trunc i64 %663 to i32, !dbg !2719
 	store i32 %664, i32* @nmerge, align 4, !dbg !2722, !tbaa !2018
 	call void @llvm.dbg.value(metadata i64 %663, metadata !1971, metadata !DIExpression()) #13, !dbg !2709
-	%665 = icmp ugt i64 %663, 4294967295, !dbg !2723
+	%665 = icmp ugt i64 %663, u0xFFFFFFFF, !dbg !2723
 	br i1 %665, label %678, label %666, !dbg !2725
 
 ; <label>:666
@@ -10658,7 +10658,7 @@ define internal fastcc i64 @open_input_files(%struct.sortfile* nocapture readonl
 	br i1 %102, label %106, label %20, !dbg !7732
 
 ; <label>:104
-	%105 = and i64 %103, 4294967295, !dbg !7733
+	%105 = and i64 %103, u0xFFFFFFFF, !dbg !7733
 	br label %106, !dbg !7630
 
 ; <label>:106

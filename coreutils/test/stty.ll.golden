@@ -2343,7 +2343,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%157 = zext i32 %156 to i64, !dbg !1760
 	%158 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 4, !dbg !1761
 	%159 = load i64, i64* %158, align 8, !dbg !1761, !tbaa !1265
-	%160 = xor i64 %159, 4294967295, !dbg !1762
+	%160 = xor i64 %159, u0xFFFFFFFF, !dbg !1762
 	%161 = and i64 %160, %157, !dbg !1763
 	%162 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 3, !dbg !1764
 	%163 = load i64, i64* %162, align 16, !dbg !1764, !tbaa !1268
@@ -2394,11 +2394,11 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%180 = zext i32 %179 to i64, !dbg !1785
 	%181 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 4, !dbg !1786
 	%182 = load i64, i64* %181, align 8, !dbg !1786, !tbaa !1265
-	%183 = xor i64 %182, 4294967295, !dbg !1787
+	%183 = xor i64 %182, u0xFFFFFFFF, !dbg !1787
 	%184 = and i64 %183, %180, !dbg !1788
 	%185 = getelementptr inbounds [90 x %struct.mode_info], [90 x %struct.mode_info]* @mode_info, i64 0, i64 %137, i32 3, !dbg !1789
 	%186 = load i64, i64* %185, align 16, !dbg !1789, !tbaa !1268
-	%187 = xor i64 %186, 4294967295, !dbg !1790
+	%187 = xor i64 %186, u0xFFFFFFFF, !dbg !1790
 	%188 = and i64 %184, %187, !dbg !1791
 	%189 = trunc i64 %188 to i32, !dbg !1785
 	store i32 %189, i32* %178, align 4, !dbg !1792, !tbaa !817
@@ -2646,7 +2646,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	br i1 %57, label %322, label %326, !dbg !1922
 
 ; <label>:322
-	%323 = xor i64 %321, 4294967295, !dbg !1923
+	%323 = xor i64 %321, u0xFFFFFFFF, !dbg !1923
 	%324 = and i64 %323, %319, !dbg !1924
 	%325 = trunc i64 %324 to i32, !dbg !1925
 	store i32 %325, i32* %313, align 4, !dbg !1926, !tbaa !817
@@ -3280,7 +3280,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%615 = icmp ne i8 %614, 58, !dbg !2323
 	%616 = icmp eq i8* %613, %59, !dbg !2324
 	%617 = or i1 %616, %615, !dbg !2325
-	%618 = icmp ugt i64 %609, 4294967295, !dbg !2326
+	%618 = icmp ugt i64 %609, u0xFFFFFFFF, !dbg !2326
 	%619 = or i1 %618, %617, !dbg !2325
 	br i1 %619, label %620, label %621, !dbg !2325
 
@@ -3367,7 +3367,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%653 = icmp ne i8 %652, 58, !dbg !2323
 	%654 = icmp eq i8* %651, %623, !dbg !2324
 	%655 = or i1 %654, %653, !dbg !2325
-	%656 = icmp ugt i64 %624, 4294967295, !dbg !2326
+	%656 = icmp ugt i64 %624, u0xFFFFFFFF, !dbg !2326
 	%657 = or i1 %656, %655, !dbg !2325
 	br i1 %657, label %658, label %659, !dbg !2325
 
@@ -3405,7 +3405,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%668 = icmp ne i8 %667, 58, !dbg !2323
 	%669 = icmp eq i8* %666, %661, !dbg !2324
 	%670 = or i1 %669, %668, !dbg !2325
-	%671 = icmp ugt i64 %662, 4294967295, !dbg !2326
+	%671 = icmp ugt i64 %662, u0xFFFFFFFF, !dbg !2326
 	%672 = or i1 %671, %670, !dbg !2325
 	br i1 %672, label %673, label %674, !dbg !2325
 
@@ -3443,7 +3443,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%683 = icmp ne i8 %682, 58, !dbg !2323
 	%684 = icmp eq i8* %681, %676, !dbg !2324
 	%685 = or i1 %684, %683, !dbg !2325
-	%686 = icmp ugt i64 %677, 4294967295, !dbg !2326
+	%686 = icmp ugt i64 %677, u0xFFFFFFFF, !dbg !2326
 	%687 = or i1 %686, %685, !dbg !2325
 	br i1 %687, label %688, label %689, !dbg !2325
 

@@ -555,7 +555,7 @@ define internal fastcc zeroext i1 @print_factors(i8*) unnamed_addr #7 !dbg !931 
 	%45 = zext i1 %44 to i64, !dbg !1099
 	%46 = add nuw nsw i64 %41, %45, !dbg !1100
 	call void @llvm.dbg.value(metadata i64 %42, metadata !1043, metadata !DIExpression()), !dbg !1061
-	%47 = and i64 %37, 4294967295, !dbg !1101
+	%47 = and i64 %37, u0xFFFFFFFF, !dbg !1101
 	%48 = add i64 %47, %42, !dbg !1102
 	%49 = icmp ult i64 %48, %47, !dbg !1103
 	%50 = zext i1 %49 to i64, !dbg !1103
@@ -1595,7 +1595,7 @@ define internal fastcc void @factor(i64, i64, %struct.factors*) unnamed_addr #7 
 	%303 = phi i64 [ %288, %298 ], [ %36, %35 ]
 	%304 = phi i64 [ %294, %298 ], [ 3, %35 ]
 	%305 = phi i64 [ %290, %298 ], [ 0, %35 ]
-	%306 = and i64 %305, 4294967295, !dbg !1603
+	%306 = and i64 %305, u0xFFFFFFFF, !dbg !1603
 	%307 = getelementptr %struct.factors, %struct.factors* %2, i64 0, i32 0, i64 1, !dbg !1603
 	%308 = getelementptr %struct.factors, %struct.factors* %2, i64 0, i32 1, i64 25, !dbg !1603
 	%309 = bitcast i64* %308 to i8*
@@ -17267,7 +17267,7 @@ define dso_local i8* @str_cd_iconv(i8*, i8*) local_unnamed_addr #7 !dbg !9181 {
 	call void @llvm.dbg.value(metadata i64 %9, metadata !9189, metadata !DIExpression()), !dbg !9229
 	store i64 %9, i64* %4, align 8, !dbg !9229, !tbaa !1148
 	call void @llvm.dbg.value(metadata i64 %9, metadata !9186, metadata !DIExpression()), !dbg !9230
-	call void @llvm.dbg.value(metadata i64 4294967295, metadata !9190, metadata !DIExpression()), !dbg !9231
+	call void @llvm.dbg.value(metadata i64 u0xFFFFFFFF, metadata !9190, metadata !DIExpression()), !dbg !9231
 	%10 = icmp ult i64 %9, u0x10000000, !dbg !9232
 	%11 = shl i64 %9, 4, !dbg !9234
 	%12 = select i1 %10, i64 %11, i64 %9, !dbg !9235

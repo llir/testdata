@@ -6570,7 +6570,7 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	%1025 = trunc i64 %1017 to i32, !dbg !5561
 	call void @llvm.dbg.value(metadata i32 %1025, metadata !4723, metadata !DIExpression()), !dbg !5561
 	call void @llvm.dbg.value(metadata i64 %1017, metadata !4723, metadata !DIExpression()), !dbg !5561
-	%1026 = and i64 %1017, 4294967295, !dbg !5573
+	%1026 = and i64 %1017, u0xFFFFFFFF, !dbg !5573
 	call void @llvm.dbg.value(metadata i64 %1026, metadata !4725, metadata !DIExpression()), !dbg !5573
 	%1027 = icmp sgt i32 %107, 0, !dbg !5573
 	%1028 = select i1 %1027, i32 %107, i32 0, !dbg !5573

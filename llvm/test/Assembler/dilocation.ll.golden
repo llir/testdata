@@ -11,7 +11,7 @@
 !6 = !DILocation(line: 3, column: 7, scope: !0, inlinedAt: !3)
 !7 = !DILocation(scope: !0)
 !8 = !DILocation(scope: !0)
-!9 = !DILocation(line: 4294967295, column: 65535, scope: !0)
+!9 = !DILocation(line: u0xFFFFFFFF, column: 65535, scope: !0)
 !10 = !DILocation(scope: !0, isImplicitCode: true)
 !11 = !DILocation(line: 1, scope: !0)
 !12 = !{i32 2, !"Debug Info Version", i32 3}

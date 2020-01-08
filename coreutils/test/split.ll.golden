@@ -9103,7 +9103,7 @@ define dso_local i32 @str2sig(i8*, i32* nocapture) local_unnamed_addr #7 !dbg !6
 	call void @llvm.dbg.value(metadata i64 %21, metadata !6115, metadata !DIExpression()) #12, !dbg !6142
 	call void @llvm.dbg.value(metadata i64 %21, metadata !6115, metadata !DIExpression()) #12, !dbg !6142
 	call void @llvm.dbg.value(metadata i64 %21, metadata !6115, metadata !DIExpression()) #12, !dbg !6142
-	%27 = and i64 %21, 4294967295, !dbg !6156
+	%27 = and i64 %21, u0xFFFFFFFF, !dbg !6156
 	call void @llvm.dbg.value(metadata i64 %21, metadata !6115, metadata !DIExpression()) #12, !dbg !6142
 	%28 = getelementptr inbounds [35 x %struct.numname], [35 x %struct.numname]* @numname_table, i64 0, i64 %27, i32 0, !dbg !6157
 	%29 = load i32, i32* %28, align 4, !dbg !6157, !tbaa !6158

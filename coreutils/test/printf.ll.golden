@@ -1801,7 +1801,7 @@ define internal fastcc i32 @print_esc(i8*, i1 zeroext) unnamed_addr #7 !dbg !131
 	call void @llvm.dbg.value(metadata i8* %267, metadata !1323, metadata !DIExpression()), !dbg !1336
 	%268 = ptrtoint i8* %267 to i64, !dbg !1459
 	%269 = ptrtoint i8* %0 to i64, !dbg !1459
-	%270 = xor i64 %269, 4294967295, !dbg !1460
+	%270 = xor i64 %269, u0xFFFFFFFF, !dbg !1460
 	%271 = add i64 %270, %268, !dbg !1460
 	%272 = trunc i64 %271 to i32, !dbg !1461
 	ret i32 %272, !dbg !1462

@@ -709,7 +709,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !692 {
 	%187 = load i32, i32* %180, align 4, !dbg !993, !tbaa !748
 	%188 = icmp eq i32 %187, 34, !dbg !994
 	%189 = add i64 %185, u0x80000000, !dbg !995
-	%190 = icmp ugt i64 %189, 4294967295, !dbg !995
+	%190 = icmp ugt i64 %189, u0xFFFFFFFF, !dbg !995
 	%191 = or i1 %188, %190, !dbg !996
 	br i1 %191, label %198, label %192, !dbg !996
 
@@ -923,7 +923,7 @@ define dso_local i32 @operand2sig(i8*, i8*) local_unnamed_addr #7 !dbg !1027 {
 	%21 = load i32, i32* %12, align 4, !dbg !1060, !tbaa !748
 	%22 = icmp ne i32 %21, 0, !dbg !1060
 	%23 = add i64 %13, u0x80000000, !dbg !1061
-	%24 = icmp ugt i64 %23, 4294967295, !dbg !1061
+	%24 = icmp ugt i64 %23, u0xFFFFFFFF, !dbg !1061
 	%25 = or i1 %24, %22, !dbg !1062
 	%26 = icmp eq i32 %14, -1, !dbg !1063
 	%27 = or i1 %26, %25, !dbg !1062
@@ -5132,7 +5132,7 @@ define dso_local i32 @str2sig(i8*, i32* nocapture) local_unnamed_addr #7 !dbg !3
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3512, metadata !DIExpression()) #12, !dbg !3539
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3512, metadata !DIExpression()) #12, !dbg !3539
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3512, metadata !DIExpression()) #12, !dbg !3539
-	%27 = and i64 %21, 4294967295, !dbg !3553
+	%27 = and i64 %21, u0xFFFFFFFF, !dbg !3553
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3512, metadata !DIExpression()) #12, !dbg !3539
 	%28 = getelementptr inbounds [35 x %struct.numname], [35 x %struct.numname]* @numname_table, i64 0, i64 %27, i32 0, !dbg !3554
 	%29 = load i32, i32* %28, align 4, !dbg !3554, !tbaa !3555

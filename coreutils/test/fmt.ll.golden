@@ -1701,7 +1701,7 @@ define internal fastcc i32 @get_line(%struct._IO_FILE*, i32) unnamed_addr #7 !db
 	call void @llvm.dbg.value(metadata i8* %114, metadata !1512, metadata !DIExpression()) #12, !dbg !1533
 	%115 = load i8, i8* %114, align 1, !dbg !1549, !tbaa !869
 	%116 = sext i8 %115 to i64, !dbg !1549
-	%117 = and i64 %116, 4294967295, !dbg !1549
+	%117 = and i64 %116, u0xFFFFFFFF, !dbg !1549
 	%118 = icmp ult i64 %117, 64, !dbg !1549
 	%119 = shl i64 1, %117, !dbg !1549
 	%120 = and i64 %119, -9223301659520663551, !dbg !1549

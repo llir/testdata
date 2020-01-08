@@ -1065,7 +1065,7 @@ define dso_local i32 @operand2sig(i8*, i8*) local_unnamed_addr #7 !dbg !1354 {
 	%21 = load i32, i32* %12, align 4, !dbg !1387, !tbaa !819
 	%22 = icmp ne i32 %21, 0, !dbg !1387
 	%23 = add i64 %13, u0x80000000, !dbg !1388
-	%24 = icmp ugt i64 %23, 4294967295, !dbg !1388
+	%24 = icmp ugt i64 %23, u0xFFFFFFFF, !dbg !1388
 	%25 = or i1 %24, %22, !dbg !1389
 	%26 = icmp eq i32 %14, -1, !dbg !1390
 	%27 = or i1 %26, %25, !dbg !1389
@@ -5418,7 +5418,7 @@ define dso_local i32 @str2sig(i8*, i32* nocapture) local_unnamed_addr #7 !dbg !3
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3965, metadata !DIExpression()) #12, !dbg !3992
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3965, metadata !DIExpression()) #12, !dbg !3992
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3965, metadata !DIExpression()) #12, !dbg !3992
-	%27 = and i64 %21, 4294967295, !dbg !4006
+	%27 = and i64 %21, u0xFFFFFFFF, !dbg !4006
 	call void @llvm.dbg.value(metadata i64 %21, metadata !3965, metadata !DIExpression()) #12, !dbg !3992
 	%28 = getelementptr inbounds [35 x %struct.numname], [35 x %struct.numname]* @numname_table, i64 0, i64 %27, i32 0, !dbg !4007
 	%29 = load i32, i32* %28, align 4, !dbg !4007, !tbaa !4008

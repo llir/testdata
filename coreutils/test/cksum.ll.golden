@@ -573,7 +573,7 @@ define internal fastcc zeroext i1 @cksum(i8*, i1 zeroext) unnamed_addr #7 !dbg !
 ; <label>:125
 	%126 = phi i64 [ %88, %110 ], [ %122, %113 ], !dbg !949
 	call void @llvm.dbg.value(metadata i64 %126, metadata !774, metadata !DIExpression()), !dbg !842
-	call void @llvm.dbg.value(metadata i64 undef, metadata !774, metadata !DIExpression(DW_OP_constu, 4294967295, DW_OP_xor, DW_OP_stack_value)), !dbg !842
+	call void @llvm.dbg.value(metadata i64 undef, metadata !774, metadata !DIExpression(DW_OP_constu, u0xFFFFFFFF, DW_OP_xor, DW_OP_stack_value)), !dbg !842
 	%127 = trunc i64 %126 to i32, !dbg !950
 	%128 = xor i32 %127, -1, !dbg !950
 	br i1 %1, label %129, label %131, !dbg !952

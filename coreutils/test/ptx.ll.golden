@@ -14051,7 +14051,7 @@ define dso_local i8* @str_cd_iconv(i8*, i8*) local_unnamed_addr #7 !dbg !8262 {
 	call void @llvm.dbg.value(metadata i64 %9, metadata !8270, metadata !DIExpression()), !dbg !8310
 	store i64 %9, i64* %4, align 8, !dbg !8310, !tbaa !1035
 	call void @llvm.dbg.value(metadata i64 %9, metadata !8267, metadata !DIExpression()), !dbg !8311
-	call void @llvm.dbg.value(metadata i64 4294967295, metadata !8271, metadata !DIExpression()), !dbg !8312
+	call void @llvm.dbg.value(metadata i64 u0xFFFFFFFF, metadata !8271, metadata !DIExpression()), !dbg !8312
 	%10 = icmp ult i64 %9, u0x10000000, !dbg !8313
 	%11 = shl i64 %9, 4, !dbg !8315
 	%12 = select i1 %10, i64 %11, i64 %9, !dbg !8316

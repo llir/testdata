@@ -3738,7 +3738,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	%890 = phi i64 [ %882, %881 ], [ %887, %885 ], !dbg !2761
 	%891 = add i64 %879, u0x80000000, !dbg !2761
 	%892 = add i64 %891, %890, !dbg !2761
-	%893 = icmp ugt i64 %892, 4294967295, !dbg !2761
+	%893 = icmp ugt i64 %892, u0xFFFFFFFF, !dbg !2761
 	br i1 %893, label %894, label %897, !dbg !2761
 
 ; <label>:894
@@ -6625,7 +6625,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:381
 	%382 = phi i64 [ %376, %379 ], [ %368, %365 ]
 	%383 = sub i64 2147481748, %382, !dbg !4147
-	%384 = icmp ugt i64 %383, 4294967295, !dbg !4147
+	%384 = icmp ugt i64 %383, u0xFFFFFFFF, !dbg !4147
 	%385 = trunc i64 %382 to i32, !dbg !4147
 	%386 = sub i32 -1900, %385, !dbg !4147
 	br i1 %384, label %392, label %397, !dbg !4147
@@ -6653,7 +6653,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	store i32 %398, i32* %367, align 4, !dbg !4149, !tbaa !1237
 	%399 = load i64, i64* %126, align 8, !dbg !4155, !tbaa !2809
 	%400 = add i64 %399, 2147483647, !dbg !4155
-	%401 = icmp ugt i64 %400, 4294967295, !dbg !4155
+	%401 = icmp ugt i64 %400, u0xFFFFFFFF, !dbg !4155
 	%402 = trunc i64 %399 to i32, !dbg !4155
 	%403 = add i32 %402, -1, !dbg !4155
 	%404 = getelementptr inbounds %struct.tm, %struct.tm* %14, i64 0, i32 4, !dbg !4155
@@ -6663,7 +6663,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:405
 	%406 = load i64, i64* %130, align 8, !dbg !4156, !tbaa !2812
 	%407 = add i64 %406, u0x80000000, !dbg !4156
-	%408 = icmp ugt i64 %407, 4294967295, !dbg !4156
+	%408 = icmp ugt i64 %407, u0xFFFFFFFF, !dbg !4156
 	%409 = trunc i64 %406 to i32, !dbg !4156
 	%410 = getelementptr inbounds %struct.tm, %struct.tm* %14, i64 0, i32 3, !dbg !4156
 	store i32 %409, i32* %410, align 4, !dbg !4156, !tbaa !1465
@@ -7599,7 +7599,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 ; <label>:963
 	%964 = add nsw i64 %956, u0x80000000, !dbg !4653
 	%965 = add i64 %964, %953, !dbg !4653
-	%966 = icmp ugt i64 %965, 4294967295, !dbg !4653
+	%966 = icmp ugt i64 %965, u0xFFFFFFFF, !dbg !4653
 	br i1 %966, label %967, label %975, !dbg !4653
 
 ; <label>:967
@@ -8097,7 +8097,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1255 = phi i32 [ %1244, %1243 ], [ %1250, %1248 ], !dbg !4907
 	%1256 = add i64 %1241, u0x80000000, !dbg !4907
 	%1257 = add i64 %1256, %1254, !dbg !4907
-	%1258 = icmp ugt i64 %1257, 4294967295, !dbg !4907
+	%1258 = icmp ugt i64 %1257, u0xFFFFFFFF, !dbg !4907
 	br i1 %1258, label %1312, label %1259, !dbg !4907
 
 ; <label>:1259
@@ -8127,7 +8127,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1276 = phi i32 [ %1265, %1264 ], [ %1271, %1269 ], !dbg !4910
 	%1277 = add i64 %1262, u0x80000000, !dbg !4910
 	%1278 = add i64 %1277, %1275, !dbg !4910
-	%1279 = icmp ugt i64 %1278, 4294967295, !dbg !4910
+	%1279 = icmp ugt i64 %1278, u0xFFFFFFFF, !dbg !4910
 	br i1 %1279, label %1312, label %1280, !dbg !4910
 
 ; <label>:1280
@@ -8157,7 +8157,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%1297 = phi i32 [ %1286, %1285 ], [ %1292, %1290 ], !dbg !4912
 	%1298 = add i64 %1283, u0x80000000, !dbg !4912
 	%1299 = add i64 %1298, %1296, !dbg !4912
-	%1300 = icmp ugt i64 %1299, 4294967295, !dbg !4912
+	%1300 = icmp ugt i64 %1299, u0xFFFFFFFF, !dbg !4912
 	br i1 %1300, label %1312, label %1301, !dbg !4912
 
 ; <label>:1301
@@ -16715,7 +16715,7 @@ define internal fastcc i64 @__strftime_internal(i8*, i64, i8* readonly, %struct.
 	%1199 = trunc i64 %1191 to i32, !dbg !9553
 	call void @llvm.dbg.value(metadata i32 %1199, metadata !8834, metadata !DIExpression()), !dbg !9553
 	call void @llvm.dbg.value(metadata i64 %1191, metadata !8834, metadata !DIExpression()), !dbg !9553
-	%1200 = and i64 %1191, 4294967295, !dbg !9565
+	%1200 = and i64 %1191, u0xFFFFFFFF, !dbg !9565
 	call void @llvm.dbg.value(metadata i64 %1200, metadata !8836, metadata !DIExpression()), !dbg !9565
 	%1201 = icmp sgt i32 %109, 0, !dbg !9565
 	%1202 = select i1 %1201, i32 %109, i32 0, !dbg !9565

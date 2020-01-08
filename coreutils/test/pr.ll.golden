@@ -939,7 +939,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #0 !dbg !1046 {
 	%248 = trunc i64 %247 to i32, !dbg !1413
 	%249 = add i32 %177, %248, !dbg !1413
 	%250 = icmp ult i32 %249, %177, !dbg !1413
-	%251 = icmp ugt i64 %247, 4294967295, !dbg !1413
+	%251 = icmp ugt i64 %247, u0xFFFFFFFF, !dbg !1413
 	%252 = or i1 %250, %251, !dbg !1413
 	br i1 %252, label %320, label %253, !dbg !1413
 
@@ -10468,7 +10468,7 @@ define internal fastcc i64 @__strftime_internal(i8*, i64, i8* readonly, %struct.
 	%1199 = trunc i64 %1191 to i32, !dbg !5309
 	call void @llvm.dbg.value(metadata i32 %1199, metadata !4580, metadata !DIExpression()), !dbg !5309
 	call void @llvm.dbg.value(metadata i64 %1191, metadata !4580, metadata !DIExpression()), !dbg !5309
-	%1200 = and i64 %1191, 4294967295, !dbg !5321
+	%1200 = and i64 %1191, u0xFFFFFFFF, !dbg !5321
 	call void @llvm.dbg.value(metadata i64 %1200, metadata !4582, metadata !DIExpression()), !dbg !5321
 	%1201 = icmp sgt i32 %109, 0, !dbg !5321
 	%1202 = select i1 %1201, i32 %109, i32 0, !dbg !5321

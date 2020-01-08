@@ -25309,7 +25309,7 @@ define internal fastcc i64 @__strftime_internal(i8*, i64, i8* readonly, %struct.
 	%1199 = trunc i64 %1191 to i32, !dbg !15398
 	call void @llvm.dbg.value(metadata i32 %1199, metadata !14673, metadata !DIExpression()), !dbg !15398
 	call void @llvm.dbg.value(metadata i64 %1191, metadata !14673, metadata !DIExpression()), !dbg !15398
-	%1200 = and i64 %1191, 4294967295, !dbg !15410
+	%1200 = and i64 %1191, u0xFFFFFFFF, !dbg !15410
 	call void @llvm.dbg.value(metadata i64 %1200, metadata !14675, metadata !DIExpression()), !dbg !15410
 	%1201 = icmp sgt i32 %109, 0, !dbg !15410
 	%1202 = select i1 %1201, i32 %109, i32 0, !dbg !15410
