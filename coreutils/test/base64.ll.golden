@@ -585,7 +585,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 	%148 = getelementptr inbounds [30720 x i8], [30720 x i8]* %7, i64 0, i64 0, !dbg !1025
 	call void @llvm.lifetime.start.p0i8(i64 30720, i8* nonnull %148) #11, !dbg !1025
 	%149 = getelementptr inbounds [40960 x i8], [40960 x i8]* %8, i64 0, i64 0, !dbg !1026
-	call void @llvm.lifetime.start.p0i8(i64 40960, i8* nonnull %149) #11, !dbg !1026
+	call void @llvm.lifetime.start.p0i8(i64 u0xA000, i8* nonnull %149) #11, !dbg !1026
 	%150 = getelementptr inbounds %struct._IO_FILE, %struct._IO_FILE* %64, i64 0, i32 0
 	%151 = icmp eq i64 %22, 0
 	%152 = getelementptr inbounds %struct._IO_FILE, %struct._IO_FILE* %66, i64 0, i32 5
@@ -784,7 +784,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 	unreachable, !dbg !1155
 
 ; <label>:258
-	call void @llvm.lifetime.end.p0i8(i64 40960, i8* nonnull %149) #11, !dbg !1156
+	call void @llvm.lifetime.end.p0i8(i64 u0xA000, i8* nonnull %149) #11, !dbg !1156
 	call void @llvm.lifetime.end.p0i8(i64 30720, i8* nonnull %148) #11, !dbg !1156
 	br label %259
 

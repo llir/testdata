@@ -4807,7 +4807,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%356 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4300
 	%357 = load i32, i32* %356, align 8, !dbg !4300, !tbaa !4113
 	%358 = and i32 %357, u0xF000, !dbg !4300
-	%359 = icmp eq i32 %358, 40960, !dbg !4300
+	%359 = icmp eq i32 %358, u0xA000, !dbg !4300
 	br i1 %359, label %360, label %452, !dbg !4301
 
 ; <label>:360
@@ -16867,7 +16867,7 @@ define dso_local i32 @file_has_acl(i8*, %struct.stat* nocapture readonly) local_
 	%3 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !10596
 	%4 = load i32, i32* %3, align 8, !dbg !10596, !tbaa !4432
 	%5 = and i32 %4, u0xF000, !dbg !10596
-	%6 = icmp eq i32 %5, 40960, !dbg !10596
+	%6 = icmp eq i32 %5, u0xA000, !dbg !10596
 	br i1 %6, label %35, label %7, !dbg !10597
 
 ; <label>:7

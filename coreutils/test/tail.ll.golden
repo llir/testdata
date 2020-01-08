@@ -2680,7 +2680,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 ; <label>:1147
 	%1148 = load i32, i32* %1140, align 8, !dbg !2406, !tbaa !1407
 	%1149 = and i32 %1148, u0xF000, !dbg !2406
-	%1150 = icmp eq i32 %1149, 40960, !dbg !2406
+	%1150 = icmp eq i32 %1149, u0xA000, !dbg !2406
 	br i1 %1150, label %1151, label %1152, !dbg !2422
 
 ; <label>:1151
@@ -4620,7 +4620,7 @@ define internal fastcc void @recheck(%struct.File_spec*, i1 zeroext) unnamed_add
 	%39 = getelementptr inbounds %struct.stat, %struct.stat* %3, i64 0, i32 3, !dbg !3627
 	%40 = load i32, i32* %39, align 8, !dbg !3627, !tbaa !1407
 	%41 = and i32 %40, u0xF000, !dbg !3627
-	%42 = icmp eq i32 %41, 40960, !dbg !3627
+	%42 = icmp eq i32 %41, u0xA000, !dbg !3627
 	br i1 %42, label %43, label %54, !dbg !3628
 
 ; <label>:43

@@ -5105,7 +5105,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%295 = bitcast i8* %294 to i32*, !dbg !2513
 	%296 = load i32, i32* %295, align 8, !dbg !2513, !tbaa !1292
 	%297 = and i32 %296, u0xF000, !dbg !2513
-	%298 = icmp eq i32 %297, 40960, !dbg !2513
+	%298 = icmp eq i32 %297, u0xA000, !dbg !2513
 	br i1 %298, label %299, label %3885, !dbg !2514
 
 ; <label>:299
@@ -8242,7 +8242,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%2358 = bitcast i8* %2357 to i32*, !dbg !3267
 	%2359 = load i32, i32* %2358, align 8, !dbg !3267, !tbaa !1292
 	%2360 = and i32 %2359, u0xF000, !dbg !3267
-	%2361 = icmp eq i32 %2360, 40960, !dbg !3267
+	%2361 = icmp eq i32 %2360, u0xA000, !dbg !3267
 	br i1 %2361, label %2373, label %2362, !dbg !3268
 
 ; <label>:2362
