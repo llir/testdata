@@ -18901,7 +18901,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%136 = load i64, i64* %135, align 8, !dbg !14107, !tbaa !13709
 	switch i64 %136, label %137 [
 		i64 1073741822, label %139
-		i64 1073741823, label %143
+		i64 u0x3FFFFFFF, label %143
 	], !dbg !14109
 
 ; <label>:137
@@ -18917,7 +18917,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 ; <label>:143
 	%144 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 1, i32 1, !dbg !14115
 	%145 = load i64, i64* %144, align 8, !dbg !14115, !tbaa !13709
-	%146 = icmp eq i64 %145, 1073741823, !dbg !14117
+	%146 = icmp eq i64 %145, u0x3FFFFFFF, !dbg !14117
 	br i1 %146, label %147, label %154, !dbg !14118
 
 ; <label>:147
@@ -18945,7 +18945,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%157 = load i64, i64* %156, align 8, !dbg !14110, !tbaa !13709
 	switch i64 %157, label %166 [
 		i64 1073741822, label %158
-		i64 1073741823, label %164
+		i64 u0x3FFFFFFF, label %164
 	], !dbg !14127
 
 ; <label>:158
@@ -19360,7 +19360,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%100 = load i64, i64* %99, align 8, !dbg !14380, !tbaa !13709
 	switch i64 %100, label %101 [
 		i64 1073741822, label %103
-		i64 1073741823, label %107
+		i64 u0x3FFFFFFF, label %107
 	], !dbg !14381
 
 ; <label>:101
@@ -19376,7 +19376,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 ; <label>:107
 	%108 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 1, i32 1, !dbg !14386
 	%109 = load i64, i64* %108, align 8, !dbg !14386, !tbaa !13709
-	%110 = icmp eq i64 %109, 1073741823, !dbg !14387
+	%110 = icmp eq i64 %109, u0x3FFFFFFF, !dbg !14387
 	br i1 %110, label %131, label %116, !dbg !14388
 
 ; <label>:111
@@ -19397,7 +19397,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%119 = load i64, i64* %118, align 8, !dbg !14382, !tbaa !13709
 	switch i64 %119, label %131 [
 		i64 1073741822, label %120
-		i64 1073741823, label %126
+		i64 u0x3FFFFFFF, label %126
 	], !dbg !14395
 
 ; <label>:120

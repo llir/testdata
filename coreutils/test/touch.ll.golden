@@ -1021,8 +1021,8 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1155 {
 	br label %208, !dbg !1481
 
 ; <label>:207
-	store i64 1073741823, i64* getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 0, i32 1), align 8, !dbg !1482, !tbaa !1263
-	store i64 1073741823, i64* getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 1, i32 1), align 8, !dbg !1483, !tbaa !1263
+	store i64 u0x3FFFFFFF, i64* getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 0, i32 1), align 8, !dbg !1482, !tbaa !1263
+	store i64 u0x3FFFFFFF, i64* getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 1, i32 1), align 8, !dbg !1483, !tbaa !1263
 	br label %208
 
 ; <label>:208

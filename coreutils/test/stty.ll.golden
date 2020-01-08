@@ -8061,7 +8061,7 @@ define dso_local i64 @xnumtoumax(i8*, i32, i64, i64, i8*, i8*, i32) local_unname
 ; <label>:18
 	call void @llvm.dbg.value(metadata i32 1, metadata !4940, metadata !DIExpression()), !dbg !4953
 	call void @llvm.dbg.value(metadata i64 %14, metadata !4942, metadata !DIExpression()), !dbg !4951
-	%19 = icmp ugt i64 %14, 1073741823, !dbg !4965
+	%19 = icmp ugt i64 %14, u0x3FFFFFFF, !dbg !4965
 	%20 = tail call i32* @__errno_location() #17, !dbg !4968
 	br i1 %19, label %21, label %22, !dbg !4969
 
