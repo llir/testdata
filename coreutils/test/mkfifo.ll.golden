@@ -639,7 +639,7 @@ define dso_local noalias %struct.mode_change* @mode_compile(i8*) local_unnamed_a
 	call void @llvm.dbg.value(metadata i64 %42, metadata !879, metadata !DIExpression()), !dbg !960
 	call void @llvm.dbg.value(metadata i64 %42, metadata !968, metadata !DIExpression()) #10, !dbg !974
 	call void @llvm.dbg.value(metadata i64 16, metadata !973, metadata !DIExpression()) #10, !dbg !976
-	%50 = icmp ugt i64 %42, 576460752303423487, !dbg !977
+	%50 = icmp ugt i64 %42, u0x7FFFFFFFFFFFFFF, !dbg !977
 	br i1 %50, label %51, label %52, !dbg !979
 
 ; <label>:51

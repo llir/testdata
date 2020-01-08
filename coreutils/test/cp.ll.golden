@@ -5184,7 +5184,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1561
 	%1562 = load i1, i1* @write_zeros.nz, align 8
-	%1563 = select i1 %1562, i64 1024, i64 131072
+	%1563 = select i1 %1562, i64 1024, i64 u0x20000
 	%1564 = call i8* @rpl_calloc(i64 %1563, i64 1) #11, !dbg !4613
 	store i8* %1564, i8** @write_zeros.zeros, align 8, !dbg !4615, !tbaa !1469
 	%1565 = icmp eq i8* %1564, null, !dbg !4616
@@ -5206,7 +5206,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1571
 	%1572 = load i1, i1* @write_zeros.nz, align 8
-	%1573 = select i1 %1572, i64 1024, i64 131072
+	%1573 = select i1 %1572, i64 1024, i64 u0x20000
 	%1574 = icmp ult i64 %1573, %1569, !dbg !4623
 	%1575 = select i1 %1574, i64 %1573, i64 %1569, !dbg !4623
 	call void @llvm.dbg.value(metadata i64 %1575, metadata !333, metadata !DIExpression()) #11, !dbg !4624
@@ -5399,7 +5399,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1627
 	%1628 = load i1, i1* @write_zeros.nz, align 8
-	%1629 = select i1 %1628, i64 1024, i64 131072
+	%1629 = select i1 %1628, i64 1024, i64 u0x20000
 	%1630 = call i8* @rpl_calloc(i64 %1629, i64 1) #11, !dbg !4695
 	store i8* %1630, i8** @write_zeros.zeros, align 8, !dbg !4696, !tbaa !1469
 	%1631 = icmp eq i8* %1630, null, !dbg !4697
@@ -5421,7 +5421,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1637
 	%1638 = load i1, i1* @write_zeros.nz, align 8
-	%1639 = select i1 %1638, i64 1024, i64 131072
+	%1639 = select i1 %1638, i64 1024, i64 u0x20000
 	%1640 = icmp ult i64 %1639, %1635, !dbg !4702
 	%1641 = select i1 %1640, i64 %1639, i64 %1635, !dbg !4702
 	call void @llvm.dbg.value(metadata i64 %1641, metadata !333, metadata !DIExpression()) #11, !dbg !4703
@@ -16418,7 +16418,7 @@ define dso_local i8* @streamsavedir(%struct.__dirstream*, i32) local_unnamed_add
 
 ; <label>:48
 	call void @llvm.dbg.value(metadata i64 %23, metadata !590, metadata !DIExpression()) #11, !dbg !12038
-	%49 = icmp ugt i64 %23, 576460752303423487, !dbg !12046
+	%49 = icmp ugt i64 %23, u0x7FFFFFFFFFFFFFF, !dbg !12046
 	br i1 %49, label %50, label %58, !dbg !12048
 
 ; <label>:50

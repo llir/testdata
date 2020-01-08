@@ -2468,7 +2468,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 
 ; <label>:91
 	call void @llvm.dbg.value(metadata i64 %82, metadata !62, metadata !DIExpression()) #12, !dbg !2200
-	%92 = icmp ugt i64 %82, 576460752303423487, !dbg !2205
+	%92 = icmp ugt i64 %82, u0x7FFFFFFFFFFFFFF, !dbg !2205
 	br i1 %92, label %93, label %101, !dbg !2206
 
 ; <label>:93
@@ -2625,7 +2625,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 
 ; <label>:175
 	call void @llvm.dbg.value(metadata i64 %166, metadata !62, metadata !DIExpression()) #12, !dbg !2289
-	%176 = icmp ugt i64 %166, 576460752303423487, !dbg !2294
+	%176 = icmp ugt i64 %166, u0x7FFFFFFFFFFFFFF, !dbg !2294
 	br i1 %176, label %177, label %185, !dbg !2295
 
 ; <label>:177
@@ -2726,7 +2726,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 
 ; <label>:230
 	call void @llvm.dbg.value(metadata i64 %219, metadata !62, metadata !DIExpression()) #12, !dbg !2346
-	%231 = icmp ugt i64 %219, 576460752303423487, !dbg !2351
+	%231 = icmp ugt i64 %219, u0x7FFFFFFFFFFFFFF, !dbg !2351
 	br i1 %231, label %232, label %240, !dbg !2352
 
 ; <label>:232

@@ -3856,7 +3856,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 
 ; <label>:82
 	call void @llvm.dbg.value(metadata i64 %72, metadata !619, metadata !DIExpression()) #13, !dbg !2777
-	%83 = icmp ugt i64 %71, 576460752303423487, !dbg !2785
+	%83 = icmp ugt i64 %71, u0x7FFFFFFFFFFFFFF, !dbg !2785
 	br i1 %83, label %84, label %92, !dbg !2787
 
 ; <label>:84
@@ -3940,7 +3940,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 
 ; <label>:123
 	call void @llvm.dbg.value(metadata i64 %113, metadata !619, metadata !DIExpression()) #13, !dbg !2830
-	%124 = icmp ugt i64 %112, 576460752303423487, !dbg !2835
+	%124 = icmp ugt i64 %112, u0x7FFFFFFFFFFFFFF, !dbg !2835
 	br i1 %124, label %125, label %133, !dbg !2836
 
 ; <label>:125
@@ -4027,7 +4027,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 
 ; <label>:167
 	call void @llvm.dbg.value(metadata i64 %157, metadata !619, metadata !DIExpression()) #13, !dbg !2876
-	%168 = icmp ugt i64 %156, 576460752303423487, !dbg !2881
+	%168 = icmp ugt i64 %156, u0x7FFFFFFFFFFFFFF, !dbg !2881
 	br i1 %168, label %169, label %177, !dbg !2882
 
 ; <label>:169
@@ -4350,7 +4350,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 
 ; <label>:350
 	call void @llvm.dbg.value(metadata i64 %344, metadata !619, metadata !DIExpression()) #13, !dbg !3050
-	%351 = icmp ugt i64 %333, 576460752303423487, !dbg !3055
+	%351 = icmp ugt i64 %333, u0x7FFFFFFFFFFFFFF, !dbg !3055
 	br i1 %351, label %352, label %360, !dbg !3056
 
 ; <label>:352
@@ -4430,7 +4430,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 
 ; <label>:391
 	call void @llvm.dbg.value(metadata i64 %385, metadata !619, metadata !DIExpression()) #13, !dbg !3093
-	%392 = icmp ugt i64 %324, 576460752303423487, !dbg !3098
+	%392 = icmp ugt i64 %324, u0x7FFFFFFFFFFFFFF, !dbg !3098
 	br i1 %392, label %393, label %401, !dbg !3099
 
 ; <label>:393

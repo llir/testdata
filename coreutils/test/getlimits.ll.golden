@@ -770,7 +770,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%264 = phi i8* [ %262, %261 ], [ %260, %255 ], !dbg !1007
 	call void @llvm.dbg.value(metadata i8* %264, metadata !770, metadata !DIExpression()) #11, !dbg !1002
 	%265 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i64 0, i64 0), i8* %264) #11, !dbg !981
-	%266 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 4294967295) #11, !dbg !1008
+	%266 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0xFFFFFFFF) #11, !dbg !1008
 	%267 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.32, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1008
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1009
 	%268 = load i8, i8* %13, align 1, !dbg !1011, !tbaa !774
@@ -820,7 +820,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%292 = phi i8* [ %290, %289 ], [ %288, %283 ], !dbg !1032
 	call void @llvm.dbg.value(metadata i8* %292, metadata !770, metadata !DIExpression()) #11, !dbg !1027
 	%293 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.33, i64 0, i64 0), i8* %292) #11, !dbg !1008
-	%294 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 9223372036854775807) #11, !dbg !1033
+	%294 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0x7FFFFFFFFFFFFFFF) #11, !dbg !1033
 	%295 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.34, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1033
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1034
 	%296 = load i8, i8* %13, align 1, !dbg !1036, !tbaa !774
@@ -1020,7 +1020,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%404 = phi i8* [ %402, %401 ], [ %400, %395 ], !dbg !1134
 	call void @llvm.dbg.value(metadata i8* %404, metadata !770, metadata !DIExpression()) #11, !dbg !1129
 	%405 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.41, i64 0, i64 0), i8* %404) #11, !dbg !1110
-	%406 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 9223372036854775807) #11, !dbg !1135
+	%406 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0x7FFFFFFFFFFFFFFF) #11, !dbg !1135
 	%407 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.42, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1135
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1136
 	%408 = load i8, i8* %13, align 1, !dbg !1138, !tbaa !774
@@ -1120,7 +1120,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%460 = phi i8* [ %458, %457 ], [ %456, %451 ], !dbg !1186
 	call void @llvm.dbg.value(metadata i8* %460, metadata !770, metadata !DIExpression()) #11, !dbg !1181
 	%461 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.45, i64 0, i64 0), i8* %460) #11, !dbg !1160
-	%462 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 9223372036854775807) #11, !dbg !1187
+	%462 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0x7FFFFFFFFFFFFFFF) #11, !dbg !1187
 	%463 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.46, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1187
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1188
 	%464 = load i8, i8* %13, align 1, !dbg !1190, !tbaa !774
@@ -1220,7 +1220,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%516 = phi i8* [ %514, %513 ], [ %512, %507 ], !dbg !1238
 	call void @llvm.dbg.value(metadata i8* %516, metadata !770, metadata !DIExpression()) #11, !dbg !1233
 	%517 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.49, i64 0, i64 0), i8* %516) #11, !dbg !1212
-	%518 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 4294967295) #11, !dbg !1239
+	%518 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0xFFFFFFFF) #11, !dbg !1239
 	%519 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.50, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1239
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1240
 	%520 = load i8, i8* %13, align 1, !dbg !1242, !tbaa !774
@@ -1270,7 +1270,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%544 = phi i8* [ %542, %541 ], [ %540, %535 ], !dbg !1263
 	call void @llvm.dbg.value(metadata i8* %544, metadata !770, metadata !DIExpression()) #11, !dbg !1258
 	%545 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.51, i64 0, i64 0), i8* %544) #11, !dbg !1239
-	%546 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 4294967295) #11, !dbg !1264
+	%546 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0xFFFFFFFF) #11, !dbg !1264
 	%547 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.52, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1264
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1265
 	%548 = load i8, i8* %13, align 1, !dbg !1267, !tbaa !774
@@ -1420,7 +1420,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%628 = phi i8* [ %626, %625 ], [ %624, %619 ], !dbg !1340
 	call void @llvm.dbg.value(metadata i8* %628, metadata !770, metadata !DIExpression()) #11, !dbg !1335
 	%629 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.57, i64 0, i64 0), i8* %628) #11, !dbg !1314
-	%630 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 9223372036854775807) #11, !dbg !1341
+	%630 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0x7FFFFFFFFFFFFFFF) #11, !dbg !1341
 	%631 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.58, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1341
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1342
 	%632 = load i8, i8* %13, align 1, !dbg !1344, !tbaa !774
@@ -1520,7 +1520,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !697 {
 	%684 = phi i8* [ %682, %681 ], [ %680, %675 ], !dbg !1392
 	call void @llvm.dbg.value(metadata i8* %684, metadata !770, metadata !DIExpression()) #11, !dbg !1387
 	%685 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.61, i64 0, i64 0), i8* %684) #11, !dbg !1366
-	%686 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 9223372036854775807) #11, !dbg !1393
+	%686 = call i32 (i8*, i32, i64, i8*, ...) @__sprintf_chk(i8* nonnull %13, i32 1, i64 21, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i64 0, i64 0), i64 u0x7FFFFFFFFFFFFFFF) #11, !dbg !1393
 	%687 = call i32 (i32, i8*, ...) @__printf_chk(i32 1, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.62, i64 0, i64 0), i8* nonnull %13) #11, !dbg !1393
 	call void @llvm.dbg.value(metadata i8* %7, metadata !762, metadata !DIExpression()) #11, !dbg !1394
 	%688 = load i8, i8* %13, align 1, !dbg !1396, !tbaa !774

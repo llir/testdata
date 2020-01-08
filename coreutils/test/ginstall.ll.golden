@@ -5060,7 +5060,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1561
 	%1562 = load i1, i1* @write_zeros.nz, align 8
-	%1563 = select i1 %1562, i64 1024, i64 131072
+	%1563 = select i1 %1562, i64 1024, i64 u0x20000
 	%1564 = call i8* @rpl_calloc(i64 %1563, i64 1) #10, !dbg !4839
 	store i8* %1564, i8** @write_zeros.zeros, align 8, !dbg !4841, !tbaa !1507
 	%1565 = icmp eq i8* %1564, null, !dbg !4842
@@ -5082,7 +5082,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1571
 	%1572 = load i1, i1* @write_zeros.nz, align 8
-	%1573 = select i1 %1572, i64 1024, i64 131072
+	%1573 = select i1 %1572, i64 1024, i64 u0x20000
 	%1574 = icmp ult i64 %1573, %1569, !dbg !4849
 	%1575 = select i1 %1574, i64 %1573, i64 %1569, !dbg !4849
 	call void @llvm.dbg.value(metadata i64 %1575, metadata !306, metadata !DIExpression()) #10, !dbg !4850
@@ -5275,7 +5275,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1627
 	%1628 = load i1, i1* @write_zeros.nz, align 8
-	%1629 = select i1 %1628, i64 1024, i64 131072
+	%1629 = select i1 %1628, i64 1024, i64 u0x20000
 	%1630 = call i8* @rpl_calloc(i64 %1629, i64 1) #10, !dbg !4921
 	store i8* %1630, i8** @write_zeros.zeros, align 8, !dbg !4922, !tbaa !1507
 	%1631 = icmp eq i8* %1630, null, !dbg !4923
@@ -5297,7 +5297,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:1637
 	%1638 = load i1, i1* @write_zeros.nz, align 8
-	%1639 = select i1 %1638, i64 1024, i64 131072
+	%1639 = select i1 %1638, i64 1024, i64 u0x20000
 	%1640 = icmp ult i64 %1639, %1635, !dbg !4928
 	%1641 = select i1 %1640, i64 %1639, i64 %1635, !dbg !4928
 	call void @llvm.dbg.value(metadata i64 %1641, metadata !306, metadata !DIExpression()) #10, !dbg !4929
@@ -13009,7 +13009,7 @@ define dso_local noalias %struct.mode_change* @mode_compile(i8*) local_unnamed_a
 	call void @llvm.dbg.value(metadata i64 %42, metadata !10042, metadata !DIExpression()), !dbg !10122
 	call void @llvm.dbg.value(metadata i64 %42, metadata !10130, metadata !DIExpression()) #10, !dbg !10136
 	call void @llvm.dbg.value(metadata i64 16, metadata !10135, metadata !DIExpression()) #10, !dbg !10138
-	%50 = icmp ugt i64 %42, 576460752303423487, !dbg !10139
+	%50 = icmp ugt i64 %42, u0x7FFFFFFFFFFFFFF, !dbg !10139
 	br i1 %50, label %51, label %52, !dbg !10141
 
 ; <label>:51
@@ -16973,7 +16973,7 @@ define dso_local i8* @streamsavedir(%struct.__dirstream*, i32) local_unnamed_add
 
 ; <label>:48
 	call void @llvm.dbg.value(metadata i64 %23, metadata !553, metadata !DIExpression()) #10, !dbg !12704
-	%49 = icmp ugt i64 %23, 576460752303423487, !dbg !12712
+	%49 = icmp ugt i64 %23, u0x7FFFFFFFFFFFFFF, !dbg !12712
 	br i1 %49, label %50, label %58, !dbg !12714
 
 ; <label>:50

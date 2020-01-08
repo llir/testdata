@@ -710,10 +710,10 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	%168 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 8
 	%169 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 3
 	%170 = getelementptr inbounds %struct.stat, %struct.stat* %7, i64 0, i32 9
-	%171 = add i64 %89, 8192
+	%171 = add i64 %89, u0x2000
 	%172 = icmp ult i64 %89, 1048577
 	%173 = bitcast [2 x i8*]* %4 to i8*
-	%174 = icmp ugt i64 %171, 4611686018427387903
+	%174 = icmp ugt i64 %171, u0x3FFFFFFFFFFFFFFF
 	%175 = and i64 %89, 8191
 	%176 = sub nsw i64 u0x2000, %175
 	%177 = add i64 %176, %89

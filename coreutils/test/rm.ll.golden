@@ -7094,7 +7094,7 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 	br i1 %62, label %189, label %97, !dbg !5651
 
 ; <label>:97
-	%98 = and i32 %1, 4096
+	%98 = and i32 %1, u0x1000
 	%99 = icmp eq i32 %98, 0
 	%100 = bitcast i8* %54 to i64*
 	br label %101, !dbg !5651

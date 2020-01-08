@@ -4681,7 +4681,7 @@ define internal fastcc void @digest_word_file(i8*, %struct.WORD_TABLE* nocapture
 
 ; <label>:41
 	call void @llvm.dbg.value(metadata i64 %35, metadata !63, metadata !DIExpression()) #12, !dbg !2801
-	%42 = icmp ugt i64 %20, 576460752303423487, !dbg !2806
+	%42 = icmp ugt i64 %20, u0x7FFFFFFFFFFFFFF, !dbg !2806
 	br i1 %42, label %43, label %51, !dbg !2807
 
 ; <label>:43
