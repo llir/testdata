@@ -4025,7 +4025,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !28
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2819, metadata !DIExpression()), !dbg !2821
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2820, metadata !DIExpression()), !dbg !2822
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2823
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2823
 	%4 = icmp ult i64 %3, %0, !dbg !2823
 	br i1 %4, label %5, label %6, !dbg !2825
 
@@ -4076,7 +4076,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2857, metadata !DIExpression()), !dbg !2860
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2858, metadata !DIExpression()), !dbg !2861
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2859, metadata !DIExpression()), !dbg !2862
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2863
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2863
 	%5 = icmp ult i64 %4, %1, !dbg !2863
 	br i1 %5, label %6, label %7, !dbg !2865
 
@@ -4172,7 +4172,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !2923
 	call void @llvm.dbg.value(metadata i64 %14, metadata !174, metadata !DIExpression()), !dbg !2910
-	%15 = udiv i64 9223372036854775807, %2, !dbg !2924
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2924
 	%16 = icmp ult i64 %15, %14, !dbg !2924
 	br i1 %16, label %19, label %17, !dbg !2926
 
@@ -4350,7 +4350,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3022
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3024, metadata !DIExpression()), !dbg !3027
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3025, metadata !DIExpression()), !dbg !3028
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3029
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3029
 	%4 = icmp ult i64 %3, %0, !dbg !3029
 	br i1 %4, label %8, label %5, !dbg !3031
 

@@ -4153,7 +4153,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !28
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2893, metadata !DIExpression()), !dbg !2895
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2894, metadata !DIExpression()), !dbg !2896
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2897
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2897
 	%4 = icmp ult i64 %3, %0, !dbg !2897
 	br i1 %4, label %5, label %6, !dbg !2899
 
@@ -4202,7 +4202,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2931, metadata !DIExpression()), !dbg !2934
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2932, metadata !DIExpression()), !dbg !2935
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2933, metadata !DIExpression()), !dbg !2936
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2937
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2937
 	%5 = icmp ult i64 %4, %1, !dbg !2937
 	br i1 %5, label %6, label %7, !dbg !2939
 
@@ -4298,7 +4298,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !2997
 	call void @llvm.dbg.value(metadata i64 %14, metadata !190, metadata !DIExpression()), !dbg !2984
-	%15 = udiv i64 9223372036854775807, %2, !dbg !2998
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2998
 	%16 = icmp ult i64 %15, %14, !dbg !2998
 	br i1 %16, label %19, label %17, !dbg !3000
 
@@ -4476,7 +4476,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3096
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3098, metadata !DIExpression()), !dbg !3101
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3099, metadata !DIExpression()), !dbg !3102
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3103
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3103
 	%4 = icmp ult i64 %3, %0, !dbg !3103
 	br i1 %4, label %8, label %5, !dbg !3105
 

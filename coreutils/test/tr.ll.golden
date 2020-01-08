@@ -7471,7 +7471,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !49
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4962, metadata !DIExpression()), !dbg !4964
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4963, metadata !DIExpression()), !dbg !4965
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4966
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4966
 	%4 = icmp ult i64 %3, %0, !dbg !4966
 	br i1 %4, label %5, label %6, !dbg !4968
 
@@ -7522,7 +7522,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5000, metadata !DIExpression()), !dbg !5003
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5001, metadata !DIExpression()), !dbg !5004
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5002, metadata !DIExpression()), !dbg !5005
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5006
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5006
 	%5 = icmp ult i64 %4, %1, !dbg !5006
 	br i1 %5, label %6, label %7, !dbg !5008
 
@@ -7618,7 +7618,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5066
 	call void @llvm.dbg.value(metadata i64 %14, metadata !259, metadata !DIExpression()), !dbg !5053
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5067
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5067
 	%16 = icmp ult i64 %15, %14, !dbg !5067
 	br i1 %16, label %19, label %17, !dbg !5069
 
@@ -7796,7 +7796,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5165
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5167, metadata !DIExpression()), !dbg !5170
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5168, metadata !DIExpression()), !dbg !5171
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5172
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5172
 	%4 = icmp ult i64 %3, %0, !dbg !5172
 	br i1 %4, label %8, label %5, !dbg !5174
 

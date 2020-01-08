@@ -14450,7 +14450,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !10
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !10299, metadata !DIExpression()), !dbg !10301
 	call void @llvm.dbg.value(metadata i64 %1, metadata !10300, metadata !DIExpression()), !dbg !10302
-	%3 = udiv i64 9223372036854775807, %1, !dbg !10303
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !10303
 	%4 = icmp ult i64 %3, %0, !dbg !10303
 	br i1 %4, label %5, label %6, !dbg !10305
 
@@ -14499,7 +14499,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !10335, metadata !DIExpression()), !dbg !10338
 	call void @llvm.dbg.value(metadata i64 %1, metadata !10336, metadata !DIExpression()), !dbg !10339
 	call void @llvm.dbg.value(metadata i64 %2, metadata !10337, metadata !DIExpression()), !dbg !10340
-	%4 = udiv i64 9223372036854775807, %2, !dbg !10341
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !10341
 	%5 = icmp ult i64 %4, %1, !dbg !10341
 	br i1 %5, label %6, label %7, !dbg !10343
 
@@ -14595,7 +14595,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !10401
 	call void @llvm.dbg.value(metadata i64 %14, metadata !747, metadata !DIExpression()), !dbg !10388
-	%15 = udiv i64 9223372036854775807, %2, !dbg !10402
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !10402
 	%16 = icmp ult i64 %15, %14, !dbg !10402
 	br i1 %16, label %19, label %17, !dbg !10404
 
@@ -14773,7 +14773,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !1050
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !10502, metadata !DIExpression()), !dbg !10505
 	call void @llvm.dbg.value(metadata i64 %1, metadata !10503, metadata !DIExpression()), !dbg !10506
-	%3 = udiv i64 9223372036854775807, %1, !dbg !10507
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !10507
 	%4 = icmp ult i64 %3, %0, !dbg !10507
 	br i1 %4, label %8, label %5, !dbg !10509
 
@@ -15065,7 +15065,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 ; <label>:63
 	%64 = icmp sgt i64 %35, 18014398509481983, !dbg !10799
 	%65 = shl nsw i64 %35, 9, !dbg !10801
-	%66 = select i1 %64, i64 9223372036854775807, i64 %65, !dbg !10802
+	%66 = select i1 %64, i64 u0x7FFFFFFFFFFFFFFF, i64 %65, !dbg !10802
 	%67 = zext i1 %64 to i32, !dbg !10802
 	br label %184, !dbg !10802
 
@@ -15077,7 +15077,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 ; <label>:70
 	%71 = icmp sgt i64 %35, 9007199254740991, !dbg !10807
 	%72 = shl nsw i64 %35, 10, !dbg !10808
-	%73 = select i1 %71, i64 9223372036854775807, i64 %72, !dbg !10809
+	%73 = select i1 %71, i64 u0x7FFFFFFFFFFFFFFF, i64 %72, !dbg !10809
 	%74 = zext i1 %71 to i32, !dbg !10809
 	br label %184, !dbg !10809
 
@@ -15091,10 +15091,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %77, label %84, label %78, !dbg !10823
 
 ; <label>:78
-	%79 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%79 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%80 = icmp slt i64 %79, %35, !dbg !10825
 	%81 = mul nsw i64 %35, %59, !dbg !10826
-	%82 = select i1 %80, i64 9223372036854775807, i64 %81, !dbg !10827
+	%82 = select i1 %80, i64 u0x7FFFFFFFFFFFFFFF, i64 %81, !dbg !10827
 	%83 = zext i1 %80 to i32, !dbg !10827
 	br label %84, !dbg !10827
 
@@ -15118,10 +15118,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %90, label %97, label %91, !dbg !10834
 
 ; <label>:91
-	%92 = udiv i64 9223372036854775807, %59, !dbg !10835
+	%92 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10835
 	%93 = icmp slt i64 %92, %35, !dbg !10836
 	%94 = mul nsw i64 %35, %59, !dbg !10837
-	%95 = select i1 %93, i64 9223372036854775807, i64 %94, !dbg !10838
+	%95 = select i1 %93, i64 u0x7FFFFFFFFFFFFFFF, i64 %94, !dbg !10838
 	%96 = zext i1 %93 to i32, !dbg !10838
 	br label %97, !dbg !10838
 
@@ -15145,10 +15145,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %103, label %184, label %104, !dbg !10845
 
 ; <label>:104
-	%105 = udiv i64 9223372036854775807, %59, !dbg !10846
+	%105 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10846
 	%106 = icmp slt i64 %105, %35, !dbg !10847
 	%107 = mul nsw i64 %35, %59, !dbg !10848
-	%108 = select i1 %106, i64 9223372036854775807, i64 %107, !dbg !10849
+	%108 = select i1 %106, i64 u0x7FFFFFFFFFFFFFFF, i64 %107, !dbg !10849
 	%109 = zext i1 %106 to i32, !dbg !10849
 	br label %184, !dbg !10849
 
@@ -15162,10 +15162,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %112, label %119, label %113, !dbg !10855
 
 ; <label>:113
-	%114 = udiv i64 9223372036854775807, %59, !dbg !10856
+	%114 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10856
 	%115 = icmp slt i64 %114, %35, !dbg !10857
 	%116 = mul nsw i64 %35, %59, !dbg !10858
-	%117 = select i1 %115, i64 9223372036854775807, i64 %116, !dbg !10859
+	%117 = select i1 %115, i64 u0x7FFFFFFFFFFFFFFF, i64 %116, !dbg !10859
 	%118 = zext i1 %115 to i32, !dbg !10859
 	br label %119, !dbg !10859
 
@@ -15189,10 +15189,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %125, label %132, label %126, !dbg !10866
 
 ; <label>:126
-	%127 = udiv i64 9223372036854775807, %59, !dbg !10867
+	%127 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10867
 	%128 = icmp slt i64 %127, %35, !dbg !10868
 	%129 = mul nsw i64 %35, %59, !dbg !10869
-	%130 = select i1 %128, i64 9223372036854775807, i64 %129, !dbg !10870
+	%130 = select i1 %128, i64 u0x7FFFFFFFFFFFFFFF, i64 %129, !dbg !10870
 	%131 = zext i1 %128 to i32, !dbg !10870
 	br label %132, !dbg !10870
 
@@ -15216,10 +15216,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %138, label %145, label %139, !dbg !10877
 
 ; <label>:139
-	%140 = udiv i64 9223372036854775807, %59, !dbg !10878
+	%140 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10878
 	%141 = icmp slt i64 %140, %35, !dbg !10879
 	%142 = mul nsw i64 %35, %59, !dbg !10880
-	%143 = select i1 %141, i64 9223372036854775807, i64 %142, !dbg !10881
+	%143 = select i1 %141, i64 u0x7FFFFFFFFFFFFFFF, i64 %142, !dbg !10881
 	%144 = zext i1 %141 to i32, !dbg !10881
 	br label %145, !dbg !10881
 
@@ -15241,7 +15241,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 ; <label>:151
 	%152 = icmp sgt i64 %35, 4611686018427387903, !dbg !10887
 	%153 = shl nsw i64 %35, 1, !dbg !10888
-	%154 = select i1 %152, i64 9223372036854775807, i64 %153, !dbg !10889
+	%154 = select i1 %152, i64 u0x7FFFFFFFFFFFFFFF, i64 %153, !dbg !10889
 	%155 = zext i1 %152 to i32, !dbg !10889
 	br label %184, !dbg !10889
 
@@ -15255,10 +15255,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %158, label %165, label %159, !dbg !10895
 
 ; <label>:159
-	%160 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%160 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%161 = icmp slt i64 %160, %35, !dbg !10897
 	%162 = mul nsw i64 %35, %59, !dbg !10898
-	%163 = select i1 %161, i64 9223372036854775807, i64 %162, !dbg !10899
+	%163 = select i1 %161, i64 u0x7FFFFFFFFFFFFFFF, i64 %162, !dbg !10899
 	%164 = zext i1 %161 to i32, !dbg !10899
 	br label %165, !dbg !10899
 
@@ -15282,10 +15282,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %171, label %178, label %172, !dbg !10906
 
 ; <label>:172
-	%173 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%173 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%174 = icmp slt i64 %173, %35, !dbg !10908
 	%175 = mul nsw i64 %35, %59, !dbg !10909
-	%176 = select i1 %174, i64 9223372036854775807, i64 %175, !dbg !10910
+	%176 = select i1 %174, i64 u0x7FFFFFFFFFFFFFFF, i64 %175, !dbg !10910
 	%177 = zext i1 %174 to i32, !dbg !10910
 	br label %178, !dbg !10910
 
@@ -15335,10 +15335,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	ret i32 %197, !dbg !10928
 
 ; <label>:198
-	%199 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%199 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%200 = icmp slt i64 %199, %85, !dbg !10825
 	%201 = mul nsw i64 %85, %59, !dbg !10826
-	%202 = select i1 %200, i64 9223372036854775807, i64 %201, !dbg !10827
+	%202 = select i1 %200, i64 u0x7FFFFFFFFFFFFFFF, i64 %201, !dbg !10827
 	%203 = zext i1 %200 to i32, !dbg !10827
 	br label %204, !dbg !10827
 
@@ -15354,10 +15354,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %208, label %215, label %209, !dbg !10823
 
 ; <label>:209
-	%210 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%210 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%211 = icmp slt i64 %210, %205, !dbg !10825
 	%212 = mul nsw i64 %205, %59, !dbg !10826
-	%213 = select i1 %211, i64 9223372036854775807, i64 %212, !dbg !10827
+	%213 = select i1 %211, i64 u0x7FFFFFFFFFFFFFFF, i64 %212, !dbg !10827
 	%214 = zext i1 %211 to i32, !dbg !10827
 	br label %215, !dbg !10827
 
@@ -15373,10 +15373,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %219, label %226, label %220, !dbg !10823
 
 ; <label>:220
-	%221 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%221 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%222 = icmp slt i64 %221, %216, !dbg !10825
 	%223 = mul nsw i64 %216, %59, !dbg !10826
-	%224 = select i1 %222, i64 9223372036854775807, i64 %223, !dbg !10827
+	%224 = select i1 %222, i64 u0x7FFFFFFFFFFFFFFF, i64 %223, !dbg !10827
 	%225 = zext i1 %222 to i32, !dbg !10827
 	br label %226, !dbg !10827
 
@@ -15392,10 +15392,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %230, label %237, label %231, !dbg !10823
 
 ; <label>:231
-	%232 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%232 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%233 = icmp slt i64 %232, %227, !dbg !10825
 	%234 = mul nsw i64 %227, %59, !dbg !10826
-	%235 = select i1 %233, i64 9223372036854775807, i64 %234, !dbg !10827
+	%235 = select i1 %233, i64 u0x7FFFFFFFFFFFFFFF, i64 %234, !dbg !10827
 	%236 = zext i1 %233 to i32, !dbg !10827
 	br label %237, !dbg !10827
 
@@ -15411,10 +15411,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %241, label %248, label %242, !dbg !10823
 
 ; <label>:242
-	%243 = udiv i64 9223372036854775807, %59, !dbg !10824
+	%243 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10824
 	%244 = icmp slt i64 %243, %238, !dbg !10825
 	%245 = mul nsw i64 %238, %59, !dbg !10826
-	%246 = select i1 %244, i64 9223372036854775807, i64 %245, !dbg !10827
+	%246 = select i1 %244, i64 u0x7FFFFFFFFFFFFFFF, i64 %245, !dbg !10827
 	%247 = zext i1 %244 to i32, !dbg !10827
 	br label %248, !dbg !10827
 
@@ -15427,10 +15427,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:252
-	%253 = udiv i64 9223372036854775807, %59, !dbg !10835
+	%253 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10835
 	%254 = icmp slt i64 %253, %98, !dbg !10836
 	%255 = mul nsw i64 %98, %59, !dbg !10837
-	%256 = select i1 %254, i64 9223372036854775807, i64 %255, !dbg !10838
+	%256 = select i1 %254, i64 u0x7FFFFFFFFFFFFFFF, i64 %255, !dbg !10838
 	%257 = zext i1 %254 to i32, !dbg !10838
 	br label %258, !dbg !10838
 
@@ -15446,10 +15446,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %262, label %269, label %263, !dbg !10834
 
 ; <label>:263
-	%264 = udiv i64 9223372036854775807, %59, !dbg !10835
+	%264 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10835
 	%265 = icmp slt i64 %264, %259, !dbg !10836
 	%266 = mul nsw i64 %259, %59, !dbg !10837
-	%267 = select i1 %265, i64 9223372036854775807, i64 %266, !dbg !10838
+	%267 = select i1 %265, i64 u0x7FFFFFFFFFFFFFFF, i64 %266, !dbg !10838
 	%268 = zext i1 %265 to i32, !dbg !10838
 	br label %269, !dbg !10838
 
@@ -15462,10 +15462,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:273
-	%274 = udiv i64 9223372036854775807, %59, !dbg !10856
+	%274 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10856
 	%275 = icmp slt i64 %274, %120, !dbg !10857
 	%276 = mul nsw i64 %120, %59, !dbg !10858
-	%277 = select i1 %275, i64 9223372036854775807, i64 %276, !dbg !10859
+	%277 = select i1 %275, i64 u0x7FFFFFFFFFFFFFFF, i64 %276, !dbg !10859
 	%278 = zext i1 %275 to i32, !dbg !10859
 	br label %279, !dbg !10859
 
@@ -15478,10 +15478,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:283
-	%284 = udiv i64 9223372036854775807, %59, !dbg !10867
+	%284 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10867
 	%285 = icmp slt i64 %284, %133, !dbg !10868
 	%286 = mul nsw i64 %133, %59, !dbg !10869
-	%287 = select i1 %285, i64 9223372036854775807, i64 %286, !dbg !10870
+	%287 = select i1 %285, i64 u0x7FFFFFFFFFFFFFFF, i64 %286, !dbg !10870
 	%288 = zext i1 %285 to i32, !dbg !10870
 	br label %289, !dbg !10870
 
@@ -15497,10 +15497,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %293, label %300, label %294, !dbg !10866
 
 ; <label>:294
-	%295 = udiv i64 9223372036854775807, %59, !dbg !10867
+	%295 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10867
 	%296 = icmp slt i64 %295, %290, !dbg !10868
 	%297 = mul nsw i64 %290, %59, !dbg !10869
-	%298 = select i1 %296, i64 9223372036854775807, i64 %297, !dbg !10870
+	%298 = select i1 %296, i64 u0x7FFFFFFFFFFFFFFF, i64 %297, !dbg !10870
 	%299 = zext i1 %296 to i32, !dbg !10870
 	br label %300, !dbg !10870
 
@@ -15516,10 +15516,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %304, label %311, label %305, !dbg !10866
 
 ; <label>:305
-	%306 = udiv i64 9223372036854775807, %59, !dbg !10867
+	%306 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10867
 	%307 = icmp slt i64 %306, %301, !dbg !10868
 	%308 = mul nsw i64 %301, %59, !dbg !10869
-	%309 = select i1 %307, i64 9223372036854775807, i64 %308, !dbg !10870
+	%309 = select i1 %307, i64 u0x7FFFFFFFFFFFFFFF, i64 %308, !dbg !10870
 	%310 = zext i1 %307 to i32, !dbg !10870
 	br label %311, !dbg !10870
 
@@ -15535,10 +15535,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %315, label %322, label %316, !dbg !10866
 
 ; <label>:316
-	%317 = udiv i64 9223372036854775807, %59, !dbg !10867
+	%317 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10867
 	%318 = icmp slt i64 %317, %312, !dbg !10868
 	%319 = mul nsw i64 %312, %59, !dbg !10869
-	%320 = select i1 %318, i64 9223372036854775807, i64 %319, !dbg !10870
+	%320 = select i1 %318, i64 u0x7FFFFFFFFFFFFFFF, i64 %319, !dbg !10870
 	%321 = zext i1 %318 to i32, !dbg !10870
 	br label %322, !dbg !10870
 
@@ -15551,10 +15551,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:326
-	%327 = udiv i64 9223372036854775807, %59, !dbg !10878
+	%327 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10878
 	%328 = icmp slt i64 %327, %146, !dbg !10879
 	%329 = mul nsw i64 %146, %59, !dbg !10880
-	%330 = select i1 %328, i64 9223372036854775807, i64 %329, !dbg !10881
+	%330 = select i1 %328, i64 u0x7FFFFFFFFFFFFFFF, i64 %329, !dbg !10881
 	%331 = zext i1 %328 to i32, !dbg !10881
 	br label %332, !dbg !10881
 
@@ -15570,10 +15570,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %336, label %343, label %337, !dbg !10877
 
 ; <label>:337
-	%338 = udiv i64 9223372036854775807, %59, !dbg !10878
+	%338 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10878
 	%339 = icmp slt i64 %338, %333, !dbg !10879
 	%340 = mul nsw i64 %333, %59, !dbg !10880
-	%341 = select i1 %339, i64 9223372036854775807, i64 %340, !dbg !10881
+	%341 = select i1 %339, i64 u0x7FFFFFFFFFFFFFFF, i64 %340, !dbg !10881
 	%342 = zext i1 %339 to i32, !dbg !10881
 	br label %343, !dbg !10881
 
@@ -15589,10 +15589,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %347, label %354, label %348, !dbg !10877
 
 ; <label>:348
-	%349 = udiv i64 9223372036854775807, %59, !dbg !10878
+	%349 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10878
 	%350 = icmp slt i64 %349, %344, !dbg !10879
 	%351 = mul nsw i64 %344, %59, !dbg !10880
-	%352 = select i1 %350, i64 9223372036854775807, i64 %351, !dbg !10881
+	%352 = select i1 %350, i64 u0x7FFFFFFFFFFFFFFF, i64 %351, !dbg !10881
 	%353 = zext i1 %350 to i32, !dbg !10881
 	br label %354, !dbg !10881
 
@@ -15605,10 +15605,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:358
-	%359 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%359 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%360 = icmp slt i64 %359, %166, !dbg !10897
 	%361 = mul nsw i64 %166, %59, !dbg !10898
-	%362 = select i1 %360, i64 9223372036854775807, i64 %361, !dbg !10899
+	%362 = select i1 %360, i64 u0x7FFFFFFFFFFFFFFF, i64 %361, !dbg !10899
 	%363 = zext i1 %360 to i32, !dbg !10899
 	br label %364, !dbg !10899
 
@@ -15624,10 +15624,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %368, label %375, label %369, !dbg !10895
 
 ; <label>:369
-	%370 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%370 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%371 = icmp slt i64 %370, %365, !dbg !10897
 	%372 = mul nsw i64 %365, %59, !dbg !10898
-	%373 = select i1 %371, i64 9223372036854775807, i64 %372, !dbg !10899
+	%373 = select i1 %371, i64 u0x7FFFFFFFFFFFFFFF, i64 %372, !dbg !10899
 	%374 = zext i1 %371 to i32, !dbg !10899
 	br label %375, !dbg !10899
 
@@ -15643,10 +15643,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %379, label %386, label %380, !dbg !10895
 
 ; <label>:380
-	%381 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%381 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%382 = icmp slt i64 %381, %376, !dbg !10897
 	%383 = mul nsw i64 %376, %59, !dbg !10898
-	%384 = select i1 %382, i64 9223372036854775807, i64 %383, !dbg !10899
+	%384 = select i1 %382, i64 u0x7FFFFFFFFFFFFFFF, i64 %383, !dbg !10899
 	%385 = zext i1 %382 to i32, !dbg !10899
 	br label %386, !dbg !10899
 
@@ -15662,10 +15662,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %390, label %397, label %391, !dbg !10895
 
 ; <label>:391
-	%392 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%392 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%393 = icmp slt i64 %392, %387, !dbg !10897
 	%394 = mul nsw i64 %387, %59, !dbg !10898
-	%395 = select i1 %393, i64 9223372036854775807, i64 %394, !dbg !10899
+	%395 = select i1 %393, i64 u0x7FFFFFFFFFFFFFFF, i64 %394, !dbg !10899
 	%396 = zext i1 %393 to i32, !dbg !10899
 	br label %397, !dbg !10899
 
@@ -15681,10 +15681,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %401, label %408, label %402, !dbg !10895
 
 ; <label>:402
-	%403 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%403 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%404 = icmp slt i64 %403, %398, !dbg !10897
 	%405 = mul nsw i64 %398, %59, !dbg !10898
-	%406 = select i1 %404, i64 9223372036854775807, i64 %405, !dbg !10899
+	%406 = select i1 %404, i64 u0x7FFFFFFFFFFFFFFF, i64 %405, !dbg !10899
 	%407 = zext i1 %404 to i32, !dbg !10899
 	br label %408, !dbg !10899
 
@@ -15700,10 +15700,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %412, label %419, label %413, !dbg !10895
 
 ; <label>:413
-	%414 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%414 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%415 = icmp slt i64 %414, %409, !dbg !10897
 	%416 = mul nsw i64 %409, %59, !dbg !10898
-	%417 = select i1 %415, i64 9223372036854775807, i64 %416, !dbg !10899
+	%417 = select i1 %415, i64 u0x7FFFFFFFFFFFFFFF, i64 %416, !dbg !10899
 	%418 = zext i1 %415 to i32, !dbg !10899
 	br label %419, !dbg !10899
 
@@ -15719,10 +15719,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %423, label %430, label %424, !dbg !10895
 
 ; <label>:424
-	%425 = udiv i64 9223372036854775807, %59, !dbg !10896
+	%425 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10896
 	%426 = icmp slt i64 %425, %420, !dbg !10897
 	%427 = mul nsw i64 %420, %59, !dbg !10898
-	%428 = select i1 %426, i64 9223372036854775807, i64 %427, !dbg !10899
+	%428 = select i1 %426, i64 u0x7FFFFFFFFFFFFFFF, i64 %427, !dbg !10899
 	%429 = zext i1 %426 to i32, !dbg !10899
 	br label %430, !dbg !10899
 
@@ -15735,10 +15735,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br label %184, !dbg !10917
 
 ; <label>:434
-	%435 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%435 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%436 = icmp slt i64 %435, %179, !dbg !10908
 	%437 = mul nsw i64 %179, %59, !dbg !10909
-	%438 = select i1 %436, i64 9223372036854775807, i64 %437, !dbg !10910
+	%438 = select i1 %436, i64 u0x7FFFFFFFFFFFFFFF, i64 %437, !dbg !10910
 	%439 = zext i1 %436 to i32, !dbg !10910
 	br label %440, !dbg !10910
 
@@ -15754,10 +15754,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %444, label %451, label %445, !dbg !10906
 
 ; <label>:445
-	%446 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%446 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%447 = icmp slt i64 %446, %441, !dbg !10908
 	%448 = mul nsw i64 %441, %59, !dbg !10909
-	%449 = select i1 %447, i64 9223372036854775807, i64 %448, !dbg !10910
+	%449 = select i1 %447, i64 u0x7FFFFFFFFFFFFFFF, i64 %448, !dbg !10910
 	%450 = zext i1 %447 to i32, !dbg !10910
 	br label %451, !dbg !10910
 
@@ -15773,10 +15773,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %455, label %462, label %456, !dbg !10906
 
 ; <label>:456
-	%457 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%457 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%458 = icmp slt i64 %457, %452, !dbg !10908
 	%459 = mul nsw i64 %452, %59, !dbg !10909
-	%460 = select i1 %458, i64 9223372036854775807, i64 %459, !dbg !10910
+	%460 = select i1 %458, i64 u0x7FFFFFFFFFFFFFFF, i64 %459, !dbg !10910
 	%461 = zext i1 %458 to i32, !dbg !10910
 	br label %462, !dbg !10910
 
@@ -15792,10 +15792,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %466, label %473, label %467, !dbg !10906
 
 ; <label>:467
-	%468 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%468 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%469 = icmp slt i64 %468, %463, !dbg !10908
 	%470 = mul nsw i64 %463, %59, !dbg !10909
-	%471 = select i1 %469, i64 9223372036854775807, i64 %470, !dbg !10910
+	%471 = select i1 %469, i64 u0x7FFFFFFFFFFFFFFF, i64 %470, !dbg !10910
 	%472 = zext i1 %469 to i32, !dbg !10910
 	br label %473, !dbg !10910
 
@@ -15811,10 +15811,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %477, label %484, label %478, !dbg !10906
 
 ; <label>:478
-	%479 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%479 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%480 = icmp slt i64 %479, %474, !dbg !10908
 	%481 = mul nsw i64 %474, %59, !dbg !10909
-	%482 = select i1 %480, i64 9223372036854775807, i64 %481, !dbg !10910
+	%482 = select i1 %480, i64 u0x7FFFFFFFFFFFFFFF, i64 %481, !dbg !10910
 	%483 = zext i1 %480 to i32, !dbg !10910
 	br label %484, !dbg !10910
 
@@ -15830,10 +15830,10 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %488, label %495, label %489, !dbg !10906
 
 ; <label>:489
-	%490 = udiv i64 9223372036854775807, %59, !dbg !10907
+	%490 = udiv i64 u0x7FFFFFFFFFFFFFFF, %59, !dbg !10907
 	%491 = icmp slt i64 %490, %485, !dbg !10908
 	%492 = mul nsw i64 %485, %59, !dbg !10909
-	%493 = select i1 %491, i64 9223372036854775807, i64 %492, !dbg !10910
+	%493 = select i1 %491, i64 u0x7FFFFFFFFFFFFFFF, i64 %492, !dbg !10910
 	%494 = zext i1 %491 to i32, !dbg !10910
 	br label %495, !dbg !10910
 

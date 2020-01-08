@@ -7458,7 +7458,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #14 !dbg !55
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5563, metadata !DIExpression()), !dbg !5565
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5564, metadata !DIExpression()), !dbg !5566
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5567
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5567
 	%4 = icmp ult i64 %3, %0, !dbg !5567
 	br i1 %4, label %5, label %6, !dbg !5569
 
@@ -7507,7 +7507,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #14 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5598, metadata !DIExpression()), !dbg !5601
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5599, metadata !DIExpression()), !dbg !5602
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5600, metadata !DIExpression()), !dbg !5603
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5604
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5604
 	%5 = icmp ult i64 %4, %1, !dbg !5604
 	br i1 %5, label %6, label %7, !dbg !5606
 
@@ -7601,7 +7601,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5664
 	call void @llvm.dbg.value(metadata i64 %14, metadata !331, metadata !DIExpression()), !dbg !5651
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5665
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5665
 	%16 = icmp ult i64 %15, %14, !dbg !5665
 	br i1 %16, label %19, label %17, !dbg !5667
 
@@ -7779,7 +7779,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5763
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5765, metadata !DIExpression()), !dbg !5768
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5766, metadata !DIExpression()), !dbg !5769
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5770
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5770
 	%4 = icmp ult i64 %3, %0, !dbg !5770
 	br i1 %4, label %8, label %5, !dbg !5772
 

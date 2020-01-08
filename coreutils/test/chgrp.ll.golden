@@ -5308,7 +5308,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !40
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4079, metadata !DIExpression()), !dbg !4081
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4080, metadata !DIExpression()), !dbg !4082
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4083
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4083
 	%4 = icmp ult i64 %3, %0, !dbg !4083
 	br i1 %4, label %5, label %6, !dbg !4085
 
@@ -5359,7 +5359,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4117, metadata !DIExpression()), !dbg !4120
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4118, metadata !DIExpression()), !dbg !4121
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4119, metadata !DIExpression()), !dbg !4122
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4123
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4123
 	%5 = icmp ult i64 %4, %1, !dbg !4123
 	br i1 %5, label %6, label %7, !dbg !4125
 
@@ -5455,7 +5455,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4183
 	call void @llvm.dbg.value(metadata i64 %14, metadata !347, metadata !DIExpression()), !dbg !4170
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4184
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4184
 	%16 = icmp ult i64 %15, %14, !dbg !4184
 	br i1 %16, label %19, label %17, !dbg !4186
 
@@ -5633,7 +5633,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4282
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4284, metadata !DIExpression()), !dbg !4287
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4285, metadata !DIExpression()), !dbg !4288
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4289
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4289
 	%4 = icmp ult i64 %3, %0, !dbg !4289
 	br i1 %4, label %8, label %5, !dbg !4291
 

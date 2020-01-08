@@ -5142,7 +5142,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !36
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3622, metadata !DIExpression()), !dbg !3624
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3623, metadata !DIExpression()), !dbg !3625
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3626
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3626
 	%4 = icmp ult i64 %3, %0, !dbg !3626
 	br i1 %4, label %5, label %6, !dbg !3628
 
@@ -5193,7 +5193,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3660, metadata !DIExpression()), !dbg !3663
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3661, metadata !DIExpression()), !dbg !3664
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3662, metadata !DIExpression()), !dbg !3665
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3666
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3666
 	%5 = icmp ult i64 %4, %1, !dbg !3666
 	br i1 %5, label %6, label %7, !dbg !3668
 
@@ -5289,7 +5289,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3726
 	call void @llvm.dbg.value(metadata i64 %14, metadata !283, metadata !DIExpression()), !dbg !3713
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3727
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3727
 	%16 = icmp ult i64 %15, %14, !dbg !3727
 	br i1 %16, label %19, label %17, !dbg !3729
 
@@ -5467,7 +5467,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3825
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3827, metadata !DIExpression()), !dbg !3830
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3828, metadata !DIExpression()), !dbg !3831
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3832
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3832
 	%4 = icmp ult i64 %3, %0, !dbg !3832
 	br i1 %4, label %8, label %5, !dbg !3834
 

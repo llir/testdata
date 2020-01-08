@@ -5158,7 +5158,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !35
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3589, metadata !DIExpression()), !dbg !3591
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3590, metadata !DIExpression()), !dbg !3592
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3593
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3593
 	%4 = icmp ult i64 %3, %0, !dbg !3593
 	br i1 %4, label %5, label %6, !dbg !3595
 
@@ -5209,7 +5209,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3627, metadata !DIExpression()), !dbg !3630
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3628, metadata !DIExpression()), !dbg !3631
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3629, metadata !DIExpression()), !dbg !3632
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3633
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3633
 	%5 = icmp ult i64 %4, %1, !dbg !3633
 	br i1 %5, label %6, label %7, !dbg !3635
 
@@ -5305,7 +5305,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3693
 	call void @llvm.dbg.value(metadata i64 %14, metadata !295, metadata !DIExpression()), !dbg !3680
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3694
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3694
 	%16 = icmp ult i64 %15, %14, !dbg !3694
 	br i1 %16, label %19, label %17, !dbg !3696
 
@@ -5483,7 +5483,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3792
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3794, metadata !DIExpression()), !dbg !3797
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3795, metadata !DIExpression()), !dbg !3798
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3799
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3799
 	%4 = icmp ult i64 %3, %0, !dbg !3799
 	br i1 %4, label %8, label %5, !dbg !3801
 

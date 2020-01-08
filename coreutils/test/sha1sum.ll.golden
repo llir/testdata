@@ -8139,7 +8139,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !46
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4672, metadata !DIExpression()), !dbg !4674
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4673, metadata !DIExpression()), !dbg !4675
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4676
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4676
 	%4 = icmp ult i64 %3, %0, !dbg !4676
 	br i1 %4, label %5, label %6, !dbg !4678
 
@@ -8188,7 +8188,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4710, metadata !DIExpression()), !dbg !4713
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4711, metadata !DIExpression()), !dbg !4714
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4712, metadata !DIExpression()), !dbg !4715
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4716
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4716
 	%5 = icmp ult i64 %4, %1, !dbg !4716
 	br i1 %5, label %6, label %7, !dbg !4718
 
@@ -8284,7 +8284,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4776
 	call void @llvm.dbg.value(metadata i64 %14, metadata !387, metadata !DIExpression()), !dbg !4763
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4777
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4777
 	%16 = icmp ult i64 %15, %14, !dbg !4777
 	br i1 %16, label %19, label %17, !dbg !4779
 
@@ -8462,7 +8462,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4875
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4877, metadata !DIExpression()), !dbg !4880
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4878, metadata !DIExpression()), !dbg !4881
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4882
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4882
 	%4 = icmp ult i64 %3, %0, !dbg !4882
 	br i1 %4, label %8, label %5, !dbg !4884
 

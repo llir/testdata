@@ -6691,7 +6691,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #11 !dbg !48
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4844, metadata !DIExpression()), !dbg !4846
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4845, metadata !DIExpression()), !dbg !4847
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4848
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4848
 	%4 = icmp ult i64 %3, %0, !dbg !4848
 	br i1 %4, label %5, label %6, !dbg !4850
 
@@ -6740,7 +6740,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #11 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4880, metadata !DIExpression()), !dbg !4883
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4881, metadata !DIExpression()), !dbg !4884
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4882, metadata !DIExpression()), !dbg !4885
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4886
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4886
 	%5 = icmp ult i64 %4, %1, !dbg !4886
 	br i1 %5, label %6, label %7, !dbg !4888
 
@@ -6836,7 +6836,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4944
 	call void @llvm.dbg.value(metadata i64 %14, metadata !698, metadata !DIExpression()), !dbg !4931
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4945
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4945
 	%16 = icmp ult i64 %15, %14, !dbg !4945
 	br i1 %16, label %19, label %17, !dbg !4947
 
@@ -7014,7 +7014,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5043
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5045, metadata !DIExpression()), !dbg !5048
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5046, metadata !DIExpression()), !dbg !5049
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5050
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5050
 	%4 = icmp ult i64 %3, %0, !dbg !5050
 	br i1 %4, label %8, label %5, !dbg !5052
 

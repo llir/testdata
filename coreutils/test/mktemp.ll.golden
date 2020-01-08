@@ -4873,7 +4873,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !35
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3603, metadata !DIExpression()), !dbg !3605
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3604, metadata !DIExpression()), !dbg !3606
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3607
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3607
 	%4 = icmp ult i64 %3, %0, !dbg !3607
 	br i1 %4, label %5, label %6, !dbg !3609
 
@@ -4922,7 +4922,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3641, metadata !DIExpression()), !dbg !3644
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3642, metadata !DIExpression()), !dbg !3645
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3643, metadata !DIExpression()), !dbg !3646
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3647
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3647
 	%5 = icmp ult i64 %4, %1, !dbg !3647
 	br i1 %5, label %6, label %7, !dbg !3649
 
@@ -5018,7 +5018,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3707
 	call void @llvm.dbg.value(metadata i64 %14, metadata !228, metadata !DIExpression()), !dbg !3694
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3708
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3708
 	%16 = icmp ult i64 %15, %14, !dbg !3708
 	br i1 %16, label %19, label %17, !dbg !3710
 
@@ -5196,7 +5196,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3806
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3808, metadata !DIExpression()), !dbg !3811
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3809, metadata !DIExpression()), !dbg !3812
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3813
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3813
 	%4 = icmp ult i64 %3, %0, !dbg !3813
 	br i1 %4, label %8, label %5, !dbg !3815
 

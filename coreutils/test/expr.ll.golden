@@ -7685,7 +7685,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !52
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5210, metadata !DIExpression()), !dbg !5212
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5211, metadata !DIExpression()), !dbg !5213
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5214
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5214
 	%4 = icmp ult i64 %3, %0, !dbg !5214
 	br i1 %4, label %5, label %6, !dbg !5216
 
@@ -7736,7 +7736,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5248, metadata !DIExpression()), !dbg !5251
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5249, metadata !DIExpression()), !dbg !5252
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5250, metadata !DIExpression()), !dbg !5253
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5254
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5254
 	%5 = icmp ult i64 %4, %1, !dbg !5254
 	br i1 %5, label %6, label %7, !dbg !5256
 
@@ -7832,7 +7832,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5314
 	call void @llvm.dbg.value(metadata i64 %14, metadata !271, metadata !DIExpression()), !dbg !5301
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5315
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5315
 	%16 = icmp ult i64 %15, %14, !dbg !5315
 	br i1 %16, label %19, label %17, !dbg !5317
 
@@ -8010,7 +8010,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5413
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5415, metadata !DIExpression()), !dbg !5418
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5416, metadata !DIExpression()), !dbg !5419
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5420
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5420
 	%4 = icmp ult i64 %3, %0, !dbg !5420
 	br i1 %4, label %8, label %5, !dbg !5422
 

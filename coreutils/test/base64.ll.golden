@@ -5327,7 +5327,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #14 !dbg !37
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3799, metadata !DIExpression()), !dbg !3801
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3800, metadata !DIExpression()), !dbg !3802
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3803
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3803
 	%4 = icmp ult i64 %3, %0, !dbg !3803
 	br i1 %4, label %5, label %6, !dbg !3805
 
@@ -5376,7 +5376,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #14 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3837, metadata !DIExpression()), !dbg !3840
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3838, metadata !DIExpression()), !dbg !3841
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3839, metadata !DIExpression()), !dbg !3842
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3843
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3843
 	%5 = icmp ult i64 %4, %1, !dbg !3843
 	br i1 %5, label %6, label %7, !dbg !3845
 
@@ -5472,7 +5472,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3903
 	call void @llvm.dbg.value(metadata i64 %14, metadata !198, metadata !DIExpression()), !dbg !3890
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3904
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3904
 	%16 = icmp ult i64 %15, %14, !dbg !3904
 	br i1 %16, label %19, label %17, !dbg !3906
 
@@ -5650,7 +5650,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4002
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4004, metadata !DIExpression()), !dbg !4007
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4005, metadata !DIExpression()), !dbg !4008
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4009
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4009
 	%4 = icmp ult i64 %3, %0, !dbg !4009
 	br i1 %4, label %8, label %5, !dbg !4011
 

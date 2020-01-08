@@ -4443,7 +4443,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !29
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2929, metadata !DIExpression()), !dbg !2931
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2930, metadata !DIExpression()), !dbg !2932
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2933
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2933
 	%4 = icmp ult i64 %3, %0, !dbg !2933
 	br i1 %4, label %5, label %6, !dbg !2935
 
@@ -4494,7 +4494,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2967, metadata !DIExpression()), !dbg !2970
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2968, metadata !DIExpression()), !dbg !2971
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2969, metadata !DIExpression()), !dbg !2972
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2973
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2973
 	%5 = icmp ult i64 %4, %1, !dbg !2973
 	br i1 %5, label %6, label %7, !dbg !2975
 
@@ -4590,7 +4590,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3033
 	call void @llvm.dbg.value(metadata i64 %14, metadata !160, metadata !DIExpression()), !dbg !3020
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3034
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3034
 	%16 = icmp ult i64 %15, %14, !dbg !3034
 	br i1 %16, label %19, label %17, !dbg !3036
 
@@ -4768,7 +4768,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3132
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3134, metadata !DIExpression()), !dbg !3137
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3135, metadata !DIExpression()), !dbg !3138
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3139
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3139
 	%4 = icmp ult i64 %3, %0, !dbg !3139
 	br i1 %4, label %8, label %5, !dbg !3141
 

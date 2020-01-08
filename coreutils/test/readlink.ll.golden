@@ -559,7 +559,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	br label %30, !dbg !884
 
 ; <label>:26
-	%27 = icmp ult i64 %10, 9223372036854775807, !dbg !885
+	%27 = icmp ult i64 %10, u0x7FFFFFFFFFFFFFFF, !dbg !885
 	br i1 %27, label %30, label %28, !dbg !887
 
 ; <label>:28
@@ -568,7 +568,7 @@ define dso_local noalias i8* @areadlink_with_size(i8* nocapture readonly, i64) l
 	br label %34, !dbg !891
 
 ; <label>:30
-	%31 = phi i64 [ %25, %24 ], [ 9223372036854775807, %26 ], !dbg !892
+	%31 = phi i64 [ %25, %24 ], [ u0x7FFFFFFFFFFFFFFF, %26 ], !dbg !892
 	call void @llvm.dbg.value(metadata i64 %31, metadata !834, metadata !DIExpression()), !dbg !855
 	%32 = tail call noalias i8* @malloc(i64 %31) #13, !dbg !856
 	call void @llvm.dbg.value(metadata i8* %32, metadata !843, metadata !DIExpression()), !dbg !857
@@ -7604,7 +7604,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #14 !dbg !51
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5126, metadata !DIExpression()), !dbg !5128
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5127, metadata !DIExpression()), !dbg !5129
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5130
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5130
 	%4 = icmp ult i64 %3, %0, !dbg !5130
 	br i1 %4, label %5, label %6, !dbg !5132
 
@@ -7653,7 +7653,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #14 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5164, metadata !DIExpression()), !dbg !5167
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5165, metadata !DIExpression()), !dbg !5168
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5166, metadata !DIExpression()), !dbg !5169
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5170
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5170
 	%5 = icmp ult i64 %4, %1, !dbg !5170
 	br i1 %5, label %6, label %7, !dbg !5172
 
@@ -7749,7 +7749,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5230
 	call void @llvm.dbg.value(metadata i64 %14, metadata !212, metadata !DIExpression()), !dbg !5217
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5231
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5231
 	%16 = icmp ult i64 %15, %14, !dbg !5231
 	br i1 %16, label %19, label %17, !dbg !5233
 
@@ -7927,7 +7927,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5329
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5331, metadata !DIExpression()), !dbg !5334
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5332, metadata !DIExpression()), !dbg !5335
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5336
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5336
 	%4 = icmp ult i64 %3, %0, !dbg !5336
 	br i1 %4, label %8, label %5, !dbg !5338
 

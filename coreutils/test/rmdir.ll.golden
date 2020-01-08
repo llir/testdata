@@ -4195,7 +4195,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !30
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3049, metadata !DIExpression()), !dbg !3051
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3050, metadata !DIExpression()), !dbg !3052
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3053
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3053
 	%4 = icmp ult i64 %3, %0, !dbg !3053
 	br i1 %4, label %5, label %6, !dbg !3055
 
@@ -4246,7 +4246,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3087, metadata !DIExpression()), !dbg !3090
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3088, metadata !DIExpression()), !dbg !3091
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3089, metadata !DIExpression()), !dbg !3092
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3093
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3093
 	%5 = icmp ult i64 %4, %1, !dbg !3093
 	br i1 %5, label %6, label %7, !dbg !3095
 
@@ -4342,7 +4342,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3153
 	call void @llvm.dbg.value(metadata i64 %14, metadata !186, metadata !DIExpression()), !dbg !3140
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3154
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3154
 	%16 = icmp ult i64 %15, %14, !dbg !3154
 	br i1 %16, label %19, label %17, !dbg !3156
 
@@ -4520,7 +4520,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3252
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3254, metadata !DIExpression()), !dbg !3257
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3255, metadata !DIExpression()), !dbg !3258
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3259
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3259
 	%4 = icmp ult i64 %3, %0, !dbg !3259
 	br i1 %4, label %8, label %5, !dbg !3261
 

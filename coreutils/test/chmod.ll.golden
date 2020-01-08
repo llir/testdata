@@ -5374,7 +5374,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !41
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4115, metadata !DIExpression()), !dbg !4117
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4116, metadata !DIExpression()), !dbg !4118
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4119
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4119
 	%4 = icmp ult i64 %3, %0, !dbg !4119
 	br i1 %4, label %5, label %6, !dbg !4121
 
@@ -5425,7 +5425,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4153, metadata !DIExpression()), !dbg !4156
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4154, metadata !DIExpression()), !dbg !4157
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4155, metadata !DIExpression()), !dbg !4158
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4159
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4159
 	%5 = icmp ult i64 %4, %1, !dbg !4159
 	br i1 %5, label %6, label %7, !dbg !4161
 
@@ -5521,7 +5521,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4219
 	call void @llvm.dbg.value(metadata i64 %14, metadata !307, metadata !DIExpression()), !dbg !4206
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4220
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4220
 	%16 = icmp ult i64 %15, %14, !dbg !4220
 	br i1 %16, label %19, label %17, !dbg !4222
 
@@ -5699,7 +5699,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4318
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4320, metadata !DIExpression()), !dbg !4323
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4321, metadata !DIExpression()), !dbg !4324
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4325
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4325
 	%4 = icmp ult i64 %3, %0, !dbg !4325
 	br i1 %4, label %8, label %5, !dbg !4327
 

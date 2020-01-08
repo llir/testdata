@@ -3838,7 +3838,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #4 !dbg !270
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2707, metadata !DIExpression()), !dbg !2709
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2708, metadata !DIExpression()), !dbg !2710
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2711
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2711
 	%4 = icmp ult i64 %3, %0, !dbg !2711
 	br i1 %4, label %5, label %6, !dbg !2713
 
@@ -3889,7 +3889,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #4 !db
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2745, metadata !DIExpression()), !dbg !2748
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2746, metadata !DIExpression()), !dbg !2749
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2747, metadata !DIExpression()), !dbg !2750
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2751
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2751
 	%5 = icmp ult i64 %4, %1, !dbg !2751
 	br i1 %5, label %6, label %7, !dbg !2753
 
@@ -3985,7 +3985,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !2811
 	call void @llvm.dbg.value(metadata i64 %14, metadata !155, metadata !DIExpression()), !dbg !2798
-	%15 = udiv i64 9223372036854775807, %2, !dbg !2812
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2812
 	%16 = icmp ult i64 %15, %14, !dbg !2812
 	br i1 %16, label %19, label %17, !dbg !2814
 
@@ -4163,7 +4163,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #8 !dbg !2910
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2912, metadata !DIExpression()), !dbg !2915
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2913, metadata !DIExpression()), !dbg !2916
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2917
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2917
 	%4 = icmp ult i64 %3, %0, !dbg !2917
 	br i1 %4, label %8, label %5, !dbg !2919
 

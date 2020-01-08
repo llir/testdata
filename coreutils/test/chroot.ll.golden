@@ -5098,7 +5098,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !35
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3556, metadata !DIExpression()), !dbg !3558
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3557, metadata !DIExpression()), !dbg !3559
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3560
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3560
 	%4 = icmp ult i64 %3, %0, !dbg !3560
 	br i1 %4, label %5, label %6, !dbg !3562
 
@@ -5149,7 +5149,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3594, metadata !DIExpression()), !dbg !3597
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3595, metadata !DIExpression()), !dbg !3598
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3596, metadata !DIExpression()), !dbg !3599
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3600
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3600
 	%5 = icmp ult i64 %4, %1, !dbg !3600
 	br i1 %5, label %6, label %7, !dbg !3602
 
@@ -5245,7 +5245,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3660
 	call void @llvm.dbg.value(metadata i64 %14, metadata !287, metadata !DIExpression()), !dbg !3647
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3661
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3661
 	%16 = icmp ult i64 %15, %14, !dbg !3661
 	br i1 %16, label %19, label %17, !dbg !3663
 
@@ -5423,7 +5423,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3759
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3761, metadata !DIExpression()), !dbg !3764
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3762, metadata !DIExpression()), !dbg !3765
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3766
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3766
 	%4 = icmp ult i64 %3, %0, !dbg !3766
 	br i1 %4, label %8, label %5, !dbg !3768
 

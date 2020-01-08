@@ -4353,7 +4353,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !29
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2952, metadata !DIExpression()), !dbg !2954
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2953, metadata !DIExpression()), !dbg !2955
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2956
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2956
 	%4 = icmp ult i64 %3, %0, !dbg !2956
 	br i1 %4, label %5, label %6, !dbg !2958
 
@@ -4404,7 +4404,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2990, metadata !DIExpression()), !dbg !2993
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2991, metadata !DIExpression()), !dbg !2994
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2992, metadata !DIExpression()), !dbg !2995
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2996
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2996
 	%5 = icmp ult i64 %4, %1, !dbg !2996
 	br i1 %5, label %6, label %7, !dbg !2998
 
@@ -4500,7 +4500,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3056
 	call void @llvm.dbg.value(metadata i64 %14, metadata !221, metadata !DIExpression()), !dbg !3043
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3057
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3057
 	%16 = icmp ult i64 %15, %14, !dbg !3057
 	br i1 %16, label %19, label %17, !dbg !3059
 
@@ -4678,7 +4678,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3155
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3157, metadata !DIExpression()), !dbg !3160
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3158, metadata !DIExpression()), !dbg !3161
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3162
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3162
 	%4 = icmp ult i64 %3, %0, !dbg !3162
 	br i1 %4, label %8, label %5, !dbg !3164
 

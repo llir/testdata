@@ -10460,7 +10460,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !46
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4666, metadata !DIExpression()), !dbg !4668
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4667, metadata !DIExpression()), !dbg !4669
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4670
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4670
 	%4 = icmp ult i64 %3, %0, !dbg !4670
 	br i1 %4, label %5, label %6, !dbg !4672
 
@@ -10509,7 +10509,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4704, metadata !DIExpression()), !dbg !4707
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4705, metadata !DIExpression()), !dbg !4708
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4706, metadata !DIExpression()), !dbg !4709
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4710
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4710
 	%5 = icmp ult i64 %4, %1, !dbg !4710
 	br i1 %5, label %6, label %7, !dbg !4712
 
@@ -10605,7 +10605,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4770
 	call void @llvm.dbg.value(metadata i64 %14, metadata !399, metadata !DIExpression()), !dbg !4757
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4771
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4771
 	%16 = icmp ult i64 %15, %14, !dbg !4771
 	br i1 %16, label %19, label %17, !dbg !4773
 
@@ -10783,7 +10783,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4869
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4871, metadata !DIExpression()), !dbg !4874
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4872, metadata !DIExpression()), !dbg !4875
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4876
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4876
 	%4 = icmp ult i64 %3, %0, !dbg !4876
 	br i1 %4, label %8, label %5, !dbg !4878
 

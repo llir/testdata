@@ -3940,7 +3940,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !28
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2837, metadata !DIExpression()), !dbg !2839
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2838, metadata !DIExpression()), !dbg !2840
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2841
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2841
 	%4 = icmp ult i64 %3, %0, !dbg !2841
 	br i1 %4, label %5, label %6, !dbg !2843
 
@@ -3991,7 +3991,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2875, metadata !DIExpression()), !dbg !2878
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2876, metadata !DIExpression()), !dbg !2879
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2877, metadata !DIExpression()), !dbg !2880
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2881
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2881
 	%5 = icmp ult i64 %4, %1, !dbg !2881
 	br i1 %5, label %6, label %7, !dbg !2883
 
@@ -4087,7 +4087,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !2941
 	call void @llvm.dbg.value(metadata i64 %14, metadata !186, metadata !DIExpression()), !dbg !2928
-	%15 = udiv i64 9223372036854775807, %2, !dbg !2942
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2942
 	%16 = icmp ult i64 %15, %14, !dbg !2942
 	br i1 %16, label %19, label %17, !dbg !2944
 
@@ -4265,7 +4265,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3040
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3042, metadata !DIExpression()), !dbg !3045
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3043, metadata !DIExpression()), !dbg !3046
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3047
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3047
 	%4 = icmp ult i64 %3, %0, !dbg !3047
 	br i1 %4, label %8, label %5, !dbg !3049
 

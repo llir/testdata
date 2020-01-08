@@ -4671,7 +4671,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !33
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3305, metadata !DIExpression()), !dbg !3307
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3306, metadata !DIExpression()), !dbg !3308
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3309
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3309
 	%4 = icmp ult i64 %3, %0, !dbg !3309
 	br i1 %4, label %5, label %6, !dbg !3311
 
@@ -4722,7 +4722,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !3343, metadata !DIExpression()), !dbg !3346
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3344, metadata !DIExpression()), !dbg !3347
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3345, metadata !DIExpression()), !dbg !3348
-	%4 = udiv i64 9223372036854775807, %2, !dbg !3349
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3349
 	%5 = icmp ult i64 %4, %1, !dbg !3349
 	br i1 %5, label %6, label %7, !dbg !3351
 
@@ -4818,7 +4818,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !3409
 	call void @llvm.dbg.value(metadata i64 %14, metadata !177, metadata !DIExpression()), !dbg !3396
-	%15 = udiv i64 9223372036854775807, %2, !dbg !3410
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !3410
 	%16 = icmp ult i64 %15, %14, !dbg !3410
 	br i1 %16, label %19, label %17, !dbg !3412
 
@@ -4996,7 +4996,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3508
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3510, metadata !DIExpression()), !dbg !3513
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3511, metadata !DIExpression()), !dbg !3514
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3515
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3515
 	%4 = icmp ult i64 %3, %0, !dbg !3515
 	br i1 %4, label %8, label %5, !dbg !3517
 

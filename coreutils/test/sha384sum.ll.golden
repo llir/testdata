@@ -11138,7 +11138,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !50
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5007, metadata !DIExpression()), !dbg !5009
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5008, metadata !DIExpression()), !dbg !5010
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5011
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5011
 	%4 = icmp ult i64 %3, %0, !dbg !5011
 	br i1 %4, label %5, label %6, !dbg !5013
 
@@ -11187,7 +11187,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5045, metadata !DIExpression()), !dbg !5048
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5046, metadata !DIExpression()), !dbg !5049
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5047, metadata !DIExpression()), !dbg !5050
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5051
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5051
 	%5 = icmp ult i64 %4, %1, !dbg !5051
 	br i1 %5, label %6, label %7, !dbg !5053
 
@@ -11283,7 +11283,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5111
 	call void @llvm.dbg.value(metadata i64 %14, metadata !403, metadata !DIExpression()), !dbg !5098
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5112
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5112
 	%16 = icmp ult i64 %15, %14, !dbg !5112
 	br i1 %16, label %19, label %17, !dbg !5114
 
@@ -11461,7 +11461,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5210
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5212, metadata !DIExpression()), !dbg !5215
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5213, metadata !DIExpression()), !dbg !5216
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5217
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5217
 	%4 = icmp ult i64 %3, %0, !dbg !5217
 	br i1 %4, label %8, label %5, !dbg !5219
 

@@ -396,7 +396,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	call void @llvm.dbg.value(metadata i64 0, metadata !111, metadata !DIExpression()), !dbg !1062
 	call void @llvm.dbg.value(metadata i64 0, metadata !112, metadata !DIExpression()), !dbg !1063
 	call void @llvm.dbg.value(metadata i32 0, metadata !114, metadata !DIExpression()), !dbg !1064
-	call void @llvm.dbg.value(metadata i64 9223372036854775807, metadata !115, metadata !DIExpression()), !dbg !1065
+	call void @llvm.dbg.value(metadata i64 u0x7FFFFFFFFFFFFFFF, metadata !115, metadata !DIExpression()), !dbg !1065
 	%9 = load i8*, i8** %1, align 8, !dbg !1066, !tbaa !1001
 	tail call void @set_program_name(i8* %9) #12, !dbg !1067
 	%10 = tail call i8* @setlocale(i32 6, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.9, i64 0, i64 0)) #12, !dbg !1068
@@ -492,7 +492,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	call void @llvm.dbg.value(metadata i32 1, metadata !108, metadata !DIExpression()), !dbg !1058
 	%43 = load i8*, i8** @optarg, align 8, !dbg !1107, !tbaa !1001
 	%44 = tail call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.18, i64 0, i64 0), i32 5) #12, !dbg !1108
-	%45 = tail call i64 @xdectoumax(i8* %43, i64 1, i64 9223372036854775807, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @main.multipliers, i64 0, i64 0), i8* %44, i32 0) #12, !dbg !1109
+	%45 = tail call i64 @xdectoumax(i8* %43, i64 1, i64 u0x7FFFFFFFFFFFFFFF, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @main.multipliers, i64 0, i64 0), i8* %44, i32 0) #12, !dbg !1109
 	call void @llvm.dbg.value(metadata i64 %45, metadata !112, metadata !DIExpression()), !dbg !1063
 	br label %166, !dbg !1110
 
@@ -528,7 +528,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	call void @llvm.dbg.value(metadata i32 2, metadata !108, metadata !DIExpression()), !dbg !1058
 	%59 = load i8*, i8** @optarg, align 8, !dbg !1125, !tbaa !1001
 	%60 = tail call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.18, i64 0, i64 0), i32 5) #12, !dbg !1126
-	%61 = tail call i64 @xdectoumax(i8* %59, i64 1, i64 9223372036854775807, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @main.multipliers, i64 0, i64 0), i8* %60, i32 0) #12, !dbg !1127
+	%61 = tail call i64 @xdectoumax(i8* %59, i64 1, i64 u0x7FFFFFFFFFFFFFFF, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @main.multipliers, i64 0, i64 0), i8* %60, i32 0) #12, !dbg !1127
 	call void @llvm.dbg.value(metadata i64 %61, metadata !112, metadata !DIExpression()), !dbg !1063
 	br label %166, !dbg !1128
 
@@ -1202,7 +1202,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	%410 = sub nsw i64 %409, %391, !dbg !1554
 	%411 = add nsw i64 %410, %383, !dbg !1555
 	call void @llvm.dbg.value(metadata i64 %411, metadata !1480, metadata !DIExpression()) #12, !dbg !1501
-	%412 = icmp eq i64 %411, 9223372036854775807, !dbg !1556
+	%412 = icmp eq i64 %411, u0x7FFFFFFFFFFFFFFF, !dbg !1556
 	br i1 %412, label %413, label %415, !dbg !1558
 
 ; <label>:413
@@ -1251,7 +1251,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	br label %436, !dbg !1575
 
 ; <label>:436
-	%437 = phi i64 [ %435, %431 ], [ 9223372036854775807, %358 ], !dbg !1576
+	%437 = phi i64 [ %435, %431 ], [ u0x7FFFFFFFFFFFFFFF, %358 ], !dbg !1576
 	%438 = phi i64 [ %433, %431 ], [ -1, %358 ], !dbg !1576
 	call void @llvm.dbg.value(metadata i64 %438, metadata !132, metadata !DIExpression()), !dbg !1467
 	call void @llvm.dbg.value(metadata i64 %437, metadata !115, metadata !DIExpression()), !dbg !1065
@@ -7809,7 +7809,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !52
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5246, metadata !DIExpression()), !dbg !5248
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5247, metadata !DIExpression()), !dbg !5249
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5250
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5250
 	%4 = icmp ult i64 %3, %0, !dbg !5250
 	br i1 %4, label %5, label %6, !dbg !5252
 
@@ -7860,7 +7860,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !5284, metadata !DIExpression()), !dbg !5287
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5285, metadata !DIExpression()), !dbg !5288
 	call void @llvm.dbg.value(metadata i64 %2, metadata !5286, metadata !DIExpression()), !dbg !5289
-	%4 = udiv i64 9223372036854775807, %2, !dbg !5290
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5290
 	%5 = icmp ult i64 %4, %1, !dbg !5290
 	br i1 %5, label %6, label %7, !dbg !5292
 
@@ -7956,7 +7956,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !5350
 	call void @llvm.dbg.value(metadata i64 %14, metadata !547, metadata !DIExpression()), !dbg !5337
-	%15 = udiv i64 9223372036854775807, %2, !dbg !5351
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !5351
 	%16 = icmp ult i64 %15, %14, !dbg !5351
 	br i1 %16, label %19, label %17, !dbg !5353
 
@@ -8134,7 +8134,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !5449
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !5451, metadata !DIExpression()), !dbg !5454
 	call void @llvm.dbg.value(metadata i64 %1, metadata !5452, metadata !DIExpression()), !dbg !5455
-	%3 = udiv i64 9223372036854775807, %1, !dbg !5456
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !5456
 	%4 = icmp ult i64 %3, %0, !dbg !5456
 	br i1 %4, label %8, label %5, !dbg !5458
 

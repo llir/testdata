@@ -4072,7 +4072,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !28
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !2888, metadata !DIExpression()), !dbg !2890
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2889, metadata !DIExpression()), !dbg !2891
-	%3 = udiv i64 9223372036854775807, %1, !dbg !2892
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !2892
 	%4 = icmp ult i64 %3, %0, !dbg !2892
 	br i1 %4, label %5, label %6, !dbg !2894
 
@@ -4123,7 +4123,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !2926, metadata !DIExpression()), !dbg !2929
 	call void @llvm.dbg.value(metadata i64 %1, metadata !2927, metadata !DIExpression()), !dbg !2930
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2928, metadata !DIExpression()), !dbg !2931
-	%4 = udiv i64 9223372036854775807, %2, !dbg !2932
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2932
 	%5 = icmp ult i64 %4, %1, !dbg !2932
 	br i1 %5, label %6, label %7, !dbg !2934
 
@@ -4219,7 +4219,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !2992
 	call void @llvm.dbg.value(metadata i64 %14, metadata !214, metadata !DIExpression()), !dbg !2979
-	%15 = udiv i64 9223372036854775807, %2, !dbg !2993
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !2993
 	%16 = icmp ult i64 %15, %14, !dbg !2993
 	br i1 %16, label %19, label %17, !dbg !2995
 
@@ -4397,7 +4397,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !3091
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !3093, metadata !DIExpression()), !dbg !3096
 	call void @llvm.dbg.value(metadata i64 %1, metadata !3094, metadata !DIExpression()), !dbg !3097
-	%3 = udiv i64 9223372036854775807, %1, !dbg !3098
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !3098
 	%4 = icmp ult i64 %3, %0, !dbg !3098
 	br i1 %4, label %8, label %5, !dbg !3100
 

@@ -5983,7 +5983,7 @@ define dso_local noalias i8* @xnmalloc(i64, i64) local_unnamed_addr #13 !dbg !42
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4267, metadata !DIExpression()), !dbg !4269
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4268, metadata !DIExpression()), !dbg !4270
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4271
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4271
 	%4 = icmp ult i64 %3, %0, !dbg !4271
 	br i1 %4, label %5, label %6, !dbg !4273
 
@@ -6034,7 +6034,7 @@ define dso_local noalias i8* @xnrealloc(i8*, i64, i64) local_unnamed_addr #13 !d
 	call void @llvm.dbg.value(metadata i8* %0, metadata !4305, metadata !DIExpression()), !dbg !4308
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4306, metadata !DIExpression()), !dbg !4309
 	call void @llvm.dbg.value(metadata i64 %2, metadata !4307, metadata !DIExpression()), !dbg !4310
-	%4 = udiv i64 9223372036854775807, %2, !dbg !4311
+	%4 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4311
 	%5 = icmp ult i64 %4, %1, !dbg !4311
 	br i1 %5, label %6, label %7, !dbg !4313
 
@@ -6130,7 +6130,7 @@ define dso_local noalias i8* @x2nrealloc(i8*, i64* nocapture, i64) local_unnamed
 ; <label>:13
 	%14 = phi i64 [ %4, %6 ], [ %12, %8 ], !dbg !4371
 	call void @llvm.dbg.value(metadata i64 %14, metadata !286, metadata !DIExpression()), !dbg !4358
-	%15 = udiv i64 9223372036854775807, %2, !dbg !4372
+	%15 = udiv i64 u0x7FFFFFFFFFFFFFFF, %2, !dbg !4372
 	%16 = icmp ult i64 %15, %14, !dbg !4372
 	br i1 %16, label %19, label %17, !dbg !4374
 
@@ -6308,7 +6308,7 @@ define dso_local noalias i8* @xcalloc(i64, i64) local_unnamed_addr #7 !dbg !4470
 ; <label>:2
 	call void @llvm.dbg.value(metadata i64 %0, metadata !4472, metadata !DIExpression()), !dbg !4475
 	call void @llvm.dbg.value(metadata i64 %1, metadata !4473, metadata !DIExpression()), !dbg !4476
-	%3 = udiv i64 9223372036854775807, %1, !dbg !4477
+	%3 = udiv i64 u0x7FFFFFFFFFFFFFFF, %1, !dbg !4477
 	%4 = icmp ult i64 %3, %0, !dbg !4477
 	br i1 %4, label %8, label %5, !dbg !4479
 
