@@ -4835,7 +4835,7 @@ define dso_local i64 @readtokens(%struct._IO_FILE*, i64, i8* nocapture readonly,
 	unreachable, !dbg !3720
 
 ; <label>:43
-	%44 = icmp ult i64 %22, 768614336404564650, !dbg !3721
+	%44 = icmp ult i64 %22, u0xAAAAAAAAAAAAAAA, !dbg !3721
 	br i1 %44, label %46, label %45, !dbg !3722
 
 ; <label>:45

@@ -1,9 +1,9 @@
-@A = global i1 false, align 536870912
+@A = global i1 false, align u0x20000000
 
 define void @foo() {
 ; <label>:0
-	%p = alloca i1, align 536870912
-	%1 = load i1, i1* %p, align 536870912
-	store i1 false, i1* %p, align 536870912
+	%p = alloca i1, align u0x20000000
+	%1 = load i1, i1* %p, align u0x20000000
+	store i1 false, i1* %p, align u0x20000000
 	ret void
 }

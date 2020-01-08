@@ -713,7 +713,7 @@ define dso_local void @add_tab_stop(i64) local_unnamed_addr #7 !dbg !1029 {
 	unreachable, !dbg !1062
 
 ; <label>:25
-	%26 = icmp ult i64 %2, 768614336404564650, !dbg !1063
+	%26 = icmp ult i64 %2, u0xAAAAAAAAAAAAAAA, !dbg !1063
 	br i1 %26, label %28, label %27, !dbg !1066
 
 ; <label>:27
@@ -911,7 +911,7 @@ define dso_local void @parse_tab_stops(i8*) local_unnamed_addr #7 !dbg !1087 {
 	call void @llvm.dbg.value(metadata i64 %61, metadata !1091, metadata !DIExpression()), !dbg !1110
 	call void @llvm.dbg.value(metadata i8 %63, metadata !1090, metadata !DIExpression()), !dbg !1109
 	call void @llvm.dbg.value(metadata i8* %62, metadata !1094, metadata !DIExpression()), !dbg !1113
-	%64 = icmp ugt i64 %61, 1844674407370955161, !dbg !1194
+	%64 = icmp ugt i64 %61, u0x1999999999999999, !dbg !1194
 	br i1 %64, label %71, label %65, !dbg !1194
 
 ; <label>:65

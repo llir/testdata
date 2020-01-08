@@ -378,7 +378,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !797 {
 	%37 = icmp eq i8 %36, 0, !dbg !840
 	%38 = select i1 %37, i64 0, i64 %11, !dbg !842
 	call void @llvm.dbg.value(metadata i64 %38, metadata !804, metadata !DIExpression()), !dbg !819
-	%39 = icmp ugt i64 %38, 1844674407370955161, !dbg !843
+	%39 = icmp ugt i64 %38, u0x1999999999999999, !dbg !843
 	br i1 %39, label %47, label %40, !dbg !843
 
 ; <label>:40
@@ -870,7 +870,7 @@ define dso_local void @add_tab_stop(i64) local_unnamed_addr #7 !dbg !1082 {
 	unreachable, !dbg !1115
 
 ; <label>:25
-	%26 = icmp ult i64 %2, 768614336404564650, !dbg !1116
+	%26 = icmp ult i64 %2, u0xAAAAAAAAAAAAAAA, !dbg !1116
 	br i1 %26, label %28, label %27, !dbg !1119
 
 ; <label>:27
@@ -1068,7 +1068,7 @@ define dso_local void @parse_tab_stops(i8*) local_unnamed_addr #7 !dbg !1140 {
 	call void @llvm.dbg.value(metadata i64 %61, metadata !1144, metadata !DIExpression()), !dbg !1163
 	call void @llvm.dbg.value(metadata i8 %63, metadata !1143, metadata !DIExpression()), !dbg !1162
 	call void @llvm.dbg.value(metadata i8* %62, metadata !1147, metadata !DIExpression()), !dbg !1166
-	%64 = icmp ugt i64 %61, 1844674407370955161, !dbg !1247
+	%64 = icmp ugt i64 %61, u0x1999999999999999, !dbg !1247
 	br i1 %64, label %71, label %65, !dbg !1247
 
 ; <label>:65

@@ -1364,7 +1364,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !853 {
 	unreachable, !dbg !1527
 
 ; <label>:463
-	%464 = icmp ult i64 %450, 768614336404564650, !dbg !1528
+	%464 = icmp ult i64 %450, u0xAAAAAAAAAAAAAAA, !dbg !1528
 	br i1 %464, label %466, label %465, !dbg !1531
 
 ; <label>:465
@@ -1474,7 +1474,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !853 {
 	unreachable, !dbg !1591
 
 ; <label>:522
-	%523 = icmp ult i64 %509, 768614336404564650, !dbg !1592
+	%523 = icmp ult i64 %509, u0xAAAAAAAAAAAAAAA, !dbg !1592
 	br i1 %523, label %525, label %524, !dbg !1593
 
 ; <label>:524

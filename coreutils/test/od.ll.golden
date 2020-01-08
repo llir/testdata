@@ -2705,7 +2705,7 @@ define internal fastcc zeroext i1 @decode_format_string(i8*) unnamed_addr #7 !db
 
 ; <label>:21
 	call void @llvm.dbg.value(metadata i64 %12, metadata !49, metadata !DIExpression()) #13, !dbg !2148
-	%22 = icmp ugt i64 %12, 230584300921369395, !dbg !2156
+	%22 = icmp ugt i64 %12, u0x333333333333333, !dbg !2156
 	br i1 %22, label %23, label %31, !dbg !2158
 
 ; <label>:23

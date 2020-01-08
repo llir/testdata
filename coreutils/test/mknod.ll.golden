@@ -555,7 +555,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !701 {
 	%140 = load i64, i64* %4, align 8, !dbg !876, !tbaa !871
 	call void @llvm.dbg.value(metadata i64 %140, metadata !731, metadata !DIExpression()), !dbg !857
 	%141 = shl i64 %140, 8, !dbg !877
-	%142 = and i64 %141, 1048320, !dbg !877
+	%142 = and i64 %141, u0xFFF00, !dbg !877
 	call void @llvm.dbg.value(metadata i64 %142, metadata !885, metadata !DIExpression()), !dbg !877
 	%143 = shl i64 %140, 32, !dbg !877
 	%144 = and i64 %143, -17592186044416, !dbg !877
@@ -563,7 +563,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !701 {
 	%145 = and i64 %134, 255, !dbg !877
 	call void @llvm.dbg.value(metadata i64 undef, metadata !885, metadata !DIExpression()), !dbg !877
 	%146 = shl i64 %134, 12, !dbg !877
-	%147 = and i64 %146, 17592184995840, !dbg !877
+	%147 = and i64 %146, u0xFFFFFF00000, !dbg !877
 	%148 = or i64 %147, %145, !dbg !877
 	%149 = or i64 %148, %142, !dbg !877
 	%150 = or i64 %149, %144, !dbg !877

@@ -2304,7 +2304,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 	unreachable, !dbg !2889
 
 ; <label>:800
-	%801 = icmp ult i64 %787, 768614336404564650, !dbg !2890
+	%801 = icmp ult i64 %787, u0xAAAAAAAAAAAAAAA, !dbg !2890
 	br i1 %801, label %803, label %802, !dbg !2893
 
 ; <label>:802
@@ -4048,9 +4048,9 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 ; <label>:1719
 	%1720 = phi i64 [ %259, %1713 ], [ %1718, %1715 ], !dbg !3828
 	call void @llvm.dbg.value(metadata i64 %1720, metadata !59, metadata !DIExpression()), !dbg !1994
-	call void @llvm.dbg.value(metadata i64 72057594037927935, metadata !390, metadata !DIExpression()), !dbg !3829
-	%1721 = icmp ult i64 %1720, 72057594037927935, !dbg !3830
-	%1722 = select i1 %1721, i64 %1720, i64 72057594037927935, !dbg !3830
+	call void @llvm.dbg.value(metadata i64 u0xFFFFFFFFFFFFFF, metadata !390, metadata !DIExpression()), !dbg !3829
+	%1721 = icmp ult i64 %1720, u0xFFFFFFFFFFFFFF, !dbg !3830
+	%1722 = select i1 %1721, i64 %1720, i64 u0xFFFFFFFFFFFFFF, !dbg !3830
 	call void @llvm.dbg.value(metadata i64 %1722, metadata !59, metadata !DIExpression()), !dbg !1994
 	call void @llvm.dbg.value(metadata i8** %1477, metadata !3831, metadata !DIExpression()) #13, !dbg !3953
 	call void @llvm.dbg.value(metadata i64 %1476, metadata !3836, metadata !DIExpression()) #13, !dbg !3955
@@ -6707,7 +6707,7 @@ define internal fastcc i32 @compare(%struct.line* nocapture readonly, %struct.li
 
 ; <label>:545
 	call void @llvm.dbg.value(metadata i64 %542, metadata !4860, metadata !DIExpression()) #13, !dbg !5386
-	%546 = icmp ult i64 %542, 6148914691236517205, !dbg !5431
+	%546 = icmp ult i64 %542, u0x5555555555555555, !dbg !5431
 	%547 = mul i64 %542, 3, !dbg !5434
 	%548 = lshr i64 %547, 1, !dbg !5435
 	call void @llvm.dbg.value(metadata i64 %548, metadata !4860, metadata !DIExpression()) #13, !dbg !5386
@@ -9812,7 +9812,7 @@ define internal fastcc i32 @reap(i32) unnamed_addr #7 !dbg !7175 {
 ; <label>:30
 	%31 = load i32, i32* %3, align 4, !dbg !7220, !tbaa !2018
 	call void @llvm.dbg.value(metadata i32 %31, metadata !7180, metadata !DIExpression()), !dbg !7186
-	%32 = and i32 %31, 65407, !dbg !7223
+	%32 = and i32 %31, u0xFF7F, !dbg !7223
 	%33 = icmp eq i32 %32, 0, !dbg !7223
 	br i1 %33, label %38, label %34, !dbg !7223
 
@@ -10677,7 +10677,7 @@ define internal fastcc void @mergefps(%struct.sortfile* nocapture, i64, i64, %st
 	call void @llvm.dbg.value(metadata %struct._IO_FILE** %5, metadata !7744, metadata !DIExpression()), !dbg !7783
 	call void @llvm.dbg.value(metadata i64 %2, metadata !2202, metadata !DIExpression()) #13, !dbg !7784
 	call void @llvm.dbg.value(metadata i64 56, metadata !2203, metadata !DIExpression()) #13, !dbg !7786
-	%8 = icmp ugt i64 %2, 164703072086692425, !dbg !7787
+	%8 = icmp ugt i64 %2, u0x249249249249249, !dbg !7787
 	br i1 %8, label %9, label %10, !dbg !7788
 
 ; <label>:9
@@ -17588,7 +17588,7 @@ define dso_local i32 @heap_insert(%struct.heap* nocapture, i8*) local_unnamed_ad
 	unreachable, !dbg !11371
 
 ; <label>:21
-	%22 = icmp ult i64 %4, 768614336404564650, !dbg !11372
+	%22 = icmp ult i64 %4, u0xAAAAAAAAAAAAAAA, !dbg !11372
 	br i1 %22, label %24, label %23, !dbg !11375
 
 ; <label>:23

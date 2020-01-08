@@ -1778,7 +1778,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !969 {
 	unreachable, !dbg !1726
 
 ; <label>:690
-	%691 = icmp ult i64 %677, 128102389400760775, !dbg !1727
+	%691 = icmp ult i64 %677, u0x1C71C71C71C71C7, !dbg !1727
 	br i1 %691, label %693, label %692, !dbg !1730
 
 ; <label>:692
@@ -2246,7 +2246,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !969 {
 	store i8 1, i8* getelementptr inbounds ([256 x i8], [256 x i8]* @edited_flag, i64 0, i64 123), align 1, !dbg !1924, !tbaa !1066
 	store i8 1, i8* getelementptr inbounds ([256 x i8], [256 x i8]* @edited_flag, i64 0, i64 125), align 1, !dbg !1924, !tbaa !1066
 	store i8 1, i8* getelementptr inbounds ([256 x i8], [256 x i8]* @edited_flag, i64 0, i64 92), align 4, !dbg !1924, !tbaa !1066
-	store i32 16843009, i32* bitcast (i8* getelementptr inbounds ([256 x i8], [256 x i8]* @edited_flag, i64 0, i64 35) to i32*), align 1, !dbg !1924
+	store i32 u0x1010101, i32* bitcast (i8* getelementptr inbounds ([256 x i8], [256 x i8]* @edited_flag, i64 0, i64 35) to i32*), align 1, !dbg !1924
 	%957 = load <16 x i8>, <16 x i8>* bitcast (i8* getelementptr inbounds ([256 x i8], [256 x i8]* @diacrit_diac, i64 0, i64 128) to <16 x i8>*), align 1, !dbg !1928, !tbaa !1066
 	%958 = load <16 x i8>, <16 x i8>* bitcast (i8* getelementptr inbounds ([256 x i8], [256 x i8]* @diacrit_diac, i64 0, i64 144) to <16 x i8>*), align 1, !dbg !1928, !tbaa !1066
 	%959 = icmp ne <16 x i8> %957, zeroinitializer, !dbg !1931
@@ -12964,7 +12964,7 @@ define internal fastcc zeroext i1 @knuth_morris_pratt_multibyte(i8*, i8*, i8** n
 	call void @llvm.dbg.value(metadata i8** %2, metadata !7642, metadata !DIExpression()), !dbg !7670
 	%7 = tail call i64 @mbslen(i8* %1) #15, !dbg !7671
 	call void @llvm.dbg.value(metadata i64 %7, metadata !7643, metadata !DIExpression()), !dbg !7672
-	%8 = icmp ugt i64 %7, 164703072086692425, !dbg !7673
+	%8 = icmp ugt i64 %7, u0x249249249249249, !dbg !7673
 	br i1 %8, label %224, label %9, !dbg !7673
 
 ; <label>:9

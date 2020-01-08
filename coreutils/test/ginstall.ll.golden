@@ -1131,7 +1131,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1561 {
 ; <label>:270
 	%271 = load i32, i32* @mode, align 4, !dbg !1945, !tbaa !1795
 	call void @llvm.dbg.value(metadata i32 %271, metadata !1947, metadata !DIExpression()), !dbg !1953
-	call void @llvm.dbg.value(metadata i32 61951, metadata !1952, metadata !DIExpression()), !dbg !1955
+	call void @llvm.dbg.value(metadata i32 u0xF1FF, metadata !1952, metadata !DIExpression()), !dbg !1955
 	%272 = and i32 %271, -61952, !dbg !1956
 	%273 = icmp eq i32 %272, 0, !dbg !1957
 	br i1 %273, label %276, label %274, !dbg !1958
@@ -1566,7 +1566,7 @@ define internal fastcc zeroext i1 @install_file_in_file(i8*, i8*, %struct.cp_opt
 	call void @llvm.lifetime.start.p0i8(i64 144, i8* nonnull %26) #10, !dbg !2315
 	%27 = load i32, i32* @mode, align 4, !dbg !2316, !tbaa !1795
 	call void @llvm.dbg.value(metadata i32 %27, metadata !1947, metadata !DIExpression()) #10, !dbg !2318
-	call void @llvm.dbg.value(metadata i32 61951, metadata !1952, metadata !DIExpression()) #10, !dbg !2320
+	call void @llvm.dbg.value(metadata i32 u0xF1FF, metadata !1952, metadata !DIExpression()) #10, !dbg !2320
 	%28 = and i32 %27, -61952, !dbg !2321
 	%29 = icmp eq i32 %28, 0, !dbg !2322
 	br i1 %29, label %30, label %112, !dbg !2323
@@ -1600,12 +1600,12 @@ define internal fastcc zeroext i1 @install_file_in_file(i8*, i8*, %struct.cp_opt
 	%44 = and i32 %38, -61952, !dbg !2346
 	%45 = icmp ne i32 %44, 0, !dbg !2348
 	call void @llvm.dbg.value(metadata i32 %38, metadata !1947, metadata !DIExpression()) #10, !dbg !2349
-	call void @llvm.dbg.value(metadata i32 61951, metadata !1952, metadata !DIExpression()) #10, !dbg !2350
+	call void @llvm.dbg.value(metadata i32 u0xF1FF, metadata !1952, metadata !DIExpression()) #10, !dbg !2350
 	%46 = and i32 %43, -512, !dbg !2351
 	%47 = icmp ne i32 %46, u0x8000, !dbg !2351
 	%48 = or i1 %45, %47, !dbg !2351
 	call void @llvm.dbg.value(metadata i32 %43, metadata !1947, metadata !DIExpression()) #10, !dbg !2352
-	call void @llvm.dbg.value(metadata i32 61951, metadata !1952, metadata !DIExpression()) #10, !dbg !2354
+	call void @llvm.dbg.value(metadata i32 u0xF1FF, metadata !1952, metadata !DIExpression()) #10, !dbg !2354
 	br i1 %48, label %112, label %49, !dbg !2351
 
 ; <label>:49
@@ -1799,7 +1799,7 @@ define internal fastcc zeroext i1 @install_file_in_file(i8*, i8*, %struct.cp_opt
 ; <label>:148
 	%149 = load i32, i32* %5, align 4, !dbg !2474, !tbaa !1795
 	call void @llvm.dbg.value(metadata i32 %149, metadata !2446, metadata !DIExpression()) #10, !dbg !2466
-	%150 = and i32 %149, 65407, !dbg !2476
+	%150 = and i32 %149, u0xFF7F, !dbg !2476
 	%151 = icmp eq i32 %150, 0, !dbg !2476
 	br i1 %151, label %154, label %152, !dbg !2476
 

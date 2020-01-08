@@ -1001,7 +1001,7 @@ define internal zeroext i1 @print_statfs(i8*, i64, i32, i32, i8*, i8* nocapture 
 	%19 = zext i32 %15 to i64, !dbg !1399
 	%20 = icmp ugt i8 %14, 63, !dbg !1399
 	%21 = shl i64 1, %19, !dbg !1399
-	%22 = and i64 %21, 35184372088833, !dbg !1399
+	%22 = and i64 %21, u0x200000000001, !dbg !1399
 	%23 = icmp eq i64 %22, 0, !dbg !1399
 	%24 = or i1 %20, %23, !dbg !1399
 	br i1 %24, label %27, label %25, !dbg !1401
@@ -2391,7 +2391,7 @@ define internal zeroext i1 @print_statfs(i8*, i64, i32, i32, i8*, i8* nocapture 
 	%728 = zext i32 %724 to i64, !dbg !1763
 	%729 = icmp ugt i8 %723, 63, !dbg !1763
 	%730 = shl i64 1, %728, !dbg !1763
-	%731 = and i64 %730, 35184372088833, !dbg !1763
+	%731 = and i64 %730, u0x200000000001, !dbg !1763
 	%732 = icmp eq i64 %731, 0, !dbg !1763
 	%733 = or i1 %729, %732, !dbg !1763
 	br i1 %733, label %736, label %734, !dbg !1764
@@ -4699,7 +4699,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%20 = zext i32 %16 to i64, !dbg !2436
 	%21 = icmp ugt i8 %15, 63, !dbg !2436
 	%22 = shl i64 1, %20, !dbg !2436
-	%23 = and i64 %22, 35184372088833, !dbg !2436
+	%23 = and i64 %22, u0x200000000001, !dbg !2436
 	%24 = icmp eq i64 %23, 0, !dbg !2436
 	%25 = or i1 %21, %24, !dbg !2436
 	br i1 %25, label %28, label %26, !dbg !2437
@@ -4918,7 +4918,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%164 = zext i32 %160 to i64, !dbg !2485
 	%165 = icmp ugt i8 %159, 63, !dbg !2485
 	%166 = shl i64 1, %164, !dbg !2485
-	%167 = and i64 %166, 35184372088833, !dbg !2485
+	%167 = and i64 %166, u0x200000000001, !dbg !2485
 	%168 = icmp eq i64 %167, 0, !dbg !2485
 	%169 = or i1 %165, %168, !dbg !2485
 	br i1 %169, label %172, label %170, !dbg !2486
@@ -5157,7 +5157,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%322 = zext i32 %318 to i64, !dbg !2545
 	%323 = icmp ugt i8 %317, 63, !dbg !2545
 	%324 = shl i64 1, %322, !dbg !2545
-	%325 = and i64 %324, 35184372088833, !dbg !2545
+	%325 = and i64 %324, u0x200000000001, !dbg !2545
 	%326 = icmp eq i64 %325, 0, !dbg !2545
 	%327 = or i1 %323, %326, !dbg !2545
 	br i1 %327, label %330, label %328, !dbg !2546
@@ -6254,7 +6254,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%1044 = zext i32 %1040 to i64, !dbg !2799
 	%1045 = icmp ugt i8 %1039, 63, !dbg !2799
 	%1046 = shl i64 1, %1044, !dbg !2799
-	%1047 = and i64 %1046, 35184372088833, !dbg !2799
+	%1047 = and i64 %1046, u0x200000000001, !dbg !2799
 	%1048 = icmp eq i64 %1047, 0, !dbg !2799
 	%1049 = or i1 %1045, %1048, !dbg !2799
 	br i1 %1049, label %1052, label %1050, !dbg !2800
@@ -6692,7 +6692,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%1333 = zext i32 %1329 to i64, !dbg !2897
 	%1334 = icmp ugt i8 %1328, 63, !dbg !2897
 	%1335 = shl i64 1, %1333, !dbg !2897
-	%1336 = and i64 %1335, 35184372088833, !dbg !2897
+	%1336 = and i64 %1335, u0x200000000001, !dbg !2897
 	%1337 = icmp eq i64 %1336, 0, !dbg !2897
 	%1338 = or i1 %1334, %1337, !dbg !2897
 	br i1 %1338, label %1341, label %1339, !dbg !2898
@@ -7363,7 +7363,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%1776 = zext i32 %1772 to i64, !dbg !3051
 	%1777 = icmp ugt i8 %1771, 63, !dbg !3051
 	%1778 = shl i64 1, %1776, !dbg !3051
-	%1779 = and i64 %1778, 35184372088833, !dbg !3051
+	%1779 = and i64 %1778, u0x200000000001, !dbg !3051
 	%1780 = icmp eq i64 %1779, 0, !dbg !3051
 	%1781 = or i1 %1777, %1780, !dbg !3051
 	br i1 %1781, label %1784, label %1782, !dbg !3052
@@ -7815,7 +7815,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%2074 = zext i32 %2070 to i64, !dbg !3156
 	%2075 = icmp ugt i8 %2069, 63, !dbg !3156
 	%2076 = shl i64 1, %2074, !dbg !3156
-	%2077 = and i64 %2076, 35184372088833, !dbg !3156
+	%2077 = and i64 %2076, u0x200000000001, !dbg !3156
 	%2078 = icmp eq i64 %2077, 0, !dbg !3156
 	%2079 = or i1 %2075, %2078, !dbg !3156
 	br i1 %2079, label %2082, label %2080, !dbg !3157
@@ -8322,7 +8322,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%2397 = zext i32 %2393 to i64, !dbg !3316
 	%2398 = icmp ugt i8 %2392, 63, !dbg !3316
 	%2399 = shl i64 1, %2397, !dbg !3316
-	%2400 = and i64 %2399, 35184372088833, !dbg !3316
+	%2400 = and i64 %2399, u0x200000000001, !dbg !3316
 	%2401 = icmp eq i64 %2400, 0, !dbg !3316
 	%2402 = or i1 %2398, %2401, !dbg !3316
 	br i1 %2402, label %2405, label %2403, !dbg !3317
@@ -9645,7 +9645,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%3271 = zext i32 %3267 to i64, !dbg !3615
 	%3272 = icmp ugt i8 %3266, 63, !dbg !3615
 	%3273 = shl i64 1, %3271, !dbg !3615
-	%3274 = and i64 %3273, 35184372088833, !dbg !3615
+	%3274 = and i64 %3273, u0x200000000001, !dbg !3615
 	%3275 = icmp eq i64 %3274, 0, !dbg !3615
 	%3276 = or i1 %3272, %3275, !dbg !3615
 	br i1 %3276, label %3279, label %3277, !dbg !3616
@@ -9874,7 +9874,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%3420 = zext i32 %3416 to i64, !dbg !3675
 	%3421 = icmp ugt i8 %3415, 63, !dbg !3675
 	%3422 = shl i64 1, %3420, !dbg !3675
-	%3423 = and i64 %3422, 35184372088833, !dbg !3675
+	%3423 = and i64 %3422, u0x200000000001, !dbg !3675
 	%3424 = icmp eq i64 %3423, 0, !dbg !3675
 	%3425 = or i1 %3421, %3424, !dbg !3675
 	br i1 %3425, label %3428, label %3426, !dbg !3676
@@ -10110,7 +10110,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%3575 = zext i32 %3571 to i64, !dbg !3735
 	%3576 = icmp ugt i8 %3570, 63, !dbg !3735
 	%3577 = shl i64 1, %3575, !dbg !3735
-	%3578 = and i64 %3577, 35184372088833, !dbg !3735
+	%3578 = and i64 %3577, u0x200000000001, !dbg !3735
 	%3579 = icmp eq i64 %3578, 0, !dbg !3735
 	%3580 = or i1 %3576, %3579, !dbg !3735
 	br i1 %3580, label %3583, label %3581, !dbg !3736
@@ -10346,7 +10346,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%3730 = zext i32 %3726 to i64, !dbg !3795
 	%3731 = icmp ugt i8 %3725, 63, !dbg !3795
 	%3732 = shl i64 1, %3730, !dbg !3795
-	%3733 = and i64 %3732, 35184372088833, !dbg !3795
+	%3733 = and i64 %3732, u0x200000000001, !dbg !3795
 	%3734 = icmp eq i64 %3733, 0, !dbg !3795
 	%3735 = or i1 %3731, %3734, !dbg !3795
 	br i1 %3735, label %3738, label %3736, !dbg !3796
@@ -20010,7 +20010,7 @@ define dso_local %struct.mount_entry* @read_file_system_list(i1 zeroext) local_u
 	call void @llvm.dbg.value(metadata i32 %242, metadata !9030, metadata !DIExpression()), !dbg !9037
 	call void @llvm.dbg.value(metadata i32 %243, metadata !9035, metadata !DIExpression()), !dbg !9037
 	%244 = shl i32 %242, 8, !dbg !9037
-	%245 = and i32 %244, 1048320, !dbg !9037
+	%245 = and i32 %244, u0xFFF00, !dbg !9037
 	%246 = zext i32 %245 to i64, !dbg !9037
 	call void @llvm.dbg.value(metadata i64 %246, metadata !9036, metadata !DIExpression()), !dbg !9037
 	%247 = and i32 %242, -4096, !dbg !9037

@@ -544,7 +544,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !796 {
 
 ; <label>:100
 	%101 = load i64, i64* @skip_fields, align 8, !dbg !927, !tbaa !843
-	%102 = icmp ugt i64 %101, 1844674407370955161, !dbg !927
+	%102 = icmp ugt i64 %101, u0x1999999999999999, !dbg !927
 	br i1 %102, label %111, label %103, !dbg !927
 
 ; <label>:103

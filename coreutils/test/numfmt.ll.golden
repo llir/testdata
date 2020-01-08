@@ -40,10 +40,10 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.19 = private unnamed_addr constant [54 x i8] c"      --version  output version information and exit\0A\00", align 1
 @.str.20 = private unnamed_addr constant [16 x i8] c"\0AUNIT options:\0A\00", align 1
 @.str.21 = private unnamed_addr constant [70 x i8] c"  none       no auto-scaling is done; suffixes will trigger an error\0A\00", align 1
-@.str.22 = private unnamed_addr constant [168 x i8] c"  auto       accept optional single/two letter suffix:\0A               1K = 1000,\0A               1Ki = 1024,\0A               1M = 1000000,\0A               1Mi = 1048576,\0A\00", align 1
+@.str.22 = private unnamed_addr constant [168 x i8] c"  auto       accept optional single/two letter suffix:\0A               1K = 1000,\0A               1Ki = 1024,\0A               1M = 1000000,\0A               1Mi = u0x100000,\0A\00", align 1
 @.str.23 = private unnamed_addr constant [126 x i8] c"  si         accept optional single letter suffix:\0A               1K = 1000,\0A               1M = 1000000,\0A               ...\0A\00", align 1
-@.str.24 = private unnamed_addr constant [126 x i8] c"  iec        accept optional single letter suffix:\0A               1K = 1024,\0A               1M = 1048576,\0A               ...\0A\00", align 1
-@.str.25 = private unnamed_addr constant [125 x i8] c"  iec-i      accept optional two-letter suffix:\0A               1Ki = 1024,\0A               1Mi = 1048576,\0A               ...\0A\00", align 1
+@.str.24 = private unnamed_addr constant [126 x i8] c"  iec        accept optional single letter suffix:\0A               1K = 1024,\0A               1M = u0x100000,\0A               ...\0A\00", align 1
+@.str.25 = private unnamed_addr constant [125 x i8] c"  iec-i      accept optional two-letter suffix:\0A               1Ki = 1024,\0A               1Mi = u0x100000,\0A               ...\0A\00", align 1
 @.str.26 = private unnamed_addr constant [275 x i8] c"\0AFIELDS supports cut(1) style field ranges:\0A  N    N'th field, counted from 1\0A  N-   from N'th field, to end of line\0A  N-M  from N'th to M'th field (inclusive)\0A  -M   from first to M'th field (inclusive)\0A  -    all fields\0AMultiple fields/ranges can be separated with commas\0A\00", align 1
 @.str.27 = private unnamed_addr constant [372 x i8] c"\0AFORMAT must be suitable for printing one floating-point argument '%f'.\0AOptional quote (%'f) will enable --grouping (if supported by current locale).\0AOptional width value (%10f) will pad output. Optional zero (%010f) width\0Awill zero pad the number. Optional negative values (%-10f) will left align.\0AOptional precision (%.1f) will override the input determined precision.\0A\00", align 1
 @.str.28 = private unnamed_addr constant [411 x i8] c"\0AExit status is 0 if all input numbers were successfully converted.\0ABy default, %s will stop at the first conversion error with exit status 2.\0AWith --invalid='fail' a warning is printed for each conversion error\0Aand the exit status is 2.  With --invalid='warn' each conversion error is\0Adiagnosed, but the exit status is 0.  With --invalid='ignore' conversion\0Aerrors are not diagnosed and the exit status is 0.\0A\00", align 1
@@ -1140,7 +1140,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !945 {
 	br i1 %326, label %327, label %333, !dbg !1279
 
 ; <label>:327
-	%328 = tail call i8* @nl_langinfo(i32 65537) #13, !dbg !1281
+	%328 = tail call i8* @nl_langinfo(i32 u0x10001) #13, !dbg !1281
 	%329 = load i8, i8* %328, align 1, !dbg !1282
 	%330 = icmp eq i8 %329, 0, !dbg !1283
 	br i1 %330, label %331, label %333, !dbg !1284
@@ -4108,7 +4108,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !633 {
 	call void @llvm.dbg.value(metadata i8 1, metadata !644, metadata !DIExpression()), !dbg !2713
 	%210 = and i8 %20, 1, !dbg !2916
 	%211 = icmp eq i8 %210, 0, !dbg !2916
-	%212 = icmp ugt i64 %17, 1844674407370955161, !dbg !2918
+	%212 = icmp ugt i64 %17, u0x1999999999999999, !dbg !2918
 	br i1 %212, label %224, label %213, !dbg !2918
 
 ; <label>:213

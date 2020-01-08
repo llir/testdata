@@ -360,7 +360,7 @@ define internal fastcc void @print_wide_uint(i64, i32, i32) unnamed_addr #0 !dbg
 
 ; <label>:8
 	%9 = lshr i64 %0, 28, !dbg !301
-	%10 = icmp ugt i64 %0, 72057594037927935, !dbg !302
+	%10 = icmp ugt i64 %0, u0xFFFFFFFFFFFFFF, !dbg !302
 	br i1 %10, label %11, label %16, !dbg !303
 
 ; <label>:11

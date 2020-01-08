@@ -1769,7 +1769,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	call void @llvm.dbg.value(metadata i8 1, metadata !176, metadata !DIExpression()), !dbg !1414
 	%210 = and i8 %20, 1, !dbg !1618
 	%211 = icmp eq i8 %210, 0, !dbg !1618
-	%212 = icmp ugt i64 %17, 1844674407370955161, !dbg !1620
+	%212 = icmp ugt i64 %17, u0x1999999999999999, !dbg !1620
 	br i1 %212, label %224, label %213, !dbg !1620
 
 ; <label>:213
@@ -2738,7 +2738,7 @@ define dso_local i8* @memchr2(i8*, i32, i32, i64) local_unnamed_addr #10 !dbg !2
 	call void @llvm.dbg.value(metadata i64 %37, metadata !2224, metadata !DIExpression()), !dbg !2242
 	%38 = bitcast i8* %36 to i64*, !dbg !2272
 	call void @llvm.dbg.value(metadata i64* %38, metadata !2227, metadata !DIExpression()), !dbg !2273
-	call void @llvm.dbg.value(metadata i64 16843009, metadata !2231, metadata !DIExpression()), !dbg !2274
+	call void @llvm.dbg.value(metadata i64 u0x1010101, metadata !2231, metadata !DIExpression()), !dbg !2274
 	%39 = shl nuw nsw <2 x i32> %7, <i32 8, i32 8>, !dbg !2275
 	%40 = or <2 x i32> %39, %7, !dbg !2276
 	call void @llvm.dbg.value(metadata i64 undef, metadata !2232, metadata !DIExpression()), !dbg !2277
@@ -2746,7 +2746,7 @@ define dso_local i8* @memchr2(i8*, i32, i32, i64) local_unnamed_addr #10 !dbg !2
 	%42 = or <2 x i32> %41, %40, !dbg !2279
 	%43 = zext <2 x i32> %42 to <2 x i64>, !dbg !2279
 	call void @llvm.dbg.value(metadata i64 undef, metadata !2233, metadata !DIExpression()), !dbg !2280
-	call void @llvm.dbg.value(metadata i64 72340172838076673, metadata !2231, metadata !DIExpression()), !dbg !2274
+	call void @llvm.dbg.value(metadata i64 u0x101010101010101, metadata !2231, metadata !DIExpression()), !dbg !2274
 	call void @llvm.dbg.value(metadata i64 undef, metadata !2232, metadata !DIExpression()), !dbg !2277
 	%44 = shl nuw <2 x i64> %43, <i64 32, i64 32>, !dbg !2281
 	%45 = or <2 x i64> %44, %43, !dbg !2284

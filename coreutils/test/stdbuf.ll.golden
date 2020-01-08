@@ -6029,7 +6029,7 @@ define dso_local i8* @careadlinkat(i32, i8*, i8*, i64, %struct.allocator* readon
 	br label %56, !dbg !4117
 
 ; <label>:56
-	%57 = icmp ult i64 %17, 4611686018427387905, !dbg !4118
+	%57 = icmp ult i64 %17, u0x4000000000000001, !dbg !4118
 	br i1 %57, label %58, label %60, !dbg !4120
 
 ; <label>:58

@@ -2515,7 +2515,7 @@ define internal fastcc void @flush_paragraph() unnamed_addr #7 !dbg !1894 {
 	%25 = select i1 %24, %struct.Word* %16, %struct.Word* %18, !dbg !1924
 	%26 = select i1 %24, i64 %23, i64 %17, !dbg !1924
 	call void @llvm.dbg.value(metadata i64 %26, metadata !1899, metadata !DIExpression()), !dbg !1910
-	%27 = icmp slt i64 %26, 9223372036854775799, !dbg !1925
+	%27 = icmp slt i64 %26, u0x7FFFFFFFFFFFFFF7, !dbg !1925
 	%28 = add nsw i64 %26, 9, !dbg !1927
 	call void @llvm.dbg.value(metadata i64 %28, metadata !1899, metadata !DIExpression()), !dbg !1910
 	%29 = select i1 %27, i64 %28, i64 %26, !dbg !1928

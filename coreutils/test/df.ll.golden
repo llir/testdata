@@ -587,7 +587,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 
 ; <label>:39
 	store i32 0, i32* @human_output_opts, align 4, !dbg !1191, !tbaa !1145
-	store i64 1048576, i64* @output_block_size, align 8, !dbg !1192, !tbaa !1182
+	store i64 u0x100000, i64* @output_block_size, align 8, !dbg !1192, !tbaa !1182
 	br label %88, !dbg !1193
 
 ; <label>:40
@@ -16052,7 +16052,7 @@ define dso_local %struct.mount_entry* @read_file_system_list(i1 zeroext) local_u
 	call void @llvm.dbg.value(metadata i32 %242, metadata !10755, metadata !DIExpression()), !dbg !10763
 	call void @llvm.dbg.value(metadata i32 %243, metadata !10761, metadata !DIExpression()), !dbg !10763
 	%244 = shl i32 %242, 8, !dbg !10763
-	%245 = and i32 %244, 1048320, !dbg !10763
+	%245 = and i32 %244, u0xFFF00, !dbg !10763
 	%246 = zext i32 %245 to i64, !dbg !10763
 	call void @llvm.dbg.value(metadata i64 %246, metadata !10762, metadata !DIExpression()), !dbg !10763
 	%247 = and i32 %242, -4096, !dbg !10763
