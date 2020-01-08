@@ -6309,7 +6309,7 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 	call void @llvm.dbg.value(metadata %struct.FTS* %19, metadata !4883, metadata !DIExpression()) #11, !dbg !4893
 	call void @llvm.dbg.value(metadata i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.165, i64 0, i64 0), metadata !4890, metadata !DIExpression()) #11, !dbg !4895
 	%241 = shl i32 %237, 13, !dbg !4896
-	%242 = and i32 %241, 131072, !dbg !4896
+	%242 = and i32 %241, u0x20000, !dbg !4896
 	%243 = shl i32 %237, 7, !dbg !4897
 	%244 = and i32 %243, 262144, !dbg !4897
 	%245 = or i32 %242, %244, !dbg !4898
@@ -7077,7 +7077,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	call void @llvm.dbg.value(metadata %struct.FTS* %0, metadata !4883, metadata !DIExpression()) #11, !dbg !5363
 	call void @llvm.dbg.value(metadata i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.165, i64 0, i64 0), metadata !4890, metadata !DIExpression()) #11, !dbg !5367
 	%32 = shl i32 %28, 13, !dbg !5368
-	%33 = and i32 %32, 131072, !dbg !5368
+	%33 = and i32 %32, u0x20000, !dbg !5368
 	%34 = shl i32 %28, 7, !dbg !5369
 	%35 = and i32 %34, 262144, !dbg !5369
 	%36 = or i32 %33, %35, !dbg !5370
@@ -7506,7 +7506,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	call void @llvm.dbg.value(metadata %struct.FTS* %0, metadata !4883, metadata !DIExpression()) #11, !dbg !5621
 	call void @llvm.dbg.value(metadata i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.165, i64 0, i64 0), metadata !4890, metadata !DIExpression()) #11, !dbg !5625
 	%268 = shl i32 %264, 13, !dbg !5626
-	%269 = and i32 %268, 131072, !dbg !5626
+	%269 = and i32 %268, u0x20000, !dbg !5626
 	%270 = shl i32 %264, 7, !dbg !5627
 	%271 = and i32 %270, 262144, !dbg !5627
 	%272 = or i32 %269, %271, !dbg !5628
@@ -8030,7 +8030,7 @@ define internal fastcc i32 @fts_safe_changedir(%struct.FTS*, %struct._ftsent* no
 	call void @llvm.dbg.value(metadata i8* %3, metadata !4890, metadata !DIExpression()) #11, !dbg !5937
 	%40 = load i32, i32* %12, align 8, !dbg !5938, !tbaa !4504
 	%41 = shl i32 %40, 13, !dbg !5938
-	%42 = and i32 %41, 131072, !dbg !5938
+	%42 = and i32 %41, u0x20000, !dbg !5938
 	%43 = shl i32 %40, 7, !dbg !5939
 	%44 = and i32 %43, 262144, !dbg !5939
 	%45 = or i32 %42, %44, !dbg !5940
@@ -8265,7 +8265,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	br label %42, !dbg !6087
 
 ; <label>:42
-	%43 = phi i32 [ 131072, %41 ], [ 0, %37 ], [ 0, %28 ]
+	%43 = phi i32 [ u0x20000, %41 ], [ 0, %37 ], [ 0, %28 ]
 	%44 = shl i32 %22, 7, !dbg !6087
 	%45 = and i32 %44, 262144, !dbg !6087
 	call void @llvm.dbg.value(metadata i32 %29, metadata !6090, metadata !DIExpression()) #11, !dbg !6104
@@ -9694,7 +9694,7 @@ define dso_local %struct._ftsent* @fts_children(%struct.FTS*, i32) local_unnamed
 	call void @llvm.dbg.value(metadata %struct.FTS* %0, metadata !4883, metadata !DIExpression()) #11, !dbg !6944
 	call void @llvm.dbg.value(metadata i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.165, i64 0, i64 0), metadata !4890, metadata !DIExpression()) #11, !dbg !6947
 	%59 = shl i32 %53, 13, !dbg !6948
-	%60 = and i32 %59, 131072, !dbg !6948
+	%60 = and i32 %59, u0x20000, !dbg !6948
 	%61 = shl i32 %53, 7, !dbg !6949
 	%62 = and i32 %61, 262144, !dbg !6949
 	%63 = or i32 %60, %62, !dbg !6950

@@ -4237,7 +4237,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 	br i1 %1802, label %1803, label %1866, !dbg !4052
 
 ; <label>:1803
-	%1804 = phi i64 [ %1799, %1798 ], [ 131072, %1800 ], !dbg !4053
+	%1804 = phi i64 [ %1799, %1798 ], [ u0x20000, %1800 ], !dbg !4053
 	call void @llvm.dbg.value(metadata i64 %1804, metadata !1135, metadata !DIExpression()) #13, !dbg !4047
 	%1805 = load i64, i64* @sort_buffer_size.size_bound, align 8, !dbg !4054, !tbaa !2301
 	%1806 = icmp eq i64 %1805, 0, !dbg !4054

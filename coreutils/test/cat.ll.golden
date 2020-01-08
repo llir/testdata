@@ -458,10 +458,10 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !2 {
 	%54 = and i1 %52, %53, !dbg !851
 	%55 = and i1 %52, %53, !dbg !851
 	%56 = xor i1 %55, true, !dbg !851
-	%57 = icmp slt i64 %51, 131072, !dbg !851
+	%57 = icmp slt i64 %51, u0x20000, !dbg !851
 	%58 = or i1 %57, %56, !dbg !851
 	%59 = select i1 %54, i64 %51, i64 512, !dbg !851
-	%60 = select i1 %58, i64 131072, i64 %59, !dbg !851
+	%60 = select i1 %58, i64 u0x20000, i64 %59, !dbg !851
 	call void @llvm.dbg.value(metadata i64 %60, metadata !68, metadata !DIExpression()), !dbg !856
 	%61 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 0, !dbg !857
 	%62 = load i64, i64* %61, align 8, !dbg !857, !tbaa !858
@@ -577,10 +577,10 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !2 {
 	%129 = and i1 %127, %128, !dbg !909
 	%130 = and i1 %127, %128, !dbg !909
 	%131 = xor i1 %130, true, !dbg !909
-	%132 = icmp slt i64 %126, 131072, !dbg !909
+	%132 = icmp slt i64 %126, u0x20000, !dbg !909
 	%133 = or i1 %132, %131, !dbg !909
 	%134 = select i1 %129, i64 %126, i64 512, !dbg !909
-	%135 = select i1 %133, i64 131072, i64 %134, !dbg !909
+	%135 = select i1 %133, i64 u0x20000, i64 %134, !dbg !909
 	call void @llvm.dbg.value(metadata i64 %135, metadata !69, metadata !DIExpression()), !dbg !910
 	%136 = load i32, i32* @input_desc, align 4, !dbg !911, !tbaa !849
 	call void @fdadvise(i32 %136, i64 0, i64 0, i32 2) #10, !dbg !912

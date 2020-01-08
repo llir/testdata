@@ -5070,7 +5070,7 @@ define internal fastcc zeroext i1 @invalidate_cache(i32, i64) unnamed_addr #7 !d
 	call void @llvm.dbg.value(metadata i64 %15, metadata !359, metadata !DIExpression()), !dbg !3786
 	%16 = and i64 %15, 131071, !dbg !3787
 	store i64 %16, i64* %9, align 8, !dbg !3788, !tbaa !1328
-	%17 = icmp ult i64 %15, 131072, !dbg !3789
+	%17 = icmp ult i64 %15, u0x20000, !dbg !3789
 	%18 = sub i64 %15, %16, !dbg !3791
 	call void @llvm.dbg.value(metadata i64 %18, metadata !356, metadata !DIExpression()), !dbg !3777
 	%19 = icmp eq i64 %18, 0, !dbg !3783

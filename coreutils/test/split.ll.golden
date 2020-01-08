@@ -1084,10 +1084,10 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 	%351 = and i1 %349, %350, !dbg !1438
 	%352 = and i1 %349, %350, !dbg !1438
 	%353 = xor i1 %352, true, !dbg !1438
-	%354 = icmp slt i64 %348, 131072, !dbg !1438
+	%354 = icmp slt i64 %348, u0x20000, !dbg !1438
 	%355 = or i1 %354, %353, !dbg !1438
 	%356 = select i1 %351, i64 %348, i64 512, !dbg !1438
-	%357 = select i1 %355, i64 131072, i64 %356, !dbg !1438
+	%357 = select i1 %355, i64 u0x20000, i64 %356, !dbg !1438
 	br label %358, !dbg !1438
 
 ; <label>:358

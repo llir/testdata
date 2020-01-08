@@ -4545,7 +4545,7 @@ define dso_local i32 @savewd_chdir(%struct.savewd* nocapture, i8*, i32, i32*) lo
 
 ; <label>:10
 	%11 = shl i32 %2, 17, !dbg !3653
-	%12 = and i32 %11, 131072, !dbg !3653
+	%12 = and i32 %11, u0x20000, !dbg !3653
 	%13 = or i32 %12, 67840, !dbg !3655
 	%14 = tail call i32 (i8*, i32, ...) @open(i8* %1, i32 %13) #9, !dbg !3656
 	call void @llvm.dbg.value(metadata i32 %14, metadata !3638, metadata !DIExpression()), !dbg !3647

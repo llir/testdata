@@ -4534,7 +4534,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	call void @llvm.dbg.value(metadata i8 %1220, metadata !2837, metadata !DIExpression()) #11, !dbg !4166
 	%1222 = load i32, i32* %129, align 4, !dbg !4167, !tbaa !1587
 	%1223 = icmp eq i32 %1222, 2, !dbg !4168
-	%1224 = select i1 %1223, i32 131072, i32 0, !dbg !4169
+	%1224 = select i1 %1223, i32 u0x20000, i32 0, !dbg !4169
 	%1225 = call i32 (i8*, i32, ...) @open_safer(i8* %0, i32 %1224) #11, !dbg !4170
 	call void @llvm.dbg.value(metadata i32 %1225, metadata !2832, metadata !DIExpression()) #11, !dbg !4171
 	%1226 = icmp slt i32 %1225, 0, !dbg !4172
@@ -4890,10 +4890,10 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1412 = and i1 %1410, %1411, !dbg !4385
 	%1413 = and i1 %1410, %1411, !dbg !4385
 	%1414 = xor i1 %1413, true, !dbg !4385
-	%1415 = icmp slt i64 %1409, 131072, !dbg !4385
+	%1415 = icmp slt i64 %1409, u0x20000, !dbg !4385
 	%1416 = or i1 %1415, %1414, !dbg !4385
 	%1417 = select i1 %1412, i64 %1409, i64 512, !dbg !4385
-	%1418 = select i1 %1416, i64 131072, i64 %1417, !dbg !4385
+	%1418 = select i1 %1416, i64 u0x20000, i64 %1417, !dbg !4385
 	call void @llvm.dbg.value(metadata i64 %1418, metadata !2853, metadata !DIExpression()) #11, !dbg !4387
 	call void @llvm.dbg.value(metadata i64 %1417, metadata !2854, metadata !DIExpression()) #11, !dbg !4388
 	call void @fdadvise(i32 %1225, i64 0, i64 0, i32 2) #11, !dbg !4389
@@ -4943,10 +4943,10 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1449 = and i1 %1447, %1448, !dbg !4420
 	%1450 = and i1 %1447, %1448, !dbg !4420
 	%1451 = xor i1 %1450, true, !dbg !4420
-	%1452 = icmp slt i64 %1446, 131072, !dbg !4420
+	%1452 = icmp slt i64 %1446, u0x20000, !dbg !4420
 	%1453 = or i1 %1452, %1451, !dbg !4420
 	%1454 = select i1 %1449, i64 %1446, i64 512, !dbg !4420
-	%1455 = select i1 %1453, i64 131072, i64 %1454, !dbg !4420
+	%1455 = select i1 %1453, i64 u0x20000, i64 %1454, !dbg !4420
 	%1456 = call i64 @buffer_lcm(i64 %1455, i64 %1418, i64 %1444) #17, !dbg !4421
 	call void @llvm.dbg.value(metadata i64 %1456, metadata !2860, metadata !DIExpression()) #11, !dbg !4422
 	br i1 %1422, label %1457, label %1463, !dbg !4423
@@ -22395,7 +22395,7 @@ attributes #19 = { cold }
 !339 = !DICompositeType(tag: DW_TAG_array_type, baseType: !57, size: 8192, elements: !340)
 !340 = !{!341}
 !341 = !DISubrange(count: 1024)
-!342 = !DIGlobalVariableExpression(var: !336, expr: !DIExpression(DW_OP_deref, DW_OP_constu, 18446744073709421568, DW_OP_mul, DW_OP_constu, 131072, DW_OP_plus, DW_OP_stack_value))
+!342 = !DIGlobalVariableExpression(var: !336, expr: !DIExpression(DW_OP_deref, DW_OP_constu, 18446744073709421568, DW_OP_mul, DW_OP_constu, u0x20000, DW_OP_plus, DW_OP_stack_value))
 !343 = !DIGlobalVariableExpression(var: !344, expr: !DIExpression())
 !344 = distinct !DIGlobalVariable(name: "src_to_dest", scope: !345, file: !346, line: 45, type: !105, isLocal: true, isDefinition: true)
 !345 = distinct !DICompileUnit(language: DW_LANG_C99, file: !346, producer: "clang version 7.0.0 (tags/RELEASE_700/final)", isOptimized: true, emissionKind: FullDebug, enums: !322, retainedTypes: !347, globals: !351)
