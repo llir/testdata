@@ -2146,7 +2146,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !101 {
 ; <label>:869
 	call void @llvm.dbg.value(metadata i64 %17, metadata !2139, metadata !DIExpression()) #12, !dbg !2145
 	call void @llvm.dbg.value(metadata i64 32, metadata !2144, metadata !DIExpression()) #12, !dbg !2149
-	%870 = icmp ugt i64 %232, 288230376151711743, !dbg !2150
+	%870 = icmp ugt i64 %232, u0x3FFFFFFFFFFFFFF, !dbg !2150
 	br i1 %870, label %871, label %872, !dbg !2152
 
 ; <label>:871

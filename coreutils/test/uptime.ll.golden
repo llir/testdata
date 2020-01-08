@@ -7336,7 +7336,7 @@ define dso_local i32 @read_utmp(i8*, i64* nocapture, %struct.utmpx** nocapture, 
 
 ; <label>:49
 	call void @llvm.dbg.value(metadata i64 %18, metadata !269, metadata !DIExpression()) #11, !dbg !5130
-	%50 = icmp ugt i64 %15, 24019198012642645, !dbg !5138
+	%50 = icmp ugt i64 %15, u0x55555555555555, !dbg !5138
 	br i1 %50, label %51, label %59, !dbg !5140
 
 ; <label>:51

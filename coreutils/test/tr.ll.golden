@@ -99,7 +99,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.97 = private unnamed_addr constant [12 x i8] c"i < N_CHARS\00", align 1
 @__PRETTY_FUNCTION__.get_next = private unnamed_addr constant [59 x i8] c"int get_next(struct Spec_list *, enum Upper_Lower_class *)\00", align 1
 @.str.98 = private unnamed_addr constant [49 x i8] c"is_char_class_member (p->u.char_class, s->state)\00", align 1
-@switch.table.is_char_class_member = private unnamed_addr constant [12 x i16] [i16 8, i16 1024, i16 1, i16 2, i16 2048, i16 -32768, i16 512, i16 u0x4000, i16 4, i16 u0x2000, i16 256, i16 4096]
+@switch.table.is_char_class_member = private unnamed_addr constant [12 x i16] [i16 8, i16 1024, i16 1, i16 2, i16 2048, i16 -32768, i16 512, i16 u0x4000, i16 4, i16 u0x2000, i16 256, i16 u0x1000]
 @.str.88 = private unnamed_addr constant [46 x i8] c"p->u.range.last_char >= p->u.range.first_char\00", align 1
 @__PRETTY_FUNCTION__.get_spec_stats = private unnamed_addr constant [40 x i8] c"void get_spec_stats(struct Spec_list *)\00", align 1
 @.str.89 = private unnamed_addr constant [27 x i8] c"too many characters in set\00", align 1
