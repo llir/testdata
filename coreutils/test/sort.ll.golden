@@ -18101,7 +18101,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	br i1 %48, label %49, label %54, !dbg !11682
 
 ; <label>:49
-	%50 = sub nsw i32 2147483647, %34, !dbg !11683
+	%50 = sub nsw i32 u0x7FFFFFFF, %34, !dbg !11683
 	%51 = icmp sgt i32 %47, %50, !dbg !11686
 	br i1 %51, label %68, label %52, !dbg !11687
 
@@ -18121,7 +18121,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	br i1 %58, label %59, label %63, !dbg !11696
 
 ; <label>:59
-	%60 = icmp eq i32 %34, 2147483647, !dbg !11697
+	%60 = icmp eq i32 %34, u0x7FFFFFFF, !dbg !11697
 	br i1 %60, label %68, label %61, !dbg !11700
 
 ; <label>:61
@@ -18212,9 +18212,9 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	br i1 %96, label %102, label %97, !dbg !11724
 
 ; <label>:97
-	%98 = icmp eq i32 %83, 2147483647, !dbg !11725
+	%98 = icmp eq i32 %83, u0x7FFFFFFF, !dbg !11725
 	%99 = add nsw i32 %83, 1, !dbg !11728
-	%100 = select i1 %98, i32 2147483647, i32 %99, !dbg !11729
+	%100 = select i1 %98, i32 u0x7FFFFFFF, i32 %99, !dbg !11729
 	%101 = sext i1 %98 to i3, !dbg !11729
 	br label %111, !dbg !11729
 
@@ -18227,9 +18227,9 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	br i1 %105, label %106, label %111, !dbg !11735
 
 ; <label>:106
-	%107 = icmp eq i32 %83, 2147483647, !dbg !11736
+	%107 = icmp eq i32 %83, u0x7FFFFFFF, !dbg !11736
 	%108 = add nsw i32 %83, 1, !dbg !11739
-	%109 = select i1 %107, i32 2147483647, i32 %108, !dbg !11740
+	%109 = select i1 %107, i32 u0x7FFFFFFF, i32 %108, !dbg !11740
 	%110 = sext i1 %107 to i3, !dbg !11740
 	br label %111, !dbg !11740
 
@@ -18251,7 +18251,7 @@ define dso_local i32 @mbsnwidth(i8*, i64, i32) local_unnamed_addr #7 !dbg !11602
 	br label %118, !dbg !11744
 
 ; <label>:118
-	%119 = phi i32 [ 0, %13 ], [ %115, %114 ], [ %117, %116 ], [ 2147483647, %75 ], [ 2147483647, %111 ]
+	%119 = phi i32 [ 0, %13 ], [ %115, %114 ], [ %117, %116 ], [ u0x7FFFFFFF, %75 ], [ u0x7FFFFFFF, %111 ]
 	ret i32 %119, !dbg !11744
 }
 
@@ -18909,7 +18909,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !12133 {
 ; <label>:13
 	call void @llvm.dbg.value(metadata i64 %9, metadata !12137, metadata !DIExpression()), !dbg !12143
 	%14 = icmp slt i64 %9, -2147483648, !dbg !12158
-	%15 = icmp slt i64 %9, 2147483647, !dbg !12159
+	%15 = icmp slt i64 %9, u0x7FFFFFFF, !dbg !12159
 	br i1 %15, label %16, label %19, !dbg !12160
 
 ; <label>:16
@@ -18919,7 +18919,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !12133 {
 
 ; <label>:19
 	%20 = phi i1 [ %17, %16 ], [ %14, %13 ]
-	%21 = phi i64 [ %18, %16 ], [ 2147483647, %13 ]
+	%21 = phi i64 [ %18, %16 ], [ u0x7FFFFFFF, %13 ]
 	%22 = trunc i64 %21 to i32, !dbg !12160
 	%23 = select i1 %20, i32 -2147483648, i32 %22, !dbg !12161
 	ret i32 %23, !dbg !12162
@@ -21263,7 +21263,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !13348
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !13327, metadata !DIExpression()), !dbg !13349
-	%15 = icmp eq i32 %0, 2147483647, !dbg !13350
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !13350
 	br i1 %15, label %16, label %17, !dbg !13352
 
 ; <label>:16

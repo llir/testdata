@@ -506,7 +506,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 ; <label>:19
 	%20 = load i8*, i8** @optarg, align 8, !dbg !1195, !tbaa !1034
 	%21 = tail call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.7, i64 0, i64 0), i32 5) #11, !dbg !1196
-	%22 = tail call i64 @xdectoimax(i8* %20, i64 0, i64 2147483647, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.2, i64 0, i64 0), i8* %21, i32 0) #11, !dbg !1197
+	%22 = tail call i64 @xdectoimax(i8* %20, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.2, i64 0, i64 0), i8* %21, i32 0) #11, !dbg !1197
 	%23 = trunc i64 %22 to i32, !dbg !1197
 	store volatile i32 %23, i32* @digits, align 4, !dbg !1198, !tbaa !1068
 	br label %27, !dbg !1199
@@ -5636,7 +5636,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.cstring* %7, @slotvec0, !dbg !4147
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !4126, metadata !DIExpression()), !dbg !4148
-	%15 = icmp eq i32 %0, 2147483647, !dbg !4149
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !4149
 	br i1 %15, label %16, label %17, !dbg !4151
 
 ; <label>:16

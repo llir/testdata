@@ -931,8 +931,8 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !743 {
 	%350 = icmp sgt i32 %290, %292, !dbg !1110
 	%351 = select i1 %350, i32 %290, i32 %292, !dbg !1110
 	call void @llvm.dbg.value(metadata i32 %351, metadata !71, metadata !DIExpression()) #12, !dbg !1111
-	%352 = icmp eq i32 %351, 2147483647, !dbg !1112
-	%353 = icmp eq i32 %294, 2147483647, !dbg !1113
+	%352 = icmp eq i32 %351, u0x7FFFFFFF, !dbg !1112
+	%353 = icmp eq i32 %294, u0x7FFFFFFF, !dbg !1113
 	%354 = or i1 %352, %353, !dbg !1114
 	br i1 %354, label %386, label %355, !dbg !1114
 
@@ -1592,7 +1592,7 @@ define internal fastcc void @scan_arg(%struct.operand* noalias sret, i8*) unname
 	%30 = getelementptr inbounds %struct.operand, %struct.operand* %0, i64 0, i32 1, !dbg !1522
 	store i64 0, i64* %30, align 16, !dbg !1523, !tbaa !1524
 	%31 = getelementptr inbounds %struct.operand, %struct.operand* %0, i64 0, i32 2, !dbg !1525
-	store i32 2147483647, i32* %31, align 8, !dbg !1526, !tbaa !1527
+	store i32 u0x7FFFFFFF, i32* %31, align 8, !dbg !1526, !tbaa !1527
 	%32 = tail call i8* @strchr(i8* %19, i32 46) #8, !dbg !1528
 	call void @llvm.dbg.value(metadata i8* %32, metadata !1481, metadata !DIExpression()), !dbg !1529
 	%33 = icmp ne i8* %32, null, !dbg !1530
@@ -4248,7 +4248,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !2894
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !2873, metadata !DIExpression()), !dbg !2895
-	%15 = icmp eq i32 %0, 2147483647, !dbg !2896
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !2896
 	br i1 %15, label %16, label %17, !dbg !2898
 
 ; <label>:16

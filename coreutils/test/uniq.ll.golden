@@ -2482,7 +2482,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !2285 {
 ; <label>:13
 	call void @llvm.dbg.value(metadata i64 %9, metadata !2289, metadata !DIExpression()), !dbg !2295
 	%14 = icmp slt i64 %9, -2147483648, !dbg !2310
-	%15 = icmp slt i64 %9, 2147483647, !dbg !2311
+	%15 = icmp slt i64 %9, u0x7FFFFFFF, !dbg !2311
 	br i1 %15, label %16, label %19, !dbg !2312
 
 ; <label>:16
@@ -2492,7 +2492,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !2285 {
 
 ; <label>:19
 	%20 = phi i1 [ %17, %16 ], [ %14, %13 ]
-	%21 = phi i64 [ %18, %16 ], [ 2147483647, %13 ]
+	%21 = phi i64 [ %18, %16 ], [ u0x7FFFFFFF, %13 ]
 	%22 = trunc i64 %21 to i32, !dbg !2312
 	%23 = select i1 %20, i32 -2147483648, i32 %22, !dbg !2313
 	ret i32 %23, !dbg !2314
@@ -4842,7 +4842,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !3504
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !3483, metadata !DIExpression()), !dbg !3505
-	%15 = icmp eq i32 %0, 2147483647, !dbg !3506
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !3506
 	br i1 %15, label %16, label %17, !dbg !3508
 
 ; <label>:16

@@ -1136,7 +1136,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !60 {
 	%165 = load i64, i64* %5, align 8, !dbg !1068
 	call void @llvm.dbg.value(metadata i64 %165, metadata !1030, metadata !DIExpression()) #9, !dbg !1065
 	%166 = add i64 %165, -1, !dbg !1069
-	%167 = icmp ult i64 %166, 2147483647, !dbg !1069
+	%167 = icmp ult i64 %166, u0x7FFFFFFF, !dbg !1069
 	%168 = and i1 %164, %167, !dbg !1069
 	br i1 %168, label %170, label %169, !dbg !1069
 
@@ -2967,9 +2967,9 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 
 ; <label>:475
 	call void @llvm.dbg.value(metadata i8* %469, metadata !1976, metadata !DIExpression()) #9, !dbg !2109
-	call void @llvm.dbg.value(metadata i64 2147483647, metadata !1981, metadata !DIExpression()) #9, !dbg !2111
+	call void @llvm.dbg.value(metadata i64 u0x7FFFFFFF, metadata !1981, metadata !DIExpression()) #9, !dbg !2111
 	%476 = call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.255, i64 0, i64 0), i32 5) #9, !dbg !2112
-	%477 = call i64 @xnumtoumax(i8* nonnull %469, i32 0, i64 0, i64 2147483647, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %476, i32 0) #9, !dbg !2113
+	%477 = call i64 @xnumtoumax(i8* nonnull %469, i32 0, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %476, i32 0) #9, !dbg !2113
 	%478 = trunc i64 %477 to i32, !dbg !2114
 	call fastcc void @set_window_size(i32 %478, i32 -1, i8* %1), !dbg !2115
 	br label %695, !dbg !2116
@@ -3009,9 +3009,9 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 
 ; <label>:497
 	call void @llvm.dbg.value(metadata i8* %491, metadata !1976, metadata !DIExpression()) #9, !dbg !2129
-	call void @llvm.dbg.value(metadata i64 2147483647, metadata !1981, metadata !DIExpression()) #9, !dbg !2131
+	call void @llvm.dbg.value(metadata i64 u0x7FFFFFFF, metadata !1981, metadata !DIExpression()) #9, !dbg !2131
 	%498 = call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.255, i64 0, i64 0), i32 5) #9, !dbg !2132
-	%499 = call i64 @xnumtoumax(i8* nonnull %491, i32 0, i64 0, i64 2147483647, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %498, i32 0) #9, !dbg !2133
+	%499 = call i64 @xnumtoumax(i8* nonnull %491, i32 0, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.254, i64 0, i64 0), i8* %498, i32 0) #9, !dbg !2133
 	%500 = trunc i64 %499 to i32, !dbg !2134
 	call fastcc void @set_window_size(i32 -1, i32 %500, i8* %1), !dbg !2135
 	br label %695, !dbg !2136
@@ -3057,7 +3057,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%519 = load i64, i64* %13, align 8, !dbg !2164
 	call void @llvm.dbg.value(metadata i64 %519, metadata !1030, metadata !DIExpression()) #9, !dbg !2161
 	%520 = add i64 %519, -1, !dbg !2165
-	%521 = icmp ult i64 %520, 2147483647, !dbg !2165
+	%521 = icmp ult i64 %520, u0x7FFFFFFF, !dbg !2165
 	%522 = and i1 %518, %521, !dbg !2165
 	br i1 %522, label %524, label %523, !dbg !2165
 
@@ -3169,7 +3169,7 @@ define internal fastcc void @apply_settings(i1 zeroext, i8*, i8** nocapture read
 	%571 = load i64, i64* %11, align 8, !dbg !2229
 	call void @llvm.dbg.value(metadata i64 %571, metadata !1030, metadata !DIExpression()) #9, !dbg !2226
 	%572 = add i64 %571, -1, !dbg !2230
-	%573 = icmp ult i64 %572, 2147483647, !dbg !2230
+	%573 = icmp ult i64 %572, u0x7FFFFFFF, !dbg !2230
 	%574 = and i1 %570, %573, !dbg !2230
 	br i1 %574, label %576, label %575, !dbg !2230
 
@@ -6491,7 +6491,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !3881
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !3860, metadata !DIExpression()), !dbg !3882
-	%15 = icmp eq i32 %0, 2147483647, !dbg !3883
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !3883
 	br i1 %15, label %16, label %17, !dbg !3885
 
 ; <label>:16

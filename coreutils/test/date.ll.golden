@@ -1975,7 +1975,7 @@ define internal fastcc i64 @__strftime_internal(%struct._IO_FILE*, i8*, %struct.
 	br label %95
 
 ; <label>:95
-	%96 = phi i32 [ %94, %90 ], [ 2147483647, %81 ], [ 2147483647, %86 ], !dbg !2419
+	%96 = phi i32 [ %94, %90 ], [ u0x7FFFFFFF, %81 ], [ u0x7FFFFFFF, %86 ], !dbg !2419
 	call void @llvm.dbg.value(metadata i32 %96, metadata !2090, metadata !DIExpression()), !dbg !2381
 	%97 = getelementptr inbounds i8, i8* %84, i64 1, !dbg !2420
 	call void @llvm.dbg.value(metadata i8* %97, metadata !2071, metadata !DIExpression()), !dbg !2368
@@ -7710,7 +7710,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %9, label %11, label %15, !dbg !4843
 
 ; <label>:11
-	%12 = add nsw i32 %8, 2147483647, !dbg !4843
+	%12 = add nsw i32 %8, u0x7FFFFFFF, !dbg !4843
 	%13 = load i32, i32* %7, align 8, !dbg !4843, !tbaa !4744
 	%14 = icmp slt i32 %12, %13, !dbg !4843
 	br i1 %14, label %21, label %19, !dbg !4843
@@ -7911,7 +7911,7 @@ define internal fastcc zeroext i1 @apply_relative_time(%struct.parser_control* n
 	br i1 %144, label %151, label %149, !dbg !4863
 
 ; <label>:145
-	%146 = sub nsw i32 2147483647, %8, !dbg !4863
+	%146 = sub nsw i32 u0x7FFFFFFF, %8, !dbg !4863
 	%147 = load i32, i32* %7, align 8, !dbg !4863, !tbaa !4744
 	%148 = icmp slt i32 %146, %147, !dbg !4863
 	br i1 %148, label %151, label %149, !dbg !4863
@@ -8945,7 +8945,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%398 = phi i32 [ %391, %387 ], [ %386, %381 ]
 	store i32 %398, i32* %367, align 4, !dbg !5408, !tbaa !1265
 	%399 = load i64, i64* %126, align 8, !dbg !5414, !tbaa !4071
-	%400 = add i64 %399, 2147483647, !dbg !5414
+	%400 = add i64 %399, u0x7FFFFFFF, !dbg !5414
 	%401 = icmp ugt i64 %400, u0xFFFFFFFF, !dbg !5414
 	%402 = trunc i64 %399 to i32, !dbg !5414
 	%403 = add i32 %402, -1, !dbg !5414
@@ -14247,7 +14247,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !8125
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !8104, metadata !DIExpression()), !dbg !8126
-	%15 = icmp eq i32 %0, 2147483647, !dbg !8127
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !8127
 	br i1 %15, label %16, label %17, !dbg !8129
 
 ; <label>:16
@@ -17005,7 +17005,7 @@ define internal fastcc i64 @__strftime_internal.361(i8*, i64, i8* readonly, %str
 	br label %97
 
 ; <label>:97
-	%98 = phi i32 [ %96, %92 ], [ 2147483647, %83 ], [ 2147483647, %88 ], !dbg !10396
+	%98 = phi i32 [ %96, %92 ], [ u0x7FFFFFFF, %83 ], [ u0x7FFFFFFF, %88 ], !dbg !10396
 	call void @llvm.dbg.value(metadata i32 %98, metadata !10143, metadata !DIExpression()), !dbg !10356
 	%99 = getelementptr inbounds i8, i8* %86, i64 1, !dbg !10397
 	call void @llvm.dbg.value(metadata i8* %99, metadata !10127, metadata !DIExpression()), !dbg !10343

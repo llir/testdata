@@ -3266,8 +3266,8 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 ; <label>:1
 	call void @llvm.dbg.value(metadata i64 8192, metadata !2569, metadata !DIExpression()), !dbg !2581
 	call void @llvm.dbg.value(metadata i64 (i8*, i64)* %0, metadata !2570, metadata !DIExpression()), !dbg !2582
-	call void @llvm.dbg.value(metadata i32 2147483647, metadata !2571, metadata !DIExpression()), !dbg !2583
-	call void @llvm.dbg.value(metadata i32 2147483647, metadata !2573, metadata !DIExpression()), !dbg !2584
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFF, metadata !2571, metadata !DIExpression()), !dbg !2583
+	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFF, metadata !2573, metadata !DIExpression()), !dbg !2584
 	call void @llvm.dbg.value(metadata i64 0, metadata !2574, metadata !DIExpression()), !dbg !2585
 	call void @llvm.dbg.value(metadata i64 0, metadata !2575, metadata !DIExpression()), !dbg !2586
 	br label %2, !dbg !2587
@@ -3275,7 +3275,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 ; <label>:2
 	%3 = phi i64 [ 0, %1 ], [ %81, %80 ], !dbg !2588
 	%4 = phi i64 [ 0, %1 ], [ %12, %80 ], !dbg !2590
-	%5 = phi i32 [ 2147483647, %1 ], [ %82, %80 ], !dbg !2593
+	%5 = phi i32 [ u0x7FFFFFFF, %1 ], [ %82, %80 ], !dbg !2593
 	call void @llvm.dbg.value(metadata i32 %5, metadata !2573, metadata !DIExpression()), !dbg !2584
 	call void @llvm.dbg.value(metadata i64 %4, metadata !2575, metadata !DIExpression()), !dbg !2586
 	call void @llvm.dbg.value(metadata i64 %3, metadata !2574, metadata !DIExpression()), !dbg !2585
@@ -3294,7 +3294,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 	call void @llvm.dbg.value(metadata i64 %12, metadata !2575, metadata !DIExpression()), !dbg !2586
 	call void @llvm.dbg.value(metadata i64 %11, metadata !2574, metadata !DIExpression()), !dbg !2585
 	call void @llvm.dbg.value(metadata i64 %11, metadata !2576, metadata !DIExpression()), !dbg !2605
-	%13 = icmp eq i32 %5, 2147483647, !dbg !2606
+	%13 = icmp eq i32 %5, u0x7FFFFFFF, !dbg !2606
 	br i1 %13, label %14, label %76, !dbg !2607
 
 ; <label>:14
@@ -3376,7 +3376,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 
 ; <label>:60
 	%61 = phi i64 [ %40, %42 ], [ %59, %57 ], !dbg !2642
-	%62 = phi i32 [ 2147483647, %42 ], [ %47, %57 ], !dbg !2642
+	%62 = phi i32 [ u0x7FFFFFFF, %42 ], [ %47, %57 ], !dbg !2642
 	%63 = phi i64 [ %43, %42 ], [ %58, %57 ], !dbg !2644
 	call void @llvm.dbg.value(metadata i64 %63, metadata !2578, metadata !DIExpression()), !dbg !2629
 	call void @llvm.dbg.value(metadata i32 %62, metadata !2573, metadata !DIExpression()), !dbg !2584
@@ -3401,7 +3401,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 ; <label>:74
 	call void @llvm.dbg.value(metadata i32 %62, metadata !2573, metadata !DIExpression()), !dbg !2584
 	call void @llvm.dbg.value(metadata i64 %61, metadata !2574, metadata !DIExpression()), !dbg !2585
-	%75 = icmp eq i32 %62, 2147483647, !dbg !2652
+	%75 = icmp eq i32 %62, u0x7FFFFFFF, !dbg !2652
 	br i1 %75, label %80, label %76, !dbg !2653
 
 ; <label>:76
@@ -3413,7 +3413,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 
 ; <label>:80
 	%81 = phi i64 [ %61, %74 ], [ %78, %76 ], [ %90, %89 ], [ %84, %83 ]
-	%82 = phi i32 [ 2147483647, %74 ], [ %77, %76 ], [ %77, %89 ], [ 2147483647, %83 ]
+	%82 = phi i32 [ u0x7FFFFFFF, %74 ], [ %77, %76 ], [ %77, %89 ], [ u0x7FFFFFFF, %83 ]
 	br label %2, !dbg !2584, !llvm.loop !2658
 
 ; <label>:83
@@ -6293,7 +6293,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !4167
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !4146, metadata !DIExpression()), !dbg !4168
-	%15 = icmp eq i32 %0, 2147483647, !dbg !4169
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !4169
 	br i1 %15, label %16, label %17, !dbg !4171
 
 ; <label>:16

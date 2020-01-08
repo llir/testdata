@@ -3501,7 +3501,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !2470
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !2449, metadata !DIExpression()), !dbg !2471
-	%15 = icmp eq i32 %0, 2147483647, !dbg !2472
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !2472
 	br i1 %15, label %16, label %17, !dbg !2474
 
 ; <label>:16

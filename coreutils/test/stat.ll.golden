@@ -10758,8 +10758,8 @@ define internal fastcc void @out_epoch_sec(i8*, i64, i64, i64) unnamed_addr #7 !
 ; <label>:17
 	%18 = tail call i64 @strtol(i8* nocapture nonnull %12, i8** null, i32 10) #10, !dbg !3982
 	call void @llvm.dbg.value(metadata i64 %18, metadata !3928, metadata !DIExpression()), !dbg !3983
-	%19 = icmp slt i64 %18, 2147483647, !dbg !3984
-	%20 = select i1 %19, i64 %18, i64 2147483647, !dbg !3984
+	%19 = icmp slt i64 %18, u0x7FFFFFFF, !dbg !3984
+	%20 = select i1 %19, i64 %18, i64 u0x7FFFFFFF, !dbg !3984
 	%21 = trunc i64 %20 to i32, !dbg !3985
 	call void @llvm.dbg.value(metadata i32 %21, metadata !3926, metadata !DIExpression()), !dbg !3973
 	call void @llvm.dbg.value(metadata i32 %21, metadata !3926, metadata !DIExpression()), !dbg !3973
@@ -10795,8 +10795,8 @@ define internal fastcc void @out_epoch_sec(i8*, i64, i64, i64) unnamed_addr #7 !
 ; <label>:39
 	%40 = tail call i64 @strtol(i8* nocapture nonnull %33, i8** null, i32 10) #10, !dbg !3998
 	call void @llvm.dbg.value(metadata i64 %40, metadata !3936, metadata !DIExpression()), !dbg !3999
-	%41 = icmp slt i64 %40, 2147483647, !dbg !4000
-	%42 = select i1 %41, i64 %40, i64 2147483647, !dbg !4000
+	%41 = icmp slt i64 %40, u0x7FFFFFFF, !dbg !4000
+	%42 = select i1 %41, i64 %40, i64 u0x7FFFFFFF, !dbg !4000
 	%43 = trunc i64 %42 to i32, !dbg !4001
 	call void @llvm.dbg.value(metadata i32 %43, metadata !3925, metadata !DIExpression()), !dbg !3972
 	%44 = icmp sgt i32 %43, 1, !dbg !4002
@@ -12897,7 +12897,7 @@ define internal fastcc i64 @__strftime_internal(i8*, i64, i8* readonly, %struct.
 	br label %97
 
 ; <label>:97
-	%98 = phi i32 [ %96, %92 ], [ 2147483647, %83 ], [ 2147483647, %88 ], !dbg !5429
+	%98 = phi i32 [ %96, %92 ], [ u0x7FFFFFFF, %83 ], [ u0x7FFFFFFF, %88 ], !dbg !5429
 	call void @llvm.dbg.value(metadata i32 %98, metadata !5167, metadata !DIExpression()), !dbg !5389
 	%99 = getelementptr inbounds i8, i8* %86, i64 1, !dbg !5430
 	call void @llvm.dbg.value(metadata i8* %99, metadata !5148, metadata !DIExpression()), !dbg !5376
@@ -17590,7 +17590,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !7305
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !7284, metadata !DIExpression()), !dbg !7306
-	%15 = icmp eq i32 %0, 2147483647, !dbg !7307
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !7307
 	br i1 %15, label %16, label %17, !dbg !7309
 
 ; <label>:16
@@ -21491,7 +21491,7 @@ define internal fastcc noalias i8* @xstrcat(i64, %struct.__va_list_tag*) unnamed
 ; <label>:38
 	call void @llvm.dbg.value(metadata i64 %35, metadata !9888, metadata !DIExpression()), !dbg !9904
 	call void @llvm.va_end(i8* nonnull %4), !dbg !9909
-	%39 = icmp ugt i64 %35, 2147483647, !dbg !9935
+	%39 = icmp ugt i64 %35, u0x7FFFFFFF, !dbg !9935
 	br i1 %39, label %40, label %42, !dbg !9937
 
 ; <label>:40

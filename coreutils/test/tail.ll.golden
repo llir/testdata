@@ -731,7 +731,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 ; <label>:154
 	%155 = load i8*, i8** @optarg, align 8, !dbg !1290, !tbaa !937
 	%156 = call i8* @dcgettext(i8* null, i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.51, i64 0, i64 0), i32 5) #12, !dbg !1291
-	%157 = call i64 @xdectoumax(i8* %155, i64 0, i64 2147483647, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.14, i64 0, i64 0), i8* %156, i32 0) #12, !dbg !1292
+	%157 = call i64 @xdectoumax(i8* %155, i64 0, i64 u0x7FFFFFFF, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.14, i64 0, i64 0), i8* %156, i32 0) #12, !dbg !1292
 	%158 = trunc i64 %157 to i32, !dbg !1292
 	store i32 %158, i32* @pid, align 4, !dbg !1293, !tbaa !1219
 	br label %122, !dbg !1294
@@ -8576,7 +8576,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !6046 {
 ; <label>:13
 	call void @llvm.dbg.value(metadata i64 %9, metadata !6051, metadata !DIExpression()), !dbg !6057
 	%14 = icmp slt i64 %9, -2147483648, !dbg !6072
-	%15 = icmp slt i64 %9, 2147483647, !dbg !6073
+	%15 = icmp slt i64 %9, u0x7FFFFFFF, !dbg !6073
 	br i1 %15, label %16, label %19, !dbg !6074
 
 ; <label>:16
@@ -8586,7 +8586,7 @@ define dso_local i32 @posix2_version() local_unnamed_addr #7 !dbg !6046 {
 
 ; <label>:19
 	%20 = phi i1 [ %17, %16 ], [ %14, %13 ]
-	%21 = phi i64 [ %18, %16 ], [ 2147483647, %13 ]
+	%21 = phi i64 [ %18, %16 ], [ u0x7FFFFFFF, %13 ]
 	%22 = trunc i64 %21 to i32, !dbg !6074
 	%23 = select i1 %20, i32 -2147483648, i32 %22, !dbg !6075
 	ret i32 %23, !dbg !6076
@@ -10938,7 +10938,7 @@ define internal fastcc i8* @quotearg_n_options(i32, i8*, i64, %struct.quoting_op
 ; <label>:13
 	%14 = icmp eq %struct.slotvec* %7, @slotvec0, !dbg !7267
 	call void @llvm.dbg.value(metadata i32 u0x7FFFFFFE, metadata !7246, metadata !DIExpression()), !dbg !7268
-	%15 = icmp eq i32 %0, 2147483647, !dbg !7269
+	%15 = icmp eq i32 %0, u0x7FFFFFFF, !dbg !7269
 	br i1 %15, label %16, label %17, !dbg !7271
 
 ; <label>:16
