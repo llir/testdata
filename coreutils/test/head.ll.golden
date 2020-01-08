@@ -2073,7 +2073,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 ; <label>:780
 	%781 = load i32, i32* %167, align 8, !dbg !1846, !tbaa !1208
 	%782 = and i32 %781, u0xF000, !dbg !1846
-	%783 = icmp eq i32 %782, 32768, !dbg !1846
+	%783 = icmp eq i32 %782, u0x8000, !dbg !1846
 	br i1 %783, label %784, label %786, !dbg !1847
 
 ; <label>:784

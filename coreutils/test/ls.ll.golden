@@ -4611,7 +4611,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%264 = getelementptr inbounds %struct.fileinfo, %struct.fileinfo* %32, i64 %31, i32 3, i32 3, !dbg !4155
 	%265 = load i32, i32* %264, align 8, !dbg !4155, !tbaa !4113
 	%266 = and i32 %265, u0xF000, !dbg !4155
-	%267 = icmp ne i32 %266, 32768, !dbg !4155
+	%267 = icmp ne i32 %266, u0x8000, !dbg !4155
 	%268 = load i8, i8* @print_with_color, align 1, !dbg !4156
 	%269 = icmp eq i8 %268, 0, !dbg !4156
 	%270 = or i1 %267, %269, !dbg !4157

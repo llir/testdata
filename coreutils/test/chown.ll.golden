@@ -197,7 +197,7 @@ target triple = "x86_64-pc-linux-gnu"
 @__PRETTY_FUNCTION__.xstrtoul = private unnamed_addr constant [81 x i8] c"strtol_error xstrtoul(const char *, char **, int, unsigned long *, const char *)\00", align 1
 @.str.185 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.190 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 32768, i32 0, i32 40960, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 u0x8000, i32 0, i32 40960, i32 0, i32 49152]
 @.str.201 = private unnamed_addr constant [24 x i8] c"state->magic == 9827862\00", align 1
 @.str.1.202 = private unnamed_addr constant [18 x i8] c"lib/cycle-check.c\00", align 1
 @__PRETTY_FUNCTION__.cycle_check = private unnamed_addr constant [67 x i8] c"_Bool cycle_check(struct cycle_check_state *, const struct stat *)\00", align 1
@@ -1287,7 +1287,7 @@ define dso_local zeroext i1 @chown_files(i8**, i32, i32, i32, i32, i32, %struct.
 ; <label>:253
 	%254 = load i32, i32* %240, align 8, !dbg !1796, !tbaa !1672
 	%255 = and i32 %254, u0xF000, !dbg !1796
-	%256 = icmp eq i32 %255, 32768, !dbg !1796
+	%256 = icmp eq i32 %255, u0x8000, !dbg !1796
 	br i1 %256, label %257, label %298, !dbg !1797
 
 ; <label>:257

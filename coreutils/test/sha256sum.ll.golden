@@ -6509,12 +6509,12 @@ define dso_local i32 @sha256_stream(%struct._IO_FILE* nocapture, i8*) local_unna
 
 ; <label>:19
 	%20 = getelementptr inbounds i8, i8* %4, i64 %15, !dbg !2327
-	%21 = sub i64 32768, %15, !dbg !2327
+	%21 = sub i64 u0x8000, %15, !dbg !2327
 	%22 = tail call i64 @fread_unlocked(i8* nonnull %20, i64 1, i64 %21, %struct._IO_FILE* nonnull %0) #10, !dbg !2327
 	call void @llvm.dbg.value(metadata i64 %22, metadata !2288, metadata !DIExpression()) #10, !dbg !2328
 	%23 = add i64 %22, %15, !dbg !2329
 	call void @llvm.dbg.value(metadata i64 %23, metadata !2287, metadata !DIExpression()) #10, !dbg !2315
-	%24 = icmp eq i64 %23, 32768, !dbg !2330
+	%24 = icmp eq i64 %23, u0x8000, !dbg !2330
 	br i1 %24, label %34, label %25, !dbg !2332
 
 ; <label>:25
@@ -6539,7 +6539,7 @@ define dso_local i32 @sha256_stream(%struct._IO_FILE* nocapture, i8*) local_unna
 
 ; <label>:34
 	call void @llvm.dbg.value(metadata %struct.sha256_ctx* %3, metadata !2286, metadata !DIExpression(DW_OP_deref)) #10, !dbg !2303
-	call void @sha256_process_block(i8* nonnull %4, i64 32768, %struct.sha256_ctx* nonnull %3) #10, !dbg !2351
+	call void @sha256_process_block(i8* nonnull %4, i64 u0x8000, %struct.sha256_ctx* nonnull %3) #10, !dbg !2351
 	call void @llvm.dbg.value(metadata i64 %23, metadata !2287, metadata !DIExpression()) #10, !dbg !2315
 	br label %27
 
@@ -6759,12 +6759,12 @@ define dso_local i32 @sha224_stream(%struct._IO_FILE* nocapture, i8*) local_unna
 
 ; <label>:19
 	%20 = getelementptr inbounds i8, i8* %4, i64 %15, !dbg !2481
-	%21 = sub i64 32768, %15, !dbg !2481
+	%21 = sub i64 u0x8000, %15, !dbg !2481
 	%22 = tail call i64 @fread_unlocked(i8* nonnull %20, i64 1, i64 %21, %struct._IO_FILE* nonnull %0) #10, !dbg !2481
 	call void @llvm.dbg.value(metadata i64 %22, metadata !2288, metadata !DIExpression()) #10, !dbg !2482
 	%23 = add i64 %22, %15, !dbg !2483
 	call void @llvm.dbg.value(metadata i64 %23, metadata !2287, metadata !DIExpression()) #10, !dbg !2475
-	%24 = icmp eq i64 %23, 32768, !dbg !2484
+	%24 = icmp eq i64 %23, u0x8000, !dbg !2484
 	br i1 %24, label %34, label %25, !dbg !2485
 
 ; <label>:25
@@ -6789,7 +6789,7 @@ define dso_local i32 @sha224_stream(%struct._IO_FILE* nocapture, i8*) local_unna
 
 ; <label>:34
 	call void @llvm.dbg.value(metadata %struct.sha256_ctx* %3, metadata !2286, metadata !DIExpression(DW_OP_deref)) #10, !dbg !2464
-	call void @sha256_process_block(i8* nonnull %4, i64 32768, %struct.sha256_ctx* nonnull %3) #10, !dbg !2494
+	call void @sha256_process_block(i8* nonnull %4, i64 u0x8000, %struct.sha256_ctx* nonnull %3) #10, !dbg !2494
 	call void @llvm.dbg.value(metadata i64 %23, metadata !2287, metadata !DIExpression()) #10, !dbg !2475
 	br label %27
 

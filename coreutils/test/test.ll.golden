@@ -1904,7 +1904,7 @@ define internal fastcc zeroext i1 @unary_operator() unnamed_addr #7 !dbg !1488 {
 	%118 = getelementptr inbounds %struct.stat, %struct.stat* %1, i64 0, i32 3, !dbg !1635
 	%119 = load i32, i32* %118, align 8, !dbg !1635, !tbaa !1636
 	%120 = and i32 %119, u0xF000, !dbg !1635
-	%121 = icmp eq i32 %120, 32768, !dbg !1635
+	%121 = icmp eq i32 %120, u0x8000, !dbg !1635
 	br label %336
 
 ; <label>:122

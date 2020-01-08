@@ -4167,12 +4167,12 @@ define dso_local i32 @sha1_stream(%struct._IO_FILE* nocapture, i8* nocapture) lo
 
 ; <label>:20
 	%21 = getelementptr inbounds i8, i8* %4, i64 %16, !dbg !2271
-	%22 = sub i64 32768, %16, !dbg !2271
+	%22 = sub i64 u0x8000, %16, !dbg !2271
 	%23 = tail call i64 @fread_unlocked(i8* nonnull %21, i64 1, i64 %22, %struct._IO_FILE* nonnull %0), !dbg !2271
 	call void @llvm.dbg.value(metadata i64 %23, metadata !2237, metadata !DIExpression()), !dbg !2272
 	%24 = add i64 %23, %16, !dbg !2273
 	call void @llvm.dbg.value(metadata i64 %24, metadata !2236, metadata !DIExpression()), !dbg !2259
-	%25 = icmp eq i64 %24, 32768, !dbg !2274
+	%25 = icmp eq i64 %24, u0x8000, !dbg !2274
 	br i1 %25, label %35, label %26, !dbg !2276
 
 ; <label>:26
@@ -4197,7 +4197,7 @@ define dso_local i32 @sha1_stream(%struct._IO_FILE* nocapture, i8* nocapture) lo
 
 ; <label>:35
 	call void @llvm.dbg.value(metadata %struct.sha1_ctx* %3, metadata !2235, metadata !DIExpression(DW_OP_deref)), !dbg !2247
-	call void @sha1_process_block(i8* nonnull %4, i64 32768, %struct.sha1_ctx* nonnull %3), !dbg !2295
+	call void @sha1_process_block(i8* nonnull %4, i64 u0x8000, %struct.sha1_ctx* nonnull %3), !dbg !2295
 	call void @llvm.dbg.value(metadata i64 %24, metadata !2236, metadata !DIExpression()), !dbg !2259
 	br label %28
 

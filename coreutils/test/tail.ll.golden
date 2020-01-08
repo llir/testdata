@@ -947,7 +947,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%268 = getelementptr inbounds %struct.stat, %struct.stat* %18, i64 0, i32 3, !dbg !1406
 	%269 = load i32, i32* %268, align 8, !dbg !1406, !tbaa !1407
 	%270 = and i32 %269, u0xF000, !dbg !1406
-	%271 = icmp eq i32 %270, 32768, !dbg !1406
+	%271 = icmp eq i32 %270, u0x8000, !dbg !1406
 	br i1 %271, label %272, label %277, !dbg !1410
 
 ; <label>:272
@@ -1306,7 +1306,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 ; <label>:451
 	%452 = load i32, i32* %321, align 8, !dbg !1595, !tbaa !1407
 	%453 = and i32 %452, u0xF000, !dbg !1595
-	%454 = icmp eq i32 %453, 32768, !dbg !1595
+	%454 = icmp eq i32 %453, u0x8000, !dbg !1595
 	br i1 %454, label %455, label %550, !dbg !1596
 
 ; <label>:455
@@ -1904,7 +1904,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 ; <label>:741
 	%742 = load i32, i32* %318, align 8, !dbg !1913, !tbaa !1407
 	%743 = and i32 %742, u0xF000, !dbg !1913
-	%744 = icmp eq i32 %743, 32768, !dbg !1913
+	%744 = icmp eq i32 %743, u0x8000, !dbg !1913
 	br i1 %744, label %745, label %748, !dbg !1914
 
 ; <label>:745
@@ -3666,7 +3666,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%1649 = bitcast i8* %1648 to i32*, !dbg !3074
 	%1650 = load i32, i32* %1649, align 8, !dbg !3074, !tbaa !2237
 	%1651 = and i32 %1650, u0xF000, !dbg !3074
-	%1652 = icmp ne i32 %1651, 32768, !dbg !3074
+	%1652 = icmp ne i32 %1651, u0x8000, !dbg !3074
 	call void @llvm.dbg.value(metadata i8 0, metadata !3042, metadata !DIExpression()) #12, !dbg !3072
 	%1653 = zext i1 %1652 to i32
 	%1654 = select i1 %1652, i32 0, i32 2048
@@ -3769,7 +3769,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 ; <label>:1710
 	%1711 = load i32, i32* %1696, align 8, !dbg !3115, !tbaa !2237
 	%1712 = and i32 %1711, u0xF000, !dbg !3115
-	%1713 = icmp eq i32 %1712, 32768, !dbg !3115
+	%1713 = icmp eq i32 %1712, u0x8000, !dbg !3115
 	%1714 = tail call i32* @__errno_location() #17, !dbg !3118
 	%1715 = load i32, i32* %1714, align 4, !dbg !3118, !tbaa !1219
 	%1716 = icmp eq i32 %1715, 1, !dbg !3119
@@ -3833,7 +3833,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 
 ; <label>:1741
 	%1742 = and i32 %1738, u0xF000, !dbg !3150
-	%1743 = icmp eq i32 %1742, 32768, !dbg !3150
+	%1743 = icmp eq i32 %1742, u0x8000, !dbg !3150
 	br i1 %1743, label %1744, label %1749, !dbg !3151
 
 ; <label>:1744
@@ -3895,7 +3895,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%1777 = getelementptr inbounds %struct.File_spec, %struct.File_spec* %295, i64 %1676, i32 15, !dbg !3194
 	store i64 0, i64* %1777, align 8, !dbg !3195, !tbaa !2243
 	%1778 = and i32 %1697, u0xF000, !dbg !3196
-	%1779 = icmp eq i32 %1778, 32768, !dbg !3196
+	%1779 = icmp eq i32 %1778, u0x8000, !dbg !3196
 	br i1 %1779, label %1780, label %1789, !dbg !3198
 
 ; <label>:1780
@@ -3938,7 +3938,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 
 ; <label>:1801
 	%1802 = and i32 %1697, u0xF000, !dbg !3225
-	%1803 = icmp eq i32 %1802, 32768, !dbg !3225
+	%1803 = icmp eq i32 %1802, u0x8000, !dbg !3225
 	br i1 %1803, label %1804, label %1813, !dbg !3227
 
 ; <label>:1804
@@ -5159,7 +5159,7 @@ define internal fastcc void @check_fspec(%struct.File_spec*, %struct.File_spec**
 	%37 = getelementptr inbounds %struct.File_spec, %struct.File_spec* %0, i64 0, i32 5, !dbg !3919
 	%38 = load i32, i32* %37, align 8, !dbg !3919, !tbaa !2237
 	%39 = and i32 %38, u0xF000, !dbg !3919
-	%40 = icmp eq i32 %39, 32768, !dbg !3919
+	%40 = icmp eq i32 %39, u0x8000, !dbg !3919
 	br i1 %40, label %41, label %68, !dbg !3921
 
 ; <label>:41

@@ -355,7 +355,7 @@ target triple = "x86_64-pc-linux-gnu"
 @rpl_fcntl.have_dupfd_cloexec = internal unnamed_addr global i32 0, align 4, !dbg !591
 @.str.400 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.405 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 32768, i32 0, i32 40960, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 8192, i32 0, i32 u0x4000, i32 0, i32 24576, i32 0, i32 u0x8000, i32 0, i32 40960, i32 0, i32 49152]
 @argmatch_die = dso_local local_unnamed_addr global void ()* @__argmatch_die, align 8, !dbg !628
 @.str.418 = private unnamed_addr constant [27 x i8] c"invalid argument %s for %s\00", align 1
 @.str.1.419 = private unnamed_addr constant [29 x i8] c"ambiguous argument %s for %s\00", align 1
@@ -2767,7 +2767,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:144
 	%145 = and i32 %107, u0xF000, !dbg !3520
-	%146 = icmp eq i32 %145, 32768, !dbg !3520
+	%146 = icmp eq i32 %145, u0x8000, !dbg !3520
 	br i1 %146, label %153, label %147, !dbg !3521
 
 ; <label>:147
@@ -3720,7 +3720,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%678 = getelementptr inbounds %struct.stat, %struct.stat* %30, i64 0, i32 3, !dbg !4074
 	%679 = load i32, i32* %678, align 8, !dbg !4074, !tbaa !1823
 	%680 = and i32 %679, u0xF000, !dbg !4074
-	%681 = icmp eq i32 %680, 32768, !dbg !4074
+	%681 = icmp eq i32 %680, u0x8000, !dbg !4074
 	br i1 %681, label %700, label %682, !dbg !4075
 
 ; <label>:682
@@ -4695,7 +4695,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	br i1 %1204, label %2028, label %2291, !dbg !4653
 
 ; <label>:1205
-	%1206 = icmp eq i32 %956, 32768, !dbg !4654
+	%1206 = icmp eq i32 %956, u0x8000, !dbg !4654
 	br i1 %1206, label %1213, label %1207, !dbg !4655
 
 ; <label>:1207
@@ -5101,7 +5101,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1419 = getelementptr inbounds %struct.stat, %struct.stat* %22, i64 0, i32 3, !dbg !4906
 	%1420 = load i32, i32* %1419, align 8, !dbg !4906, !tbaa !1823
 	%1421 = and i32 %1420, u0xF000, !dbg !4906
-	%1422 = icmp eq i32 %1421, 32768, !dbg !4906
+	%1422 = icmp eq i32 %1421, u0x8000, !dbg !4906
 	br i1 %1422, label %1423, label %1430, !dbg !4907
 
 ; <label>:1423
@@ -5118,7 +5118,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	%1432 = getelementptr inbounds %struct.stat, %struct.stat* %21, i64 0, i32 3, !dbg !4914
 	%1433 = load i32, i32* %1432, align 8, !dbg !4914, !tbaa !1823
 	%1434 = and i32 %1433, u0xF000, !dbg !4914
-	%1435 = icmp eq i32 %1434, 32768, !dbg !4914
+	%1435 = icmp eq i32 %1434, u0x8000, !dbg !4914
 	br i1 %1435, label %1436, label %1443, !dbg !4916
 
 ; <label>:1436
@@ -6694,7 +6694,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 
 ; <label>:2221
 	%2222 = and i32 %2149, 28672, !dbg !5859
-	%2223 = or i32 %2222, 32768, !dbg !5860
+	%2223 = or i32 %2222, u0x8000, !dbg !5860
 	%2224 = icmp eq i32 %2223, 49152, !dbg !5860
 	%2225 = select i1 %2224, i32 511, i32 438, !dbg !5860
 	call void @llvm.dbg.value(metadata i32 %2225, metadata !3323, metadata !DIExpression()), !dbg !5861
@@ -24212,7 +24212,7 @@ define internal fastcc i32 @set_acls(%struct.permission_context* nocapture, i8*,
 	br label %31, !dbg !17677
 
 ; <label>:29
-	%30 = tail call i32 @acl_set_file(i8* %1, i32 32768, %struct.__acl_ext* nonnull %25) #12, !dbg !17678
+	%30 = tail call i32 @acl_set_file(i8* %1, i32 u0x8000, %struct.__acl_ext* nonnull %25) #12, !dbg !17678
 	call void @llvm.dbg.value(metadata i32 %30, metadata !17643, metadata !DIExpression()), !dbg !17650
 	br label %31
 

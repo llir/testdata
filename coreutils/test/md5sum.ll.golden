@@ -3181,12 +3181,12 @@ define dso_local i32 @md5_stream(%struct._IO_FILE* nocapture, i8* nocapture) loc
 
 ; <label>:18
 	%19 = getelementptr inbounds i8, i8* %4, i64 %14, !dbg !2189
-	%20 = sub i64 32768, %14, !dbg !2189
+	%20 = sub i64 u0x8000, %14, !dbg !2189
 	%21 = tail call i64 @fread_unlocked(i8* nonnull %19, i64 1, i64 %20, %struct._IO_FILE* nonnull %0), !dbg !2189
 	call void @llvm.dbg.value(metadata i64 %21, metadata !2154, metadata !DIExpression()), !dbg !2190
 	%22 = add i64 %21, %14, !dbg !2191
 	call void @llvm.dbg.value(metadata i64 %22, metadata !2153, metadata !DIExpression()), !dbg !2177
-	%23 = icmp eq i64 %22, 32768, !dbg !2192
+	%23 = icmp eq i64 %22, u0x8000, !dbg !2192
 	br i1 %23, label %33, label %24, !dbg !2194
 
 ; <label>:24
@@ -3211,7 +3211,7 @@ define dso_local i32 @md5_stream(%struct._IO_FILE* nocapture, i8* nocapture) loc
 
 ; <label>:33
 	call void @llvm.dbg.value(metadata %struct.md5_ctx* %3, metadata !2152, metadata !DIExpression(DW_OP_deref)), !dbg !2164
-	call void @md5_process_block(i8* nonnull %4, i64 32768, %struct.md5_ctx* nonnull %3) #10, !dbg !2213
+	call void @md5_process_block(i8* nonnull %4, i64 u0x8000, %struct.md5_ctx* nonnull %3) #10, !dbg !2213
 	call void @llvm.dbg.value(metadata i64 %22, metadata !2153, metadata !DIExpression()), !dbg !2177
 	br label %26
 

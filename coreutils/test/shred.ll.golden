@@ -1020,7 +1020,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%64 = icmp eq i64 %63, -1, !dbg !1497
 	%65 = load i32, i32* %32, align 8, !dbg !1498, !tbaa !1456
 	%66 = and i32 %65, u0xF000, !dbg !1498
-	%67 = icmp eq i32 %66, 32768, !dbg !1498
+	%67 = icmp eq i32 %66, u0x8000, !dbg !1498
 	br i1 %64, label %68, label %98, !dbg !1500
 
 ; <label>:68
@@ -2158,7 +2158,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 ; <label>:581
 	%582 = load i32, i32* %32, align 8, !dbg !2135, !tbaa !1456
 	%583 = and i32 %582, u0xF000, !dbg !2135
-	%584 = icmp eq i32 %583, 32768, !dbg !2135
+	%584 = icmp eq i32 %583, u0x8000, !dbg !2135
 	br i1 %584, label %585, label %589, !dbg !2136
 
 ; <label>:585

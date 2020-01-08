@@ -6517,12 +6517,12 @@ define dso_local i32 @blake2b_stream(%struct._IO_FILE* nocapture, i8*, i64) loca
 	%12 = phi i64 [ 0, %8 ], [ %27, %26 ], !dbg !5280
 	call void @llvm.dbg.value(metadata i64 %12, metadata !483, metadata !DIExpression()), !dbg !5283
 	%13 = getelementptr inbounds i8, i8* %6, i64 %12, !dbg !5284
-	%14 = sub i64 32768, %12, !dbg !5285
+	%14 = sub i64 u0x8000, %12, !dbg !5285
 	%15 = call i64 @fread(i8* nonnull %13, i64 1, i64 %14, %struct._IO_FILE* %0), !dbg !5286
 	call void @llvm.dbg.value(metadata i64 %15, metadata !484, metadata !DIExpression()), !dbg !5287
 	%16 = add i64 %15, %12, !dbg !5288
 	call void @llvm.dbg.value(metadata i64 %16, metadata !483, metadata !DIExpression()), !dbg !5283
-	%17 = icmp eq i64 %16, 32768, !dbg !5289
+	%17 = icmp eq i64 %16, u0x8000, !dbg !5289
 	br i1 %17, label %28, label %18, !dbg !5291
 
 ; <label>:18

@@ -4223,7 +4223,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !11 {
 ; <label>:1794
 	%1795 = load i32, i32* %1739, align 8, !dbg !4039, !tbaa !4041
 	%1796 = and i32 %1795, u0xF000, !dbg !4039
-	%1797 = icmp eq i32 %1796, 32768, !dbg !4039
+	%1797 = icmp eq i32 %1796, u0x8000, !dbg !4039
 	br i1 %1797, label %1798, label %1800, !dbg !4044
 
 ; <label>:1798
@@ -13908,12 +13908,12 @@ define dso_local i32 @md5_stream(%struct._IO_FILE* nocapture, i8* nocapture) loc
 
 ; <label>:18
 	%19 = getelementptr inbounds i8, i8* %4, i64 %14, !dbg !9135
-	%20 = sub i64 32768, %14, !dbg !9135
+	%20 = sub i64 u0x8000, %14, !dbg !9135
 	%21 = tail call i64 @fread_unlocked(i8* nonnull %19, i64 1, i64 %20, %struct._IO_FILE* nonnull %0), !dbg !9135
 	call void @llvm.dbg.value(metadata i64 %21, metadata !9100, metadata !DIExpression()), !dbg !9136
 	%22 = add i64 %21, %14, !dbg !9137
 	call void @llvm.dbg.value(metadata i64 %22, metadata !9099, metadata !DIExpression()), !dbg !9123
-	%23 = icmp eq i64 %22, 32768, !dbg !9138
+	%23 = icmp eq i64 %22, u0x8000, !dbg !9138
 	br i1 %23, label %33, label %24, !dbg !9140
 
 ; <label>:24
@@ -13938,7 +13938,7 @@ define dso_local i32 @md5_stream(%struct._IO_FILE* nocapture, i8* nocapture) loc
 
 ; <label>:33
 	call void @llvm.dbg.value(metadata %struct.md5_ctx* %3, metadata !9098, metadata !DIExpression(DW_OP_deref)), !dbg !9110
-	call void @md5_process_block(i8* nonnull %4, i64 32768, %struct.md5_ctx* nonnull %3) #13, !dbg !9159
+	call void @md5_process_block(i8* nonnull %4, i64 u0x8000, %struct.md5_ctx* nonnull %3) #13, !dbg !9159
 	call void @llvm.dbg.value(metadata i64 %22, metadata !9099, metadata !DIExpression()), !dbg !9123
 	br label %26
 

@@ -2713,7 +2713,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 	%1177 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 3, !dbg !2557
 	%1178 = load i32, i32* %1177, align 8, !dbg !2557, !tbaa !1999
 	%1179 = and i32 %1178, u0xF000, !dbg !2557
-	%1180 = icmp eq i32 %1179, 32768, !dbg !2557
+	%1180 = icmp eq i32 %1179, u0x8000, !dbg !2557
 	br i1 %1180, label %1181, label %1203, !dbg !2558
 
 ; <label>:1181
@@ -2798,7 +2798,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 	%1221 = phi i32 [ 1, %1216 ], [ %1075, %1214 ], [ %1075, %1214 ], !dbg !2605
 	call void @llvm.dbg.value(metadata i32 %1221, metadata !2019, metadata !DIExpression()) #10, !dbg !2061
 	%1222 = load i32, i32* @conversions_mask, align 4, !dbg !2606, !tbaa !1377
-	%1223 = or i32 %1222, 32768, !dbg !2606
+	%1223 = or i32 %1222, u0x8000, !dbg !2606
 	store i32 %1223, i32* @conversions_mask, align 4, !dbg !2606, !tbaa !1377
 	br label %1224, !dbg !2607
 
@@ -4622,7 +4622,7 @@ define internal fastcc i64 @iwrite(i8* nocapture readonly, i64) unnamed_addr #7 
 
 ; <label>:39
 	%40 = load i32, i32* @conversions_mask, align 4, !dbg !3502, !tbaa !1377
-	%41 = or i32 %40, 32768, !dbg !3502
+	%41 = or i32 %40, u0x8000, !dbg !3502
 	store i32 %41, i32* @conversions_mask, align 4, !dbg !3502, !tbaa !1377
 	br label %42, !dbg !3503
 
