@@ -966,12 +966,12 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 
 ; <label>:213
 	%214 = load i32, i32* @input_flags, align 4, !dbg !1599, !tbaa !1377
-	%215 = and i32 %214, 1052672, !dbg !1601
+	%215 = and i32 %214, u0x101000, !dbg !1601
 	%216 = icmp eq i32 %215, 0, !dbg !1601
 	br i1 %216, label %219, label %217, !dbg !1602
 
 ; <label>:217
-	%218 = or i32 %214, 1052672, !dbg !1603
+	%218 = or i32 %214, u0x101000, !dbg !1603
 	store i32 %218, i32* @input_flags, align 4, !dbg !1603, !tbaa !1377
 	br label %219, !dbg !1604
 
@@ -1155,7 +1155,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 ; <label>:316
 	%317 = and i32 %274, 12288, !dbg !1716
 	call void @llvm.dbg.value(metadata i32 %317, metadata !1692, metadata !DIExpression()) #10, !dbg !1718
-	%318 = add nuw nsw i32 %317, 16383, !dbg !1720
+	%318 = add nuw nsw i32 %317, u0x3FFF, !dbg !1720
 	%319 = and i32 %318, %317, !dbg !1720
 	%320 = icmp eq i32 %319, 0, !dbg !1720
 	br i1 %320, label %323, label %321, !dbg !1721
@@ -1168,7 +1168,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 ; <label>:323
 	%324 = and i32 %220, 16386, !dbg !1723
 	call void @llvm.dbg.value(metadata i32 %324, metadata !1692, metadata !DIExpression()) #10, !dbg !1725
-	%325 = add nuw nsw i32 %324, 32767, !dbg !1727
+	%325 = add nuw nsw i32 %324, u0x7FFF, !dbg !1727
 	%326 = and i32 %325, %324, !dbg !1727
 	%327 = icmp eq i32 %326, 0, !dbg !1727
 	br i1 %327, label %328, label %333, !dbg !1728
@@ -1176,7 +1176,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1125 {
 ; <label>:328
 	%329 = and i32 %221, 16386, !dbg !1729
 	call void @llvm.dbg.value(metadata i32 %329, metadata !1692, metadata !DIExpression()) #10, !dbg !1730
-	%330 = add nuw nsw i32 %329, 32767, !dbg !1732
+	%330 = add nuw nsw i32 %329, u0x7FFF, !dbg !1732
 	%331 = and i32 %330, %329, !dbg !1732
 	%332 = icmp eq i32 %331, 0, !dbg !1732
 	br i1 %332, label %335, label %333, !dbg !1733

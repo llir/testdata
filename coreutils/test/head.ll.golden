@@ -880,7 +880,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	call void @llvm.dbg.value(metadata %struct.linebuffer* %250, metadata !1240, metadata !DIExpression()) #10, !dbg !1274
 	call void @llvm.dbg.value(metadata %struct.linebuffer* %250, metadata !1250, metadata !DIExpression()) #10, !dbg !1273
 	call void @llvm.dbg.value(metadata i64 0, metadata !1252, metadata !DIExpression()) #10, !dbg !1270
-	%253 = call i64 @safe_read(i32 %207, i8* %252, i64 8192) #10, !dbg !1278
+	%253 = call i64 @safe_read(i32 %207, i8* %252, i64 u0x2000) #10, !dbg !1278
 	call void @llvm.dbg.value(metadata i64 %253, metadata !1254, metadata !DIExpression()) #10, !dbg !1279
 	%254 = add i64 %253, 1, !dbg !1280
 	%255 = icmp ult i64 %254, 2, !dbg !1280
@@ -938,7 +938,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	call void @llvm.dbg.value(metadata %struct.linebuffer* %264, metadata !1250, metadata !DIExpression()) #10, !dbg !1273
 	call void @llvm.dbg.value(metadata i64 %265, metadata !1252, metadata !DIExpression()) #10, !dbg !1270
 	call void @llvm.dbg.value(metadata %struct.linebuffer* undef, metadata !1251, metadata !DIExpression()) #10, !dbg !1282
-	%282 = call i64 @safe_read(i32 %207, i8* %252, i64 8192) #10, !dbg !1278
+	%282 = call i64 @safe_read(i32 %207, i8* %252, i64 u0x2000) #10, !dbg !1278
 	call void @llvm.dbg.value(metadata i64 %282, metadata !1254, metadata !DIExpression()) #10, !dbg !1279
 	%283 = add i64 %282, 1, !dbg !1280
 	%284 = icmp ult i64 %283, 2, !dbg !1280
@@ -1024,7 +1024,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	call void @llvm.dbg.value(metadata i64 %329, metadata !1252, metadata !DIExpression()) #10, !dbg !1270
 	call void @llvm.dbg.value(metadata %struct.linebuffer* %328, metadata !1251, metadata !DIExpression()) #10, !dbg !1282
 	%333 = getelementptr inbounds %struct.linebuffer, %struct.linebuffer* %328, i64 0, i32 0, i64 0, !dbg !1347
-	%334 = call i64 @safe_read(i32 %207, i8* %333, i64 8192) #10, !dbg !1278
+	%334 = call i64 @safe_read(i32 %207, i8* %333, i64 u0x2000) #10, !dbg !1278
 	call void @llvm.dbg.value(metadata i64 %334, metadata !1254, metadata !DIExpression()) #10, !dbg !1279
 	%335 = add i64 %334, 1, !dbg !1280
 	%336 = icmp ult i64 %335, 2, !dbg !1280
@@ -1467,7 +1467,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	br i1 %536, label %544, label %537, !dbg !1538
 
 ; <label>:537
-	%538 = call i64 @safe_read(i32 %207, i8* nonnull %183, i64 8192) #10, !dbg !1539
+	%538 = call i64 @safe_read(i32 %207, i8* nonnull %183, i64 u0x2000) #10, !dbg !1539
 	call void @llvm.dbg.value(metadata i64 %538, metadata !918, metadata !DIExpression()) #10, !dbg !1445
 	switch i64 %538, label %480 [
 		i64 -1, label %539
@@ -1729,7 +1729,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 	br label %651, !dbg !1688
 
 ; <label>:647
-	%648 = call noalias i8* @xmalloc(i64 8192) #10, !dbg !1690
+	%648 = call noalias i8* @xmalloc(i64 u0x2000) #10, !dbg !1690
 	%649 = getelementptr inbounds i8*, i8** %640, i64 %619, !dbg !1692
 	store i8* %648, i8** %649, align 8, !dbg !1693, !tbaa !720
 	%650 = add nsw i64 %619, 1, !dbg !1694
@@ -1739,7 +1739,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 ; <label>:651
 	%652 = phi i8* [ %646, %644 ], [ %648, %647 ], !dbg !1689
 	%653 = phi i64 [ %614, %644 ], [ %650, %647 ], !dbg !1696
-	%654 = call i64 @full_read(i32 %207, i8* %652, i64 8192) #10, !dbg !1697
+	%654 = call i64 @full_read(i32 %207, i8* %652, i64 u0x2000) #10, !dbg !1697
 	%655 = icmp ult i64 %654, u0x2000, !dbg !1698
 	br i1 %655, label %656, label %663, !dbg !1700
 
@@ -2014,7 +2014,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !49 {
 ; <label>:751
 	%752 = phi i64 [ %788, %791 ], [ %89, %750 ]
 	call void @llvm.dbg.value(metadata i64 %752, metadata !956, metadata !DIExpression()) #10, !dbg !1814
-	%753 = call i64 @safe_read(i32 %207, i8* nonnull %163, i64 8192) #10, !dbg !1816
+	%753 = call i64 @safe_read(i32 %207, i8* nonnull %163, i64 u0x2000) #10, !dbg !1816
 	call void @llvm.dbg.value(metadata i64 %753, metadata !957, metadata !DIExpression()) #10, !dbg !1817
 	call void @llvm.dbg.value(metadata i64 0, metadata !959, metadata !DIExpression()) #10, !dbg !1818
 	switch i64 %753, label %754 [

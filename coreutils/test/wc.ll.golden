@@ -1196,7 +1196,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 ; <label>:89
 	%90 = phi i64 [ %88, %87 ], [ %97, %96 ], !dbg !1777
 	call void @llvm.dbg.value(metadata i64 %90, metadata !1631, metadata !DIExpression()), !dbg !1705
-	%91 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 16384) #13, !dbg !1779
+	%91 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 u0x4000) #13, !dbg !1779
 	call void @llvm.dbg.value(metadata i64 %91, metadata !1627, metadata !DIExpression()), !dbg !1780
 	switch i64 %91, label %96 [
 		i64 0, label %436
@@ -1232,7 +1232,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	%103 = phi i1 [ %193, %189 ], [ false, %98 ], !dbg !1793
 	call void @llvm.dbg.value(metadata i64 %102, metadata !1628, metadata !DIExpression()), !dbg !1708
 	call void @llvm.dbg.value(metadata i64 %101, metadata !1631, metadata !DIExpression()), !dbg !1705
-	%104 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 16384) #13, !dbg !1795
+	%104 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 u0x4000) #13, !dbg !1795
 	call void @llvm.dbg.value(metadata i64 %104, metadata !1627, metadata !DIExpression()), !dbg !1780
 	switch i64 %104, label %109 [
 		i64 0, label %436
@@ -1909,7 +1909,7 @@ define internal fastcc zeroext i1 @wc(i32, i8*, %struct.fstatus*, i64) unnamed_a
 	call void @llvm.dbg.value(metadata i64 %370, metadata !1629, metadata !DIExpression()), !dbg !1707
 	call void @llvm.dbg.value(metadata i64 %369, metadata !1631, metadata !DIExpression()), !dbg !1705
 	call void @llvm.dbg.value(metadata i64 %368, metadata !1632, metadata !DIExpression()), !dbg !1704
-	%374 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 16384) #13, !dbg !1985
+	%374 = call i64 @safe_read(i32 %0, i8* nonnull %9, i64 u0x4000) #13, !dbg !1985
 	call void @llvm.dbg.value(metadata i64 %374, metadata !1627, metadata !DIExpression()), !dbg !1780
 	switch i64 %374, label %379 [
 		i64 0, label %429

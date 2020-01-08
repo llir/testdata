@@ -1205,7 +1205,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !757 {
 	br label %462, !dbg !1384
 
 ; <label>:462
-	%463 = call i64 @read_and_delete(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 8192), !dbg !1384
+	%463 = call i64 @read_and_delete(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 u0x2000), !dbg !1384
 	call void @llvm.dbg.value(metadata i64 %463, metadata !811, metadata !DIExpression()), !dbg !1385
 	%464 = icmp eq i64 %463, 0, !dbg !1386
 	br i1 %464, label %727, label %465, !dbg !1388
@@ -1622,7 +1622,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !757 {
 	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !1584, metadata !DIExpression()) #12, !dbg !1590
 	call void @llvm.dbg.value(metadata i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), metadata !1591, metadata !DIExpression()) #12, !dbg !1596
 	call void @llvm.dbg.value(metadata i64 u0x2000, metadata !1594, metadata !DIExpression()) #12, !dbg !1598
-	%663 = call i64 @safe_read(i32 0, i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 8192) #12, !dbg !1599
+	%663 = call i64 @safe_read(i32 0, i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 u0x2000) #12, !dbg !1599
 	call void @llvm.dbg.value(metadata i64 %663, metadata !1595, metadata !DIExpression()) #12, !dbg !1600
 	switch i64 %663, label %664 [
 		i64 -1, label %670
@@ -3283,7 +3283,7 @@ define internal fastcc void @squeeze_filter(i64 (i8*, i64)* nocapture) unnamed_a
 	br i1 %6, label %10, label %7, !dbg !2598
 
 ; <label>:7
-	%8 = tail call i64 %0(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 8192) #12, !dbg !2599, !callees !2600
+	%8 = tail call i64 %0(i8* getelementptr inbounds ([8192 x i8], [8192 x i8]* @io_buf, i64 0, i64 0), i64 u0x2000) #12, !dbg !2599, !callees !2600
 	call void @llvm.dbg.value(metadata i64 %8, metadata !2575, metadata !DIExpression()), !dbg !2586
 	%9 = icmp eq i64 %8, 0, !dbg !2601
 	br i1 %9, label %92, label %10, !dbg !2603

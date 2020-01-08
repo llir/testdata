@@ -3835,7 +3835,7 @@ define internal fastcc i32 @create(i8*) unnamed_addr #7 !dbg !2808 {
 	unreachable, !dbg !2955
 
 ; <label>:155
-	%156 = icmp ult i64 %142, 1537228672809129301, !dbg !2956
+	%156 = icmp ult i64 %142, u0x1555555555555555, !dbg !2956
 	br i1 %156, label %158, label %157, !dbg !2959
 
 ; <label>:157

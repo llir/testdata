@@ -1037,7 +1037,7 @@ define internal fastcc i32 @parse_additional_groups(i8*, i32** nocapture, i64* n
 	unreachable, !dbg !1300
 
 ; <label>:66
-	%67 = icmp ult i64 %16, 1537228672809129301, !dbg !1301
+	%67 = icmp ult i64 %16, u0x1555555555555555, !dbg !1301
 	br i1 %67, label %69, label %68, !dbg !1304
 
 ; <label>:68

@@ -2168,7 +2168,7 @@ define internal fastcc void @print_files(i32, i8** nocapture readonly) unnamed_a
 	%332 = sext i32 %316 to i64, !dbg !1946
 	%333 = load i1, i1* @use_col_separator, align 1
 	call void @llvm.dbg.value(metadata i64 %332, metadata !1102, metadata !DIExpression()) #11, !dbg !1947
-	%334 = select i1 %333, i64 4611686018427387903, i64 u0x7FFFFFFFFFFFFFFF, !dbg !1949
+	%334 = select i1 %333, i64 u0x3FFFFFFFFFFFFFFF, i64 u0x7FFFFFFFFFFFFFFF, !dbg !1949
 	%335 = icmp ult i64 %334, %332, !dbg !1949
 	br i1 %335, label %336, label %337, !dbg !1950
 
@@ -14989,7 +14989,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %150, label %184, label %151, !dbg !7849
 
 ; <label>:151
-	%152 = icmp sgt i64 %35, 4611686018427387903, !dbg !7850
+	%152 = icmp sgt i64 %35, u0x3FFFFFFFFFFFFFFF, !dbg !7850
 	%153 = shl nsw i64 %35, 1, !dbg !7851
 	%154 = select i1 %152, i64 u0x7FFFFFFFFFFFFFFF, i64 %153, !dbg !7852
 	%155 = zext i1 %152 to i32, !dbg !7852
@@ -15937,7 +15937,7 @@ define dso_local i32 @xstrtol(i8*, i8**, i32, i64* nocapture, i8* readonly) loca
 	br i1 %150, label %184, label %151, !dbg !8084
 
 ; <label>:151
-	%152 = icmp sgt i64 %35, 4611686018427387903, !dbg !8085
+	%152 = icmp sgt i64 %35, u0x3FFFFFFFFFFFFFFF, !dbg !8085
 	%153 = shl nsw i64 %35, 1, !dbg !8086
 	%154 = select i1 %152, i64 u0x7FFFFFFFFFFFFFFF, i64 %153, !dbg !8087
 	%155 = zext i1 %152 to i32, !dbg !8087

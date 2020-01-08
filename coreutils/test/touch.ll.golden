@@ -1101,7 +1101,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1155 {
 
 ; <label>:240
 	%241 = phi i64* [ getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 1, i32 1), %239 ], [ getelementptr inbounds ([2 x %struct.timespec], [2 x %struct.timespec]* @newtime, i64 0, i64 0, i32 1), %234 ]
-	store i64 1073741822, i64* %241, align 8, !dbg !1535, !tbaa !1263
+	store i64 u0x3FFFFFFE, i64* %241, align 8, !dbg !1535, !tbaa !1263
 	br label %242
 
 ; <label>:242
@@ -2074,7 +2074,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %120, label %578, label %123, !dbg !2168
 
 ; <label>:121
-	%122 = icmp sgt i64 %117, 922337203685477580, !dbg !2168
+	%122 = icmp sgt i64 %117, u0xCCCCCCCCCCCCCCC, !dbg !2168
 	br i1 %122, label %578, label %123, !dbg !2168
 
 ; <label>:123
@@ -3533,7 +3533,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %770, label %774, label %773, !dbg !2678
 
 ; <label>:771
-	%772 = icmp sgt i64 %761, 153722867280912930, !dbg !2678
+	%772 = icmp sgt i64 %761, u0x222222222222222, !dbg !2678
 	br i1 %772, label %774, label %773, !dbg !2678
 
 ; <label>:773
@@ -3671,7 +3671,7 @@ define dso_local i32 @yyparse(%struct.parser_control*) local_unnamed_addr #7 !db
 	br i1 %848, label %852, label %851, !dbg !2751
 
 ; <label>:849
-	%850 = icmp sgt i64 %839, 153722867280912930, !dbg !2751
+	%850 = icmp sgt i64 %839, u0x222222222222222, !dbg !2751
 	br i1 %850, label %852, label %851, !dbg !2751
 
 ; <label>:851
@@ -8737,7 +8737,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	br i1 %1636, label %1676, label %1639, !dbg !5216
 
 ; <label>:1637
-	%1638 = icmp sgt i64 %1633, 153722867280912930, !dbg !5216
+	%1638 = icmp sgt i64 %1633, u0x222222222222222, !dbg !5216
 	br i1 %1638, label %1676, label %1639, !dbg !5216
 
 ; <label>:1639

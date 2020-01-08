@@ -1942,7 +1942,7 @@ define internal zeroext i1 @print_statfs(i8*, i64, i32, i32, i8*, i8* nocapture 
 		i64 427819522, label %661
 		i64 19780, label %662
 		i64 22092, label %663
-		i64 26985, label %664
+		i64 u0x6969, label %664
 		i64 1852207972, label %665
 		i64 13364, label %666
 		i64 1853056627, label %667

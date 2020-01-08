@@ -6371,9 +6371,9 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 	br i1 %2220, label %2238, label %2221, !dbg !5576
 
 ; <label>:2221
-	%2222 = and i32 %2149, 28672, !dbg !5577
+	%2222 = and i32 %2149, u0x7000, !dbg !5577
 	%2223 = or i32 %2222, u0x8000, !dbg !5578
-	%2224 = icmp eq i32 %2223, 49152, !dbg !5578
+	%2224 = icmp eq i32 %2223, u0xC000, !dbg !5578
 	%2225 = select i1 %2224, i32 511, i32 438, !dbg !5578
 	call void @llvm.dbg.value(metadata i32 %2225, metadata !3038, metadata !DIExpression()), !dbg !5579
 	%2226 = load i32, i32* @cached_umask.mask, align 4, !dbg !5580, !tbaa !1795
@@ -18657,7 +18657,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%19 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 0, i32 1, !dbg !13931
 	%20 = load i64, i64* %19, align 8, !dbg !13931, !tbaa !13709
 	%21 = and i64 %20, -2, !dbg !13933
-	%22 = icmp eq i64 %21, 1073741822, !dbg !13933
+	%22 = icmp eq i64 %21, u0x3FFFFFFE, !dbg !13933
 	%23 = icmp ult i64 %20, 1000000000, !dbg !13934
 	%24 = or i1 %23, %22, !dbg !13933
 	br i1 %24, label %25, label %32, !dbg !13933
@@ -18666,7 +18666,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%26 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 1, i32 1, !dbg !13935
 	%27 = load i64, i64* %26, align 8, !dbg !13935, !tbaa !13709
 	%28 = and i64 %27, -2, !dbg !13936
-	%29 = icmp eq i64 %28, 1073741822, !dbg !13936
+	%29 = icmp eq i64 %28, u0x3FFFFFFE, !dbg !13936
 	%30 = icmp ult i64 %27, 1000000000, !dbg !13937
 	%31 = or i1 %30, %29, !dbg !13936
 	br i1 %31, label %34, label %32, !dbg !13936
@@ -18684,7 +18684,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%36 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 0, i32 0, !dbg !13944
 	store i64 0, i64* %36, align 16, !dbg !13946, !tbaa !13705
 	call void @llvm.dbg.value(metadata i32 1, metadata !13925, metadata !DIExpression()) #10, !dbg !13929
-	%37 = icmp eq i64 %20, 1073741822, !dbg !13947
+	%37 = icmp eq i64 %20, u0x3FFFFFFE, !dbg !13947
 	%38 = zext i1 %37 to i32, !dbg !13949
 	br label %39, !dbg !13949
 
@@ -18699,7 +18699,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%43 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 1, i32 0, !dbg !13953
 	store i64 0, i64* %43, align 16, !dbg !13955, !tbaa !13705
 	call void @llvm.dbg.value(metadata i32 1, metadata !13925, metadata !DIExpression()) #10, !dbg !13929
-	%44 = icmp eq i64 %27, 1073741822, !dbg !13956
+	%44 = icmp eq i64 %27, u0x3FFFFFFE, !dbg !13956
 	%45 = zext i1 %44 to i32, !dbg !13958
 	%46 = add nuw nsw i32 %41, %45, !dbg !13958
 	br label %47, !dbg !13958
@@ -18761,7 +18761,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	call void @llvm.dbg.value(metadata %struct.timespec* %11, metadata !13854, metadata !DIExpression()), !dbg !13910
 	%75 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 0, i32 1, !dbg !14006
 	%76 = load i64, i64* %75, align 8, !dbg !14006, !tbaa !13709
-	%77 = icmp eq i64 %76, 1073741822, !dbg !14008
+	%77 = icmp eq i64 %76, u0x3FFFFFFE, !dbg !14008
 	br i1 %77, label %78, label %83, !dbg !14009
 
 ; <label>:78
@@ -18777,7 +18777,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 ; <label>:83
 	%84 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 1, i32 1, !dbg !14022
 	%85 = load i64, i64* %84, align 8, !dbg !14022, !tbaa !13709
-	%86 = icmp eq i64 %85, 1073741822, !dbg !14024
+	%86 = icmp eq i64 %85, u0x3FFFFFFE, !dbg !14024
 	br i1 %86, label %87, label %93, !dbg !14025
 
 ; <label>:87
@@ -18900,7 +18900,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%135 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 0, i32 1, !dbg !14107
 	%136 = load i64, i64* %135, align 8, !dbg !14107, !tbaa !13709
 	switch i64 %136, label %137 [
-		i64 1073741822, label %139
+		i64 u0x3FFFFFFE, label %139
 		i64 u0x3FFFFFFF, label %143
 	], !dbg !14109
 
@@ -18911,7 +18911,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 ; <label>:139
 	%140 = getelementptr inbounds %struct.timespec, %struct.timespec* %11, i64 1, i32 1, !dbg !14112
 	%141 = load i64, i64* %140, align 8, !dbg !14112, !tbaa !13709
-	%142 = icmp eq i64 %141, 1073741822, !dbg !14113
+	%142 = icmp eq i64 %141, u0x3FFFFFFE, !dbg !14113
 	br i1 %142, label %258, label %149, !dbg !14114
 
 ; <label>:143
@@ -18944,7 +18944,7 @@ define dso_local i32 @fdutimens(i32, i8*, %struct.timespec* readonly) local_unna
 	%156 = phi i64* [ %138, %137 ], [ %144, %154 ], [ %140, %149 ], !dbg !14110
 	%157 = load i64, i64* %156, align 8, !dbg !14110, !tbaa !13709
 	switch i64 %157, label %166 [
-		i64 1073741822, label %158
+		i64 u0x3FFFFFFE, label %158
 		i64 u0x3FFFFFFF, label %164
 	], !dbg !14127
 
@@ -19191,7 +19191,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%16 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 0, i32 1, !dbg !14284
 	%17 = load i64, i64* %16, align 8, !dbg !14284, !tbaa !13709
 	%18 = and i64 %17, -2, !dbg !14285
-	%19 = icmp eq i64 %18, 1073741822, !dbg !14285
+	%19 = icmp eq i64 %18, u0x3FFFFFFE, !dbg !14285
 	%20 = icmp ult i64 %17, 1000000000, !dbg !14286
 	%21 = or i1 %20, %19, !dbg !14285
 	br i1 %21, label %22, label %29, !dbg !14285
@@ -19200,7 +19200,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%23 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 1, i32 1, !dbg !14287
 	%24 = load i64, i64* %23, align 8, !dbg !14287, !tbaa !13709
 	%25 = and i64 %24, -2, !dbg !14288
-	%26 = icmp eq i64 %25, 1073741822, !dbg !14288
+	%26 = icmp eq i64 %25, u0x3FFFFFFE, !dbg !14288
 	%27 = icmp ult i64 %24, 1000000000, !dbg !14289
 	%28 = or i1 %27, %26, !dbg !14288
 	br i1 %28, label %31, label %29, !dbg !14288
@@ -19218,7 +19218,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%33 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 0, i32 0, !dbg !14294
 	store i64 0, i64* %33, align 16, !dbg !14295, !tbaa !13705
 	call void @llvm.dbg.value(metadata i32 1, metadata !13925, metadata !DIExpression()) #10, !dbg !14282
-	%34 = icmp eq i64 %17, 1073741822, !dbg !14296
+	%34 = icmp eq i64 %17, u0x3FFFFFFE, !dbg !14296
 	%35 = zext i1 %34 to i32, !dbg !14297
 	br label %36, !dbg !14297
 
@@ -19233,7 +19233,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%40 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 1, i32 0, !dbg !14300
 	store i64 0, i64* %40, align 16, !dbg !14301, !tbaa !13705
 	call void @llvm.dbg.value(metadata i32 1, metadata !13925, metadata !DIExpression()) #10, !dbg !14282
-	%41 = icmp eq i64 %24, 1073741822, !dbg !14302
+	%41 = icmp eq i64 %24, u0x3FFFFFFE, !dbg !14302
 	%42 = zext i1 %41 to i32, !dbg !14303
 	%43 = add nuw nsw i32 %38, %42, !dbg !14303
 	br label %44, !dbg !14303
@@ -19272,7 +19272,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	call void @llvm.dbg.value(metadata %struct.timespec* %8, metadata !14259, metadata !DIExpression()), !dbg !14271
 	%61 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 0, i32 1, !dbg !14328
 	%62 = load i64, i64* %61, align 8, !dbg !14328, !tbaa !13709
-	%63 = icmp eq i64 %62, 1073741822, !dbg !14330
+	%63 = icmp eq i64 %62, u0x3FFFFFFE, !dbg !14330
 	br i1 %63, label %64, label %69, !dbg !14331
 
 ; <label>:64
@@ -19288,7 +19288,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 ; <label>:69
 	%70 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 1, i32 1, !dbg !14337
 	%71 = load i64, i64* %70, align 8, !dbg !14337, !tbaa !13709
-	%72 = icmp eq i64 %71, 1073741822, !dbg !14339
+	%72 = icmp eq i64 %71, u0x3FFFFFFE, !dbg !14339
 	br i1 %72, label %73, label %79, !dbg !14340
 
 ; <label>:73
@@ -19359,7 +19359,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%99 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 0, i32 1, !dbg !14380
 	%100 = load i64, i64* %99, align 8, !dbg !14380, !tbaa !13709
 	switch i64 %100, label %101 [
-		i64 1073741822, label %103
+		i64 u0x3FFFFFFE, label %103
 		i64 u0x3FFFFFFF, label %107
 	], !dbg !14381
 
@@ -19370,7 +19370,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 ; <label>:103
 	%104 = getelementptr inbounds %struct.timespec, %struct.timespec* %8, i64 1, i32 1, !dbg !14383
 	%105 = load i64, i64* %104, align 8, !dbg !14383, !tbaa !13709
-	%106 = icmp eq i64 %105, 1073741822, !dbg !14384
+	%106 = icmp eq i64 %105, u0x3FFFFFFE, !dbg !14384
 	br i1 %106, label %141, label %111, !dbg !14385
 
 ; <label>:107
@@ -19396,7 +19396,7 @@ define dso_local i32 @lutimens(i8*, %struct.timespec* readonly) local_unnamed_ad
 	%118 = phi i64* [ %102, %101 ], [ %108, %116 ], [ %104, %111 ], !dbg !14382
 	%119 = load i64, i64* %118, align 8, !dbg !14382, !tbaa !13709
 	switch i64 %119, label %131 [
-		i64 1073741822, label %120
+		i64 u0x3FFFFFFE, label %120
 		i64 u0x3FFFFFFF, label %126
 	], !dbg !14395
 
@@ -21719,7 +21719,7 @@ define dso_local i32 @get_permissions(i8*, i32, i32, %struct.permission_context*
 	br label %12, !dbg !15793
 
 ; <label>:10
-	%11 = tail call %struct.__acl_ext* @acl_get_file(i8* %0, i32 32768) #10, !dbg !15794
+	%11 = tail call %struct.__acl_ext* @acl_get_file(i8* %0, i32 u0x8000) #10, !dbg !15794
 	br label %12
 
 ; <label>:12
@@ -21742,7 +21742,7 @@ define dso_local i32 @get_permissions(i8*, i32, i32, %struct.permission_context*
 	br i1 %23, label %24, label %28, !dbg !15805
 
 ; <label>:24
-	%25 = tail call %struct.__acl_ext* @acl_get_file(i8* %0, i32 16384) #10, !dbg !15806
+	%25 = tail call %struct.__acl_ext* @acl_get_file(i8* %0, i32 u0x4000) #10, !dbg !15806
 	%26 = getelementptr inbounds %struct.permission_context, %struct.permission_context* %3, i64 0, i32 2, !dbg !15808
 	store %struct.__acl_ext* %25, %struct.__acl_ext** %26, align 8, !dbg !15809, !tbaa !15760
 	%27 = icmp eq %struct.__acl_ext* %25, null, !dbg !15810

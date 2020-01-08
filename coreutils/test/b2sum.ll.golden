@@ -6503,7 +6503,7 @@ define dso_local i32 @blake2b_stream(%struct._IO_FILE* nocapture, i8*, i64) loca
 	%5 = bitcast [1 x %struct.blake2b_state__]* %4 to i8*, !dbg !5270
 	call void @llvm.lifetime.start.p0i8(i64 248, i8* nonnull %5) #13, !dbg !5270
 	call void @llvm.dbg.declare(metadata [1 x %struct.blake2b_state__]* %4, metadata !485, metadata !DIExpression()), !dbg !5271
-	%6 = tail call noalias i8* @malloc(i64 32768) #13, !dbg !5272
+	%6 = tail call noalias i8* @malloc(i64 u0x8000) #13, !dbg !5272
 	call void @llvm.dbg.value(metadata i8* %6, metadata !502, metadata !DIExpression()), !dbg !5273
 	%7 = icmp eq i8* %6, null, !dbg !5274
 	br i1 %7, label %38, label %8, !dbg !5276
@@ -6544,7 +6544,7 @@ define dso_local i32 @blake2b_stream(%struct._IO_FILE* nocapture, i8*, i64) loca
 	br label %11, !dbg !5283, !llvm.loop !5302
 
 ; <label>:28
-	%29 = call i32 @blake2b_update(%struct.blake2b_state__* nonnull %9, i8* nonnull %6, i64 32768) #13, !dbg !5304
+	%29 = call i32 @blake2b_update(%struct.blake2b_state__* nonnull %9, i8* nonnull %6, i64 u0x8000) #13, !dbg !5304
 	br label %26, !dbg !5279
 
 ; <label>:30

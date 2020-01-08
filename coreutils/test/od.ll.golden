@@ -2198,7 +2198,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !105 {
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %835) #13, !dbg !1911
 	call void @llvm.dbg.value(metadata i64 2, metadata !1912, metadata !DIExpression()) #13, !dbg !1918
 	call void @llvm.dbg.value(metadata i64 %554, metadata !1917, metadata !DIExpression()) #13, !dbg !1920
-	%836 = icmp ugt i64 %554, 4611686018427387903, !dbg !1921
+	%836 = icmp ugt i64 %554, u0x3FFFFFFFFFFFFFFF, !dbg !1921
 	br i1 %836, label %837, label %838, !dbg !1923
 
 ; <label>:837
@@ -2713,7 +2713,7 @@ define internal fastcc zeroext i1 @decode_format_string(i8*) unnamed_addr #7 !db
 	unreachable, !dbg !2159
 
 ; <label>:24
-	%25 = icmp ult i64 %12, 153722867280912930, !dbg !2160
+	%25 = icmp ult i64 %12, u0x222222222222222, !dbg !2160
 	br i1 %25, label %27, label %26, !dbg !2163
 
 ; <label>:26

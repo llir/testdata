@@ -453,7 +453,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !673 {
 	%85 = getelementptr inbounds i8, i8* %84, i64 8, !dbg !847
 	%86 = bitcast i8* %85 to i64*, !dbg !847
 	store i64 u0x2000, i64* %86, align 8, !dbg !848, !tbaa !849
-	%87 = call noalias i8* @xmalloc(i64 8192) #11, !dbg !851
+	%87 = call noalias i8* @xmalloc(i64 u0x2000) #11, !dbg !851
 	%88 = bitcast i8* %84 to i8**, !dbg !852
 	store i8* %87, i8** %88, align 8, !dbg !853, !tbaa !854
 	%89 = getelementptr inbounds i8, i8* %87, i64 8191, !dbg !855
@@ -766,7 +766,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !673 {
 	call void @llvm.dbg.value(metadata i64 %231, metadata !1078, metadata !DIExpression()) #11, !dbg !1095
 	call void @llvm.dbg.value(metadata i64 2, metadata !1096, metadata !DIExpression()) #11, !dbg !1102
 	call void @llvm.dbg.value(metadata i64 %231, metadata !1101, metadata !DIExpression()) #11, !dbg !1104
-	%232 = icmp ugt i64 %231, 4611686018427387903, !dbg !1105
+	%232 = icmp ugt i64 %231, u0x3FFFFFFFFFFFFFFF, !dbg !1105
 	br i1 %232, label %233, label %234, !dbg !1107
 
 ; <label>:233
@@ -882,7 +882,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !673 {
 	call void @llvm.dbg.value(metadata i64 %280, metadata !1078, metadata !DIExpression()) #11, !dbg !1159
 	call void @llvm.dbg.value(metadata i64 2, metadata !1096, metadata !DIExpression()) #11, !dbg !1160
 	call void @llvm.dbg.value(metadata i64 %280, metadata !1101, metadata !DIExpression()) #11, !dbg !1162
-	%281 = icmp ugt i64 %280, 4611686018427387903, !dbg !1163
+	%281 = icmp ugt i64 %280, u0x3FFFFFFFFFFFFFFF, !dbg !1163
 	br i1 %281, label %282, label %283, !dbg !1164
 
 ; <label>:282

@@ -469,7 +469,7 @@ define internal zeroext i1 @bsd_sum_file(i8*, i32) unnamed_addr #7 !dbg !821 {
 	call void @llvm.dbg.value(metadata i32 %38, metadata !881, metadata !DIExpression()), !dbg !894
 	%39 = add i32 %34, %38, !dbg !942
 	call void @llvm.dbg.value(metadata i32 %39, metadata !881, metadata !DIExpression()), !dbg !894
-	%40 = and i32 %39, 65535, !dbg !943
+	%40 = and i32 %39, u0xFFFF, !dbg !943
 	call void @llvm.dbg.value(metadata i32 %40, metadata !881, metadata !DIExpression()), !dbg !894
 	br label %20, !dbg !917, !llvm.loop !944
 
@@ -611,7 +611,7 @@ define internal zeroext i1 @sysv_sum_file(i8*, i32) unnamed_addr #7 !dbg !990 {
 	%21 = phi i32 [ 0, %17 ], [ %111, %110 ], !dbg !1016
 	call void @llvm.dbg.value(metadata i32 %21, metadata !1003, metadata !DIExpression()), !dbg !1016
 	call void @llvm.dbg.value(metadata i64 %20, metadata !999, metadata !DIExpression()), !dbg !1013
-	%22 = call i64 @safe_read(i32 %18, i8* nonnull %5, i64 8192) #11, !dbg !1035
+	%22 = call i64 @safe_read(i32 %18, i8* nonnull %5, i64 u0x2000) #11, !dbg !1035
 	call void @llvm.dbg.value(metadata i64 %22, metadata !1005, metadata !DIExpression()), !dbg !1036
 	switch i64 %22, label %23 [
 		i64 0, label %113
@@ -771,11 +771,11 @@ define internal zeroext i1 @sysv_sum_file(i8*, i32) unnamed_addr #7 !dbg !990 {
 	br label %144, !dbg !1068
 
 ; <label>:121
-	%122 = and i32 %21, 65535, !dbg !1069
+	%122 = and i32 %21, u0xFFFF, !dbg !1069
 	%123 = lshr i32 %21, 16, !dbg !1070
 	%124 = add nuw nsw i32 %122, %123, !dbg !1071
 	call void @llvm.dbg.value(metadata i32 %124, metadata !1001, metadata !DIExpression()), !dbg !1072
-	%125 = and i32 %124, 65535, !dbg !1073
+	%125 = and i32 %124, u0xFFFF, !dbg !1073
 	%126 = lshr i32 %124, 16, !dbg !1074
 	%127 = add nuw nsw i32 %125, %126, !dbg !1075
 	call void @llvm.dbg.value(metadata i32 %127, metadata !1002, metadata !DIExpression()), !dbg !1076

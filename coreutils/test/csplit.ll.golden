@@ -956,7 +956,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 
 ; <label>:220
 	call void @llvm.dbg.value(metadata i64 %211, metadata !189, metadata !DIExpression()) #11, !dbg !1435
-	%221 = icmp ugt i64 %210, 96076792050570581, !dbg !1443
+	%221 = icmp ugt i64 %210, u0x155555555555555, !dbg !1443
 	br i1 %221, label %222, label %230, !dbg !1445
 
 ; <label>:222
@@ -964,7 +964,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 	unreachable, !dbg !1446
 
 ; <label>:223
-	%224 = icmp ult i64 %210, 64051194700380387, !dbg !1447
+	%224 = icmp ult i64 %210, u0xE38E38E38E38E3, !dbg !1447
 	br i1 %224, label %226, label %225, !dbg !1450
 
 ; <label>:225
@@ -1074,7 +1074,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 
 ; <label>:278
 	call void @llvm.dbg.value(metadata i64 %269, metadata !189, metadata !DIExpression()) #11, !dbg !1531
-	%279 = icmp ugt i64 %268, 96076792050570581, !dbg !1536
+	%279 = icmp ugt i64 %268, u0x155555555555555, !dbg !1536
 	br i1 %279, label %280, label %288, !dbg !1537
 
 ; <label>:280
@@ -1082,7 +1082,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #3 !dbg !6 {
 	unreachable, !dbg !1538
 
 ; <label>:281
-	%282 = icmp ult i64 %268, 64051194700380387, !dbg !1539
+	%282 = icmp ult i64 %268, u0xE38E38E38E38E3, !dbg !1539
 	br i1 %282, label %284, label %283, !dbg !1540
 
 ; <label>:283
@@ -2940,7 +2940,7 @@ define internal fastcc zeroext i1 @load_buffer() unnamed_addr #3 !dbg !2396 {
 
 ; <label>:177
 	%178 = load i64, i64* %20, align 8, !dbg !2684, !tbaa !2445
-	%179 = icmp ugt i64 %178, 4611686018427387903, !dbg !2684
+	%179 = icmp ugt i64 %178, u0x3FFFFFFFFFFFFFFF, !dbg !2684
 	br i1 %179, label %180, label %181, !dbg !2686
 
 ; <label>:180
@@ -7645,7 +7645,7 @@ define dso_local i32 @xstrtoimax(i8*, i8**, i32, i64* nocapture, i8* readonly) l
 	br i1 %150, label %184, label %151, !dbg !5490
 
 ; <label>:151
-	%152 = icmp sgt i64 %35, 4611686018427387903, !dbg !5491
+	%152 = icmp sgt i64 %35, u0x3FFFFFFFFFFFFFFF, !dbg !5491
 	%153 = shl nsw i64 %35, 1, !dbg !5492
 	%154 = select i1 %152, i64 u0x7FFFFFFFFFFFFFFF, i64 %153, !dbg !5493
 	%155 = zext i1 %152 to i32, !dbg !5493

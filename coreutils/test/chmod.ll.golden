@@ -5956,7 +5956,7 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 	br label %50, !dbg !4632
 
 ; <label>:50
-	%51 = phi i64 [ 4352, %21 ], [ %49, %45 ]
+	%51 = phi i64 [ u0x1100, %21 ], [ %49, %45 ]
 	call void @llvm.dbg.value(metadata %struct.FTS* %19, metadata !4634, metadata !DIExpression()) #11, !dbg !4642
 	call void @llvm.dbg.value(metadata i64 %51, metadata !4641, metadata !DIExpression()) #11, !dbg !4644
 	%52 = getelementptr inbounds i8, i8* %18, i64 48, !dbg !4645
@@ -6313,7 +6313,7 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 	%243 = shl i32 %237, 7, !dbg !4897
 	%244 = and i32 %243, 262144, !dbg !4897
 	%245 = or i32 %242, %244, !dbg !4898
-	%246 = or i32 %245, 592128, !dbg !4898
+	%246 = or i32 %245, u0x90900, !dbg !4898
 	call void @llvm.dbg.value(metadata i32 %246, metadata !4891, metadata !DIExpression()) #11, !dbg !4899
 	%247 = and i32 %237, 512, !dbg !4900
 	%248 = icmp eq i32 %247, 0, !dbg !4900
@@ -7081,7 +7081,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%34 = shl i32 %28, 7, !dbg !5369
 	%35 = and i32 %34, 262144, !dbg !5369
 	%36 = or i32 %33, %35, !dbg !5370
-	%37 = or i32 %36, 592128, !dbg !5370
+	%37 = or i32 %36, u0x90900, !dbg !5370
 	call void @llvm.dbg.value(metadata i32 %37, metadata !4891, metadata !DIExpression()) #11, !dbg !5371
 	%38 = and i32 %28, 512, !dbg !5372
 	%39 = icmp eq i32 %38, 0, !dbg !5372
@@ -7510,7 +7510,7 @@ define dso_local %struct._ftsent* @fts_read(%struct.FTS*) local_unnamed_addr #7 
 	%270 = shl i32 %264, 7, !dbg !5627
 	%271 = and i32 %270, 262144, !dbg !5627
 	%272 = or i32 %269, %271, !dbg !5628
-	%273 = or i32 %272, 592128, !dbg !5628
+	%273 = or i32 %272, u0x90900, !dbg !5628
 	call void @llvm.dbg.value(metadata i32 %273, metadata !4891, metadata !DIExpression()) #11, !dbg !5629
 	%274 = and i32 %264, 512, !dbg !5630
 	%275 = icmp eq i32 %274, 0, !dbg !5630
@@ -8034,7 +8034,7 @@ define internal fastcc i32 @fts_safe_changedir(%struct.FTS*, %struct._ftsent* no
 	%43 = shl i32 %40, 7, !dbg !5939
 	%44 = and i32 %43, 262144, !dbg !5939
 	%45 = or i32 %42, %44, !dbg !5940
-	%46 = or i32 %45, 592128, !dbg !5940
+	%46 = or i32 %45, u0x90900, !dbg !5940
 	call void @llvm.dbg.value(metadata i32 %46, metadata !4891, metadata !DIExpression()) #11, !dbg !5941
 	%47 = and i32 %40, 512, !dbg !5942
 	%48 = icmp eq i32 %47, 0, !dbg !5942
@@ -8272,7 +8272,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	call void @llvm.dbg.value(metadata i8* %31, metadata !6095, metadata !DIExpression()) #11, !dbg !6106
 	call void @llvm.dbg.value(metadata i32 undef, metadata !6096, metadata !DIExpression()) #11, !dbg !6107
 	%46 = or i32 %45, %43, !dbg !6108
-	%47 = or i32 %46, 592128, !dbg !6108
+	%47 = or i32 %46, u0x90900, !dbg !6108
 	call void @llvm.dbg.value(metadata i32 %47, metadata !6098, metadata !DIExpression()) #11, !dbg !6109
 	%48 = tail call i32 (i32, i8*, i32, ...) @openat_safer(i32 %29, i8* %31, i32 %47) #11, !dbg !6110
 	call void @llvm.dbg.value(metadata i32 %48, metadata !6099, metadata !DIExpression()) #11, !dbg !6111
@@ -8373,7 +8373,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	%100 = tail call fastcc i64 @filesystem_type(%struct._ftsent* nonnull %4, i32 %48) #11, !dbg !6173
 	switch i64 %100, label %103 [
 		i64 40864, label %101
-		i64 26985, label %101
+		i64 u0x6969, label %101
 		i64 0, label %101
 		i64 1397113167, label %101
 		i64 4283649346, label %101
@@ -8942,7 +8942,7 @@ define internal fastcc %struct._ftsent* @fts_build(%struct.FTS*, i32) unnamed_ad
 	%385 = tail call fastcc i64 @filesystem_type(%struct._ftsent* nonnull %4, i32 %143) #11, !dbg !6470
 	switch i64 %385, label %386 [
 		i64 4283649346, label %387
-		i64 26985, label %387
+		i64 u0x6969, label %387
 		i64 16914836, label %387
 	], !dbg !6471
 
@@ -9698,7 +9698,7 @@ define dso_local %struct._ftsent* @fts_children(%struct.FTS*, i32) local_unnamed
 	%61 = shl i32 %53, 7, !dbg !6949
 	%62 = and i32 %61, 262144, !dbg !6949
 	%63 = or i32 %60, %62, !dbg !6950
-	%64 = or i32 %63, 592128, !dbg !6950
+	%64 = or i32 %63, u0x90900, !dbg !6950
 	call void @llvm.dbg.value(metadata i32 %64, metadata !4891, metadata !DIExpression()) #11, !dbg !6951
 	%65 = and i32 %53, 512, !dbg !6952
 	%66 = icmp eq i32 %65, 0, !dbg !6952
