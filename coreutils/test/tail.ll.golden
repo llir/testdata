@@ -4419,7 +4419,7 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 151263540, label %18
 		i64 19911021, label %18
 		i64 391, label %18
-		i64 325456742, label %18
+		i64 u0x13661366, label %18
 		i64 1111905073, label %18
 		i64 1650746742, label %18
 		i64 464386766, label %18
@@ -4456,7 +4456,7 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 195894762, label %18
 		i64 40866, label %18
 		i64 1410924800, label %18
-		i64 16964, label %18
+		i64 u0x4244, label %18
 		i64 18475, label %18
 		i64 18520, label %18
 		i64 12648430, label %18
@@ -4466,7 +4466,7 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 72020, label %18
 		i64 732765674, label %18
 		i64 38496, label %18
-		i64 16388, label %18
+		i64 u0x4004, label %18
 		i64 u0x4000, label %18
 		i64 1984, label %18
 		i64 29366, label %18
@@ -4481,11 +4481,11 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 9336, label %18
 		i64 19802, label %18
 		i64 427819522, label %18
-		i64 19780, label %18
+		i64 u0x4D44, label %18
 		i64 1953653091, label %18
 		i64 16914836, label %18
 		i64 19920821, label %18
-		i64 13364, label %18
+		i64 u0x3434, label %18
 		i64 1853056627, label %18
 		i64 1397118030, label %18
 		i64 40865, label %18
@@ -4503,7 +4503,7 @@ define internal fastcc zeroext i1 @fremote(i32, i8*) unnamed_addr #7 !dbg !3471 
 		i64 1382369651, label %18
 		i64 29301, label %18
 		i64 1733912937, label %18
-		i64 1935894131, label %18
+		i64 u0x73636673, label %18
 		i64 4185718668, label %18
 	], !dbg !3537
 

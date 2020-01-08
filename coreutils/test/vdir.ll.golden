@@ -9580,7 +9580,7 @@ define internal fastcc i64 @quote_name_buf(i8** nocapture, i8*, %struct.quoting_
 ; <label>:21
 	%22 = tail call i64 @quotearg_buffer(i8* %10, i64 u0x2000, i8* %1, i64 -1, %struct.quoting_options* %2) #15, !dbg !6860
 	call void @llvm.dbg.value(metadata i64 %22, metadata !6800, metadata !DIExpression()), !dbg !6850
-	%23 = icmp ugt i64 %22, 8191, !dbg !6862
+	%23 = icmp ugt i64 %22, u0x1FFF, !dbg !6862
 	br i1 %23, label %24, label %28, !dbg !6864
 
 ; <label>:24
@@ -9610,7 +9610,7 @@ define internal fastcc i64 @quote_name_buf(i8** nocapture, i8*, %struct.quoting_
 	br i1 %19, label %39, label %276, !dbg !6879
 
 ; <label>:39
-	%40 = icmp ugt i64 %38, 8191, !dbg !6880
+	%40 = icmp ugt i64 %38, u0x1FFF, !dbg !6880
 	%41 = add i64 %38, 1, !dbg !6883
 	br i1 %40, label %42, label %44, !dbg !6884
 

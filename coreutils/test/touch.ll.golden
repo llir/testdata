@@ -7525,7 +7525,7 @@ define dso_local zeroext i1 @parse_datetime2(%struct.timespec*, i8*, %struct.tim
 	%911 = phi i1 [ false, %903 ], [ %909, %904 ], !dbg !4650
 	%912 = zext i1 %911 to i64, !dbg !4647
 	%913 = sub nsw i64 %879, %912, !dbg !4647
-	%914 = icmp sgt i64 %913, 1317624576693539401, !dbg !4647
+	%914 = icmp sgt i64 %913, u0x1249249249249249, !dbg !4647
 	br i1 %914, label %970, label %915, !dbg !4647
 
 ; <label>:915
@@ -9205,7 +9205,7 @@ define dso_local zeroext i1 @posixtime(i64* nocapture, i8*, i32) local_unnamed_a
 	br i1 %48, label %110, label %49, !dbg !5475
 
 ; <label>:49
-	%50 = and i64 %45, 9223372036854775804, !dbg !5475
+	%50 = and i64 %45, u0x7FFFFFFFFFFFFFFC, !dbg !5475
 	%51 = add nsw i64 %50, -4, !dbg !5475
 	%52 = lshr exact i64 %51, 2, !dbg !5475
 	%53 = add nuw nsw i64 %52, 1, !dbg !5475

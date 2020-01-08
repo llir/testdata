@@ -13549,7 +13549,7 @@ define dso_local i32 @save_cwd(%struct.saved_cwd* nocapture) local_unnamed_addr 
 	call void @llvm.dbg.value(metadata %struct.saved_cwd* %0, metadata !9213, metadata !DIExpression()), !dbg !9214
 	%2 = getelementptr inbounds %struct.saved_cwd, %struct.saved_cwd* %0, i64 0, i32 1, !dbg !9215
 	store i8* null, i8** %2, align 8, !dbg !9216, !tbaa !9217
-	%3 = tail call i32 (i8*, i32, ...) @open_safer(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.216, i64 0, i64 0), i32 524288) #13, !dbg !9219
+	%3 = tail call i32 (i8*, i32, ...) @open_safer(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.216, i64 0, i64 0), i32 u0x80000) #13, !dbg !9219
 	%4 = getelementptr inbounds %struct.saved_cwd, %struct.saved_cwd* %0, i64 0, i32 0, !dbg !9220
 	store i32 %3, i32* %4, align 8, !dbg !9221, !tbaa !9222
 	%5 = icmp slt i32 %3, 0, !dbg !9223

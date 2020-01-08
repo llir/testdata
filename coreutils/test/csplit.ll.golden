@@ -2597,34 +2597,34 @@ declare i32 @re_search(%struct.re_pattern_buffer*, i8*, i32, i32, i32, %struct.r
 
 define internal fastcc zeroext i1 @load_buffer() unnamed_addr #3 !dbg !2396 {
 ; <label>:0
-	call void @llvm.dbg.value(metadata i64 8191, metadata !2399, metadata !DIExpression()), !dbg !2403
+	call void @llvm.dbg.value(metadata i64 u0x1FFF, metadata !2399, metadata !DIExpression()), !dbg !2403
 	%1 = load i1, i1* @have_read_eof, align 1
 	br i1 %1, label %224, label %2, !dbg !2404
 
 ; <label>:2
 	%3 = load i64, i64* @hold_count, align 8, !dbg !2405, !tbaa !1074
-	%4 = icmp ugt i64 %3, 8191, !dbg !2407
-	%5 = select i1 %4, i64 %3, i64 8191
+	%4 = icmp ugt i64 %3, u0x1FFF, !dbg !2407
+	%5 = select i1 %4, i64 %3, i64 u0x1FFF
 	br label %6, !dbg !2408
 
 ; <label>:6
 	%7 = phi i64 [ %182, %192 ], [ %5, %2 ], !dbg !2421
 	call void @llvm.dbg.value(metadata i64 %7, metadata !2399, metadata !DIExpression()), !dbg !2403
 	call void @llvm.dbg.value(metadata i64 %7, metadata !2414, metadata !DIExpression()) #11, !dbg !2422
-	call void @llvm.dbg.value(metadata i64 8191, metadata !2416, metadata !DIExpression()) #11, !dbg !2423
-	%8 = icmp ugt i64 %7, 8191, !dbg !2408
+	call void @llvm.dbg.value(metadata i64 u0x1FFF, metadata !2416, metadata !DIExpression()) #11, !dbg !2423
+	%8 = icmp ugt i64 %7, u0x1FFF, !dbg !2408
 	br i1 %8, label %9, label %13, !dbg !2424
 
 ; <label>:9
 	%10 = add i64 %7, -6144, !dbg !2425
 	call void @llvm.dbg.value(metadata i64 %10, metadata !2417, metadata !DIExpression()) #11, !dbg !2426
 	%11 = and i64 %10, -2048, !dbg !2427
-	%12 = add i64 %11, 8191, !dbg !2428
+	%12 = add i64 %11, u0x1FFF, !dbg !2428
 	call void @llvm.dbg.value(metadata i64 %12, metadata !2416, metadata !DIExpression()) #11, !dbg !2423
 	br label %13, !dbg !2429
 
 ; <label>:13
-	%14 = phi i64 [ %12, %9 ], [ 8191, %6 ], !dbg !2430
+	%14 = phi i64 [ %12, %9 ], [ u0x1FFF, %6 ], !dbg !2430
 	call void @llvm.dbg.value(metadata i64 %14, metadata !2416, metadata !DIExpression()) #11, !dbg !2423
 	call void @llvm.dbg.value(metadata i64 %14, metadata !2431, metadata !DIExpression()) #11, !dbg !2435
 	%15 = tail call noalias i8* @xmalloc(i64 72) #11, !dbg !2437

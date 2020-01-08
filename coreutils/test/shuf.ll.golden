@@ -784,7 +784,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !845 {
 	%200 = sub nsw i64 %195, %196, !dbg !1189
 	call void @llvm.dbg.value(metadata i64 %200, metadata !1110, metadata !DIExpression()) #11, !dbg !1182
 	call void @llvm.lifetime.end.p0i8(i64 144, i8* nonnull %185) #11, !dbg !1187
-	%201 = icmp sgt i64 %200, 8388608, !dbg !1190
+	%201 = icmp sgt i64 %200, u0x800000, !dbg !1190
 	br i1 %201, label %273, label %202, !dbg !1188
 
 ; <label>:202
@@ -5192,7 +5192,7 @@ define dso_local i64* @randperm_new(%struct.randint_source*, i64, i64) local_unn
 	br label %188, !dbg !4243
 
 ; <label>:11
-	%12 = icmp ugt i64 %2, 131071, !dbg !4244
+	%12 = icmp ugt i64 %2, u0x1FFFF, !dbg !4244
 	br i1 %12, label %13, label %35, !dbg !4245
 
 ; <label>:13

@@ -935,7 +935,7 @@ define internal fastcc i32 @parse_additional_groups(i8*, i32** nocapture, i64* n
 	%19 = icmp eq i32 %18, 0, !dbg !1237
 	%20 = load i64, i64* %5, align 8, !dbg !1238
 	call void @llvm.dbg.value(metadata i64 %20, metadata !1219, metadata !DIExpression()), !dbg !1234
-	%21 = icmp ult i64 %20, 4294967296, !dbg !1239
+	%21 = icmp ult i64 %20, u0x100000000, !dbg !1239
 	%22 = and i1 %19, %21, !dbg !1240
 	br i1 %22, label %23, label %44, !dbg !1240
 
@@ -4373,7 +4373,7 @@ define internal fastcc i8* @parse_with_separator(i8*, i8*, i32* nocapture, i32*,
 	%60 = icmp eq i32 %59, 0, !dbg !3270
 	%61 = load i64, i64* %7, align 8, !dbg !3271
 	call void @llvm.dbg.value(metadata i64 %61, metadata !251, metadata !DIExpression()), !dbg !3267
-	%62 = icmp ult i64 %61, 4294967296, !dbg !3272
+	%62 = icmp ult i64 %61, u0x100000000, !dbg !3272
 	%63 = and i1 %60, %62, !dbg !3273
 	br i1 %63, label %64, label %67, !dbg !3273
 
@@ -4477,7 +4477,7 @@ define internal fastcc i8* @parse_with_separator(i8*, i8*, i32* nocapture, i32*,
 	%114 = icmp eq i32 %113, 0, !dbg !3314
 	%115 = load i64, i64* %9, align 8, !dbg !3315
 	call void @llvm.dbg.value(metadata i64 %115, metadata !261, metadata !DIExpression()), !dbg !3311
-	%116 = icmp ult i64 %115, 4294967296, !dbg !3316
+	%116 = icmp ult i64 %115, u0x100000000, !dbg !3316
 	%117 = and i1 %114, %116, !dbg !3317
 	br i1 %117, label %118, label %121, !dbg !3317
 

@@ -4731,7 +4731,7 @@ define internal fastcc zeroext i1 @copy_internal(i8*, i8*, i1 zeroext, %struct.s
 ; <label>:1393
 	call void @llvm.dbg.value(metadata i32 %1367, metadata !4586, metadata !DIExpression()) #10, !dbg !4592
 	call void @llvm.dbg.value(metadata i32 %1225, metadata !4591, metadata !DIExpression()) #10, !dbg !4594
-	%1394 = call i32 (i32, i64, ...) @ioctl(i32 %1367, i64 1074041865, i32 %1225) #10, !dbg !4595
+	%1394 = call i32 (i32, i64, ...) @ioctl(i32 %1367, i64 u0x40049409, i32 %1225) #10, !dbg !4595
 	%1395 = icmp eq i32 %1394, 0, !dbg !4596
 	br i1 %1395, label %1689, label %1396, !dbg !4597
 

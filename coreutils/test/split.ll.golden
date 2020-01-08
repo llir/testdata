@@ -3490,8 +3490,8 @@ define internal fastcc void @closeout(%struct._IO_FILE*, i32, i32, i8*) unnamed_
 	call void @llvm.dbg.value(metadata i32 %61, metadata !2701, metadata !DIExpression()), !dbg !2764
 	%62 = and i32 %61, 127, !dbg !2773
 	%63 = shl nuw nsw i32 %62, 24, !dbg !2773
-	%64 = add nuw i32 %63, 16777216, !dbg !2773
-	%65 = icmp sgt i32 %64, 33554431, !dbg !2773
+	%64 = add nuw i32 %63, u0x1000000, !dbg !2773
+	%65 = icmp sgt i32 %64, u0x1FFFFFF, !dbg !2773
 	br i1 %65, label %66, label %79, !dbg !2774
 
 ; <label>:66

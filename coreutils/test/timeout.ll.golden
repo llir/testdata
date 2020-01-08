@@ -574,8 +574,8 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !766 {
 
 ; <label>:133
 	%134 = shl nuw nsw i32 %128, 24, !dbg !1075
-	%135 = add nuw i32 %134, 16777216, !dbg !1075
-	%136 = icmp sgt i32 %135, 33554431, !dbg !1075
+	%135 = add nuw i32 %134, u0x1000000, !dbg !1075
+	%136 = icmp sgt i32 %135, u0x1FFFFFF, !dbg !1075
 	br i1 %136, label %137, label %156, !dbg !1076
 
 ; <label>:137

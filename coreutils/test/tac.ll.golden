@@ -5845,7 +5845,7 @@ define dso_local i32 @dup_safer_flag(i32, i32) local_unnamed_addr #7 !dbg !4279 
 ; <label>:2
 	call void @llvm.dbg.value(metadata i32 %0, metadata !4282, metadata !DIExpression()), !dbg !4284
 	call void @llvm.dbg.value(metadata i32 %1, metadata !4283, metadata !DIExpression()), !dbg !4285
-	%3 = and i32 %1, 524288, !dbg !4286
+	%3 = and i32 %1, u0x80000, !dbg !4286
 	%4 = icmp eq i32 %3, 0, !dbg !4287
 	%5 = select i1 %4, i32 0, i32 1030, !dbg !4287
 	%6 = tail call i32 (i32, i32, ...) @rpl_fcntl(i32 %0, i32 %5, i32 3) #11, !dbg !4288

@@ -456,7 +456,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !673 {
 	%87 = call noalias i8* @xmalloc(i64 u0x2000) #11, !dbg !851
 	%88 = bitcast i8* %84 to i8**, !dbg !852
 	store i8* %87, i8** %88, align 8, !dbg !853, !tbaa !854
-	%89 = getelementptr inbounds i8, i8* %87, i64 8191, !dbg !855
+	%89 = getelementptr inbounds i8, i8* %87, i64 u0x1FFF, !dbg !855
 	%90 = getelementptr inbounds i8, i8* %84, i64 16, !dbg !856
 	%91 = bitcast i8* %90 to i8**, !dbg !856
 	store i8* %89, i8** %91, align 8, !dbg !857, !tbaa !858
