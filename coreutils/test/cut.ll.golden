@@ -1870,7 +1870,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	br i1 %264, label %265, label %298, !dbg !1663
 
 ; <label>:265
-	%266 = sub i64 1152921504606846974, %262
+	%266 = sub i64 u0xFFFFFFFFFFFFFFE, %262
 	%267 = load %struct.field_range_pair*, %struct.field_range_pair** @frp, align 8, !dbg !1664, !tbaa !770
 	%268 = getelementptr inbounds %struct.field_range_pair, %struct.field_range_pair* %267, i64 %263, i32 0, !dbg !1667
 	%269 = load i64, i64* %268, align 8, !dbg !1667, !tbaa !1137

@@ -3445,7 +3445,7 @@ define dso_local zeroext i1 @hash_rehash(%struct.hash_table* nocapture, i64) loc
 	call void @llvm.dbg.value(metadata i64 %24, metadata !2386, metadata !DIExpression()), !dbg !2646
 	call void @llvm.dbg.value(metadata i64 %24, metadata !2364, metadata !DIExpression()), !dbg !2635
 	%45 = add i64 %24, -1, !dbg !2668
-	%46 = icmp ugt i64 %45, 1152921504606846974, !dbg !2668
+	%46 = icmp ugt i64 %45, u0xFFFFFFFFFFFFFFE, !dbg !2668
 	call void @llvm.dbg.value(metadata i64 %24, metadata !2630, metadata !DIExpression()), !dbg !2669
 	br i1 %46, label %146, label %47, !dbg !2668
 
