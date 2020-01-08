@@ -904,7 +904,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !1028 {
 	%183 = getelementptr inbounds %struct.stat, %struct.stat* %158, i64 %182, i32 3, !dbg !1380
 	%184 = load i32, i32* %183, align 8, !dbg !1380, !tbaa !1381
 	%185 = and i32 %184, u0xF000, !dbg !1380
-	%186 = icmp eq i32 %185, 4096, !dbg !1380
+	%186 = icmp eq i32 %185, u0x1000, !dbg !1380
 	br i1 %186, label %193, label %187, !dbg !1384
 
 ; <label>:187
@@ -5114,7 +5114,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	%24 = tail call i64 @strlen(i8* nonnull %21), !dbg !4103
 	%25 = getelementptr i8, i8* %21, i64 %24, !dbg !4103
 	call void @llvm.dbg.value(metadata i8* %25, metadata !4010, metadata !DIExpression()), !dbg !4104
-	%26 = icmp slt i64 %24, 4096, !dbg !4105
+	%26 = icmp slt i64 %24, u0x1000, !dbg !4105
 	br i1 %26, label %27, label %35, !dbg !4106
 
 ; <label>:27
@@ -5123,7 +5123,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	%29 = getelementptr inbounds i8, i8* %28, i64 %24, !dbg !4109
 	call void @llvm.dbg.value(metadata i8* %29, metadata !4010, metadata !DIExpression()), !dbg !4104
 	call void @llvm.dbg.value(metadata i8* %28, metadata !4009, metadata !DIExpression()), !dbg !4099
-	%30 = getelementptr inbounds i8, i8* %28, i64 4096, !dbg !4110
+	%30 = getelementptr inbounds i8, i8* %28, i64 u0x1000, !dbg !4110
 	call void @llvm.dbg.value(metadata i8* %30, metadata !4014, metadata !DIExpression()), !dbg !4111
 	br label %35, !dbg !4112
 
@@ -5131,7 +5131,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	%32 = tail call noalias i8* @xmalloc(i64 4096) #13, !dbg !4113
 	call void @llvm.dbg.value(metadata i8* %32, metadata !4009, metadata !DIExpression()), !dbg !4099
 	call void @llvm.dbg.value(metadata i8* %32, metadata !4010, metadata !DIExpression()), !dbg !4104
-	%33 = getelementptr inbounds i8, i8* %32, i64 4096, !dbg !4115
+	%33 = getelementptr inbounds i8, i8* %32, i64 u0x1000, !dbg !4115
 	call void @llvm.dbg.value(metadata i8* %33, metadata !4014, metadata !DIExpression()), !dbg !4111
 	call void @llvm.dbg.value(metadata i8* %32, metadata !4010, metadata !DIExpression()), !dbg !4104
 	%34 = getelementptr inbounds i8, i8* %32, i64 1, !dbg !4116
@@ -5306,7 +5306,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	call void @llvm.dbg.value(metadata i64 %115, metadata !4059, metadata !DIExpression()), !dbg !4178
 	%116 = icmp sgt i64 %80, 4095, !dbg !4179
 	%117 = add nsw i64 %80, 1, !dbg !4181
-	%118 = select i1 %116, i64 %117, i64 4096, !dbg !4182
+	%118 = select i1 %116, i64 %117, i64 u0x1000, !dbg !4182
 	%119 = add i64 %118, %115, !dbg !4183
 	call void @llvm.dbg.value(metadata i64 %119, metadata !4059, metadata !DIExpression()), !dbg !4178
 	%120 = call i8* @xrealloc(i8* %54, i64 %119) #13, !dbg !4184
@@ -5477,8 +5477,8 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #7
 	br i1 %178, label %181, label %185, !dbg !4286
 
 ; <label>:181
-	%182 = icmp ugt i64 %180, 4096, !dbg !4287
-	%183 = select i1 %182, i64 %180, i64 4096, !dbg !4288
+	%182 = icmp ugt i64 %180, u0x1000, !dbg !4287
+	%183 = select i1 %182, i64 %180, i64 u0x1000, !dbg !4288
 	call void @llvm.dbg.value(metadata i64 %183, metadata !4015, metadata !DIExpression()), !dbg !4071
 	%184 = call noalias i8* @xmalloc(i64 %183) #13, !dbg !4289
 	call void @llvm.dbg.value(metadata i8* %184, metadata !4011, metadata !DIExpression()), !dbg !4070
@@ -15318,7 +15318,7 @@ define dso_local i32 @chdir_long(i8*) local_unnamed_addr #7 !dbg !10043 {
 	store i8 0, i8* %54, align 1, !dbg !10168, !tbaa !2243
 	%58 = ptrtoint i8* %54 to i64, !dbg !10169
 	%59 = sub i64 %58, %51, !dbg !10169
-	%60 = icmp slt i64 %59, 4096, !dbg !10169
+	%60 = icmp slt i64 %59, u0x1000, !dbg !10169
 	br i1 %60, label %62, label %61, !dbg !10172
 
 ; <label>:61

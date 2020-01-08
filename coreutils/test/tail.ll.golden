@@ -2322,7 +2322,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%955 = and i16 %954, -4096, !dbg !2151
 	switch i16 %955, label %956 [
 		i16 -32768, label %976
-		i16 4096, label %976
+		i16 u0x1000, label %976
 		i16 -16384, label %976
 		i16 u0x2000, label %976
 	], !dbg !2151
@@ -2535,7 +2535,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%1073 = getelementptr inbounds %struct.File_spec, %struct.File_spec* %295, i64 %1059, i32 5, !dbg !2300
 	%1074 = load i32, i32* %1073, align 8, !dbg !2300, !tbaa !2237
 	%1075 = and i32 %1074, u0xF000, !dbg !2300
-	%1076 = icmp eq i32 %1075, 4096, !dbg !2300
+	%1076 = icmp eq i32 %1075, u0x1000, !dbg !2300
 	br i1 %1076, label %1077, label %1078, !dbg !2301
 
 ; <label>:1077
@@ -2588,7 +2588,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%1095 = getelementptr inbounds %struct.stat, %struct.stat* %19, i64 0, i32 3, !dbg !2326
 	%1096 = load i32, i32* %1095, align 8, !dbg !2326, !tbaa !1407
 	%1097 = and i32 %1096, u0xF000, !dbg !2326
-	%1098 = icmp eq i32 %1097, 4096, !dbg !2326
+	%1098 = icmp eq i32 %1097, u0x1000, !dbg !2326
 	%1099 = zext i1 %1098 to i8, !dbg !2327
 	store i8 %1099, i8* @monitor_output, align 1, !dbg !2327, !tbaa !1126
 	%1100 = load i1, i1* @disable_inotify, align 1
@@ -2715,7 +2715,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !67 {
 	%1165 = and i16 %1164, -4096, !dbg !2447
 	switch i16 %1165, label %1173 [
 		i16 -32768, label %1166
-		i16 4096, label %1166
+		i16 u0x1000, label %1166
 	], !dbg !2447
 
 ; <label>:1166
@@ -4717,7 +4717,7 @@ define internal fastcc void @recheck(%struct.File_spec*, i1 zeroext) unnamed_add
 	%90 = and i16 %89, -4096, !dbg !3676
 	switch i16 %90, label %91 [
 		i16 -32768, label %118
-		i16 4096, label %118
+		i16 u0x1000, label %118
 		i16 -16384, label %118
 		i16 u0x2000, label %118
 	], !dbg !3676

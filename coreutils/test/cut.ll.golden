@@ -7141,15 +7141,15 @@ define dso_local i32 @freadseek(%struct._IO_FILE*, i64) local_unnamed_addr #7 !d
 
 ; <label>:53
 	%54 = getelementptr inbounds [4096 x i8], [4096 x i8]* %4, i64 0, i64 0, !dbg !5082
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %54) #12, !dbg !5082
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %54) #12, !dbg !5082
 	call void @llvm.dbg.declare(metadata [4096 x i8]* %4, metadata !5018, metadata !DIExpression()), !dbg !5083
 	br label %55, !dbg !5084
 
 ; <label>:55
 	%56 = phi i64 [ %45, %53 ], [ %62, %63 ], !dbg !5056
 	call void @llvm.dbg.value(metadata i64 %56, metadata !5010, metadata !DIExpression()), !dbg !5027
-	%57 = icmp ult i64 %56, 4096, !dbg !5085
-	%58 = select i1 %57, i64 %56, i64 4096, !dbg !5085
+	%57 = icmp ult i64 %56, u0x1000, !dbg !5085
+	%58 = select i1 %57, i64 %56, i64 u0x1000, !dbg !5085
 	call void @llvm.dbg.value(metadata i64 %58, metadata !5024, metadata !DIExpression()), !dbg !5086
 	%59 = call i64 @fread(i8* nonnull %54, i64 1, i64 %58, %struct._IO_FILE* %0), !dbg !5087
 	%60 = icmp ult i64 %59, %58, !dbg !5089
@@ -7163,11 +7163,11 @@ define dso_local i32 @freadseek(%struct._IO_FILE*, i64) local_unnamed_addr #7 !d
 	br i1 %64, label %65, label %55, !dbg !5092, !llvm.loop !5093
 
 ; <label>:65
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %54) #12, !dbg !5095
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %54) #12, !dbg !5095
 	br label %71
 
 ; <label>:66
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %54) #12, !dbg !5095
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %54) #12, !dbg !5095
 	br label %67
 
 ; <label>:67

@@ -5820,8 +5820,8 @@ define dso_local %struct.randread_source* @randread_new(i8*, i64) local_unnamed_
 	br i1 %31, label %37, label %33, !dbg !4539
 
 ; <label>:33
-	%34 = icmp ult i64 %1, 4096, !dbg !4540
-	%35 = select i1 %34, i64 %1, i64 4096, !dbg !4540
+	%34 = icmp ult i64 %1, u0x1000, !dbg !4540
+	%35 = select i1 %34, i64 %1, i64 u0x1000, !dbg !4540
 	%36 = tail call i32 @setvbuf(%struct._IO_FILE* nonnull %23, i8* nonnull %32, i32 0, i64 %35) #12, !dbg !4541
 	br label %96, !dbg !4541
 

@@ -4389,7 +4389,7 @@ define internal fastcc zeroext i1 @print_it(i8*, i32, i8*, i1 (i8*, i64, i32, i3
 	%123 = zext i8 %122 to i64, !dbg !2312
 	%124 = getelementptr inbounds i16, i16* %120, i64 %123, !dbg !2312
 	%125 = load i16, i16* %124, align 2, !dbg !2312, !tbaa !2313
-	%126 = and i16 %125, 4096, !dbg !2312
+	%126 = and i16 %125, u0x1000, !dbg !2312
 	%127 = icmp eq i16 %126, 0, !dbg !2312
 	br i1 %127, label %195, label %128, !dbg !2314
 
@@ -4415,7 +4415,7 @@ define internal fastcc zeroext i1 @print_it(i8*, i32, i8*, i1 (i8*, i64, i32, i3
 	%141 = zext i8 %140 to i64, !dbg !2317
 	%142 = getelementptr inbounds i16, i16* %120, i64 %141, !dbg !2317
 	%143 = load i16, i16* %142, align 2, !dbg !2317, !tbaa !2313
-	%144 = and i16 %143, 4096, !dbg !2317
+	%144 = and i16 %143, u0x1000, !dbg !2317
 	%145 = icmp eq i16 %144, 0, !dbg !2317
 	br i1 %145, label %159, label %146, !dbg !2319
 
@@ -19411,7 +19411,7 @@ define dso_local i32 @chdir_long(i8*) local_unnamed_addr #7 !dbg !8456 {
 	store i8 0, i8* %54, align 1, !dbg !8581, !tbaa !1113
 	%58 = ptrtoint i8* %54 to i64, !dbg !8582
 	%59 = sub i64 %58, %51, !dbg !8582
-	%60 = icmp slt i64 %59, 4096, !dbg !8582
+	%60 = icmp slt i64 %59, u0x1000, !dbg !8582
 	br i1 %60, label %62, label %61, !dbg !8585
 
 ; <label>:61

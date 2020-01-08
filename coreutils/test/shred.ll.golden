@@ -97,7 +97,7 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.60 = private unnamed_addr constant [17 x i8] c"%s: fstat failed\00", align 1
 @.str.61 = private unnamed_addr constant [22 x i8] c"%s: invalid file type\00", align 1
 @.str.62 = private unnamed_addr constant [27 x i8] c"%s: file has negative size\00", align 1
-@patterns = internal unnamed_addr constant [55 x i32] [i32 -2, i32 2, i32 0, i32 4095, i32 2, i32 1365, i32 2730, i32 -1, i32 6, i32 585, i32 1170, i32 1755, i32 2340, i32 2925, i32 3510, i32 12, i32 273, i32 546, i32 819, i32 1092, i32 1638, i32 1911, i32 2184, i32 2457, i32 3003, i32 3276, i32 3549, i32 3822, i32 -1, i32 8, i32 4096, i32 4681, i32 5266, i32 5851, i32 6436, i32 7021, i32 7606, i32 8191, i32 14, i32 4369, i32 4642, i32 4915, i32 5188, i32 5461, i32 5734, i32 6007, i32 6280, i32 6553, i32 6826, i32 7099, i32 7372, i32 7645, i32 7918, i32 -1, i32 0], align 16, !dbg !86
+@patterns = internal unnamed_addr constant [55 x i32] [i32 -2, i32 2, i32 0, i32 4095, i32 2, i32 1365, i32 2730, i32 -1, i32 6, i32 585, i32 1170, i32 1755, i32 2340, i32 2925, i32 3510, i32 12, i32 273, i32 546, i32 819, i32 1092, i32 1638, i32 1911, i32 2184, i32 2457, i32 3003, i32 3276, i32 3549, i32 3822, i32 -1, i32 8, i32 u0x1000, i32 4681, i32 5266, i32 5851, i32 6436, i32 7021, i32 7606, i32 8191, i32 14, i32 4369, i32 4642, i32 4915, i32 5188, i32 5461, i32 5734, i32 6007, i32 6280, i32 6553, i32 6826, i32 7099, i32 7372, i32 7645, i32 7918, i32 -1, i32 0], align 16, !dbg !86
 @.str.64 = private unnamed_addr constant [18 x i8] c"%s: cannot rewind\00", align 1
 @.str.71 = private unnamed_addr constant [13 x i8] c"%02x%02x%02x\00", align 1
 @.str.72 = private unnamed_addr constant [7 x i8] c"random\00", align 1
@@ -976,7 +976,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	%43 = trunc i32 %42 to i16, !dbg !1463
 	%44 = and i16 %43, -4096, !dbg !1463
 	switch i16 %44, label %53 [
-		i16 4096, label %45
+		i16 u0x1000, label %45
 		i16 -16384, label %45
 		i16 -32768, label %47
 	], !dbg !1463
@@ -1586,7 +1586,7 @@ define internal fastcc zeroext i1 @do_wipefd(i32, i8*, %struct.randint_source*, 
 	br label %345, !dbg !1905
 
 ; <label>:345
-	%346 = and i32 %251, 4096, !dbg !1906
+	%346 = and i32 %251, u0x1000, !dbg !1906
 	%347 = icmp ne i32 %346, 0, !dbg !1906
 	%348 = icmp ne i64 %321, 0, !dbg !1908
 	%349 = and i1 %347, %348, !dbg !1911
@@ -7220,8 +7220,8 @@ define dso_local %struct.randread_source* @randread_new(i8*, i64) local_unnamed_
 	br i1 %31, label %37, label %33, !dbg !5418
 
 ; <label>:33
-	%34 = icmp ult i64 %1, 4096, !dbg !5419
-	%35 = select i1 %34, i64 %1, i64 4096, !dbg !5419
+	%34 = icmp ult i64 %1, u0x1000, !dbg !5419
+	%35 = select i1 %34, i64 %1, i64 u0x1000, !dbg !5419
 	%36 = tail call i32 @setvbuf(%struct._IO_FILE* nonnull %23, i8* nonnull %32, i32 0, i64 %35) #13, !dbg !5420
 	br label %96, !dbg !5420
 

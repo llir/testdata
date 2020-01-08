@@ -7315,7 +7315,7 @@ define internal fastcc void @print_current_files() unnamed_addr #0 !dbg !4921 {
 ; <label>:753
 	switch i16 %745, label %781 [
 		i16 -24576, label %756
-		i16 4096, label %754
+		i16 u0x1000, label %754
 		i16 -16384, label %755
 	], !dbg !5725
 
@@ -11297,7 +11297,7 @@ define internal fastcc i64 @length_of_file_name_and_frills(%struct.fileinfo* noc
 	%114 = and i16 %113, -4096, !dbg !7476
 	switch i16 %114, label %118 [
 		i16 -24576, label %123
-		i16 4096, label %123
+		i16 u0x1000, label %123
 		i16 -16384, label %123
 	], !dbg !7476
 
@@ -12089,7 +12089,7 @@ define internal fastcc zeroext i1 @print_type_indicator(i1 zeroext, i32, i32) un
 	%22 = and i16 %21, -4096, !dbg !7910
 	switch i16 %22, label %44 [
 		i16 -24576, label %28
-		i16 4096, label %26
+		i16 u0x1000, label %26
 		i16 -16384, label %27
 	], !dbg !7910
 
@@ -15941,7 +15941,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	%24 = tail call i64 @strlen(i8* nonnull %21), !dbg !10133
 	%25 = getelementptr i8, i8* %21, i64 %24, !dbg !10133
 	call void @llvm.dbg.value(metadata i8* %25, metadata !10041, metadata !DIExpression()), !dbg !10134
-	%26 = icmp slt i64 %24, 4096, !dbg !10135
+	%26 = icmp slt i64 %24, u0x1000, !dbg !10135
 	br i1 %26, label %27, label %35, !dbg !10136
 
 ; <label>:27
@@ -15950,7 +15950,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	%29 = getelementptr inbounds i8, i8* %28, i64 %24, !dbg !10139
 	call void @llvm.dbg.value(metadata i8* %29, metadata !10041, metadata !DIExpression()), !dbg !10134
 	call void @llvm.dbg.value(metadata i8* %28, metadata !10040, metadata !DIExpression()), !dbg !10129
-	%30 = getelementptr inbounds i8, i8* %28, i64 4096, !dbg !10140
+	%30 = getelementptr inbounds i8, i8* %28, i64 u0x1000, !dbg !10140
 	call void @llvm.dbg.value(metadata i8* %30, metadata !10045, metadata !DIExpression()), !dbg !10141
 	br label %35, !dbg !10142
 
@@ -15958,7 +15958,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	%32 = tail call noalias i8* @xmalloc(i64 4096) #15, !dbg !10143
 	call void @llvm.dbg.value(metadata i8* %32, metadata !10040, metadata !DIExpression()), !dbg !10129
 	call void @llvm.dbg.value(metadata i8* %32, metadata !10041, metadata !DIExpression()), !dbg !10134
-	%33 = getelementptr inbounds i8, i8* %32, i64 4096, !dbg !10145
+	%33 = getelementptr inbounds i8, i8* %32, i64 u0x1000, !dbg !10145
 	call void @llvm.dbg.value(metadata i8* %33, metadata !10045, metadata !DIExpression()), !dbg !10141
 	call void @llvm.dbg.value(metadata i8* %32, metadata !10041, metadata !DIExpression()), !dbg !10134
 	%34 = getelementptr inbounds i8, i8* %32, i64 1, !dbg !10146
@@ -16133,7 +16133,7 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	call void @llvm.dbg.value(metadata i64 %115, metadata !10089, metadata !DIExpression()), !dbg !10208
 	%116 = icmp sgt i64 %80, 4095, !dbg !10209
 	%117 = add nsw i64 %80, 1, !dbg !10211
-	%118 = select i1 %116, i64 %117, i64 4096, !dbg !10212
+	%118 = select i1 %116, i64 %117, i64 u0x1000, !dbg !10212
 	%119 = add i64 %118, %115, !dbg !10213
 	call void @llvm.dbg.value(metadata i64 %119, metadata !10089, metadata !DIExpression()), !dbg !10208
 	%120 = call i8* @xrealloc(i8* %54, i64 %119) #15, !dbg !10214
@@ -16304,8 +16304,8 @@ define dso_local i8* @canonicalize_filename_mode(i8*, i32) local_unnamed_addr #0
 	br i1 %178, label %181, label %185, !dbg !10316
 
 ; <label>:181
-	%182 = icmp ugt i64 %180, 4096, !dbg !10317
-	%183 = select i1 %182, i64 %180, i64 4096, !dbg !10318
+	%182 = icmp ugt i64 %180, u0x1000, !dbg !10317
+	%183 = select i1 %182, i64 %180, i64 u0x1000, !dbg !10318
 	call void @llvm.dbg.value(metadata i64 %183, metadata !10046, metadata !DIExpression()), !dbg !10101
 	%184 = call noalias i8* @xmalloc(i64 %183) #15, !dbg !10319
 	call void @llvm.dbg.value(metadata i8* %184, metadata !10042, metadata !DIExpression()), !dbg !10100

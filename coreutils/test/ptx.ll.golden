@@ -4216,7 +4216,7 @@ define internal fastcc i8* @copy_unescaped_string(i8* nocapture readonly) unname
 	%23 = zext i8 %22 to i64, !dbg !2613
 	%24 = getelementptr inbounds i16, i16* %21, i64 %23, !dbg !2613
 	%25 = load i16, i16* %24, align 2, !dbg !2613, !tbaa !1281
-	%26 = and i16 %25, 4096, !dbg !2613
+	%26 = and i16 %25, u0x1000, !dbg !2613
 	%27 = icmp eq i16 %26, 0, !dbg !2615
 	br i1 %27, label %46, label %28, !dbg !2616
 
@@ -4246,7 +4246,7 @@ define internal fastcc i8* @copy_unescaped_string(i8* nocapture readonly) unname
 	%41 = zext i8 %40 to i64, !dbg !2613
 	%42 = getelementptr inbounds i16, i16* %21, i64 %41, !dbg !2613
 	%43 = load i16, i16* %42, align 2, !dbg !2613, !tbaa !1281
-	%44 = and i16 %43, 4096, !dbg !2613
+	%44 = and i16 %43, u0x1000, !dbg !2613
 	%45 = icmp eq i16 %44, 0, !dbg !2615
 	br i1 %45, label %49, label %130, !dbg !2616
 
@@ -4476,7 +4476,7 @@ define internal fastcc i8* @copy_unescaped_string(i8* nocapture readonly) unname
 	%145 = zext i8 %144 to i64, !dbg !2613
 	%146 = getelementptr inbounds i16, i16* %21, i64 %145, !dbg !2613
 	%147 = load i16, i16* %146, align 2, !dbg !2613, !tbaa !1281
-	%148 = and i16 %147, 4096, !dbg !2613
+	%148 = and i16 %147, u0x1000, !dbg !2613
 	%149 = icmp eq i16 %148, 0, !dbg !2615
 	br i1 %149, label %49, label %150, !dbg !2616
 
@@ -13770,7 +13770,7 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	%17 = tail call i64 @iconv(i8* %2, i8** null, i64* null, i8** null, i64* null) #12, !dbg !8152
 	call void @llvm.dbg.value(metadata i64 0, metadata !8114, metadata !DIExpression()), !dbg !8153
 	%18 = bitcast %union.anon.59* %6 to i8*, !dbg !8154
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %18) #12, !dbg !8154
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %18) #12, !dbg !8154
 	%19 = bitcast i8** %7 to i8*, !dbg !8155
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %19) #12, !dbg !8155
 	call void @llvm.dbg.value(metadata i8* %0, metadata !8124, metadata !DIExpression()), !dbg !8156
@@ -13813,8 +13813,8 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	call void @llvm.dbg.value(metadata %union.anon.59* %6, metadata !8126, metadata !DIExpression()), !dbg !8162
 	store %union.anon.59* %6, %union.anon.59** %24, align 8, !dbg !8162, !tbaa !915
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %25) #12, !dbg !8168
-	call void @llvm.dbg.value(metadata i64 4096, metadata !8128, metadata !DIExpression()), !dbg !8169
-	store i64 4096, i64* %10, align 8, !dbg !8169, !tbaa !1035
+	call void @llvm.dbg.value(metadata i64 u0x1000, metadata !8128, metadata !DIExpression()), !dbg !8169
+	store i64 u0x1000, i64* %10, align 8, !dbg !8169, !tbaa !1035
 	call void @llvm.dbg.value(metadata i8** %7, metadata !8124, metadata !DIExpression(DW_OP_deref)), !dbg !8156
 	call void @llvm.dbg.value(metadata i64* %8, metadata !8125, metadata !DIExpression(DW_OP_deref)), !dbg !8158
 	call void @llvm.dbg.value(metadata i8** %9, metadata !8126, metadata !DIExpression(DW_OP_deref)), !dbg !8162
@@ -13859,8 +13859,8 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	store %union.anon.59* %6, %union.anon.59** %46, align 8, !dbg !8180, !tbaa !915
 	%47 = bitcast i64* %12 to i8*, !dbg !8181
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %47) #12, !dbg !8181
-	call void @llvm.dbg.value(metadata i64 4096, metadata !8132, metadata !DIExpression()), !dbg !8182
-	store i64 4096, i64* %12, align 8, !dbg !8182, !tbaa !1035
+	call void @llvm.dbg.value(metadata i64 u0x1000, metadata !8132, metadata !DIExpression()), !dbg !8182
+	store i64 u0x1000, i64* %12, align 8, !dbg !8182, !tbaa !1035
 	call void @llvm.dbg.value(metadata i8** %11, metadata !8130, metadata !DIExpression(DW_OP_deref)), !dbg !8180
 	call void @llvm.dbg.value(metadata i64* %12, metadata !8132, metadata !DIExpression(DW_OP_deref)), !dbg !8182
 	%48 = call i64 @iconv(i8* %2, i8** null, i64* null, i8** nonnull %11, i64* nonnull %12) #12, !dbg !8183
@@ -13893,7 +13893,7 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	call void @llvm.dbg.value(metadata i64 %61, metadata !8112, metadata !DIExpression()), !dbg !8193
 	call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %20) #12, !dbg !8194
 	call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %19) #12, !dbg !8194
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %18) #12, !dbg !8194
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %18) #12, !dbg !8194
 	%62 = icmp eq i32 %60, 0
 	br i1 %62, label %63, label %111
 

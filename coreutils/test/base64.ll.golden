@@ -420,7 +420,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 	call void @llvm.dbg.value(metadata %struct._IO_FILE* %66, metadata !790, metadata !DIExpression()) #11, !dbg !909
 	call void @llvm.dbg.value(metadata i1 %68, metadata !791, metadata !DIExpression()) #11, !dbg !910
 	%69 = getelementptr inbounds [4096 x i8], [4096 x i8]* %3, i64 0, i64 0, !dbg !911
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %69) #11, !dbg !911
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %69) #11, !dbg !911
 	%70 = getelementptr inbounds [3072 x i8], [3072 x i8]* %4, i64 0, i64 0, !dbg !912
 	call void @llvm.lifetime.start.p0i8(i64 3072, i8* nonnull %70) #11, !dbg !912
 	%71 = bitcast %struct.base64_decode_context* %5 to i8*, !dbg !913
@@ -441,7 +441,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 	%77 = phi i64 [ 0, %75 ], [ %105, %113 ], !dbg !920
 	call void @llvm.dbg.value(metadata i64 %77, metadata !796, metadata !DIExpression()) #11, !dbg !918
 	%78 = getelementptr inbounds [4096 x i8], [4096 x i8]* %3, i64 0, i64 %77, !dbg !921
-	%79 = sub i64 4096, %77, !dbg !921
+	%79 = sub i64 u0x1000, %77, !dbg !921
 	%80 = call i64 @fread_unlocked(i8* nonnull %78, i64 1, i64 %79, %struct._IO_FILE* %64) #11, !dbg !921
 	call void @llvm.dbg.value(metadata i64 %80, metadata !808, metadata !DIExpression()) #11, !dbg !922
 	store i64 %80, i64* %6, align 8, !dbg !923, !tbaa !924
@@ -507,7 +507,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 	unreachable, !dbg !968
 
 ; <label>:113
-	%114 = icmp ult i64 %105, 4096, !dbg !969
+	%114 = icmp ult i64 %105, u0x1000, !dbg !969
 	%115 = and i32 %106, 16, !dbg !970
 	%116 = icmp eq i32 %115, 0, !dbg !975
 	%117 = and i1 %114, %116, !dbg !976
@@ -574,7 +574,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !714 {
 ; <label>:146
 	call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %71) #11, !dbg !1019
 	call void @llvm.lifetime.end.p0i8(i64 3072, i8* nonnull %70) #11, !dbg !1019
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %69) #11, !dbg !1019
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %69) #11, !dbg !1019
 	br label %259, !dbg !1020
 
 ; <label>:147

@@ -355,7 +355,7 @@ target triple = "x86_64-pc-linux-gnu"
 @rpl_fcntl.have_dupfd_cloexec = internal unnamed_addr global i32 0, align 4, !dbg !591
 @.str.400 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.405 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 u0x2000, i32 0, i32 u0x4000, i32 0, i32 u0x6000, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 u0x1000, i32 u0x2000, i32 0, i32 u0x4000, i32 0, i32 u0x6000, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
 @argmatch_die = dso_local local_unnamed_addr global void ()* @__argmatch_die, align 8, !dbg !628
 @.str.418 = private unnamed_addr constant [27 x i8] c"invalid argument %s for %s\00", align 1
 @.str.1.419 = private unnamed_addr constant [29 x i8] c"ambiguous argument %s for %s\00", align 1
@@ -7929,10 +7929,10 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 	%22 = phi i32 [ 0, %1 ], [ %155, %154 ], !dbg !6680
 	call void @llvm.dbg.value(metadata i32 %22, metadata !692, metadata !DIExpression()), !dbg !6680
 	call void @llvm.dbg.value(metadata %struct.extent_info* %21, metadata !693, metadata !DIExpression()), !dbg !6682
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %5) #12, !dbg !6685
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %5) #12, !dbg !6685
 	call void @llvm.dbg.value(metadata %struct.fiemap* %6, metadata !731, metadata !DIExpression()), !dbg !6686
 	call void @llvm.dbg.value(metadata %union.anon.20* %2, metadata !733, metadata !DIExpression(DW_OP_plus_uconst, 32, DW_OP_stack_value)), !dbg !6687
-	call void @llvm.memset.p0i8.i64(i8* nonnull align 8 %5, i8 0, i64 4096, i1 false), !dbg !6688
+	call void @llvm.memset.p0i8.i64(i8* nonnull align 8 %5, i8 0, i64 u0x1000, i1 false), !dbg !6688
 	store i64 %20, i64* %8, align 8, !dbg !6689, !tbaa !6690
 	%23 = load i32, i32* %9, align 8, !dbg !6692, !tbaa !6677
 	store i32 %23, i32* %10, align 8, !dbg !6693, !tbaa !6694
@@ -8183,14 +8183,14 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 ; <label>:151
 	call void @llvm.dbg.value(metadata i32 %128, metadata !692, metadata !DIExpression()), !dbg !6680
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !693, metadata !DIExpression()), !dbg !6682
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #12, !dbg !6839
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #12, !dbg !6839
 	br label %163
 
 ; <label>:152
 	%153 = phi i1 [ false, %28 ], [ false, %31 ], [ %38, %36 ], [ false, %107 ], [ false, %104 ]
 	call void @llvm.dbg.value(metadata i32 %128, metadata !692, metadata !DIExpression()), !dbg !6680
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !693, metadata !DIExpression()), !dbg !6682
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #12, !dbg !6839
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #12, !dbg !6839
 	br label %163
 
 ; <label>:154
@@ -8205,7 +8205,7 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 	%162 = icmp ugt i32 %155, 71, !dbg !6844
 	call void @llvm.dbg.value(metadata i32 %128, metadata !692, metadata !DIExpression()), !dbg !6680
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !693, metadata !DIExpression()), !dbg !6682
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #12, !dbg !6839
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #12, !dbg !6839
 	br i1 %162, label %163, label %19
 
 ; <label>:163
@@ -19984,8 +19984,8 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 ; <label>:45
 	%46 = add i64 %41, 1, !dbg !14999
 	call void @llvm.dbg.value(metadata i64 %46, metadata !14927, metadata !DIExpression()), !dbg !15000
-	%47 = icmp ugt i64 %46, 4096, !dbg !15001
-	%48 = select i1 %47, i64 %46, i64 4096, !dbg !15001
+	%47 = icmp ugt i64 %46, u0x1000, !dbg !15001
+	%48 = select i1 %47, i64 %46, i64 u0x1000, !dbg !15001
 	%49 = add i64 %48, 256, !dbg !15001
 	br label %50, !dbg !15001
 
@@ -25313,8 +25313,8 @@ define dso_local %struct.randread_source* @randread_new(i8*, i64) local_unnamed_
 	br i1 %31, label %37, label %33, !dbg !18700
 
 ; <label>:33
-	%34 = icmp ult i64 %1, 4096, !dbg !18701
-	%35 = select i1 %34, i64 %1, i64 4096, !dbg !18701
+	%34 = icmp ult i64 %1, u0x1000, !dbg !18701
+	%35 = select i1 %34, i64 %1, i64 u0x1000, !dbg !18701
 	%36 = tail call i32 @setvbuf(%struct._IO_FILE* nonnull %23, i8* nonnull %32, i32 0, i64 %35) #12, !dbg !18702
 	br label %96, !dbg !18702
 

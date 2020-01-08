@@ -184,7 +184,7 @@ target triple = "x86_64-pc-linux-gnu"
 @__PRETTY_FUNCTION__.xfts_open = private unnamed_addr constant [78 x i8] c"FTS *xfts_open(char *const *, int, int (*)(const FTSENT **, const FTSENT **))\00", align 1
 @.str.159 = private unnamed_addr constant [2 x i8] c".\00", align 1
 @.str.2.164 = private unnamed_addr constant [3 x i8] c"..\00", align 1
-@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 4096, i32 u0x2000, i32 0, i32 u0x4000, i32 0, i32 u0x6000, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
+@switch.table.fts_build = private unnamed_addr constant [12 x i32] [i32 u0x1000, i32 u0x2000, i32 0, i32 u0x4000, i32 0, i32 u0x6000, i32 0, i32 u0x8000, i32 0, i32 u0xA000, i32 0, i32 49152]
 @.str.183 = private unnamed_addr constant [24 x i8] c"state->magic == 9827862\00", align 1
 @.str.1.184 = private unnamed_addr constant [18 x i8] c"lib/cycle-check.c\00", align 1
 @__PRETTY_FUNCTION__.cycle_check = private unnamed_addr constant [67 x i8] c"_Bool cycle_check(struct cycle_check_state *, const struct stat *)\00", align 1
@@ -5242,8 +5242,8 @@ define dso_local %struct.FTS* @fts_open(i8** nocapture readonly, i32, i32 (%stru
 ; <label>:45
 	%46 = add i64 %41, 1, !dbg !4101
 	call void @llvm.dbg.value(metadata i64 %46, metadata !4029, metadata !DIExpression()), !dbg !4102
-	%47 = icmp ugt i64 %46, 4096, !dbg !4103
-	%48 = select i1 %47, i64 %46, i64 4096, !dbg !4103
+	%47 = icmp ugt i64 %46, u0x1000, !dbg !4103
+	%48 = select i1 %47, i64 %46, i64 u0x1000, !dbg !4103
 	%49 = add i64 %48, 256, !dbg !4103
 	br label %50, !dbg !4103
 
@@ -12713,7 +12713,7 @@ define dso_local i32 @chdir_long(i8*) local_unnamed_addr #7 !dbg !8920 {
 	store i8 0, i8* %54, align 1, !dbg !9045, !tbaa !1845
 	%58 = ptrtoint i8* %54 to i64, !dbg !9046
 	%59 = sub i64 %58, %51, !dbg !9046
-	%60 = icmp slt i64 %59, 4096, !dbg !9046
+	%60 = icmp slt i64 %59, u0x1000, !dbg !9046
 	br i1 %60, label %62, label %61, !dbg !9049
 
 ; <label>:61

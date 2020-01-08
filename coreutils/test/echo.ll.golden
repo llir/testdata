@@ -554,7 +554,7 @@ define dso_local i32 @main(i32, i8** nocapture readonly) local_unnamed_addr #7 !
 	%123 = zext i8 %120 to i64, !dbg !781
 	%124 = getelementptr inbounds i16, i16* %122, i64 %123, !dbg !781
 	%125 = load i16, i16* %124, align 2, !dbg !781, !tbaa !783
-	%126 = and i16 %125, 4096, !dbg !781
+	%126 = and i16 %125, u0x1000, !dbg !781
 	%127 = icmp eq i16 %126, 0, !dbg !781
 	br i1 %127, label %194, label %128, !dbg !785
 
@@ -604,7 +604,7 @@ define dso_local i32 @main(i32, i8** nocapture readonly) local_unnamed_addr #7 !
 	%141 = zext i8 %140 to i64, !dbg !806
 	%142 = getelementptr inbounds i16, i16* %122, i64 %141, !dbg !806
 	%143 = load i16, i16* %142, align 2, !dbg !806, !tbaa !783
-	%144 = and i16 %143, 4096, !dbg !806
+	%144 = and i16 %143, u0x1000, !dbg !806
 	%145 = icmp eq i16 %144, 0, !dbg !806
 	br i1 %145, label %160, label %146, !dbg !808
 

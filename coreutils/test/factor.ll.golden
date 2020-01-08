@@ -16986,7 +16986,7 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	%17 = tail call i64 @iconv(i8* %2, i8** null, i64* null, i8** null, i64* null) #10, !dbg !9071
 	call void @llvm.dbg.value(metadata i64 0, metadata !9033, metadata !DIExpression()), !dbg !9072
 	%18 = bitcast %union.anon.40* %6 to i8*, !dbg !9073
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %18) #10, !dbg !9073
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %18) #10, !dbg !9073
 	%19 = bitcast i8** %7 to i8*, !dbg !9074
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %19) #10, !dbg !9074
 	call void @llvm.dbg.value(metadata i8* %0, metadata !9043, metadata !DIExpression()), !dbg !9075
@@ -17029,8 +17029,8 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	call void @llvm.dbg.value(metadata %union.anon.40* %6, metadata !9045, metadata !DIExpression()), !dbg !9081
 	store %union.anon.40* %6, %union.anon.40** %24, align 8, !dbg !9081, !tbaa !773
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %25) #10, !dbg !9087
-	call void @llvm.dbg.value(metadata i64 4096, metadata !9047, metadata !DIExpression()), !dbg !9088
-	store i64 4096, i64* %10, align 8, !dbg !9088, !tbaa !1148
+	call void @llvm.dbg.value(metadata i64 u0x1000, metadata !9047, metadata !DIExpression()), !dbg !9088
+	store i64 u0x1000, i64* %10, align 8, !dbg !9088, !tbaa !1148
 	call void @llvm.dbg.value(metadata i8** %7, metadata !9043, metadata !DIExpression(DW_OP_deref)), !dbg !9075
 	call void @llvm.dbg.value(metadata i64* %8, metadata !9044, metadata !DIExpression(DW_OP_deref)), !dbg !9077
 	call void @llvm.dbg.value(metadata i8** %9, metadata !9045, metadata !DIExpression(DW_OP_deref)), !dbg !9081
@@ -17075,8 +17075,8 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	store %union.anon.40* %6, %union.anon.40** %46, align 8, !dbg !9099, !tbaa !773
 	%47 = bitcast i64* %12 to i8*, !dbg !9100
 	call void @llvm.lifetime.start.p0i8(i64 8, i8* nonnull %47) #10, !dbg !9100
-	call void @llvm.dbg.value(metadata i64 4096, metadata !9051, metadata !DIExpression()), !dbg !9101
-	store i64 4096, i64* %12, align 8, !dbg !9101, !tbaa !1148
+	call void @llvm.dbg.value(metadata i64 u0x1000, metadata !9051, metadata !DIExpression()), !dbg !9101
+	store i64 u0x1000, i64* %12, align 8, !dbg !9101, !tbaa !1148
 	call void @llvm.dbg.value(metadata i8** %11, metadata !9049, metadata !DIExpression(DW_OP_deref)), !dbg !9099
 	call void @llvm.dbg.value(metadata i64* %12, metadata !9051, metadata !DIExpression(DW_OP_deref)), !dbg !9101
 	%48 = call i64 @iconv(i8* %2, i8** null, i64* null, i8** nonnull %11, i64* nonnull %12) #10, !dbg !9102
@@ -17109,7 +17109,7 @@ define dso_local i32 @mem_cd_iconv(i8*, i64, i8*, i8** nocapture, i64* nocapture
 	call void @llvm.dbg.value(metadata i64 %61, metadata !9031, metadata !DIExpression()), !dbg !9112
 	call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %20) #10, !dbg !9113
 	call void @llvm.lifetime.end.p0i8(i64 8, i8* nonnull %19) #10, !dbg !9113
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %18) #10, !dbg !9113
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %18) #10, !dbg !9113
 	%62 = icmp eq i32 %60, 0
 	br i1 %62, label %63, label %111
 

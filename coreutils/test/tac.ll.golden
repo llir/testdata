@@ -395,7 +395,7 @@ define dso_local i32 @main(i32, i8**) local_unnamed_addr #7 !dbg !34 {
 ; <label>:41
 	%42 = phi i64 [ %34, %33 ], [ %40, %39 ], !dbg !937
 	store i64 u0x2000, i64* @read_size, align 8, !dbg !943, !tbaa !901
-	%43 = icmp ult i64 %42, 4096, !dbg !945
+	%43 = icmp ult i64 %42, u0x1000, !dbg !945
 	br i1 %43, label %53, label %44, !dbg !946
 
 ; <label>:44

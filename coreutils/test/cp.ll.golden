@@ -7727,10 +7727,10 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 	%22 = phi i32 [ 0, %1 ], [ %155, %154 ], !dbg !6172
 	call void @llvm.dbg.value(metadata i32 %22, metadata !807, metadata !DIExpression()), !dbg !6172
 	call void @llvm.dbg.value(metadata %struct.extent_info* %21, metadata !808, metadata !DIExpression()), !dbg !6174
-	call void @llvm.lifetime.start.p0i8(i64 4096, i8* nonnull %5) #11, !dbg !6177
+	call void @llvm.lifetime.start.p0i8(i64 u0x1000, i8* nonnull %5) #11, !dbg !6177
 	call void @llvm.dbg.value(metadata %struct.fiemap* %6, metadata !846, metadata !DIExpression()), !dbg !6178
 	call void @llvm.dbg.value(metadata %union.anon* %2, metadata !848, metadata !DIExpression(DW_OP_plus_uconst, 32, DW_OP_stack_value)), !dbg !6179
-	call void @llvm.memset.p0i8.i64(i8* nonnull align 8 %5, i8 0, i64 4096, i1 false), !dbg !6180
+	call void @llvm.memset.p0i8.i64(i8* nonnull align 8 %5, i8 0, i64 u0x1000, i1 false), !dbg !6180
 	store i64 %20, i64* %8, align 8, !dbg !6181, !tbaa !6182
 	%23 = load i32, i32* %9, align 8, !dbg !6184, !tbaa !6169
 	store i32 %23, i32* %10, align 8, !dbg !6185, !tbaa !6186
@@ -7981,14 +7981,14 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 ; <label>:151
 	call void @llvm.dbg.value(metadata i32 %128, metadata !807, metadata !DIExpression()), !dbg !6172
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !808, metadata !DIExpression()), !dbg !6174
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #11, !dbg !6331
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #11, !dbg !6331
 	br label %163
 
 ; <label>:152
 	%153 = phi i1 [ false, %28 ], [ false, %31 ], [ %38, %36 ], [ false, %107 ], [ false, %104 ]
 	call void @llvm.dbg.value(metadata i32 %128, metadata !807, metadata !DIExpression()), !dbg !6172
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !808, metadata !DIExpression()), !dbg !6174
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #11, !dbg !6331
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #11, !dbg !6331
 	br label %163
 
 ; <label>:154
@@ -8003,7 +8003,7 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 	%162 = icmp ugt i32 %155, 71, !dbg !6336
 	call void @llvm.dbg.value(metadata i32 %128, metadata !807, metadata !DIExpression()), !dbg !6172
 	call void @llvm.dbg.value(metadata %struct.extent_info* %127, metadata !808, metadata !DIExpression()), !dbg !6174
-	call void @llvm.lifetime.end.p0i8(i64 4096, i8* nonnull %5) #11, !dbg !6331
+	call void @llvm.lifetime.end.p0i8(i64 u0x1000, i8* nonnull %5) #11, !dbg !6331
 	br i1 %162, label %163, label %19
 
 ; <label>:163
@@ -20838,8 +20838,8 @@ define dso_local %struct.randread_source* @randread_new(i8*, i64) local_unnamed_
 	br i1 %31, label %37, label %33, !dbg !15291
 
 ; <label>:33
-	%34 = icmp ult i64 %1, 4096, !dbg !15292
-	%35 = select i1 %34, i64 %1, i64 4096, !dbg !15292
+	%34 = icmp ult i64 %1, u0x1000, !dbg !15292
+	%35 = select i1 %34, i64 %1, i64 u0x1000, !dbg !15292
 	%36 = tail call i32 @setvbuf(%struct._IO_FILE* nonnull %23, i8* nonnull %32, i32 0, i64 %35) #11, !dbg !15293
 	br label %96, !dbg !15293
 

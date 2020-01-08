@@ -1311,7 +1311,7 @@ define internal fastcc i32 @print_esc(i8*, i1 zeroext) unnamed_addr #7 !dbg !131
 	%11 = zext i8 %10 to i64, !dbg !1345
 	%12 = getelementptr inbounds i16, i16* %9, i64 %11, !dbg !1345
 	%13 = load i16, i16* %12, align 2, !dbg !1345, !tbaa !1347
-	%14 = and i16 %13, 4096, !dbg !1345
+	%14 = and i16 %13, u0x1000, !dbg !1345
 	%15 = icmp eq i16 %14, 0, !dbg !1348
 	br i1 %15, label %34, label %16, !dbg !1349
 
@@ -1341,7 +1341,7 @@ define internal fastcc i32 @print_esc(i8*, i1 zeroext) unnamed_addr #7 !dbg !131
 	%29 = zext i8 %28 to i64, !dbg !1345
 	%30 = getelementptr inbounds i16, i16* %9, i64 %29, !dbg !1345
 	%31 = load i16, i16* %30, align 2, !dbg !1345, !tbaa !1347
-	%32 = and i16 %31, 4096, !dbg !1345
+	%32 = and i16 %31, u0x1000, !dbg !1345
 	%33 = icmp eq i16 %32, 0, !dbg !1348
 	br i1 %33, label %36, label %273, !dbg !1349
 
@@ -1684,7 +1684,7 @@ define internal fastcc i32 @print_esc(i8*, i1 zeroext) unnamed_addr #7 !dbg !131
 	%205 = zext i8 %204 to i64, !dbg !1422
 	%206 = getelementptr inbounds i16, i16* %199, i64 %205, !dbg !1422
 	%207 = load i16, i16* %206, align 2, !dbg !1422, !tbaa !1347
-	%208 = and i16 %207, 4096, !dbg !1422
+	%208 = and i16 %207, u0x1000, !dbg !1422
 	%209 = icmp eq i16 %208, 0, !dbg !1422
 	br i1 %209, label %210, label %212, !dbg !1427
 
