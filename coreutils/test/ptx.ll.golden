@@ -4689,7 +4689,7 @@ define internal fastcc void @digest_word_file(i8*, %struct.WORD_TABLE* nocapture
 	unreachable, !dbg !2808
 
 ; <label>:44
-	%45 = icmp ult i64 %20, 384307168202282325, !dbg !2809
+	%45 = icmp ult i64 %20, u0x555555555555555, !dbg !2809
 	br i1 %45, label %47, label %46, !dbg !2810
 
 ; <label>:46

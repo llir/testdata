@@ -2476,7 +2476,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 	unreachable, !dbg !2207
 
 ; <label>:94
-	%95 = icmp ult i64 %82, 384307168202282325, !dbg !2208
+	%95 = icmp ult i64 %82, u0x555555555555555, !dbg !2208
 	br i1 %95, label %97, label %96, !dbg !2209
 
 ; <label>:96
@@ -2633,7 +2633,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 	unreachable, !dbg !2296
 
 ; <label>:178
-	%179 = icmp ult i64 %166, 384307168202282325, !dbg !2297
+	%179 = icmp ult i64 %166, u0x555555555555555, !dbg !2297
 	br i1 %179, label %181, label %180, !dbg !2298
 
 ; <label>:180
@@ -2734,7 +2734,7 @@ define internal fastcc zeroext i1 @get_line(%struct._IO_FILE*, %struct.line** no
 	unreachable, !dbg !2353
 
 ; <label>:233
-	%234 = icmp ult i64 %219, 384307168202282325, !dbg !2354
+	%234 = icmp ult i64 %219, u0x555555555555555, !dbg !2354
 	br i1 %234, label %236, label %235, !dbg !2355
 
 ; <label>:235

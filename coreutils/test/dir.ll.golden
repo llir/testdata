@@ -5373,7 +5373,7 @@ define internal fastcc void @sort_files() unnamed_addr #0 !dbg !4668 {
 	%8 = load i64, i64* @cwd_n_used, align 8, !dbg !4681, !tbaa !1814
 	call void @llvm.dbg.value(metadata i64 %8, metadata !2729, metadata !DIExpression()) #15, !dbg !4682
 	call void @llvm.dbg.value(metadata i64 24, metadata !2734, metadata !DIExpression()) #15, !dbg !4684
-	%9 = icmp ugt i64 %8, 384307168202282325, !dbg !4685
+	%9 = icmp ugt i64 %8, u0x555555555555555, !dbg !4685
 	br i1 %9, label %10, label %11, !dbg !4687
 
 ; <label>:10
@@ -10680,7 +10680,7 @@ define internal fastcc i64 @calculate_columns(i1 zeroext) unnamed_addr #0 !dbg !
 ; <label>:19
 	call void @llvm.dbg.value(metadata i64 %2, metadata !3836, metadata !DIExpression()) #15, !dbg !7235
 	call void @llvm.dbg.value(metadata i64 24, metadata !3842, metadata !DIExpression()) #15, !dbg !7236
-	%20 = icmp ugt i64 %2, 384307168202282325, !dbg !7237
+	%20 = icmp ugt i64 %2, u0x555555555555555, !dbg !7237
 	br i1 %20, label %21, label %22, !dbg !7238
 
 ; <label>:21

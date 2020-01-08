@@ -1525,7 +1525,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	unreachable, !dbg !1490
 
 ; <label>:85
-	%86 = icmp ult i64 %71, 384307168202282325, !dbg !1491
+	%86 = icmp ult i64 %71, u0x555555555555555, !dbg !1491
 	br i1 %86, label %88, label %87, !dbg !1494
 
 ; <label>:87
@@ -1609,7 +1609,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	unreachable, !dbg !1539
 
 ; <label>:126
-	%127 = icmp ult i64 %112, 384307168202282325, !dbg !1540
+	%127 = icmp ult i64 %112, u0x555555555555555, !dbg !1540
 	br i1 %127, label %129, label %128, !dbg !1541
 
 ; <label>:128
@@ -1696,7 +1696,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	unreachable, !dbg !1585
 
 ; <label>:170
-	%171 = icmp ult i64 %156, 384307168202282325, !dbg !1586
+	%171 = icmp ult i64 %156, u0x555555555555555, !dbg !1586
 	br i1 %171, label %173, label %172, !dbg !1587
 
 ; <label>:172
@@ -2019,7 +2019,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	unreachable, !dbg !1759
 
 ; <label>:353
-	%354 = icmp ult i64 %333, 384307168202282325, !dbg !1760
+	%354 = icmp ult i64 %333, u0x555555555555555, !dbg !1760
 	br i1 %354, label %356, label %355, !dbg !1761
 
 ; <label>:355
@@ -2099,7 +2099,7 @@ define dso_local void @set_fields(i8*, i32) local_unnamed_addr #7 !dbg !165 {
 	unreachable, !dbg !1802
 
 ; <label>:394
-	%395 = icmp ult i64 %324, 384307168202282325, !dbg !1803
+	%395 = icmp ult i64 %324, u0x555555555555555, !dbg !1803
 	br i1 %395, label %397, label %396, !dbg !1804
 
 ; <label>:396

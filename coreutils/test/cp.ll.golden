@@ -7780,7 +7780,7 @@ define dso_local zeroext i1 @extent_scan_read(%struct.extent_scan* nocapture) lo
 	%47 = load %struct.extent_info*, %struct.extent_info** %3, align 8, !dbg !6220, !tbaa !4566
 	call void @llvm.dbg.value(metadata i64 %46, metadata !6221, metadata !DIExpression()) #11, !dbg !6228
 	call void @llvm.dbg.value(metadata i64 24, metadata !6227, metadata !DIExpression()) #11, !dbg !6230
-	%48 = icmp ugt i64 %46, 384307168202282325, !dbg !6231
+	%48 = icmp ugt i64 %46, u0x555555555555555, !dbg !6231
 	br i1 %48, label %49, label %50, !dbg !6233
 
 ; <label>:49
@@ -16426,7 +16426,7 @@ define dso_local i8* @streamsavedir(%struct.__dirstream*, i32) local_unnamed_add
 	unreachable, !dbg !12049
 
 ; <label>:51
-	%52 = icmp ult i64 %23, 384307168202282325, !dbg !12050
+	%52 = icmp ult i64 %23, u0x555555555555555, !dbg !12050
 	br i1 %52, label %54, label %53, !dbg !12053
 
 ; <label>:53
