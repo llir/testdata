@@ -5236,7 +5236,7 @@ define internal fastcc i64 @gobble_file(i8*, i32, i1 zeroext, i8* readonly) unna
 	%584 = lshr i64 %583, 8, !dbg !4588
 	%585 = and i64 %584, 4095, !dbg !4588
 	%586 = lshr i64 %583, 32, !dbg !4588
-	%587 = and i64 %586, 4294963200, !dbg !4588
+	%587 = and i64 %586, u0xFFFFF000, !dbg !4588
 	%588 = or i64 %585, %587, !dbg !4588
 	call void @llvm.dbg.value(metadata i64 %588, metadata !4587, metadata !DIExpression()), !dbg !4588
 	%589 = call i8* @umaxtostr(i64 %588, i8* nonnull %581) #15, !dbg !4590
@@ -6923,7 +6923,7 @@ define internal fastcc void @print_current_files() unnamed_addr #0 !dbg !4921 {
 	%545 = lshr i64 %544, 8, !dbg !5473
 	%546 = and i64 %545, 4095, !dbg !5473
 	%547 = lshr i64 %544, 32, !dbg !5473
-	%548 = and i64 %547, 4294963200, !dbg !5473
+	%548 = and i64 %547, u0xFFFFF000, !dbg !5473
 	%549 = or i64 %546, %548, !dbg !5473
 	call void @llvm.dbg.value(metadata i64 %549, metadata !4587, metadata !DIExpression()) #15, !dbg !5473
 	%550 = call i8* @umaxtostr(i64 %549, i8* nonnull %35) #15, !dbg !5472

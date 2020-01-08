@@ -8008,7 +8008,7 @@ define internal zeroext i1 @print_stat(i8*, i64, i32, i32, i8*, i8*) #7 !dbg !23
 	%2208 = lshr i64 %2207, 8, !dbg !3194
 	%2209 = and i64 %2208, 4095, !dbg !3194
 	%2210 = lshr i64 %2207, 32, !dbg !3194
-	%2211 = and i64 %2210, 4294963200, !dbg !3194
+	%2211 = and i64 %2210, u0xFFFFF000, !dbg !3194
 	%2212 = or i64 %2209, %2211, !dbg !3194
 	call void @llvm.dbg.value(metadata i64 %2212, metadata !3193, metadata !DIExpression()), !dbg !3194
 	call void @llvm.dbg.value(metadata i8* %0, metadata !1455, metadata !DIExpression()) #10, !dbg !3196
