@@ -6,7 +6,7 @@ define void @foo(i32 %x) {
 	ret void, !_1 !0
 }
 
-declare void @llvm.zonk(metadata, i64, metadata) nounwind readnone
+declare void @llvm.zonk(metadata %0, i64 %1, metadata %2) nounwind readnone
 
 !another_named = !{}
 !named = !{!0}

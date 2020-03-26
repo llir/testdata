@@ -1,4 +1,4 @@
-declare void @llvm.metadata(metadata)
+declare void @llvm.metadata(metadata %0)
 
 define void @foo(i32 %arg) {
 entry:

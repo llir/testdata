@@ -5,7 +5,7 @@
 %myty = type i32
 %thisfuncty = type i32 (i32)*
 
-declare void @F(%thisfuncty, %thisfuncty, %thisfuncty)
+declare void @F(%thisfuncty %0, %thisfuncty %1, %thisfuncty %2)
 
 define i32 @zarro(i32 %Func) {
 Startup:
@@ -13,13 +13,13 @@ Startup:
 	ret i32 0
 }
 
-define i32 @test(i32) {
+define i32 @test(i32 %0) {
 ; <label>:1
 	call void @F(i32 (i32)* @zarro, i32 (i32)* @test, i32 (i32)* @foozball)
 	ret i32 0
 }
 
-define i32 @foozball(i32) {
+define i32 @foozball(i32 %0) {
 ; <label>:1
 	ret i32 0
 }

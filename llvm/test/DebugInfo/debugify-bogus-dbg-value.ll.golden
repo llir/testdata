@@ -9,7 +9,7 @@ define <2 x i64> @test-fun(<2 x i64> %A) !dbg !6 {
 	ret <2 x i64> %and, !dbg !16
 }
 
-declare void @llvm.dbg.value(metadata, metadata, metadata) #0
+declare void @llvm.dbg.value(metadata %0, metadata %1, metadata %2) #0
 
 attributes #0 = { nounwind readnone speculatable }
 

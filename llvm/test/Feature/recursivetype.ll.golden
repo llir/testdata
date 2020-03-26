@@ -1,6 +1,6 @@
 %list = type { %list*, i32 }
 
-declare i8* @malloc(i32)
+declare i8* @malloc(i32 %0)
 
 define void @InsertIntoListTail(%list** %L, i32 %Data) {
 bb1:

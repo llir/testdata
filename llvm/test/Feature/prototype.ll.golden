@@ -1,4 +1,4 @@
-declare i32 @bar(i32)
+declare i32 @bar(i32 %0)
 
 define i32 @foo(i32 %blah) {
 ; <label>:0

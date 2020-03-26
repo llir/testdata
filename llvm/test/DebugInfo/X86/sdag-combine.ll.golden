@@ -6,7 +6,7 @@ target triple = "x86_64-apple-macosx10.13"
 
 declare swiftcc i1 @f()
 
-declare void @llvm.dbg.declare(metadata, metadata, metadata) #0
+declare void @llvm.dbg.declare(metadata %0, metadata %1, metadata %2) #0
 
 define swiftcc void @g() #0 !dbg !5 {
 entry:
@@ -20,7 +20,7 @@ entry:
 	ret void, !dbg !7
 }
 
-declare void @llvm.dbg.value(metadata, metadata, metadata) #0
+declare void @llvm.dbg.value(metadata %0, metadata %1, metadata %2) #0
 
 attributes #0 = { nounwind readnone speculatable }
 

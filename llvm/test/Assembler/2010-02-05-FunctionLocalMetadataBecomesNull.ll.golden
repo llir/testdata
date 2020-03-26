@@ -19,7 +19,7 @@ define i32 @main() nounwind readonly !dbg !1 {
 	ret i32 4, !dbg !DILocation(scope: !1)
 }
 
-declare void @llvm.dbg.declare(metadata, metadata, metadata) nounwind readnone
+declare void @llvm.dbg.declare(metadata %0, metadata %1, metadata %2) nounwind readnone
 
 !llvm.dbg.cu = !{!6}
 !llvm.module.flags = !{!10}

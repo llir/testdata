@@ -24,7 +24,7 @@ define void @test_attachment_name() {
 	unreachable, !\342abc !4
 }
 
-declare void @llvm.dbg.func.start(metadata) nounwind readnone
+declare void @llvm.dbg.func.start(metadata %0) nounwind readnone
 
 !bar = !{!1}
 !foo = !{!0}

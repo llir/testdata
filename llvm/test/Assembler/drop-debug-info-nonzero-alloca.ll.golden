@@ -5,7 +5,7 @@ entry:
 	ret void
 }
 
-declare void @llvm.dbg.value(metadata, metadata, metadata)
+declare void @llvm.dbg.value(metadata %0, metadata %1, metadata %2)
 
 !llvm.module.flags = !{!0}
 

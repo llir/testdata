@@ -1,4 +1,4 @@
-declare void @llvm.token.foobar(token)
+declare void @llvm.token.foobar(token %0)
 
 define void @f() {
 ; <label>:0

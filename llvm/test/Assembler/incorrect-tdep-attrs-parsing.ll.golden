@@ -1,4 +1,4 @@
-define i32 @f(i64 "foo bar", i64, i64, i64 "xyz") {
+define i32 @f(i64 "foo bar" %0, i64 %1, i64 %2, i64 "xyz" %3) {
 ; <label>:4
 	ret i32 41
 }
