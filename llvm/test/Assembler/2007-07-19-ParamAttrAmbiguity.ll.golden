@@ -5,4 +5,4 @@ define void @bar() {
 	ret void
 }
 
-declare i8 @foo(i8)
+declare i8 @foo(i8 %0)

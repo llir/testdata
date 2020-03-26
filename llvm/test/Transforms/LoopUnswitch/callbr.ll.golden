@@ -1,4 +1,4 @@
-define dso_local void @foo(i32) #0 {
+define dso_local void @foo(i32 %0) #0 {
 ; <label>:1
 	br label %2
 

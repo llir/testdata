@@ -6,4 +6,4 @@ define void @test() {
 	ret void
 }
 
-declare zeroext i1 @paging_map(i64)
+declare zeroext i1 @paging_map(i64 %0)

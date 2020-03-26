@@ -7,13 +7,13 @@ define [2 x i32]* @testfunction(i32 %i0, i32 %j0) {
 	ret [2 x i32]* @array
 }
 
-define i8* @otherfunc(i32, double) {
+define i8* @otherfunc(i32 %0, double %1) {
 ; <label>:2
 	%somestr = getelementptr [11 x i8], [11 x i8]* @somestr, i64 0, i64 0
 	ret i8* %somestr
 }
 
-define i8* @yetanotherfunc(i32, double) {
+define i8* @yetanotherfunc(i32 %0, double %1) {
 ; <label>:2
 	ret i8* null
 }

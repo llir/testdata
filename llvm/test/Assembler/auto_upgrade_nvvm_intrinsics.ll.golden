@@ -1,36 +1,36 @@
-declare i32 @llvm.nvvm.brev32(i32)
+declare i32 @llvm.nvvm.brev32(i32 %0)
 
-declare i64 @llvm.nvvm.brev64(i64)
+declare i64 @llvm.nvvm.brev64(i64 %0)
 
-declare i32 @llvm.nvvm.clz.i(i32)
+declare i32 @llvm.nvvm.clz.i(i32 %0)
 
-declare i32 @llvm.nvvm.clz.ll(i64)
+declare i32 @llvm.nvvm.clz.ll(i64 %0)
 
-declare i32 @llvm.nvvm.popc.i(i32)
+declare i32 @llvm.nvvm.popc.i(i32 %0)
 
-declare i32 @llvm.nvvm.popc.ll(i64)
+declare i32 @llvm.nvvm.popc.ll(i64 %0)
 
-declare float @llvm.nvvm.h2f(i16)
+declare float @llvm.nvvm.h2f(i16 %0)
 
-declare i32 @llvm.nvvm.abs.i(i32)
+declare i32 @llvm.nvvm.abs.i(i32 %0)
 
-declare i64 @llvm.nvvm.abs.ll(i64)
+declare i64 @llvm.nvvm.abs.ll(i64 %0)
 
-declare i32 @llvm.nvvm.max.i(i32, i32)
+declare i32 @llvm.nvvm.max.i(i32 %0, i32 %1)
 
-declare i64 @llvm.nvvm.max.ll(i64, i64)
+declare i64 @llvm.nvvm.max.ll(i64 %0, i64 %1)
 
-declare i32 @llvm.nvvm.max.ui(i32, i32)
+declare i32 @llvm.nvvm.max.ui(i32 %0, i32 %1)
 
-declare i64 @llvm.nvvm.max.ull(i64, i64)
+declare i64 @llvm.nvvm.max.ull(i64 %0, i64 %1)
 
-declare i32 @llvm.nvvm.min.i(i32, i32)
+declare i32 @llvm.nvvm.min.i(i32 %0, i32 %1)
 
-declare i64 @llvm.nvvm.min.ll(i64, i64)
+declare i64 @llvm.nvvm.min.ll(i64 %0, i64 %1)
 
-declare i32 @llvm.nvvm.min.ui(i32, i32)
+declare i32 @llvm.nvvm.min.ui(i32 %0, i32 %1)
 
-declare i64 @llvm.nvvm.min.ull(i64, i64)
+declare i64 @llvm.nvvm.min.ull(i64 %0, i64 %1)
 
 define void @simple_upgrade(i32 %a, i64 %b, i16 %c) {
 ; <label>:0

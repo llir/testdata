@@ -1,4 +1,4 @@
-declare void @argmemonly_function(i32*) argmemonly
+declare void @argmemonly_function(i32* %0) argmemonly
 
 define i32 @test0(i32* %P, i32* noalias %P2) {
 ; <label>:0

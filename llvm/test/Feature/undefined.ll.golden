@@ -1,6 +1,6 @@
 @X = global i32 undef
 
-declare i32 @atoi(i8*)
+declare i32 @atoi(i8* %0)
 
 define i32 @test() {
 ; <label>:0

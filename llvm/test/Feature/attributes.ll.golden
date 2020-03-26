@@ -6,6 +6,6 @@ entry:
 	ret void
 }
 
-declare i32 @printf(i8*, ...)
+declare i32 @printf(i8* %0, ...)
 
 attributes #0 = { nounwind ssp uwtable }

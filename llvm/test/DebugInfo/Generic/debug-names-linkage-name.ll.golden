@@ -8,9 +8,9 @@ entry:
 	ret i32 %call.i, !dbg !24
 }
 
-declare dso_local i32 @_Z1ei(i32) local_unnamed_addr
+declare dso_local i32 @_Z1ei(i32 %0) local_unnamed_addr
 
-declare void @llvm.dbg.value(metadata, metadata, metadata) #0
+declare void @llvm.dbg.value(metadata %0, metadata %1, metadata %2) #0
 
 attributes #2 = { nounwind readnone speculatable }
 

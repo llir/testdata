@@ -8,7 +8,7 @@ define i32 @bar() !dbg !9 {
 	ret i32 0, !dbg !15
 }
 
-declare void @llvm.dbg.value(metadata, metadata, metadata)
+declare void @llvm.dbg.value(metadata %0, metadata %1, metadata %2)
 
 !llvm.dbg.cu = !{!0}
 !llvm.debugify = !{!3, !4}

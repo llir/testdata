@@ -23,7 +23,7 @@ done:
 	ret i32 %2
 }
 
-declare void @llvm.dbg.label(metadata)
+declare void @llvm.dbg.label(metadata %0)
 
 !llvm.dbg.cu = !{!0}
 !llvm.module.flags = !{!3}

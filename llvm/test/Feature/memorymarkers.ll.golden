@@ -1,14 +1,14 @@
 %"struct.std::pair<int,int>" = type { i32, i32 }
 
-declare void @_Z3barRKi(i32*)
+declare void @_Z3barRKi(i32* %0)
 
-declare void @llvm.lifetime.start(i64, i8* nocapture) nounwind
+declare void @llvm.lifetime.start(i64 %0, i8* nocapture %1) nounwind
 
-declare void @llvm.lifetime.end(i64, i8* nocapture) nounwind
+declare void @llvm.lifetime.end(i64 %0, i8* nocapture %1) nounwind
 
-declare {}* @llvm.invariant.start.p0i8(i64, i8* nocapture) readonly nounwind
+declare {}* @llvm.invariant.start.p0i8(i64 %0, i8* nocapture %1) readonly nounwind
 
-declare void @llvm.invariant.end.p0i8({}*, i64, i8* nocapture) nounwind
+declare void @llvm.invariant.end.p0i8({}* %0, i64 %1, i8* nocapture %2) nounwind
 
 define i32 @_Z4foo2v() nounwind {
 entry:

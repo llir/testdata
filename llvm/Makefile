@@ -1,5 +1,5 @@
 # LLVM version.
-VER=9.0.0
+VER=10.0.0
 
 ROOT_DIR=$(shell pwd)
 
@@ -21,7 +21,7 @@ llvm-${VER}.src: | llvm-${VER}.src.tar.xz
 	tar -xJf llvm-${VER}.src.tar.xz
 
 llvm-${VER}.src.tar.xz:
-	wget -O $@ "https://releases.llvm.org/${VER}/llvm-${VER}.src.tar.xz"
+	wget -O $@ "https://github.com/llvm/llvm-project/releases/download/llvmorg-${VER}/llvm-${VER}.src.tar.xz"
 	touch $@
 
 clean:

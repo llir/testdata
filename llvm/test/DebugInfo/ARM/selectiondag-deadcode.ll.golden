@@ -16,7 +16,7 @@ _ZN7Vector39NormalizeEv.exit:
 	ret void
 }
 
-declare void @llvm.dbg.declare(metadata, metadata, metadata) #1
+declare void @llvm.dbg.declare(metadata %0, metadata %1, metadata %2) #1
 
 declare arm_aapcscc void @_ZL4Sqrtd() #2
 

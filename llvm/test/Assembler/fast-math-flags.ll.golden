@@ -3,7 +3,7 @@
 @vec = external global <3 x float>
 @arr = external global [3 x float]
 
-declare float @foo(float)
+declare float @foo(float %0)
 
 define float @none(float %x, float %y) {
 entry:
