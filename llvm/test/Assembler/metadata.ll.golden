@@ -1,7 +1,7 @@
 @global = global i32 0, !foo !2, !foo !3, !baz !3
 
 define void @test() !dbg !1 {
-; <label>:0
+0:
 	%1 = add i32 2, 1, !bar !0
 	%2 = add i32 1, 2, !foo !1
 	call void @llvm.dbg.func.start(metadata !"foo")
@@ -10,17 +10,17 @@ define void @test() !dbg !1 {
 }
 
 define void @test2() !foo !2 !baz !3 {
-; <label>:0
+0:
 	unreachable
 }
 
 define void @test3() !bar !3 {
-; <label>:0
+0:
 	unreachable, !bar !4
 }
 
 define void @test_attachment_name() {
-; <label>:0
+0:
 	unreachable, !\342abc !4
 }
 

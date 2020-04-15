@@ -1,13 +1,13 @@
 %FunTy = type i32 (i32)
 
 define void @invoke(%FunTy* %x) {
-; <label>:0
+0:
 	%foo = call i32 %x(i32 123)
 	ret void
 }
 
 define i32 @main(i32 %argc, i8** %argv, i8** %envp) {
-; <label>:0
+0:
 	%retval = call i32 @test(i32 %argc)
 	%two = add i32 %retval, %retval
 	%retval2 = call i32 @test(i32 %argc)
@@ -17,6 +17,6 @@ define i32 @main(i32 %argc, i8** %argv, i8** %envp) {
 }
 
 define i32 @test(i32 %i0) {
-; <label>:0
+0:
 	ret i32 %i0
 }

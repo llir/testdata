@@ -8,6 +8,6 @@ $i = comdat largest
 @a = alias i32, i32* @v
 
 define void @f() comdat {
-; <label>:0
+0:
 	ret void
 }

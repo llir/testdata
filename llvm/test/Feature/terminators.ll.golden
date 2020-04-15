@@ -4,7 +4,7 @@
 @Addr3 = global i8* blockaddress(@squared, %Case1)
 
 define i32 @squared(i32 %i0) {
-; <label>:0
+0:
 	switch i32 %i0, label %Default [
 		i32 1, label %Case1
 		i32 2, label %Case2
@@ -25,7 +25,7 @@ Case4:
 }
 
 define i32 @indbrtest(i8* %P, i32* %Q) {
-; <label>:0
+0:
 	indirectbr i8* %P, [label %BB1, label %BB2, label %BB3]
 
 BB1:

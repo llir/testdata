@@ -437,7 +437,7 @@ declare void @f.strictfp() #35
 declare void @f.section() section "80"
 
 define void @f.partition() partition "part" {
-; <label>:0
+0:
 	ret void
 }
 
@@ -485,7 +485,7 @@ declare void @f.prologuearray() prologue [4 x i32] [i32 0, i32 1, i32 2, i32 3]
 declare void @llvm.donothing() nounwind readnone
 
 define void @f.no_personality() personality i8 3 {
-; <label>:0
+0:
 	invoke void @llvm.donothing()
 		to label %normal unwind label %exception
 
@@ -501,7 +501,7 @@ normal:
 declare i32 @f.personality_handler()
 
 define void @f.personality() personality i32 ()* @f.personality_handler {
-; <label>:0
+0:
 	invoke void @llvm.donothing()
 		to label %normal unwind label %exception
 
@@ -515,7 +515,7 @@ normal:
 }
 
 define void @atomics(i32* %word) {
-; <label>:0
+0:
 	%cmpxchg.0 = cmpxchg i32* %word, i32 0, i32 4 monotonic monotonic
 	%cmpxchg.1 = cmpxchg i32* %word, i32 0, i32 5 acq_rel monotonic
 	%cmpxchg.2 = cmpxchg i32* %word, i32 0, i32 6 acquire monotonic
@@ -549,7 +549,7 @@ define void @atomics(i32* %word) {
 }
 
 define void @fp_atomics(float* %word) {
-; <label>:0
+0:
 	%atomicrmw.xchg = atomicrmw xchg float* %word, float 1.0 monotonic
 	%atomicrmw.fadd = atomicrmw fadd float* %word, float 1.0 monotonic
 	%atomicrmw.fsub = atomicrmw fsub float* %word, float 1.0 monotonic
@@ -557,7 +557,7 @@ define void @fp_atomics(float* %word) {
 }
 
 define void @fastmathflags_unop(float %op1) {
-; <label>:0
+0:
 	%f.nnan = fneg nnan float %op1
 	%f.ninf = fneg ninf float %op1
 	%f.nsz = fneg nsz float %op1
@@ -570,7 +570,7 @@ define void @fastmathflags_unop(float %op1) {
 }
 
 define void @fastmathflags_binops(float %op1, float %op2) {
-; <label>:0
+0:
 	%f.nnan = fadd nnan float %op1, %op2
 	%f.ninf = fadd ninf float %op1, %op2
 	%f.nsz = fadd nsz float %op1, %op2
@@ -583,7 +583,7 @@ define void @fastmathflags_binops(float %op1, float %op2) {
 }
 
 define void @fastmathflags_select(i1 %cond, float %op1, float %op2) {
-; <label>:0
+0:
 	%f.nnan = select nnan i1 %cond, float %op1, float %op2
 	%f.ninf = select ninf i1 %cond, float %op1, float %op2
 	%f.nsz = select nsz i1 %cond, float %op1, float %op2
@@ -596,14 +596,14 @@ define void @fastmathflags_select(i1 %cond, float %op1, float %op2) {
 }
 
 define void @fastmathflags_vector_select(<2 x i1> %cond, <2 x double> %op1, <2 x double> %op2) {
-; <label>:0
+0:
 	%f.nnan.nsz = select nnan nsz <2 x i1> %cond, <2 x double> %op1, <2 x double> %op2
 	%f.fast = select fast <2 x i1> %cond, <2 x double> %op1, <2 x double> %op2
 	ret void
 }
 
 define void @fastmathflags_array_select(i1 %cond, [2 x double] %op1, [2 x double] %op2) {
-; <label>:0
+0:
 	%f.nnan.nsz = select nnan nsz i1 %cond, [2 x double] %op1, [2 x double] %op2
 	%f.fast = select fast i1 %cond, [2 x double] %op1, [2 x double] %op2
 	ret void
@@ -673,7 +673,7 @@ declare double @fmf_f64()
 declare <4 x double> @fmf_v4f64()
 
 define void @fastMathFlagsForCalls(float %f, double %d1, <4 x double> %d2) {
-; <label>:0
+0:
 	%call.fast = call fast float @fmf_f32()
 	%call.nsz.arcp = notail call nsz arcp double @fmf_f64()
 	%call.nnan.ninf = tail call nnan ninf fastcc <4 x double> @fmf_v4f64()
@@ -687,7 +687,7 @@ declare [2 x double] @fmf_a2f64()
 declare [2 x <4 x double>] @fmf_a2v4f64()
 
 define void @fastMathFlagsForArrayCalls([2 x float] %f, [2 x double] %d1, [2 x <4 x double>] %d2) {
-; <label>:0
+0:
 	%call.fast = call fast [2 x float] @fmf_a2f32()
 	%call.nsz.arcp = notail call nsz arcp [2 x double] @fmf_a2f64()
 	%call.nnan.ninf = tail call nnan ninf fastcc [2 x <4 x double>] @fmf_a2v4f64()
@@ -695,7 +695,7 @@ define void @fastMathFlagsForArrayCalls([2 x float] %f, [2 x double] %d1, [2 x <
 }
 
 define void @typesystem() {
-; <label>:0
+0:
 	%p0 = bitcast i8* null to i32 (i32)*
 	%p1 = bitcast i8* null to void (i8*)*
 	%p2 = bitcast i8* null to i32 (i8*, ...)*
@@ -719,17 +719,17 @@ define void @typesystem() {
 declare void @llvm.token(token %0)
 
 define void @inlineasm(i32 %arg) {
-; <label>:0
+0:
 	%1 = call i32 asm "bswap $0", "=r,r"(i32 %arg)
 	%2 = call i32 asm sideeffect "blt $1, $2, $3", "=r,r,rm"(i32 %arg, i32 %arg)
 	ret void
 }
 
 define void @instructions.terminators(i8 %val) personality i32 -10 {
-; <label>:0
+0:
 	br i1 false, label %iftrue, label %iffalse
 
-; <label>:1
+1:
 	br label %iftrue
 
 iftrue:
@@ -754,10 +754,10 @@ defaultdest.1:
 defaultdest.2:
 	indirectbr i8* blockaddress(@instructions.terminators, %defaultdest.2), [label %defaultdest.2]
 
-; <label>:2
+2:
 	indirectbr i8* blockaddress(@instructions.terminators, %defaultdest.2), [label %defaultdest.2, label %defaultdest.2]
 
-; <label>:3
+3:
 	invoke fastcc void @f.fastcc()
 		to label %defaultdest unwind label %exc
 
@@ -766,10 +766,10 @@ exc:
 		cleanup
 	resume i32 undef
 
-; <label>:4
+4:
 	unreachable
 
-; <label>:5
+5:
 	ret void
 }
 
@@ -780,11 +780,11 @@ entry:
 	invoke void @f.ccc()
 		to label %normal unwind label %catchswitch1
 
-; <label>:0
+0:
 	invoke void @f.ccc()
 		to label %normal unwind label %catchswitch2
 
-; <label>:1
+1:
 	invoke void @f.ccc()
 		to label %normal unwind label %catchswitch3
 
@@ -841,7 +841,7 @@ body:
 	invoke void @f.ccc() [ "funclet"(token %catch) ]
 		to label %continue unwind label %terminate.inner
 
-; <label>:0
+0:
 	catchret from %catch to label %return
 
 return:
@@ -860,13 +860,13 @@ continue:
 }
 
 define void @instructions.unops(double %op1) {
-; <label>:0
+0:
 	%1 = fneg double %op1
 	ret void
 }
 
 define void @instructions.binops(i8 %op1, i8 %op2) {
-; <label>:0
+0:
 	%1 = add i8 %op1, %op2
 	%2 = add nuw i8 %op1, %op2
 	%3 = add nsw i8 %op1, %op2
@@ -889,7 +889,7 @@ define void @instructions.binops(i8 %op1, i8 %op2) {
 }
 
 define void @instructions.bitwise_binops(i8 %op1, i8 %op2) {
-; <label>:0
+0:
 	%1 = shl i8 %op1, %op2
 	%2 = shl nuw i8 %op1, %op2
 	%3 = shl nsw i8 %op1, %op2
@@ -905,7 +905,7 @@ define void @instructions.bitwise_binops(i8 %op1, i8 %op2) {
 }
 
 define void @instructions.vectorops(<4 x float> %vec, <4 x float> %vec2) {
-; <label>:0
+0:
 	%1 = extractelement <4 x float> %vec, i8 0
 	%2 = insertelement <4 x float> %vec, float 3.5, i8 0
 	%3 = shufflevector <4 x float> %vec, <4 x float> %vec2, <2 x i32> zeroinitializer
@@ -913,7 +913,7 @@ define void @instructions.vectorops(<4 x float> %vec, <4 x float> %vec2) {
 }
 
 define void @instructions.aggregateops({ i8, i32 } %up, <{ i8, i32 }> %p, [3 x i8] %arr, { i8, { i32 } } %n, <2 x i8*> %pvec, <2 x i64> %offsets) {
-; <label>:0
+0:
 	%1 = extractvalue { i8, i32 } %up, 0
 	%2 = extractvalue <{ i8, i32 }> %p, 1
 	%3 = extractvalue [3 x i8] %arr, 2
@@ -936,7 +936,7 @@ define void @instructions.aggregateops({ i8, i32 } %up, <{ i8, i32 }> %p, [3 x i
 }
 
 define void @instructions.memops(i32** %base) {
-; <label>:0
+0:
 	%1 = alloca i32, i8 4, align 4
 	%2 = alloca inalloca i32, i8 4, align 4
 	%3 = load i32*, i32** %base, align 8, !invariant.load !7, !nontemporal !8, !nonnull !7, !dereferenceable !9, !dereferenceable_or_null !9
@@ -947,7 +947,7 @@ define void @instructions.memops(i32** %base) {
 }
 
 define void @instructions.conversions() {
-; <label>:0
+0:
 	%1 = trunc i32 -1 to i1
 	%2 = zext i32 -1 to i64
 	%3 = sext i32 -1 to i64
@@ -1018,31 +1018,31 @@ exit:
 }
 
 define void @instructions.call_musttail(i8* inalloca %val) {
-; <label>:0
+0:
 	musttail call void @f.param.inalloca(i8* inalloca %val)
 	ret void
 }
 
 define void @instructions.call_notail() {
-; <label>:0
+0:
 	notail call void @f1()
 	ret void
 }
 
 define void @instructions.landingpad() personality i32 -2 {
-; <label>:0
+0:
 	invoke void @llvm.donothing()
 		to label %proceed unwind label %catch1
 
-; <label>:1
+1:
 	invoke void @llvm.donothing()
 		to label %proceed unwind label %catch2
 
-; <label>:2
+2:
 	invoke void @llvm.donothing()
 		to label %proceed unwind label %catch3
 
-; <label>:3
+3:
 	invoke void @llvm.donothing()
 		to label %proceed unwind label %catch4
 
@@ -1080,7 +1080,7 @@ declare void @llvm.va_copy(i8* %0, i8* %1)
 declare void @llvm.va_end(i8* %0)
 
 define void @instructions.va_arg(i8* %v, ...) {
-; <label>:0
+0:
 	%ap = alloca i8*
 	%ap2 = bitcast i8** %ap to i8*
 	call void @llvm.va_start(i8* %ap2)
@@ -1097,7 +1097,7 @@ declare i8* @llvm.gcread(i8* %0, i8** %1)
 declare void @llvm.gcwrite(i8* %0, i8* %1, i8** %2)
 
 define void @intrinsics.gc() gc "shadow-stack" {
-; <label>:0
+0:
 	%ptrloc = alloca i8*
 	call void @llvm.gcroot(i8** %ptrloc, i8* null)
 	%1 = call i8* @llvm.gcread(i8* null, i8** %ptrloc)
@@ -1133,7 +1133,7 @@ declare void @llvm.clear_cache(i8* %0, i8* %1)
 declare void @llvm.instrprof_increment(i8* %0, i64 %1, i32 %2, i32 %3)
 
 define void @intrinsics.codegen() {
-; <label>:0
+0:
 	%1 = call i8* @llvm.returnaddress(i32 1)
 	%2 = call i8* @llvm.frameaddress(i32 1)
 	%3 = call i32 @llvm.read_register.i32(metadata !10)
@@ -1155,7 +1155,7 @@ declare void @llvm.localescape(...)
 declare i8* @llvm.localrecover(i8* %func, i8* %fp, i32 %idx)
 
 define void @intrinsics.localescape() {
-; <label>:0
+0:
 	%static.alloca = alloca i32
 	call void (...) @llvm.localescape(i32* %static.alloca)
 	call void @intrinsics.localrecover()
@@ -1163,7 +1163,7 @@ define void @intrinsics.localescape() {
 }
 
 define void @intrinsics.localrecover() {
-; <label>:0
+0:
 	%func = bitcast void ()* @intrinsics.localescape to i8*
 	%fp = call i8* @llvm.frameaddress(i32 1)
 	%1 = call i8* @llvm.localrecover(i8* %func, i8* %fp, i32 0)
@@ -1171,7 +1171,7 @@ define void @intrinsics.localrecover() {
 }
 
 define void @misc.metadata() {
-; <label>:0
+0:
 	call void @f1(), !srcloc !11
 	call void @f1(), !srcloc !12
 	call void @f1(), !srcloc !13
@@ -1342,12 +1342,12 @@ declare void @f.writeonly() writeonly
 declare void @f.speculatable() speculatable
 
 define i8** @constexpr() {
-; <label>:0
+0:
 	ret i8** getelementptr inbounds ({ [4 x i8*], [4 x i8*] }, { [4 x i8*], [4 x i8*] }* null, i32 0, inrange i32 1, i32 2)
 }
 
 define void @instructions.strictfp() strictfp {
-; <label>:0
+0:
 	call void @f.strictfp() strictfp
 	ret void
 }

@@ -3,7 +3,7 @@
 @ba3 = constant i8* getelementptr (i8, i8* blockaddress(@bafunc2, %bb), i61 0)
 
 define i8* @babefore() {
-; <label>:0
+0:
 	ret i8* getelementptr (i8, i8* blockaddress(@bafunc2, %bb), i61 0)
 
 bb1:
@@ -14,7 +14,7 @@ bb2:
 }
 
 define void @bafunc1() {
-; <label>:0
+0:
 	br label %bb
 
 bb:
@@ -22,7 +22,7 @@ bb:
 }
 
 define void @bafunc2() {
-; <label>:0
+0:
 	br label %bb
 
 bb:
@@ -30,7 +30,7 @@ bb:
 }
 
 define void @bafunc3() {
-; <label>:0
+0:
 	br label %bb
 
 bb:
@@ -38,7 +38,7 @@ bb:
 }
 
 define i8* @baafter() {
-; <label>:0
+0:
 	ret i8* blockaddress(@bafunc2, %bb)
 
 bb1:

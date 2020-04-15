@@ -1,7 +1,7 @@
 declare i32 @atoi(i8* %0)
 
 define i64 @fib(i64 %n) {
-; <label>:0
+0:
 	%1 = icmp ult i64 %n, 2
 	br i1 %1, label %BaseCase, label %RecurseCase
 
@@ -18,7 +18,7 @@ RecurseCase:
 }
 
 define i64 @realmain(i32 %argc, i8** %argv) {
-; <label>:0
+0:
 	%1 = icmp eq i32 %argc, 2
 	br i1 %1, label %HasArg, label %Continue
 
@@ -34,13 +34,13 @@ Continue:
 }
 
 define i64 @trampoline(i64 %n, i64 (i64)* %fibfunc) {
-; <label>:0
+0:
 	%F = call i64 %fibfunc(i64 %n)
 	ret i64 %F
 }
 
 define i32 @main() {
-; <label>:0
+0:
 	%Result = call i64 @trampoline(i64 10, i64 (i64)* @fib)
 	%Result.upgrd.1 = trunc i64 %Result to i32
 	ret i32 %Result.upgrd.1

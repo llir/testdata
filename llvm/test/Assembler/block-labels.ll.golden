@@ -1,12 +1,12 @@
 define i32 @test1(i32 %X) {
-; <label>:0
+0:
 	%1 = alloca i32
 	br label %2
 
-; <label>:2
+2:
 	br label %3
 
-; <label>:3
+3:
 	br label %"2"
 
 "2":
@@ -24,6 +24,6 @@ $N:
 }
 
 define void @test2(i32 %0, i32 %1) {
-; <label>:2
+2:
 	ret void
 }

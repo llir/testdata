@@ -16,7 +16,7 @@
 @A = alias i64, bitcast (i32* @bar to i64*)
 
 define i32 @foo_f() {
-; <label>:0
+0:
 	ret i32 0
 }
 

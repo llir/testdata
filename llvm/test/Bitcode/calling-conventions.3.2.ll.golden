@@ -33,103 +33,103 @@ declare ptx_kernel void @ptx_kernel()
 declare ptx_device void @ptx_device()
 
 define void @call_ccc() {
-; <label>:0
+0:
 	call ccc void @ccc()
 	ret void
 }
 
 define void @call_fastcc() {
-; <label>:0
+0:
 	call fastcc void @fastcc()
 	ret void
 }
 
 define void @call_coldcc() {
-; <label>:0
+0:
 	call coldcc void @coldcc()
 	ret void
 }
 
 define void @call_cc10 () {
-; <label>:0
+0:
 	call cc10 void @cc10 ()
 	ret void
 }
 
 define void @call_spir_kernel() {
-; <label>:0
+0:
 	call spir_kernel void @spir_kernel()
 	ret void
 }
 
 define void @call_spir_func() {
-; <label>:0
+0:
 	call spir_func void @spir_func()
 	ret void
 }
 
 define void @call_intel_ocl_bicc() {
-; <label>:0
+0:
 	call intel_ocl_bicc void @intel_ocl_bicc()
 	ret void
 }
 
 define void @call_cfguard_checkcc() {
-; <label>:0
+0:
 	call cfguard_checkcc void @cfguard_checkcc()
 	ret void
 }
 
 define void @call_x86_stdcallcc() {
-; <label>:0
+0:
 	call x86_stdcallcc void @x86_stdcallcc()
 	ret void
 }
 
 define void @call_x86_fastcallcc() {
-; <label>:0
+0:
 	call x86_fastcallcc void @x86_fastcallcc()
 	ret void
 }
 
 define void @call_x86_thiscallcc() {
-; <label>:0
+0:
 	call x86_thiscallcc void @x86_thiscallcc()
 	ret void
 }
 
 define void @call_arm_apcscc() {
-; <label>:0
+0:
 	call arm_apcscc void @arm_apcscc()
 	ret void
 }
 
 define void @call_arm_aapcscc() {
-; <label>:0
+0:
 	call arm_aapcscc void @arm_aapcscc()
 	ret void
 }
 
 define void @call_arm_aapcs_vfpcc() {
-; <label>:0
+0:
 	call arm_aapcs_vfpcc void @arm_aapcs_vfpcc()
 	ret void
 }
 
 define void @call_msp430_intrcc() {
-; <label>:0
+0:
 	call msp430_intrcc void @msp430_intrcc()
 	ret void
 }
 
 define void @call_ptx_kernel() {
-; <label>:0
+0:
 	call ptx_kernel void @ptx_kernel()
 	ret void
 }
 
 define void @call_ptx_device() {
-; <label>:0
+0:
 	call ptx_device void @ptx_device()
 	ret void
 }

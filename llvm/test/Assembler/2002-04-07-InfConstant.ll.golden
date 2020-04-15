@@ -1,5 +1,5 @@
 define float @test() {
-; <label>:0
+0:
 	%tmp = fmul float 0x7FF0000000000000, 10.0
 	ret float %tmp
 }

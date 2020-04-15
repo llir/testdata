@@ -1,5 +1,5 @@
 define void @tinkywinky() !dbg !3 {
-; <label>:0
+0:
 	ret void
 }
 

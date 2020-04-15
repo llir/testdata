@@ -1,4 +1,4 @@
 define void @foo() {
-; <label>:0
+0:
 	ret void
 }

@@ -1,7 +1,7 @@
 declare void @argmemonly_function(i32* %0) argmemonly
 
 define i32 @test0(i32* %P, i32* noalias %P2) {
-; <label>:0
+0:
 	%v1 = load i32, i32* %P
 	call void @argmemonly_function(i32* %P2) [ "tag"() ]
 	%v2 = load i32, i32* %P
@@ -10,7 +10,7 @@ define i32 @test0(i32* %P, i32* noalias %P2) {
 }
 
 define i32 @test1(i32* %P, i32* noalias %P2) {
-; <label>:0
+0:
 	%v1 = load i32, i32* %P
 	call void @argmemonly_function(i32* %P2) argmemonly [ "tag"() ]
 	%v2 = load i32, i32* %P
@@ -19,7 +19,7 @@ define i32 @test1(i32* %P, i32* noalias %P2) {
 }
 
 define i32 @test2(i32* %P, i32* noalias %P2) {
-; <label>:0
+0:
 	%v1 = load i32, i32* %P
 	call void @argmemonly_function(i32* %P2) [ "deopt"() ]
 	%v2 = load i32, i32* %P

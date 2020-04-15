@@ -1,4 +1,4 @@
 define double @test() {
-; <label>:0
+0:
 	ret double 1.0
 }

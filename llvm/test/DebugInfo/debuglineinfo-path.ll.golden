@@ -1,15 +1,15 @@
 define i32 @win_func() #0 !dbg !54 {
-; <label>:0
+0:
 	ret i32 5, !dbg !511
 }
 
 define i32 @posix_absolute_func() #0 !dbg !34 {
-; <label>:0
+0:
 	ret i32 3, !dbg !311
 }
 
 define i32 @posix_relative_func() #0 !dbg !44 {
-; <label>:0
+0:
 	ret i32 4, !dbg !411
 }
 

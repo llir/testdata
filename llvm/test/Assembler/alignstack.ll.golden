@@ -2,25 +2,25 @@ target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f3
 target triple = "i386-apple-darwin10.0"
 
 define void @test1() nounwind {
-; <label>:0
+0:
 	tail call void asm sideeffect "mov", "~{dirflag},~{fpsr},~{flags}"() nounwind
 	ret void
 }
 
 define void @test2() nounwind {
-; <label>:0
+0:
 	tail call void asm sideeffect alignstack "mov", "~{dirflag},~{fpsr},~{flags}"() nounwind
 	ret void
 }
 
 define void @test3() nounwind {
-; <label>:0
+0:
 	tail call void asm alignstack "mov", "~{dirflag},~{fpsr},~{flags}"() nounwind
 	ret void
 }
 
 define void @test4() nounwind {
-; <label>:0
+0:
 	tail call void asm "mov", "~{dirflag},~{fpsr},~{flags}"() nounwind
 	ret void
 }

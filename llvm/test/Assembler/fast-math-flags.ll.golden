@@ -54,7 +54,7 @@ entry:
 }
 
 define float @reassoc(float %x, float %y) {
-; <label>:0
+0:
 	%a = fsub reassoc float %x, %y
 	%b = fmul reassoc float %x, %y
 	%c = call reassoc float @foo(float %b)
@@ -62,7 +62,7 @@ define float @reassoc(float %x, float %y) {
 }
 
 define float @afn(float %x, float %y) {
-; <label>:0
+0:
 	%a = fdiv afn float %x, %y
 	%b = frem afn float %x, %y
 	%c = call afn float @foo(float %b)

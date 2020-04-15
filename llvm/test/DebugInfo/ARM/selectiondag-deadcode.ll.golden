@@ -3,10 +3,10 @@ target triple = "thumbv7-apple-ios7.0.0"
 %class.Matrix3.0.6.10 = type { [9 x float] }
 
 define arm_aapcscc void @_Z9GetMatrixv(%class.Matrix3.0.6.10* noalias nocapture sret %agg.result) #0 !dbg !39 {
-; <label>:0
+0:
 	br i1 fcmp oeq (float fadd (float fadd (float fmul (float undef, float undef), float fmul (float undef, float undef)), float fmul (float undef, float undef)), float 0.0), label %_ZN7Vector39NormalizeEv.exit, label %1
 
-; <label>:1
+1:
 	tail call arm_aapcscc void @_ZL4Sqrtd() #3
 	br label %_ZN7Vector39NormalizeEv.exit
 

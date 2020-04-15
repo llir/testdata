@@ -1,5 +1,5 @@
 define hidden void @foo() !dbg !4 {
-; <label>:0
+0:
 	ret void, !dbg !7
 }
 

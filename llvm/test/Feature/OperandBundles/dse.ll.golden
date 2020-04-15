@@ -3,7 +3,7 @@ declare void @f()
 declare noalias i8* @malloc(i32 %0) nounwind
 
 define void @test_0() {
-; <label>:0
+0:
 	%m = call i8* @malloc(i32 24)
 	tail call void @f() [ "unknown"(i8* %m) ]
 	store i8 -19, i8* %m
@@ -11,7 +11,7 @@ define void @test_0() {
 }
 
 define i8* @test_1() {
-; <label>:0
+0:
 	%m = call i8* @malloc(i32 24)
 	tail call void @f() [ "unknown"(i8* %m) ]
 	store i8 -19, i8* %m
@@ -21,7 +21,7 @@ define i8* @test_1() {
 }
 
 define void @test_2() {
-; <label>:0
+0:
 	%m = call i8* @malloc(i32 24)
 	tail call void @f() [ "deopt"(i8* %m) ]
 	store i8 -19, i8* %m
@@ -29,7 +29,7 @@ define void @test_2() {
 }
 
 define i8* @test_3() {
-; <label>:0
+0:
 	%m = call i8* @malloc(i32 24)
 	tail call void @f() [ "deopt"(i8* %m) ]
 	store i8 -19, i8* %m

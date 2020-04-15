@@ -1,5 +1,5 @@
 define void @foo() {
-; <label>:0
+0:
 	%1 = bitcast i32* null to i32*
 	ret void
 }

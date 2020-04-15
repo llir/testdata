@@ -1,5 +1,5 @@
 define <2 x i64> @test-fun(<2 x i64> %A) !dbg !6 {
-; <label>:0
+0:
 	%and = and <2 x i64> %A, <i64 23, i64 42>, !dbg !14
 	call void @llvm.dbg.value(metadata <2 x i64> %and, metadata !12, metadata !DIExpression()), !dbg !15
 	call void @llvm.dbg.value(metadata <2 x i256> zeroinitializer, metadata !12, metadata !DIExpression()), !dbg !15

@@ -1,5 +1,5 @@
 define void @irreducible(i1 %cond) {
-; <label>:0
+0:
 	br i1 %cond, label %X, label %Y
 
 X:
@@ -10,7 +10,7 @@ Y:
 }
 
 define void @sharedheader(i1 %cond) {
-; <label>:0
+0:
 	br label %A
 
 A:
@@ -24,7 +24,7 @@ Y:
 }
 
 define void @nested(i1 %cond1, i1 %cond2, i1 %cond3) {
-; <label>:0
+0:
 	br label %Loop1
 
 Loop1:

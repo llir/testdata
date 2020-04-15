@@ -1,5 +1,5 @@
 define void @f(i32* %x) {
-; <label>:0
+0:
 	%1 = load atomic i32, i32* %x unordered, align 4
 	%2 = load atomic volatile i32, i32* %x syncscope("singlethread") acquire, align 4
 	%3 = load atomic volatile i32, i32* %x syncscope("agent") acquire, align 4
@@ -21,7 +21,7 @@ define void @f(i32* %x) {
 }
 
 define void @fp_atomics(float* %x) {
-; <label>:0
+0:
 	%1 = atomicrmw fadd float* %x, float 1.0 seq_cst
 	%2 = atomicrmw volatile fadd float* %x, float 1.0 seq_cst
 	ret void

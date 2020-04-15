@@ -3,7 +3,7 @@
 declare void @foo(...)
 
 define void @bar() {
-; <label>:0
+0:
 	call void (...) @foo(%struct* byval null)
 	ret void
 }

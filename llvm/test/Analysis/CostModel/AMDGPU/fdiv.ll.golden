@@ -1,5 +1,5 @@
 define amdgpu_kernel void @fdiv_f32_ieee(float addrspace(1)* %out, float addrspace(1)* %vaddr, float %b) #0 {
-; <label>:0
+0:
 	%vec = load float, float addrspace(1)* %vaddr
 	%add = fdiv float %vec, %b
 	store float %add, float addrspace(1)* %out
@@ -7,7 +7,7 @@ define amdgpu_kernel void @fdiv_f32_ieee(float addrspace(1)* %out, float addrspa
 }
 
 define amdgpu_kernel void @fdiv_f32_ftzdaz(float addrspace(1)* %out, float addrspace(1)* %vaddr, float %b) #1 {
-; <label>:0
+0:
 	%vec = load float, float addrspace(1)* %vaddr
 	%add = fdiv float %vec, %b
 	store float %add, float addrspace(1)* %out
@@ -15,7 +15,7 @@ define amdgpu_kernel void @fdiv_f32_ftzdaz(float addrspace(1)* %out, float addrs
 }
 
 define amdgpu_kernel void @fdiv_v2f32_ieee(<2 x float> addrspace(1)* %out, <2 x float> addrspace(1)* %vaddr, <2 x float> %b) #0 {
-; <label>:0
+0:
 	%vec = load <2 x float>, <2 x float> addrspace(1)* %vaddr
 	%add = fdiv <2 x float> %vec, %b
 	store <2 x float> %add, <2 x float> addrspace(1)* %out
@@ -23,7 +23,7 @@ define amdgpu_kernel void @fdiv_v2f32_ieee(<2 x float> addrspace(1)* %out, <2 x 
 }
 
 define amdgpu_kernel void @fdiv_v2f32_ftzdaz(<2 x float> addrspace(1)* %out, <2 x float> addrspace(1)* %vaddr, <2 x float> %b) #1 {
-; <label>:0
+0:
 	%vec = load <2 x float>, <2 x float> addrspace(1)* %vaddr
 	%add = fdiv <2 x float> %vec, %b
 	store <2 x float> %add, <2 x float> addrspace(1)* %out
@@ -31,7 +31,7 @@ define amdgpu_kernel void @fdiv_v2f32_ftzdaz(<2 x float> addrspace(1)* %out, <2 
 }
 
 define amdgpu_kernel void @fdiv_v3f32_ieee(<3 x float> addrspace(1)* %out, <3 x float> addrspace(1)* %vaddr, <3 x float> %b) #0 {
-; <label>:0
+0:
 	%vec = load <3 x float>, <3 x float> addrspace(1)* %vaddr
 	%add = fdiv <3 x float> %vec, %b
 	store <3 x float> %add, <3 x float> addrspace(1)* %out
@@ -39,7 +39,7 @@ define amdgpu_kernel void @fdiv_v3f32_ieee(<3 x float> addrspace(1)* %out, <3 x 
 }
 
 define amdgpu_kernel void @fdiv_v3f32_ftzdaz(<3 x float> addrspace(1)* %out, <3 x float> addrspace(1)* %vaddr, <3 x float> %b) #1 {
-; <label>:0
+0:
 	%vec = load <3 x float>, <3 x float> addrspace(1)* %vaddr
 	%add = fdiv <3 x float> %vec, %b
 	store <3 x float> %add, <3 x float> addrspace(1)* %out
@@ -47,7 +47,7 @@ define amdgpu_kernel void @fdiv_v3f32_ftzdaz(<3 x float> addrspace(1)* %out, <3 
 }
 
 define amdgpu_kernel void @fdiv_v5f32_ieee(<5 x float> addrspace(1)* %out, <5 x float> addrspace(1)* %vaddr, <5 x float> %b) #0 {
-; <label>:0
+0:
 	%vec = load <5 x float>, <5 x float> addrspace(1)* %vaddr
 	%add = fdiv <5 x float> %vec, %b
 	store <5 x float> %add, <5 x float> addrspace(1)* %out
@@ -55,7 +55,7 @@ define amdgpu_kernel void @fdiv_v5f32_ieee(<5 x float> addrspace(1)* %out, <5 x 
 }
 
 define amdgpu_kernel void @fdiv_v5f32_ftzdaz(<5 x float> addrspace(1)* %out, <5 x float> addrspace(1)* %vaddr, <5 x float> %b) #1 {
-; <label>:0
+0:
 	%vec = load <5 x float>, <5 x float> addrspace(1)* %vaddr
 	%add = fdiv <5 x float> %vec, %b
 	store <5 x float> %add, <5 x float> addrspace(1)* %out
@@ -63,7 +63,7 @@ define amdgpu_kernel void @fdiv_v5f32_ftzdaz(<5 x float> addrspace(1)* %out, <5 
 }
 
 define amdgpu_kernel void @fdiv_f64(double addrspace(1)* %out, double addrspace(1)* %vaddr, double %b) #0 {
-; <label>:0
+0:
 	%vec = load double, double addrspace(1)* %vaddr
 	%add = fdiv double %vec, %b
 	store double %add, double addrspace(1)* %out
@@ -71,7 +71,7 @@ define amdgpu_kernel void @fdiv_f64(double addrspace(1)* %out, double addrspace(
 }
 
 define amdgpu_kernel void @fdiv_v2f64(<2 x double> addrspace(1)* %out, <2 x double> addrspace(1)* %vaddr, <2 x double> %b) #0 {
-; <label>:0
+0:
 	%vec = load <2 x double>, <2 x double> addrspace(1)* %vaddr
 	%add = fdiv <2 x double> %vec, %b
 	store <2 x double> %add, <2 x double> addrspace(1)* %out
@@ -79,7 +79,7 @@ define amdgpu_kernel void @fdiv_v2f64(<2 x double> addrspace(1)* %out, <2 x doub
 }
 
 define amdgpu_kernel void @fdiv_v3f64(<3 x double> addrspace(1)* %out, <3 x double> addrspace(1)* %vaddr, <3 x double> %b) #0 {
-; <label>:0
+0:
 	%vec = load <3 x double>, <3 x double> addrspace(1)* %vaddr
 	%add = fdiv <3 x double> %vec, %b
 	store <3 x double> %add, <3 x double> addrspace(1)* %out
@@ -87,7 +87,7 @@ define amdgpu_kernel void @fdiv_v3f64(<3 x double> addrspace(1)* %out, <3 x doub
 }
 
 define amdgpu_kernel void @fdiv_f16_f32_ieee(half addrspace(1)* %out, half addrspace(1)* %vaddr, half %b) #0 {
-; <label>:0
+0:
 	%vec = load half, half addrspace(1)* %vaddr
 	%add = fdiv half %vec, %b
 	store half %add, half addrspace(1)* %out
@@ -95,7 +95,7 @@ define amdgpu_kernel void @fdiv_f16_f32_ieee(half addrspace(1)* %out, half addrs
 }
 
 define amdgpu_kernel void @fdiv_f16_f32_ftzdaz(half addrspace(1)* %out, half addrspace(1)* %vaddr, half %b) #1 {
-; <label>:0
+0:
 	%vec = load half, half addrspace(1)* %vaddr
 	%add = fdiv half %vec, %b
 	store half %add, half addrspace(1)* %out
@@ -103,7 +103,7 @@ define amdgpu_kernel void @fdiv_f16_f32_ftzdaz(half addrspace(1)* %out, half add
 }
 
 define amdgpu_kernel void @fdiv_v2f16_f32_ieee(<2 x half> addrspace(1)* %out, <2 x half> addrspace(1)* %vaddr, <2 x half> %b) #0 {
-; <label>:0
+0:
 	%vec = load <2 x half>, <2 x half> addrspace(1)* %vaddr
 	%add = fdiv <2 x half> %vec, %b
 	store <2 x half> %add, <2 x half> addrspace(1)* %out
@@ -111,7 +111,7 @@ define amdgpu_kernel void @fdiv_v2f16_f32_ieee(<2 x half> addrspace(1)* %out, <2
 }
 
 define amdgpu_kernel void @fdiv_v2f16_f32_ftzdaz(<2 x half> addrspace(1)* %out, <2 x half> addrspace(1)* %vaddr, <2 x half> %b) #1 {
-; <label>:0
+0:
 	%vec = load <2 x half>, <2 x half> addrspace(1)* %vaddr
 	%add = fdiv <2 x half> %vec, %b
 	store <2 x half> %add, <2 x half> addrspace(1)* %out
@@ -119,7 +119,7 @@ define amdgpu_kernel void @fdiv_v2f16_f32_ftzdaz(<2 x half> addrspace(1)* %out, 
 }
 
 define amdgpu_kernel void @fdiv_v4f16_f32_ieee(<4 x half> addrspace(1)* %out, <4 x half> addrspace(1)* %vaddr, <4 x half> %b) #0 {
-; <label>:0
+0:
 	%vec = load <4 x half>, <4 x half> addrspace(1)* %vaddr
 	%add = fdiv <4 x half> %vec, %b
 	store <4 x half> %add, <4 x half> addrspace(1)* %out
@@ -127,7 +127,7 @@ define amdgpu_kernel void @fdiv_v4f16_f32_ieee(<4 x half> addrspace(1)* %out, <4
 }
 
 define amdgpu_kernel void @fdiv_v4f16_f32_ftzdaz(<4 x half> addrspace(1)* %out, <4 x half> addrspace(1)* %vaddr, <4 x half> %b) #1 {
-; <label>:0
+0:
 	%vec = load <4 x half>, <4 x half> addrspace(1)* %vaddr
 	%add = fdiv <4 x half> %vec, %b
 	store <4 x half> %add, <4 x half> addrspace(1)* %out
@@ -135,7 +135,7 @@ define amdgpu_kernel void @fdiv_v4f16_f32_ftzdaz(<4 x half> addrspace(1)* %out, 
 }
 
 define amdgpu_kernel void @rcp_f32_ieee(float addrspace(1)* %out, float addrspace(1)* %vaddr) #0 {
-; <label>:0
+0:
 	%vec = load float, float addrspace(1)* %vaddr
 	%add = fdiv float 1.0, %vec
 	store float %add, float addrspace(1)* %out
@@ -143,7 +143,7 @@ define amdgpu_kernel void @rcp_f32_ieee(float addrspace(1)* %out, float addrspac
 }
 
 define amdgpu_kernel void @rcp_f32_ftzdaz(float addrspace(1)* %out, float addrspace(1)* %vaddr) #1 {
-; <label>:0
+0:
 	%vec = load float, float addrspace(1)* %vaddr
 	%add = fdiv float 1.0, %vec
 	store float %add, float addrspace(1)* %out
@@ -151,7 +151,7 @@ define amdgpu_kernel void @rcp_f32_ftzdaz(float addrspace(1)* %out, float addrsp
 }
 
 define amdgpu_kernel void @rcp_f16_f32_ieee(half addrspace(1)* %out, half addrspace(1)* %vaddr) #0 {
-; <label>:0
+0:
 	%vec = load half, half addrspace(1)* %vaddr
 	%add = fdiv half 1.0, %vec
 	store half %add, half addrspace(1)* %out
@@ -159,7 +159,7 @@ define amdgpu_kernel void @rcp_f16_f32_ieee(half addrspace(1)* %out, half addrsp
 }
 
 define amdgpu_kernel void @rcp_f16_f32_ftzdaz(half addrspace(1)* %out, half addrspace(1)* %vaddr) #1 {
-; <label>:0
+0:
 	%vec = load half, half addrspace(1)* %vaddr
 	%add = fdiv half 1.0, %vec
 	store half %add, half addrspace(1)* %out
@@ -167,7 +167,7 @@ define amdgpu_kernel void @rcp_f16_f32_ftzdaz(half addrspace(1)* %out, half addr
 }
 
 define amdgpu_kernel void @rcp_f64(double addrspace(1)* %out, double addrspace(1)* %vaddr) #0 {
-; <label>:0
+0:
 	%vec = load double, double addrspace(1)* %vaddr
 	%add = fdiv double 1.0, %vec
 	store double %add, double addrspace(1)* %out
@@ -175,7 +175,7 @@ define amdgpu_kernel void @rcp_f64(double addrspace(1)* %out, double addrspace(1
 }
 
 define amdgpu_kernel void @rcp_v2f32_ieee(<2 x float> addrspace(1)* %out, <2 x float> addrspace(1)* %vaddr) #0 {
-; <label>:0
+0:
 	%vec = load <2 x float>, <2 x float> addrspace(1)* %vaddr
 	%add = fdiv <2 x float> <float 1.0, float 1.0>, %vec
 	store <2 x float> %add, <2 x float> addrspace(1)* %out
@@ -183,7 +183,7 @@ define amdgpu_kernel void @rcp_v2f32_ieee(<2 x float> addrspace(1)* %out, <2 x f
 }
 
 define amdgpu_kernel void @rcp_v2f32_ftzdaz(<2 x float> addrspace(1)* %out, <2 x float> addrspace(1)* %vaddr) #1 {
-; <label>:0
+0:
 	%vec = load <2 x float>, <2 x float> addrspace(1)* %vaddr
 	%add = fdiv <2 x float> <float 1.0, float 1.0>, %vec
 	store <2 x float> %add, <2 x float> addrspace(1)* %out
@@ -191,7 +191,7 @@ define amdgpu_kernel void @rcp_v2f32_ftzdaz(<2 x float> addrspace(1)* %out, <2 x
 }
 
 define amdgpu_kernel void @rcp_v2f16_f32_ieee(<2 x half> addrspace(1)* %out, <2 x half> addrspace(1)* %vaddr) #0 {
-; <label>:0
+0:
 	%vec = load <2 x half>, <2 x half> addrspace(1)* %vaddr
 	%add = fdiv <2 x half> <half 1.0, half 1.0>, %vec
 	store <2 x half> %add, <2 x half> addrspace(1)* %out
@@ -199,7 +199,7 @@ define amdgpu_kernel void @rcp_v2f16_f32_ieee(<2 x half> addrspace(1)* %out, <2 
 }
 
 define amdgpu_kernel void @rcp_v2f16_f32_ftzdaz(<2 x half> addrspace(1)* %out, <2 x half> addrspace(1)* %vaddr) #1 {
-; <label>:0
+0:
 	%vec = load <2 x half>, <2 x half> addrspace(1)* %vaddr
 	%add = fdiv <2 x half> <half 1.0, half 1.0>, %vec
 	store <2 x half> %add, <2 x half> addrspace(1)* %out

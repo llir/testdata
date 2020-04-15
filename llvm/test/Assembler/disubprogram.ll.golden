@@ -1,5 +1,5 @@
 define void @_Z3foov() !dbg !9 {
-; <label>:0
+0:
 	ret void
 }
 

@@ -5,7 +5,7 @@ declare void @llvm.va_copy(i8* %0, i8* %1)
 declare void @llvm.va_end(i8* %0)
 
 define i32 @test(i32 %X, ...) {
-; <label>:0
+0:
 	%ap = alloca i8*
 	%va.upgrd.1 = bitcast i8** %ap to i8*
 	call void @llvm.va_start(i8* %va.upgrd.1)

@@ -1,6 +1,6 @@
 %Ty = type opaque
 
 define %Ty* @func() {
-; <label>:0
+0:
 	ret %Ty* null
 }

@@ -1,5 +1,5 @@
 define void @NewCasts(i16 %x) {
-; <label>:0
+0:
 	%a = zext i16 %x to i32
 	%b = sext i16 %x to i32
 	%c = trunc i16 %x to i8
@@ -24,11 +24,11 @@ define void @NewCasts(i16 %x) {
 }
 
 define i16 @ZExtConst() {
-; <label>:0
+0:
 	ret i16 trunc (i32 zext (i16 42 to i32) to i16)
 }
 
 define i16 @SExtConst() {
-; <label>:0
+0:
 	ret i16 trunc (i32 sext (i16 42 to i32) to i16)
 }

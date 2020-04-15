@@ -1,7 +1,7 @@
 target datalayout = "A5"
 
 define void @use_alloca() {
-; <label>:0
+0:
 	%alloca_array_no_align = alloca i32, i32 9, addrspace(5)
 	%alloca_array_align4 = alloca i32, i32 9, align 4, addrspace(5)
 	%alloca_array_no_align_metadata = alloca i32, i32 9, addrspace(5), !foo !0

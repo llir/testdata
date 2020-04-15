@@ -1,7 +1,7 @@
 @0 = external global float, align 16
 
 define internal void @a() nounwind {
-; <label>:0
+0:
 	%1 = load float, float* @0, align 16
 	%2 = insertelement <4 x float> undef, float %1, i32 0
 	%3 = call <4 x float> @llvm.x86.sse.rsqrt.ss(<4 x float> %2)
@@ -11,7 +11,7 @@ define internal void @a() nounwind {
 }
 
 define internal void @b() nounwind {
-; <label>:0
+0:
 	%1 = load float, float* @0, align 16
 	%2 = insertelement <4 x float> undef, float %1, i32 1
 	%3 = call <4 x float> @llvm.x86.sse.rsqrt.ss(<4 x float> %2)

@@ -3,18 +3,18 @@ target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 declare nonnull i8* @ret_nonnull()
 
 define i8* @test1() {
-; <label>:0
+0:
 	%ret = call i8* @ret_nonnull()
 	ret i8* %ret
 }
 
 define i8* @test2(i8* nonnull %p) {
-; <label>:0
+0:
 	ret i8* %p
 }
 
 define i8* @scc_binder(i1 %c) {
-; <label>:0
+0:
 	br i1 %c, label %rec, label %end
 
 rec:
@@ -26,26 +26,26 @@ end:
 }
 
 define i8* @test3(i1 %c) {
-; <label>:0
+0:
 	%1 = call i8* @scc_binder(i1 %c)
 	%ret = call i8* @ret_nonnull()
 	ret i8* %ret
 }
 
 define i8* @test4_helper() {
-; <label>:0
+0:
 	%ret = call i8* @test4()
 	ret i8* %ret
 }
 
 define i8* @test4() {
-; <label>:0
+0:
 	%ret = call i8* @test4_helper()
 	ret i8* %ret
 }
 
 define i8* @test5_helper(i1 %c) {
-; <label>:0
+0:
 	br i1 %c, label %rec, label %end
 
 rec:
@@ -57,7 +57,7 @@ end:
 }
 
 define i8* @test5(i1 %c) {
-; <label>:0
+0:
 	%ret = call i8* @test5_helper(i1 %c)
 	ret i8* %ret
 }
@@ -89,19 +89,19 @@ exit:
 }
 
 define i8* @test7(i8* %a) {
-; <label>:0
+0:
 	%b = getelementptr inbounds i8, i8* %a, i64 0
 	ret i8* %b
 }
 
 define i8* @test8(i8* %a) {
-; <label>:0
+0:
 	%b = getelementptr inbounds i8, i8* %a, i64 1
 	ret i8* %b
 }
 
 define i8* @test9(i8* %a, i64 %n) {
-; <label>:0
+0:
 	%b = getelementptr inbounds i8, i8* %a, i64 %n
 	ret i8* %b
 }
@@ -109,7 +109,7 @@ define i8* @test9(i8* %a, i64 %n) {
 declare void @llvm.assume(i1 %0)
 
 define i8* @test10(i8* %a, i64 %n) {
-; <label>:0
+0:
 	%cmp = icmp ne i64 %n, 0
 	call void @llvm.assume(i1 %cmp)
 	%b = getelementptr inbounds i8, i8* %a, i64 %n
@@ -117,7 +117,7 @@ define i8* @test10(i8* %a, i64 %n) {
 }
 
 define i8* @test11(i8* %0) local_unnamed_addr {
-; <label>:1
+1:
 	%2 = icmp eq i8* %0, null
 	br i1 %2, label %3, label %5
 
@@ -133,7 +133,7 @@ define i8* @test11(i8* %0) local_unnamed_addr {
 declare void @test12_helper(i8* %0)
 
 define void @test12(i8* nonnull %a) {
-; <label>:0
+0:
 	tail call void @test12_helper(i8* %a)
 	ret void
 }
@@ -141,7 +141,7 @@ define void @test12(i8* nonnull %a) {
 declare i8* @unknown()
 
 define void @test13_helper() {
-; <label>:0
+0:
 	%nonnullptr = tail call i8* @ret_nonnull()
 	%maybenullptr = tail call i8* @unknown()
 	tail call void @test13(i8* %nonnullptr, i8* %nonnullptr, i8* %maybenullptr)
@@ -152,7 +152,7 @@ define void @test13_helper() {
 declare void @use_i8_ptr(i8* nofree %0) readnone nounwind
 
 define internal void @test13(i8* %a, i8* %b, i8* %c) {
-; <label>:0
+0:
 	call void @use_i8_ptr(i8* %a)
 	call void @use_i8_ptr(i8* %b)
 	call void @use_i8_ptr(i8* %c)
@@ -199,7 +199,7 @@ bb:
 }
 
 define void @f15(i8* %arg) {
-; <label>:0
+0:
 	tail call void @use1(i8* dereferenceable(4) %arg)
 	ret void
 }
@@ -213,7 +213,7 @@ declare void @fun2(i8* %0, i8* %1) #1
 declare void @fun3(i8* %0, i8* %1, i8* %2) #1
 
 define void @f16(i8* %a, i8* %b, i8 %c) {
-; <label>:0
+0:
 	%cmp = icmp eq i8 %c, 0
 	br i1 %cmp, label %if.then, label %if.else
 
@@ -227,7 +227,7 @@ if.else:
 }
 
 define void @f17(i8* %a, i8 %c) {
-; <label>:0
+0:
 	%cmp = icmp eq i8 %c, 0
 	br i1 %cmp, label %if.then, label %if.else
 
@@ -245,7 +245,7 @@ cont:
 }
 
 define void @f18(i8* %a, i8* %b, i8 %c) {
-; <label>:0
+0:
 	%cmp1 = icmp eq i8 %c, 0
 	br i1 %cmp1, label %if.then, label %if.else
 
@@ -275,7 +275,7 @@ cont2:
 }
 
 define void @f19(i8* %a, i8* %b, i8 %c) {
-; <label>:0
+0:
 	br label %loop.header
 
 loop.header:
@@ -307,28 +307,28 @@ declare void @use3nonnull(i8* nonnull %x, i8* nonnull %y, i8* nonnull %z)
 declare i8 @use1safecall(i8* %x) readonly nounwind
 
 define void @parent1(i8* %a, i8* %b, i8* %c) {
-; <label>:0
+0:
 	call void @use3(i8* %c, i8* %a, i8* %b)
 	call void @use3nonnull(i8* %b, i8* %c, i8* %a)
 	ret void
 }
 
 define void @parent2(i8* %a, i8* %b, i8* %c) {
-; <label>:0
+0:
 	call void @use3nonnull(i8* %b, i8* %c, i8* %a)
 	call void @use3(i8* %c, i8* %a, i8* %b)
 	ret void
 }
 
 define void @parent3(i8* %a, i8* %b, i8* %c) {
-; <label>:0
+0:
 	call void @use1nonnull(i8* %a)
 	call void @use3(i8* %c, i8* %b, i8* %a)
 	ret void
 }
 
 define void @parent4(i8* %a, i8* %b, i8* %c) {
-; <label>:0
+0:
 	call void @use2nonnull(i8* %c, i8* %b)
 	call void @use2(i8* %a, i8* %c)
 	call void @use1(i8* %b)
@@ -336,7 +336,7 @@ define void @parent4(i8* %a, i8* %b, i8* %c) {
 }
 
 define void @parent5(i8* %a, i1 %a_is_notnull) {
-; <label>:0
+0:
 	br i1 %a_is_notnull, label %t, label %f
 
 t:
@@ -348,14 +348,14 @@ f:
 }
 
 define i8 @parent6(i8* %a, i8* %b) {
-; <label>:0
+0:
 	%c = load volatile i8, i8* %b
 	call void @use1nonnull(i8* %a)
 	ret i8 %c
 }
 
 define i8 @parent7(i8* %a) {
-; <label>:0
+0:
 	%ret = call i8 @use1safecall(i8* %a)
 	call void @use1nonnull(i8* %a)
 	ret i8 %ret
@@ -379,35 +379,35 @@ exc:
 }
 
 define i32* @gep1(i32* %p) {
-; <label>:0
+0:
 	%q = getelementptr inbounds i32, i32* %p, i32 1
 	ret i32* %q
 }
 
 define i32* @gep1_no_null_opt(i32* %p) #0 {
-; <label>:0
+0:
 	%q = getelementptr inbounds i32, i32* %p, i32 1
 	ret i32* %q
 }
 
 define i32 addrspace(3)* @gep2(i32 addrspace(3)* %p) {
-; <label>:0
+0:
 	%q = getelementptr inbounds i32, i32 addrspace(3)* %p, i32 1
 	ret i32 addrspace(3)* %q
 }
 
 define i32 addrspace(3)* @as(i32 addrspace(3)* dereferenceable(4) %p) {
-; <label>:0
+0:
 	ret i32 addrspace(3)* %p
 }
 
 define internal i32* @g2() {
-; <label>:0
+0:
 	ret i32* inttoptr (i64 4 to i32*)
 }
 
 define i32* @g1() {
-; <label>:0
+0:
 	%c = call i32* @g2()
 	ret i32* %c
 }
@@ -415,37 +415,37 @@ define i32* @g1() {
 declare void @use_i32_ptr(i32* %0) readnone nounwind
 
 define internal void @called_by_weak(i32* %a) {
-; <label>:0
+0:
 	call void @use_i32_ptr(i32* %a)
 	ret void
 }
 
 define weak_odr void @weak_caller(i32* nonnull %a) {
-; <label>:0
+0:
 	call void @called_by_weak(i32* %a)
 	ret void
 }
 
 define internal void @control(i32* dereferenceable(4) %a) {
-; <label>:0
+0:
 	call void @use_i32_ptr(i32* %a)
 	ret void
 }
 
 define internal void @naked(i32* dereferenceable(4) %a) naked {
-; <label>:0
+0:
 	call void @use_i32_ptr(i32* %a)
 	ret void
 }
 
 define internal void @optnone(i32* dereferenceable(4) %a) optnone noinline {
-; <label>:0
+0:
 	call void @use_i32_ptr(i32* %a)
 	ret void
 }
 
 define void @make_live(i32* nonnull dereferenceable(8) %a) {
-; <label>:0
+0:
 	call void @naked(i32* nonnull dereferenceable(8) align 16 %a)
 	call void @control(i32* nonnull dereferenceable(8) align 16 %a)
 	call void @optnone(i32* nonnull dereferenceable(8) align 16 %a)
@@ -533,7 +533,7 @@ hd2:
 declare void @sink(i32* %0)
 
 define void @PR43833(i32* %0, i32 %1) {
-; <label>:2
+2:
 	%3 = icmp sgt i32 %1, 1
 	br i1 %3, label %4, label %7
 
@@ -554,7 +554,7 @@ define void @PR43833(i32* %0, i32 %1) {
 }
 
 define void @PR43833_simple(i32* %0, i32 %1) {
-; <label>:2
+2:
 	%3 = icmp ne i32 %1, 0
 	br i1 %3, label %4, label %7
 
@@ -577,7 +577,7 @@ define void @PR43833_simple(i32* %0, i32 %1) {
 declare i8* @strrchr(i8* %0, i32 %1) nofree nounwind readonly
 
 define i8* @mybasename(i8* nofree readonly %str) {
-; <label>:0
+0:
 	%call = call i8* @strrchr(i8* %str, i32 47)
 	%tobool = icmp ne i8* %call, null
 	%add.ptr = getelementptr inbounds i8, i8* %call, i64 1

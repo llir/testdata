@@ -38,7 +38,7 @@ entry:
 }
 
 define i32 @test.objectsize() {
-; <label>:0
+0:
 	%s = call i32 @llvm.objectsize.i32(i8* getelementptr inbounds ([60 x i8], [60 x i8]* @a, i32 0, i32 0), i1 false)
 	ret i32 %s
 }
@@ -46,7 +46,7 @@ define i32 @test.objectsize() {
 declare i64 @llvm.objectsize.i64.p0i8(i8* %0, i1 %1) nounwind readonly
 
 define i64 @test.objectsize.2() {
-; <label>:0
+0:
 	%s = call i64 @llvm.objectsize.i64.p0i8(i8* getelementptr inbounds ([60 x i8], [60 x i8]* @a, i32 0, i32 0), i1 false)
 	ret i64 %s
 }
@@ -54,7 +54,7 @@ define i64 @test.objectsize.2() {
 declare <2 x double> @llvm.masked.load.v2f64(<2 x double>* %ptrs, i32 %0, <2 x i1> %mask, <2 x double> %src0)
 
 define <2 x double> @tests.masked.load(<2 x double>* %ptr, <2 x i1> %mask, <2 x double> %passthru) {
-; <label>:0
+0:
 	%res = call <2 x double> @llvm.masked.load.v2f64(<2 x double>* %ptr, i32 1, <2 x i1> %mask, <2 x double> %passthru)
 	ret <2 x double> %res
 }
@@ -62,7 +62,7 @@ define <2 x double> @tests.masked.load(<2 x double>* %ptr, <2 x i1> %mask, <2 x 
 declare void @llvm.masked.store.v2f64(<2 x double> %val, <2 x double>* %ptrs, i32 %0, <2 x i1> %mask)
 
 define void @tests.masked.store(<2 x double>* %ptr, <2 x i1> %mask, <2 x double> %val) {
-; <label>:0
+0:
 	call void @llvm.masked.store.v2f64(<2 x double> %val, <2 x double>* %ptr, i32 4, <2 x i1> %mask)
 	ret void
 }
@@ -70,7 +70,7 @@ define void @tests.masked.store(<2 x double>* %ptr, <2 x i1> %mask, <2 x double>
 declare <2 x double> @llvm.masked.gather.v2f64(<2 x double*> %ptrs, i32 %0, <2 x i1> %mask, <2 x double> %src0)
 
 define <2 x double> @tests.masked.gather(<2 x double*> %ptr, <2 x i1> %mask, <2 x double> %passthru) {
-; <label>:0
+0:
 	%res = call <2 x double> @llvm.masked.gather.v2f64(<2 x double*> %ptr, i32 1, <2 x i1> %mask, <2 x double> %passthru)
 	ret <2 x double> %res
 }
@@ -78,7 +78,7 @@ define <2 x double> @tests.masked.gather(<2 x double*> %ptr, <2 x i1> %mask, <2 
 declare void @llvm.masked.scatter.v2f64(<2 x double> %val, <2 x double*> %ptrs, i32 %0, <2 x i1> %mask)
 
 define void @tests.masked.scatter(<2 x double*> %ptr, <2 x i1> %mask, <2 x double> %val) {
-; <label>:0
+0:
 	call void @llvm.masked.scatter.v2f64(<2 x double> %val, <2 x double*> %ptr, i32 3, <2 x i1> %mask)
 	ret void
 }
@@ -88,7 +88,7 @@ declare {}* @llvm.invariant.start(i64 %0, i8* nocapture %1) nounwind readonly
 declare void @llvm.invariant.end({}* %0, i64 %1, i8* nocapture %2) nounwind
 
 define void @tests.invariant.start.end() {
-; <label>:0
+0:
 	%a = alloca i8
 	%i = call {}* @llvm.invariant.start(i64 1, i8* %a)
 	store i8 0, i8* %a
@@ -99,7 +99,7 @@ define void @tests.invariant.start.end() {
 declare void @llvm.stackprotectorcheck(i8** %0)
 
 define void @test.stackprotectorcheck() {
-; <label>:0
+0:
 	call void @llvm.stackprotectorcheck(i8** @__stack_chk_guard)
 	ret void
 }
@@ -109,7 +109,7 @@ declare void @llvm.lifetime.start(i64 %0, i8* nocapture %1) nounwind readonly
 declare void @llvm.lifetime.end(i64 %0, i8* nocapture %1) nounwind
 
 define void @tests.lifetime.start.end() {
-; <label>:0
+0:
 	%a = alloca i8
 	call void @llvm.lifetime.start(i64 1, i8* %a)
 	store i8 0, i8* %a
@@ -120,7 +120,7 @@ define void @tests.lifetime.start.end() {
 declare void @llvm.prefetch(i8* %0, i32 %1, i32 %2, i32 %3)
 
 define void @test.prefetch(i8* %ptr) {
-; <label>:0
+0:
 	call void @llvm.prefetch(i8* %ptr, i32 0, i32 3, i32 2)
 	ret void
 }
@@ -128,7 +128,7 @@ define void @test.prefetch(i8* %ptr) {
 declare void @llvm.prefetch.p0i8(i8* %0, i32 %1, i32 %2, i32 %3)
 
 define void @test.prefetch.2(i8* %ptr) {
-; <label>:0
+0:
 	call void @llvm.prefetch(i8* %ptr, i32 0, i32 3, i32 2)
 	ret void
 }

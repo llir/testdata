@@ -2,6 +2,6 @@ target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:32:64-f3
 target triple = "i686-pc-linux-gnu"
 
 define i128 @a() {
-; <label>:0
+0:
 	ret i128 u0x10000000000000000
 }

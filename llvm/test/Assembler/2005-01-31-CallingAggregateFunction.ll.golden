@@ -1,5 +1,5 @@
 define void @test() {
-; <label>:0
+0:
 	%1 = call { i32 } @foo()
 	ret void
 }

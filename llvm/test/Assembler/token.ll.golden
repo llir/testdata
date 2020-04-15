@@ -1,7 +1,7 @@
 declare void @llvm.token.foobar(token %0)
 
 define void @f() {
-; <label>:0
+0:
 	call void @llvm.token.foobar(token none)
 	ret void
 }

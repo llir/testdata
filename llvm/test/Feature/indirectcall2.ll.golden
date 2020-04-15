@@ -1,10 +1,10 @@
 define i64 @test(i64 %X) {
-; <label>:0
+0:
 	ret i64 %X
 }
 
 define i64 @fib(i64 %n) {
-; <label>:0
+0:
 	%T = icmp ult i64 %n, 2
 	br i1 %T, label %BaseCase, label %RecurseCase
 

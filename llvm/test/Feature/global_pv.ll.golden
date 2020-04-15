@@ -6,7 +6,7 @@
 @llvm.global_ctors = appending global [1 x %0] [%0 { i32 u0xFFFF, void ()* @test, i8* null }]
 
 define internal void @test() {
-; <label>:0
+0:
 	%A = insertelement <2 x i32*> undef, i32* @G1, i32 0
 	%B = insertelement <2 x i32*> %A, i32* @G2, i32 1
 	store <2 x i32*> %B, <2 x i32*>* @g

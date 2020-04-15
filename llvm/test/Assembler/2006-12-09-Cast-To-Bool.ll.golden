@@ -1,5 +1,5 @@
 define i1 @main(i32 %X) {
-; <label>:0
+0:
 	%res = bitcast i1 true to i1
 	ret i1 %res
 }

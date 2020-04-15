@@ -32,12 +32,12 @@ entry:
 	%_mscmp = icmp eq i64 %_msld, 0, !dbg !20
 	br i1 %_mscmp, label %6, label %5, !dbg !20, !prof !22
 
-; <label>:5
+5:
 	call void @__msan_warning_noreturn(), !dbg !20
 	call void asm sideeffect "", ""() #3, !dbg !20
 	unreachable, !dbg !20
 
-; <label>:6
+6:
 	%7 = load i32, i32* %p.0.p.0., align 4, !dbg !20, !tbaa !23
 	%8 = ptrtoint i32* %p.0.p.0. to i64, !dbg !20
 	%9 = and i64 %8, -70368744177665, !dbg !20
@@ -50,12 +50,12 @@ entry:
 	%_msprop_icmp = and i1 %11, %14, !dbg !20
 	br i1 %_msprop_icmp, label %15, label %16, !dbg !20, !prof !27
 
-; <label>:15
+15:
 	call void @__msan_warning_noreturn(), !dbg !20
 	call void asm sideeffect "", ""() #3, !dbg !20
 	unreachable, !dbg !20
 
-; <label>:16
+16:
 	%tobool = icmp eq i32 %7, 0, !dbg !20
 	br i1 %tobool, label %if.end, label %if.then, !dbg !20
 
@@ -95,12 +95,12 @@ entry:
 	%_mscmp = icmp eq i64 %_msld, 0, !dbg !33
 	br i1 %_mscmp, label %6, label %5, !dbg !33, !prof !22
 
-; <label>:5
+5:
 	call void @__msan_warning_noreturn(), !dbg !33
 	call void asm sideeffect "", ""() #3, !dbg !33
 	unreachable, !dbg !33
 
-; <label>:6
+6:
 	%7 = load i32, i32* %p.i.0.p.0.p.0..i, align 4, !dbg !33, !tbaa !23
 	%8 = ptrtoint i32* %p.i.0.p.0.p.0..i to i64, !dbg !33
 	%9 = and i64 %8, -70368744177665, !dbg !33
@@ -113,12 +113,12 @@ entry:
 	%_msprop_icmp = and i1 %11, %14, !dbg !33
 	br i1 %_msprop_icmp, label %15, label %16, !dbg !33, !prof !27
 
-; <label>:15
+15:
 	call void @__msan_warning_noreturn(), !dbg !33
 	call void asm sideeffect "", ""() #3, !dbg !33
 	unreachable, !dbg !33
 
-; <label>:16
+16:
 	%tobool.i = icmp eq i32 %7, 0, !dbg !33
 	br i1 %tobool.i, label %_Z1fv.exit, label %if.then.i, !dbg !33
 

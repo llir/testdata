@@ -1,22 +1,22 @@
 define void @foo() {
-; <label>:0
+0:
 	ret void
 }
 
 define i32 @bar() {
-; <label>:0
+0:
 	call void @foo()
 	%sum = add i32 0, 1
 	ret i32 0
 }
 
 define weak_odr zeroext i1 @baz() {
-; <label>:0
+0:
 	ret i1 false
 }
 
 define i32 @boom() {
-; <label>:0
+0:
 	%retval = musttail call i32 @bar()
 	ret i32 %retval
 }

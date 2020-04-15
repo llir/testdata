@@ -8,7 +8,7 @@
 @2 = dllexport global i32 42
 
 define i32 @foo(i32 %blah) {
-; <label>:0
+0:
 	store i32 5, i32* @MyVar
 	%idx = getelementptr { i32*, i32 }, { i32*, i32 }* @MyIntList, i64 0, i32 1
 	store i32 12, i32* %idx

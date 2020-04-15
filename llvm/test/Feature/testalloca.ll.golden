@@ -2,7 +2,7 @@
 %struct = type { i32, %inners, i64 }
 
 define i32 @testfunction(i32 %i0, i32 %j0) {
-; <label>:0
+0:
 	%1 = alloca i8, i32 5
 	%ptr = alloca i32
 	store i32 3, i32* %ptr

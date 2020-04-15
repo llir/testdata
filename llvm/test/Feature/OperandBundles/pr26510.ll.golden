@@ -1,7 +1,7 @@
 declare void @foo() readnone
 
 define i8* @test(i8* %p) {
-; <label>:0
+0:
 	%a = alloca i8*, align 8
 	store i8* %p, i8** %a, align 8
 	call void @foo() [ "abc"(i8** %a) ]

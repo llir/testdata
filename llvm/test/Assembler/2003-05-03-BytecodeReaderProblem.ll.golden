@@ -1,5 +1,5 @@
 define void @test() {
-; <label>:0
+0:
 	%tmp.123 = trunc i64 0 to i32
 	ret void
 }
