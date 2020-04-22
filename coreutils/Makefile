@@ -21,11 +21,10 @@ test/%.ll: coreutils-$(VER)/src/%.bc
 coreutils-$(VER)/src/%.bc: coreutils-$(VER)/src/%
 	get-bc $<
 
-# Compile executables using WLLVM.
+# Compile executables using GLLVM.
 .ONESHELL:
 coreutils-$(VER)/src/$(EXE): | coreutils-$(VER)
 	cd coreutils-$(VER)
-	export LLVM_COMPILER=clang
 	CC=gclang ./configure
 	make
 
