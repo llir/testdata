@@ -2,7 +2,7 @@
 
 ## GLLVM
 
-To convert whole programs to LLVM bitcode, we rely on [gllvm](github.com/SRI-CSL/gllvm).
+To convert whole programs to LLVM bitcode, we rely on [gllvm](https://github.com/SRI-CSL/gllvm).
 
 ### Installation
 
