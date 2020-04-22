@@ -19,14 +19,14 @@ test/%.ll: coreutils-$(VER)/src/%.bc
 
 # Extract LLVM IR bitcode from executables.
 coreutils-$(VER)/src/%.bc: coreutils-$(VER)/src/%
-	extract-bc $<
+	get-bc $<
 
 # Compile executables using WLLVM.
 .ONESHELL:
 coreutils-$(VER)/src/$(EXE): | coreutils-$(VER)
 	cd coreutils-$(VER)
 	export LLVM_COMPILER=clang
-	CC=wllvm ./configure
+	CC=gclang ./configure
 	make
 
 # Fetch source code.

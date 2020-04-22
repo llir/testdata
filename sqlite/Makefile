@@ -17,14 +17,13 @@ test/%.ll: sqlite-amalgamation-$(VER)/%.bc
 
 # Extract LLVM IR bitcode from executables.
 sqlite-amalgamation-$(VER)/%.bc: sqlite-amalgamation-$(VER)/%
-	extract-bc $<
+	get-bc $<
 
-# Compile executables using WLLVM.
+# Compile executables using GLLVM.
 .ONESHELL:
 sqlite-amalgamation-$(VER)/$(EXE): | sqlite-amalgamation-$(VER)
 	cd sqlite-amalgamation-$(VER)
-	export LLVM_COMPILER=clang
-	wllvm -g -o $(EXE) $(SRC_C) -lpthread -ldl
+	gclang -g -o $(EXE) $(SRC_C) -lpthread -ldl
 
 # Fetch source code.
 fetch: sqlite-amalgamation-$(VER)
