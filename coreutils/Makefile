@@ -1,5 +1,5 @@
 # GNU Coreutils version.
-VER=8.30
+VER=8.32
 
 # List of programs retrieved with:
 #

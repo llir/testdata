@@ -1,5 +1,5 @@
 # SQLite version.
-VER=3250200
+VER=3310100
 
 EXE=shell
 SRC_C=shell.c sqlite3.c
@@ -32,7 +32,7 @@ sqlite-amalgamation-$(VER): | sqlite-amalgamation-$(VER).zip
 	unzip sqlite-amalgamation-$(VER).zip
 
 sqlite-amalgamation-$(VER).zip:
-	wget -O $@ https://www.sqlite.org/2018/sqlite-amalgamation-$(VER).zip
+	wget -O $@ https://www.sqlite.org/2020/sqlite-amalgamation-$(VER).zip
 	touch $@
 
 clean:
