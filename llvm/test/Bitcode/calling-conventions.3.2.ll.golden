@@ -4,7 +4,7 @@ declare fastcc void @fastcc()
 
 declare coldcc void @coldcc()
 
-declare cc10 void @cc10()
+declare ghccc void @cc10()
 
 declare spir_kernel void @spir_kernel()
 
@@ -50,9 +50,9 @@ define void @call_coldcc() {
 	ret void
 }
 
-define void @call_cc10 () {
+define void @call_cc10() {
 0:
-	call cc10 void @cc10 ()
+	call ghccc void @cc10()
 	ret void
 }
 
