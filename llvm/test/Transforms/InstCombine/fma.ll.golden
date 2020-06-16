@@ -385,7 +385,6 @@ entry:
 	ret <2 x double> %res
 }
 
-
 define <2 x double> @fma_nan_0(<2 x double> %b, <2 x double> %c) {
 entry:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %b, <2 x double> %c)
