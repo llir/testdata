@@ -106,3 +106,23 @@ entry:
 	%f_vec = fneg fast <3 x float> %vec
 	ret float %f
 }
+
+define float @fmf_calls(float %x, float %y) {
+entry:
+	%vec = load <3 x float>, <3 x float>* @vec
+	%select = load i1, i1* @select
+	%arr = load [3 x float], [3 x float]* @arr
+	%a = call ninf nnan afn float @extfunc(float %x, float %y)
+	%a_vec = call reassoc nnan <3 x float> @extfunc_vec(<3 x float> %vec, <3 x float> %vec)
+	%b = call ninf nnan afn float (...) @var_extfunc(float %x, float %y)
+	%b_vec = call reassoc nnan <3 x float> (...) @var_extfunc_vec(<3 x float> %vec, <3 x float> %vec)
+	ret float %a
+}
+
+declare float @extfunc(float %0, float %1)
+
+declare <3 x float> @extfunc_vec(<3 x float> %0, <3 x float> %1)
+
+declare float @var_extfunc(...)
+
+declare <3 x float> @var_extfunc_vec(...)
