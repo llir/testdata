@@ -4,6 +4,8 @@ declare float @llvm.fma.f32(float %0, float %1, float %2) #1
 
 declare <2 x float> @llvm.fma.v2f32(<2 x float> %0, <2 x float> %1, <2 x float> %2) #1
 
+declare <8 x half> @llvm.fma.v8f16(<8 x half> %0, <8 x half> %1, <8 x half> %2) #1
+
 declare float @llvm.fmuladd.f32(float %0, float %1, float %2) #1
 
 declare float @llvm.fabs.f32(float %0) #1
@@ -247,6 +249,60 @@ define float @fma_x_1_z_fast(float %x, float %z) {
 define float @fma_1_1_z(float %z) {
 0:
 	%fma = call float @llvm.fma.f32(float 1.0, float 1.0, float %z)
+	ret float %fma
+}
+
+define float @fma_x_y_0(float %x, float %y) {
+0:
+	%fma = call float @llvm.fma.f32(float %x, float %y, float 0.0)
+	ret float %fma
+}
+
+define float @fma_x_y_0_nsz(float %x, float %y) {
+0:
+	%fma = call nsz float @llvm.fma.f32(float %x, float %y, float 0.0)
+	ret float %fma
+}
+
+define <8 x half> @fma_x_y_0_v(<8 x half> %x, <8 x half> %y) {
+0:
+	%fma = call <8 x half> @llvm.fma.v8f16(<8 x half> %x, <8 x half> %y, <8 x half> zeroinitializer)
+	ret <8 x half> %fma
+}
+
+define <8 x half> @fma_x_y_0_nsz_v(<8 x half> %x, <8 x half> %y) {
+0:
+	%fma = call nsz <8 x half> @llvm.fma.v8f16(<8 x half> %x, <8 x half> %y, <8 x half> zeroinitializer)
+	ret <8 x half> %fma
+}
+
+define float @fmuladd_x_y_0(float %x, float %y) {
+0:
+	%fma = call float @llvm.fmuladd.f32(float %x, float %y, float 0.0)
+	ret float %fma
+}
+
+define float @fmuladd_x_y_0_nsz(float %x, float %y) {
+0:
+	%fma = call nsz float @llvm.fmuladd.f32(float %x, float %y, float 0.0)
+	ret float %fma
+}
+
+define float @fma_x_y_m0(float %x, float %y) {
+0:
+	%fma = call float @llvm.fma.f32(float %x, float %y, float -0.0)
+	ret float %fma
+}
+
+define <8 x half> @fma_x_y_m0_v(<8 x half> %x, <8 x half> %y) {
+0:
+	%fma = call <8 x half> @llvm.fma.v8f16(<8 x half> %x, <8 x half> %y, <8 x half> <half -0.0, half -0.0, half -0.0, half -0.0, half -0.0, half -0.0, half -0.0, half -0.0>)
+	ret <8 x half> %fma
+}
+
+define float @fmuladd_x_y_m0(float %x, float %y) {
+0:
+	%fma = call float @llvm.fmuladd.f32(float %x, float %y, float -0.0)
 	ret float %fma
 }
 
