@@ -23,7 +23,7 @@
                              emissionKind: FullDebug,
                              enums: !2, retainedTypes: !3,
                              globals: !5, imports: !6, macros: !7, dwoId: 42,
-                             splitDebugInlining: true, rangesBaseAddress: true, sysroot: "/")
+                             splitDebugInlining: true)
 
 ; CHECK: !9 = distinct !DICompileUnit(language: DW_LANG_C99, file: !1, isOptimized: false, runtimeVersion: 0, emissionKind: NoDebug)
 !9 = distinct !DICompileUnit(language: 12, file: !1, producer: "",
