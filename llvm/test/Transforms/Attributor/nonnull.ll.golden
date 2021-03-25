@@ -2,6 +2,8 @@ target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 
 declare nonnull i8* @ret_nonnull()
 
+declare void @llvm.assume(i1 %0)
+
 define i8* @test1() {
 0:
 	%ret = call i8* @ret_nonnull()
@@ -11,6 +13,32 @@ define i8* @test1() {
 define i8* @test2(i8* nonnull %p) {
 0:
 	ret i8* %p
+}
+
+define i8* @test2A(i1 %c, i8* %ret) {
+0:
+	br i1 %c, label %A, label %B
+
+A:
+	call void @llvm.assume(i1 true) [ "nonnull"(i8* %ret) ]
+	ret i8* %ret
+
+B:
+	call void @llvm.assume(i1 true) [ "nonnull"(i8* %ret) ]
+	ret i8* %ret
+}
+
+define i8* @test2B(i1 %c, i8* %ret) {
+0:
+	br i1 %c, label %A, label %B
+
+A:
+	call void @llvm.assume(i1 true) [ "dereferenceable"(i8* %ret, i32 4) ]
+	ret i8* %ret
+
+B:
+	call void @llvm.assume(i1 true) [ "dereferenceable"(i8* %ret, i32 4) ]
+	ret i8* %ret
 }
 
 define i8* @scc_binder(i1 %c) {
@@ -106,8 +134,6 @@ define i8* @test9(i8* %a, i64 %n) {
 	ret i8* %b
 }
 
-declare void @llvm.assume(i1 %0)
-
 define i8* @test10(i8* %a, i64 %n) {
 0:
 	%cmp = icmp ne i64 %n, 0
@@ -148,8 +174,6 @@ define void @test13_helper() {
 	tail call void @test13(i8* %nonnullptr, i8* %maybenullptr, i8* %nonnullptr)
 	ret void
 }
-
-declare void @use_i8_ptr(i8* nofree %0) readnone nounwind
 
 define internal void @test13(i8* %a, i8* %b, i8* %c) {
 0:
@@ -412,7 +436,7 @@ define i32* @g1() {
 	ret i32* %c
 }
 
-declare void @use_i32_ptr(i32* %0) readnone nounwind
+declare void @use_i32_ptr(i32* readnone nocapture %0) nounwind
 
 define internal void @called_by_weak(i32* %a) {
 0:
@@ -585,5 +609,30 @@ define i8* @mybasename(i8* nofree readonly %str) {
 	ret i8* %cond
 }
 
-attributes #0 = { "null-pointer-is-valid"="true" }
+define void @nonnull_assume_pos(i8* %arg) {
+0:
+	call void @llvm.assume(i1 true) [ "nonnull"(i8* %arg) ]
+	call void @use_i8_ptr(i8* %arg)
+	%1 = call i8* @unknown()
+	ret void
+}
+
+define void @nonnull_assume_neg(i8* %arg) {
+0:
+	%1 = call i8* @unknown()
+	call void @use_i8_ptr(i8* %arg)
+	call void @llvm.assume(i1 true) [ "nonnull"(i8* %arg) ]
+	call void @use_i8_ptr(i8* %arg)
+	%2 = call i8* @unknown()
+	call void @use_i8_ptr_ret(i8* %arg)
+	call void @llvm.assume(i1 true) [ "nonnull"(i8* %arg) ]
+	call void @use_i8_ptr_ret(i8* %arg)
+	ret void
+}
+
+declare void @use_i8_ptr(i8* nofree nocapture readnone %0) nounwind
+
+declare void @use_i8_ptr_ret(i8* nofree nocapture readnone %0) nounwind willreturn
+
+attributes #0 = { null_pointer_is_valid }
 attributes #1 = { nounwind willreturn }
