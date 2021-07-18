@@ -9,9 +9,9 @@ define coldcc void @bar() {
 	ret void
 }
 
-define void @structret({ i8 }* sret %P) {
+define void @structret({ i8 }* sret({ i8 }) %P) {
 0:
-	call void @structret({ i8 }* sret %P)
+	call void @structret({ i8 }* sret({ i8 }) %P)
 	ret void
 }
 
