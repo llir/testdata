@@ -3,7 +3,7 @@ target triple = "x86_64-apple-macosx10.10.0"
 
 module asm "beep boop"
 
-%const.struct.type = type { i32, i8 }
+%const.struct.type = type { i32, i8, i64 }
 %const.struct.type.packed = type <{ i32, i8 }>
 %named_type = type [8 x i8]
 %opaquety = type opaque
@@ -22,7 +22,7 @@ $comdat2 = comdat any
 @const.int = constant i32 zeroinitializer
 @const.float = constant double 0.0
 @const.null = constant i8* null
-@const.struct = constant %const.struct.type { i32 -1, i8 undef }
+@const.struct = constant %const.struct.type { i32 -1, i8 undef, i64 poison }
 @const.struct.packed = constant %const.struct.type.packed <{ i32 -1, i8 1 }>
 @constant.array.i8 = constant [3 x i8] [i8 0, i8 1, i8 0]
 @constant.array.i16 = constant [3 x i16] [i16 0, i16 1, i16 0]
@@ -264,9 +264,9 @@ declare hhvm_ccc void @f.cc82()
 
 declare hhvm_ccc void @f.hhvm_ccc()
 
-declare x86_intrcc void @f.cc83()
+declare x86_intrcc void @f.cc83(i8* byval(i8) %0)
 
-declare x86_intrcc void @f.x86_intrcc()
+declare x86_intrcc void @f.x86_intrcc(i8* byval(i8) %0)
 
 declare avr_intrcc void @f.cc84()
 
@@ -291,6 +291,8 @@ declare amdgpu_ps void @f.amdgpu_ps()
 declare amdgpu_cs void @f.cc90()
 
 declare amdgpu_cs void @f.amdgpu_cs()
+
+declare amdgpu_gfx void @f.amdgpu_gfx()
 
 declare amdgpu_kernel void @f.cc91()
 
@@ -338,11 +340,11 @@ declare void @f.param.signext(i8 signext %0)
 
 declare void @f.param.inreg(i8 inreg %0)
 
-declare void @f.param.byval({ i8, i8 }* byval %0)
+declare void @f.param.byval({ i8, i8 }* byval({ i8, i8 }) %0)
 
 declare void @f.param.inalloca(i8* inalloca %0)
 
-declare void @f.param.sret(i8* sret %0)
+declare void @f.param.sret(i8* sret(i8) %0)
 
 declare void @f.param.noalias(i8* noalias %0)
 
@@ -767,9 +769,12 @@ exc:
 	resume i32 undef
 
 4:
-	unreachable
+	resume i32 poison
 
 5:
+	unreachable
+
+6:
 	ret void
 }
 
@@ -955,12 +960,16 @@ define void @instructions.conversions() {
 	%5 = fpext half undef to float
 	%6 = fptoui float undef to i32
 	%7 = fptosi float undef to i32
-	%8 = uitofp i32 1 to float
-	%9 = sitofp i32 -1 to float
-	%10 = ptrtoint i8* null to i64
-	%11 = inttoptr i64 0 to i8*
-	%12 = bitcast i32 0 to i32
-	%13 = addrspacecast i32* null to i32 addrspace(1)*
+	%8 = fptrunc float poison to half
+	%9 = fpext half poison to float
+	%10 = fptoui float poison to i32
+	%11 = fptosi float poison to i32
+	%12 = uitofp i32 1 to float
+	%13 = sitofp i32 -1 to float
+	%14 = ptrtoint i8* null to i64
+	%15 = inttoptr i64 0 to i8*
+	%16 = bitcast i32 0 to i32
+	%17 = addrspacecast i32* null to i32 addrspace(1)*
 	ret void
 }
 

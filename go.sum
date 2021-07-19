@@ -1,2 +1,4 @@
 github.com/SRI-CSL/gllvm v1.2.6 h1:1IwK96SNtOtz+CiK+PFKodV66svtSvwyBPYWan87Qj8=
 github.com/SRI-CSL/gllvm v1.2.6/go.mod h1:v8ChJRFHrYBib7DZR6v/ZkNHO97WlSfYbq3nkNGtBQo=
+github.com/SRI-CSL/gllvm v1.3.0 h1:EVVPBEMQbq+b0BKJ8kvbPpuNZIOSqnDZO5DNMXTc+0M=
+github.com/SRI-CSL/gllvm v1.3.0/go.mod h1:v8ChJRFHrYBib7DZR6v/ZkNHO97WlSfYbq3nkNGtBQo=

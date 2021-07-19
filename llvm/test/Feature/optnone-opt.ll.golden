@@ -1,4 +1,4 @@
-define i32 @_Z3fooi(i32 %x) #0 {
+define i32 @foo(i32 %x) #0 {
 entry:
 	%x.addr = alloca i32, align 4
 	store i32 %x, i32* %x.addr, align 4
@@ -15,7 +15,7 @@ while.body:
 	br label %while.cond
 
 while.end:
-	ret i32 0
+	ret i32 %dec
 }
 
 attributes #0 = { optnone noinline }

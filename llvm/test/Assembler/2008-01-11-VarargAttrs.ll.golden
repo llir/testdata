@@ -4,6 +4,6 @@ declare void @foo(...)
 
 define void @bar() {
 0:
-	call void (...) @foo(%struct* byval null)
+	call void (...) @foo(%struct* byval(%struct) null)
 	ret void
 }

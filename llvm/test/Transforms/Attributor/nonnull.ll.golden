@@ -328,7 +328,7 @@ declare void @use2nonnull(i8* nonnull %x, i8* nonnull %y)
 
 declare void @use3nonnull(i8* nonnull %x, i8* nonnull %y, i8* nonnull %z)
 
-declare i8 @use1safecall(i8* %x) readonly nounwind
+declare i8 @use1safecall(i8* %x) readonly nounwind willreturn
 
 define void @parent1(i8* %a, i8* %b, i8* %c) {
 0:
@@ -598,7 +598,7 @@ define void @PR43833_simple(i32* %0, i32 %1) {
 	br i1 %11, label %7, label %8
 }
 
-declare i8* @strrchr(i8* %0, i32 %1) nofree nounwind readonly
+declare i8* @strrchr(i8* %0, i32 %1) nofree nounwind readonly willreturn
 
 define i8* @mybasename(i8* nofree readonly %str) {
 0:
@@ -633,6 +633,28 @@ define void @nonnull_assume_neg(i8* %arg) {
 declare void @use_i8_ptr(i8* nofree nocapture readnone %0) nounwind
 
 declare void @use_i8_ptr_ret(i8* nofree nocapture readnone %0) nounwind willreturn
+
+define i8* @nonnull_function_ptr_1() {
+0:
+	%bc = bitcast i8* ()* @nonnull_function_ptr_1 to i8*
+	ret i8* %bc
+}
+
+declare i8* @function_decl()
+
+define i8* @nonnull_function_ptr_2() {
+0:
+	%bc = bitcast i8* ()* @function_decl to i8*
+	ret i8* %bc
+}
+
+define void @nonnull_caller(i8* %p) {
+0:
+	call void @nonnull_callee(i8* %p)
+	ret void
+}
+
+declare void @nonnull_callee(i8* nonnull %p)
 
 attributes #0 = { null_pointer_is_valid }
 attributes #1 = { nounwind willreturn }

@@ -1,4 +1,4 @@
-@0 = external global float, align 16
+@0 = external dso_local global float, align 16
 
 define internal void @a() nounwind {
 0:
