@@ -326,9 +326,9 @@ define <3 x float> @shuf_frem_const_op1(<3 x float> %x) {
 	ret <3 x float> %r
 }
 
-define i32* @gep_vbase_w_s_idx(<2 x i32*> %base) {
+define i32* @gep_vbase_w_s_idx(<2 x i32*> %base, i64 %index) {
 0:
-	%gep = getelementptr i32, <2 x i32*> %base, i64 1
+	%gep = getelementptr i32, <2 x i32*> %base, i64 %index
 	%ee = extractelement <2 x i32*> %gep, i32 1
 	ret i32* %ee
 }

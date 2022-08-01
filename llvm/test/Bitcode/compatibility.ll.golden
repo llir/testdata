@@ -344,7 +344,7 @@ declare void @f.param.inreg(i8 inreg %0)
 
 declare void @f.param.byval({ i8, i8 }* byval({ i8, i8 }) %0)
 
-declare void @f.param.inalloca(i8* inalloca (i8) %0)
+declare void @f.param.inalloca(i8* inalloca(i8) %0)
 
 declare void @f.param.sret(i8* sret(i8) %0)
 
@@ -1055,9 +1055,9 @@ exit:
 	ret void
 }
 
-define void @instructions.call_musttail(i8* inalloca (i8) %val) {
+define void @instructions.call_musttail(i8* inalloca(i8) %val) {
 0:
-	musttail call void @f.param.inalloca(i8* inalloca (i8) %val)
+	musttail call void @f.param.inalloca(i8* inalloca(i8) %val)
 	ret void
 }
 
@@ -1417,4 +1417,3 @@ declare void @byval_named_type(%named_type* byval(%named_type) %0)
 !12 = distinct !{}
 !13 = !{!11}
 !14 = !{!12}
-
