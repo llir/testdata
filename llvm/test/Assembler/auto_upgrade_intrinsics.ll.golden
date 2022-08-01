@@ -1,4 +1,7 @@
+%0 = type opaque
+
 @a = private global [60 x i8] zeroinitializer, align 1
+@u = private global [60 x %0*] zeroinitializer, align 1
 @__stack_chk_guard = external global i8*
 
 declare i8 @llvm.ctlz.i8(i8 %0)
@@ -8,8 +11,6 @@ declare i16 @llvm.ctlz.i16(i16 %0)
 declare i32 @llvm.ctlz.i32(i32 %0)
 
 declare i42 @llvm.ctlz.i42(i42 %0)
-
-declare i32 @llvm.objectsize.i32(i8* %0, i1 %1) nounwind readonly
 
 define void @test.ctlz(i8 %a, i16 %b, i32 %c, i42 %d) {
 entry:
@@ -37,6 +38,8 @@ entry:
 	ret void
 }
 
+declare i32 @llvm.objectsize.i32(i8* %0, i1 %1) nounwind readonly
+
 define i32 @test.objectsize() {
 0:
 	%s = call i32 @llvm.objectsize.i32(i8* getelementptr inbounds ([60 x i8], [60 x i8]* @a, i32 0, i32 0), i1 false)
@@ -48,6 +51,22 @@ declare i64 @llvm.objectsize.i64.p0i8(i8* %0, i1 %1) nounwind readonly
 define i64 @test.objectsize.2() {
 0:
 	%s = call i64 @llvm.objectsize.i64.p0i8(i8* getelementptr inbounds ([60 x i8], [60 x i8]* @a, i32 0, i32 0), i1 false)
+	ret i64 %s
+}
+
+declare i32 @llvm.objectsize.i32.unnamed(%0** %0, i1 %1) nounwind readonly
+
+define i32 @test.objectsize.unnamed() {
+0:
+	%s = call i32 @llvm.objectsize.i32.unnamed(%0** getelementptr inbounds ([60 x %0*], [60 x %0*]* @u, i32 0, i32 0), i1 false)
+	ret i32 %s
+}
+
+declare i64 @llvm.objectsize.i64.p0p0s_s.0(%0** %0, i1 %1) nounwind readonly
+
+define i64 @test.objectsize.unnamed.2() {
+0:
+	%s = call i64 @llvm.objectsize.i64.p0p0s_s.0(%0** getelementptr inbounds ([60 x %0*], [60 x %0*]* @u, i32 0, i32 0), i1 false)
 	ret i64 %s
 }
 
@@ -96,6 +115,19 @@ define void @tests.invariant.start.end() {
 	ret void
 }
 
+declare {}* @llvm.invariant.start.unnamed(i64 %0, %0** nocapture %1) nounwind readonly
+
+declare void @llvm.invariant.end.unnamed({}* %0, i64 %1, %0** nocapture %2) nounwind
+
+define void @tests.invariant.start.end.unnamed() {
+0:
+	%a = alloca %0*
+	%i = call {}* @llvm.invariant.start.unnamed(i64 1, %0** %a)
+	store %0* null, %0** %a
+	call void @llvm.invariant.end.unnamed({}* %i, i64 1, %0** %a)
+	ret void
+}
+
 declare void @llvm.stackprotectorcheck(i8** %0)
 
 define void @test.stackprotectorcheck() {
@@ -117,6 +149,19 @@ define void @tests.lifetime.start.end() {
 	ret void
 }
 
+declare void @llvm.lifetime.start.unnamed(i64 %0, %0** nocapture %1) nounwind readonly
+
+declare void @llvm.lifetime.end.unnamed(i64 %0, %0** nocapture %1) nounwind
+
+define void @tests.lifetime.start.end.unnamed() {
+0:
+	%a = alloca %0*
+	call void @llvm.lifetime.start.unnamed(i64 1, %0** %a)
+	store %0* null, %0** %a
+	call void @llvm.lifetime.end.unnamed(i64 1, %0** %a)
+	ret void
+}
+
 declare void @llvm.prefetch(i8* %0, i32 %1, i32 %2, i32 %3)
 
 define void @test.prefetch(i8* %ptr) {
@@ -130,5 +175,13 @@ declare void @llvm.prefetch.p0i8(i8* %0, i32 %1, i32 %2, i32 %3)
 define void @test.prefetch.2(i8* %ptr) {
 0:
 	call void @llvm.prefetch(i8* %ptr, i32 0, i32 3, i32 2)
+	ret void
+}
+
+declare void @llvm.prefetch.unnamed(%0** %0, i32 %1, i32 %2, i32 %3)
+
+define void @test.prefetch.unnamed(%0** %ptr) {
+0:
+	call void @llvm.prefetch.unnamed(%0** %ptr, i32 0, i32 3, i32 2)
 	ret void
 }
