@@ -12,14 +12,14 @@ define dso_local void @foo(i32 %0) #0 {
 	br i1 %5, label %8, label %6
 
 6:
-	callbr void asm sideeffect "# ${0:l}", "X,~{dirflag},~{fpsr},~{flags}"(i8* blockaddress(@foo, %10)) #0
+	callbr void asm sideeffect "# ${0:l}", "i,~{dirflag},~{fpsr},~{flags}"(i8* blockaddress(@foo, %10)) #0
 		to label %7 [label %10]
 
 7:
 	br label %10
 
 8:
-	callbr void asm sideeffect "# ${0:l}", "X,~{dirflag},~{fpsr},~{flags}"(i8* blockaddress(@foo, %10)) #0
+	callbr void asm sideeffect "# ${0:l}", "i,~{dirflag},~{fpsr},~{flags}"(i8* blockaddress(@foo, %10)) #0
 		to label %9 [label %10]
 
 9:

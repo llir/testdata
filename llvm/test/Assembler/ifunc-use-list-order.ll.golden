@@ -4,13 +4,12 @@
 @alias_foo = alias void (), void ()* @foo_ifunc
 @alias_bar = alias void (), void ()* @bar
 
-@foo_ifunc = ifunc void (), i8* ()* @foo_resolver
-@bar_ifunc = ifunc void (), i8* ()* @bar2_ifunc
-@bar2_ifunc = ifunc i8* (), i8* ()* @bar_resolver
+@foo_ifunc = ifunc void (), void ()* ()* @foo_resolver
+@bar_ifunc = ifunc void (), void ()* ()* @bar_resolver
 
-define i8* @foo_resolver() {
+define void ()* @foo_resolver() {
 entry:
-	ret i8* null
+	ret void ()* null
 }
 
 define void @bar() {
@@ -19,9 +18,9 @@ entry:
 	ret void
 }
 
-define i8* @bar_resolver() {
+define void ()* @bar_resolver() {
 entry:
-	ret i8* null
+	ret void ()* null
 }
 
 define void @bar2() {
