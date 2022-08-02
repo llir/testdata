@@ -24,5 +24,9 @@ define void @fp_atomics(float* %x) {
 0:
 	%1 = atomicrmw fadd float* %x, float 1.0 seq_cst
 	%2 = atomicrmw volatile fadd float* %x, float 1.0 seq_cst
+	%3 = atomicrmw fmax float* %x, float 1.0 seq_cst
+	%4 = atomicrmw volatile fmax float* %x, float 1.0 seq_cst
+	%5 = atomicrmw fmin float* %x, float 1.0 seq_cst
+	%6 = atomicrmw volatile fmin float* %x, float 1.0 seq_cst
 	ret void
 }
