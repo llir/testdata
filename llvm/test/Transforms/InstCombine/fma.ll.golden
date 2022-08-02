@@ -1,14 +1,26 @@
 @external = external global i32
 
-declare float @llvm.fma.f32(float %0, float %1, float %2) #1
+declare float @llvm.fma.f32(float %0, float %1, float %2)
 
-declare <2 x float> @llvm.fma.v2f32(<2 x float> %0, <2 x float> %1, <2 x float> %2) #1
+declare <2 x float> @llvm.fma.v2f32(<2 x float> %0, <2 x float> %1, <2 x float> %2)
 
-declare <8 x half> @llvm.fma.v8f16(<8 x half> %0, <8 x half> %1, <8 x half> %2) #1
+declare <3 x float> @llvm.fma.v3f32(<3 x float> %0, <3 x float> %1, <3 x float> %2)
 
-declare float @llvm.fmuladd.f32(float %0, float %1, float %2) #1
+declare <8 x half> @llvm.fma.v8f16(<8 x half> %0, <8 x half> %1, <8 x half> %2)
 
-declare float @llvm.fabs.f32(float %0) #1
+declare <2 x double> @llvm.fma.v2f64(<2 x double> %0, <2 x double> %1, <2 x double> %2)
+
+declare float @llvm.fmuladd.f32(float %0, float %1, float %2)
+
+declare <2 x double> @llvm.fmuladd.v2f64(<2 x double> %0, <2 x double> %1, <2 x double> %2)
+
+declare float @llvm.fabs.f32(float %0)
+
+declare <2 x double> @llvm.sqrt.v2f64(<2 x double> %0)
+
+declare void @use_vec(<2 x float> %0)
+
+declare void @use_vec3(<3 x float> %0)
 
 define float @fma_fneg_x_fneg_y(float %x, float %y, float %z) {
 0:
@@ -69,7 +81,8 @@ define float @fma_unary_fneg_x_unary_fneg_y_fast(float %x, float %y, float %z) {
 define float @fma_fneg_const_fneg_y(float %y, float %z) {
 0:
 	%y.fneg = fsub float -0.0, %y
-	%fma = call float @llvm.fma.f32(float fsub (float -0.0, float bitcast (i32 ptrtoint (i32* @external to i32) to float)), float %y.fneg, float %z)
+	%fsub = fsub float -0.0, bitcast (i32 ptrtoint (i32* @external to i32) to float)
+	%fma = call float @llvm.fma.f32(float %fsub, float %y.fneg, float %z)
 	ret float %fma
 }
 
@@ -83,7 +96,8 @@ define float @fma_unary_fneg_const_unary_fneg_y(float %y, float %z) {
 define float @fma_fneg_x_fneg_const(float %x, float %z) {
 0:
 	%x.fneg = fsub float -0.0, %x
-	%fma = call float @llvm.fma.f32(float %x.fneg, float fsub (float -0.0, float bitcast (i32 ptrtoint (i32* @external to i32) to float)), float %z)
+	%fsub = fsub float -0.0, bitcast (i32 ptrtoint (i32* @external to i32) to float)
+	%fma = call float @llvm.fma.f32(float %x.fneg, float %fsub, float %z)
 	ret float %fma
 }
 
@@ -151,7 +165,8 @@ define float @fmuladd_unary_fneg_x_unary_fneg_y_fast(float %x, float %y, float %
 define float @fmuladd_fneg_const_fneg_y(float %y, float %z) {
 0:
 	%y.fneg = fsub float -0.0, %y
-	%fmuladd = call float @llvm.fmuladd.f32(float fsub (float -0.0, float bitcast (i32 ptrtoint (i32* @external to i32) to float)), float %y.fneg, float %z)
+	%fsub = fsub float -0.0, bitcast (i32 ptrtoint (i32* @external to i32) to float)
+	%fmuladd = call float @llvm.fmuladd.f32(float %fsub, float %y.fneg, float %z)
 	ret float %fmuladd
 }
 
@@ -165,7 +180,8 @@ define float @fmuladd_unary_fneg_const_unary_fneg_y(float %y, float %z) {
 define float @fmuladd_fneg_x_fneg_const(float %x, float %z) {
 0:
 	%x.fneg = fsub float -0.0, %x
-	%fmuladd = call float @llvm.fmuladd.f32(float %x.fneg, float fsub (float -0.0, float bitcast (i32 ptrtoint (i32* @external to i32) to float)), float %z)
+	%fsub = fsub float -0.0, bitcast (i32 ptrtoint (i32* @external to i32) to float)
+	%fmuladd = call float @llvm.fmuladd.f32(float %x.fneg, float %fsub, float %z)
 	ret float %fmuladd
 }
 
@@ -313,209 +329,258 @@ define float @fmuladd_x_1_z_fast(float %x, float %z) {
 }
 
 define <2 x double> @fmuladd_a_0_b(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> %a, <2 x double> zeroinitializer, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_0_a_b(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> zeroinitializer, <2 x double> %a, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_a_0_b_missing_flags(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nnan <2 x double> @llvm.fmuladd.v2f64(<2 x double> %a, <2 x double> zeroinitializer, <2 x double> %b)
 	ret <2 x double> %res
 }
 
-declare <2 x double> @llvm.fmuladd.v2f64(<2 x double> %0, <2 x double> %1, <2 x double> %2)
-
 define <2 x double> @fma_a_0_b(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %a, <2 x double> zeroinitializer, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_0_a_b(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> zeroinitializer, <2 x double> %a, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_0_a_b_missing_flags(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%res = call nsz <2 x double> @llvm.fma.v2f64(<2 x double> zeroinitializer, <2 x double> %a, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_sqrt(<2 x double> %a, <2 x double> %b) {
-entry:
+0:
 	%sqrt = call fast <2 x double> @llvm.sqrt.v2f64(<2 x double> %a)
 	%res = call fast <2 x double> @llvm.fma.v2f64(<2 x double> %sqrt, <2 x double> %sqrt, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_const_fmul(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_const_fmul_zero(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0.0, double 0.0>, <2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_const_fmul_zero2(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> <double 0.0, double 0.0>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_const_fmul_one(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 1.0, double 1.0>, <2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_const_fmul_one2(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> <double 1.0, double 1.0>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_and_const_0(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_and_const_1(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_and_const_2(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_undef_0(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double undef, double undef>, <2 x double> %b, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_undef_1(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> <double undef, double undef>, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_undef_2(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> %c, <2 x double> <double undef, double undef>)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_partial_undef_0(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double undef, double 0x4068E00A137F38C5>, <2 x double> %b, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_partial_undef_1(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> <double 0x4068E00A137F38C5, double undef>, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_partial_undef_2(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> %c, <2 x double> <double 0x4068E00A137F38C5, double undef>)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_0(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %b, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_1(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fma_nan_2(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fma.v2f64(<2 x double> %b, <2 x double> %c, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_const_fmul(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double 0x4131233302898702, double 0x40C387800000D6C0>, <2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_nan_and_const_0(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_nan_and_const_1(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %b)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_nan_and_const_2(<2 x double> %b) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double 0x3E4BBDDB05A67F53, double 0x3EE321DF92910088>, <2 x double> %b, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_nan_0(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %b, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_nan_1(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> %b, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_undef_0(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> <double undef, double undef>, <2 x double> %b, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_undef_1(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> %b, <2 x double> <double undef, double undef>, <2 x double> %c)
 	ret <2 x double> %res
 }
 
 define <2 x double> @fmuladd_undef_2(<2 x double> %b, <2 x double> %c) {
-entry:
+0:
 	%res = call nnan nsz <2 x double> @llvm.fmuladd.v2f64(<2 x double> %b, <2 x double> %c, <2 x double> <double 0x7FF8000000000000, double 0x7FF8000000000000>)
 	ret <2 x double> %res
 }
 
-declare <2 x double> @llvm.fma.v2f64(<2 x double> %0, <2 x double> %1, <2 x double> %2)
+define <2 x float> @fma_unary_shuffle_ops(<2 x float> %x, <2 x float> %y, <2 x float> %z) {
+0:
+	%a = shufflevector <2 x float> %x, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%b = shufflevector <2 x float> %y, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%c = shufflevector <2 x float> %z, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%r = call <2 x float> @llvm.fma.v2f32(<2 x float> %a, <2 x float> %b, <2 x float> %c)
+	ret <2 x float> %r
+}
 
-declare <2 x double> @llvm.sqrt.v2f64(<2 x double> %0)
+define <3 x float> @fma_unary_shuffle_ops_widening(<2 x float> %x, <2 x float> %y, <2 x float> %z) {
+0:
+	%a = shufflevector <2 x float> %x, <2 x float> poison, <3 x i32> <i32 1, i32 0, i32 1>
+	call void @use_vec3(<3 x float> %a)
+	%b = shufflevector <2 x float> %y, <2 x float> poison, <3 x i32> <i32 1, i32 0, i32 1>
+	%c = shufflevector <2 x float> %z, <2 x float> poison, <3 x i32> <i32 1, i32 0, i32 1>
+	%r = call fast <3 x float> @llvm.fma.v3f32(<3 x float> %a, <3 x float> %b, <3 x float> %c)
+	ret <3 x float> %r
+}
 
-attributes #0 = { nounwind }
-attributes #1 = { nounwind readnone }
+define <2 x float> @fma_unary_shuffle_ops_narrowing(<3 x float> %x, <3 x float> %y, <3 x float> %z) {
+0:
+	%a = shufflevector <3 x float> %x, <3 x float> poison, <2 x i32> <i32 1, i32 0>
+	%b = shufflevector <3 x float> %y, <3 x float> poison, <2 x i32> <i32 1, i32 0>
+	call void @use_vec(<2 x float> %b)
+	%c = shufflevector <3 x float> %z, <3 x float> poison, <2 x i32> <i32 1, i32 0>
+	%r = call nnan nsz <2 x float> @llvm.fma.v2f32(<2 x float> %a, <2 x float> %b, <2 x float> %c)
+	ret <2 x float> %r
+}
+
+define <2 x float> @fma_unary_shuffle_ops_unshuffled(<2 x float> %x, <2 x float> %y, <2 x float> %z) {
+0:
+	%a = shufflevector <2 x float> %x, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%b = shufflevector <2 x float> %y, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%r = call <2 x float> @llvm.fma.v2f32(<2 x float> %a, <2 x float> %b, <2 x float> %z)
+	ret <2 x float> %r
+}
+
+define <2 x float> @fma_unary_shuffle_ops_wrong_mask(<2 x float> %x, <2 x float> %y, <2 x float> %z) {
+0:
+	%a = shufflevector <2 x float> %x, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%b = shufflevector <2 x float> %y, <2 x float> poison, <2 x i32> <i32 0, i32 0>
+	%c = shufflevector <2 x float> %z, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	%r = call <2 x float> @llvm.fma.v2f32(<2 x float> %a, <2 x float> %b, <2 x float> %c)
+	ret <2 x float> %r
+}
+
+define <2 x float> @fma_unary_shuffle_ops_uses(<2 x float> %x, <2 x float> %y, <2 x float> %z) {
+0:
+	%a = shufflevector <2 x float> %x, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	call void @use_vec(<2 x float> %a)
+	%b = shufflevector <2 x float> %y, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	call void @use_vec(<2 x float> %b)
+	%c = shufflevector <2 x float> %z, <2 x float> poison, <2 x i32> <i32 1, i32 0>
+	call void @use_vec(<2 x float> %c)
+	%r = call <2 x float> @llvm.fma.v2f32(<2 x float> %a, <2 x float> %b, <2 x float> %c)
+	ret <2 x float> %r
+}
