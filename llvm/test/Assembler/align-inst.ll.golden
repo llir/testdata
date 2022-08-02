@@ -1,9 +1,9 @@
-@A = global i1 false, align 536870912
+@A = global i1 false, align 4294967296
 
 define void @foo() {
 0:
-	%p = alloca i1, align 536870912
-	%1 = load i1, i1* %p, align 536870912
-	store i1 false, i1* %p, align 536870912
+	%p = alloca i1, align 4294967296
+	%1 = load i1, i1* %p, align 4294967296
+	store i1 false, i1* %p, align 4294967296
 	ret void
 }

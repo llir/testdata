@@ -105,19 +105,19 @@ $comdat2 = comdat any
 @a.local_unnamed_addr = local_unnamed_addr alias i32, i32* @g.local_unnamed_addr
 @alias.partition = alias i32, i32* @g.partition, partition "part"
 
-@ifunc.external = external ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.private = private ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.internal = internal ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.default = default ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.hidden = hidden ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.protected = protected ifunc void (), i8* ()* @ifunc_resolver
-@ifunc.partition = ifunc void (), i8* ()* @ifunc_resolver, partition "part"
+@ifunc.external = external ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.private = private ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.internal = internal ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.default = default ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.hidden = hidden ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.protected = protected ifunc void (), void ()* ()* @ifunc_resolver
+@ifunc.partition = ifunc void (), void ()* ()* @ifunc_resolver, partition "part"
 
 declare void @g.f1()
 
-define i8* @ifunc_resolver() {
+define void ()* @ifunc_resolver() {
 entry:
-	ret i8* null
+	ret void ()* null
 }
 
 declare void @f1()
@@ -1391,6 +1391,8 @@ define void @instructions.strictfp() strictfp {
 }
 
 declare void @f.nosanitize_coverage() nosanitize_coverage
+
+declare void @f.disable_sanitizer_instrumentation()
 
 declare void @llvm.test.immarg.intrinsic(i32 immarg %0)
 
