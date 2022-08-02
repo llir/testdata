@@ -1,5 +1,5 @@
 # LLVM version.
-VER=14.0.6
+VER=15.0.0rc1
 
 ROOT_DIR=$(shell pwd)
 

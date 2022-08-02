@@ -33,11 +33,10 @@ define void @baz() #0 {
 ; CHECK-NEXT:    # kill: def $r7 killed $r7 killed $s7
 ; CHECK-NEXT:    bl fma
 ; CHECK-NEXT:    evmergelo 3, 3, 4
-; CHECK-NEXT:    addi 5, 28, 1
-; CHECK-NEXT:    cmplw 5, 28
-; CHECK-NEXT:    mr 28, 5
+; CHECK-NEXT:    addi 28, 28, 1
+; CHECK-NEXT:    cmplwi 28, 0
 ; CHECK-NEXT:    efdctsiz 3, 3
-; CHECK-NEXT:    bge 0, .LBB0_1
+; CHECK-NEXT:    bne 0, .LBB0_1
 ; CHECK-NEXT:  # %bb.2: # %bb8
 ; CHECK-NEXT:    bl wibble
 ; CHECK-NEXT:    evldd 30, 32(1) # 8-byte Folded Reload
@@ -97,11 +96,10 @@ define void @wombat() #0 {
 ; CHECK-NEXT:    # kill: def $r7 killed $r7 killed $s7
 ; CHECK-NEXT:    bl fma
 ; CHECK-NEXT:    evmergelo 3, 3, 4
-; CHECK-NEXT:    addi 5, 28, 1
-; CHECK-NEXT:    cmplw 5, 28
-; CHECK-NEXT:    mr 28, 5
+; CHECK-NEXT:    addi 28, 28, 1
+; CHECK-NEXT:    cmplwi 28, 0
 ; CHECK-NEXT:    efdctsiz 3, 3
-; CHECK-NEXT:    bge 0, .LBB1_1
+; CHECK-NEXT:    bne 0, .LBB1_1
 ; CHECK-NEXT:  # %bb.2: # %bb8
 ; CHECK-NEXT:    bl wibble
 ; CHECK-NEXT:    evldd 30, 32(1) # 8-byte Folded Reload
