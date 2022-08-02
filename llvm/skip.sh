@@ -88,10 +88,6 @@ mv "test/Other/lit-globbing.ll" "test/Other/lit-globbing.ll.x"
 
 # --- [ invalid LLVM IR ] ------------------------------------------------------
 
-mv "test/CodeGen/X86/nonconst-static-iv.ll" "test/CodeGen/X86/nonconst-static-iv.ll.x"
-
-# --- [ invalid LLVM IR ] ------------------------------------------------------
-
 # Located by running `sift -x ll -l "RUN: not llvm-as" test/`
 
 mv "test/Assembler/2003-04-15-ConstantInitAssertion.ll" "test/Assembler/2003-04-15-ConstantInitAssertion.ll.x"
@@ -134,9 +130,7 @@ mv "test/Assembler/getelementptr_vec_idx3.ll" "test/Assembler/getelementptr_vec_
 mv "test/Assembler/getelementptr_vec_idx4.ll" "test/Assembler/getelementptr_vec_idx4.ll.x"
 mv "test/Assembler/getelementptr_vec_struct.ll" "test/Assembler/getelementptr_vec_struct.ll.x"
 mv "test/Assembler/gv-invalid-type.ll" "test/Assembler/gv-invalid-type.ll.x"
-mv "test/Assembler/inline-asm-clobber.ll" "test/Assembler/inline-asm-clobber.ll.x"
 mv "test/Assembler/insertvalue-invalid-idx.ll" "test/Assembler/insertvalue-invalid-idx.ll.x"
-mv "test/Assembler/insertvalue-invalid-type-1.ll" "test/Assembler/insertvalue-invalid-type-1.ll.x"
 mv "test/Assembler/insertvalue-invalid-type.ll" "test/Assembler/insertvalue-invalid-type.ll.x"
 mv "test/Assembler/internal-hidden-alias.ll" "test/Assembler/internal-hidden-alias.ll.x"
 mv "test/Assembler/internal-hidden-function.ll" "test/Assembler/internal-hidden-function.ll.x"
@@ -148,7 +142,6 @@ mv "test/Assembler/invalid-alias-mismatched-explicit-type.ll" "test/Assembler/in
 mv "test/Assembler/invalid-atomicrmw-add-must-be-integer-type.ll" "test/Assembler/invalid-atomicrmw-add-must-be-integer-type.ll.x"
 mv "test/Assembler/invalid-atomicrmw-fadd-must-be-fp-type.ll" "test/Assembler/invalid-atomicrmw-fadd-must-be-fp-type.ll.x"
 mv "test/Assembler/invalid-atomicrmw-fsub-must-be-fp-type.ll" "test/Assembler/invalid-atomicrmw-fsub-must-be-fp-type.ll.x"
-mv "test/Assembler/invalid-atomicrmw-xchg-must-be-integer-or-fp-type.ll" "test/Assembler/invalid-atomicrmw-xchg-must-be-integer-or-fp-type.ll.x"
 mv "test/Assembler/invalid-attrgrp.ll" "test/Assembler/invalid-attrgrp.ll.x"
 mv "test/Assembler/invalid-block-label-num.ll" "test/Assembler/invalid-block-label-num.ll.x"
 mv "test/Assembler/invalid-byval-type1.ll" "test/Assembler/invalid-byval-type1.ll.x"
@@ -198,7 +191,6 @@ mv "test/Assembler/invalid-diexpression-verify.ll" "test/Assembler/invalid-diexp
 mv "test/Assembler/invalid-difile-missing-directory.ll" "test/Assembler/invalid-difile-missing-directory.ll.x"
 mv "test/Assembler/invalid-difile-missing-filename.ll" "test/Assembler/invalid-difile-missing-filename.ll.x"
 mv "test/Assembler/invalid-diglobalvariable-empty-name.ll" "test/Assembler/invalid-diglobalvariable-empty-name.ll.x"
-mv "test/Assembler/invalid-diglobalvariable-missing-name.ll" "test/Assembler/invalid-diglobalvariable-missing-name.ll.x"
 mv "test/Assembler/invalid-diimportedentity-missing-scope.ll" "test/Assembler/invalid-diimportedentity-missing-scope.ll.x"
 mv "test/Assembler/invalid-diimportedentity-missing-tag.ll" "test/Assembler/invalid-diimportedentity-missing-tag.ll.x"
 mv "test/Assembler/invalid-dilexicalblock-missing-scope.ll" "test/Assembler/invalid-dilexicalblock-missing-scope.ll.x"
