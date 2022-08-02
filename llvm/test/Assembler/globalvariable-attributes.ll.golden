@@ -2,5 +2,10 @@
 @g2 = global i32 2, align 4 "key3"="value3"
 @g3 = global i32 2 #0
 @g4 = global i32 2, align 4 "key5"="value5" #0
+@g5 = global i32 2, align 4, no_sanitize_address
+@g6 = global i32 2, align 4, no_sanitize_hwaddress
+@g7 = global i32 2, align 4, sanitize_address_dyninit
+@g8 = global i32 2, align 4, sanitize_memtag
+@g9 = global i32 2, align 4, sanitize_memtag
 
 attributes #0 = { "string"="value" nobuiltin norecurse }
