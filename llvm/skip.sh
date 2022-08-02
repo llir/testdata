@@ -39,6 +39,10 @@ mv "test/Transforms/GCOVProfiling/linkagename.ll" "test/Transforms/GCOVProfiling
 mv "test/Transforms/GCOVProfiling/three-element-mdnode.ll" "test/Transforms/GCOVProfiling/three-element-mdnode.ll.x"
 mv "test/CodeGen/NVPTX/nvvm-reflect.ll" "test/CodeGen/NVPTX/nvvm-reflect.ll.x"
 
+# --- [ Type error ] -----------------------------------------------------------
+
+mv "test/Assembler/ifunc-asm.ll" "test/Assembler/ifunc-asm.ll.x"
+
 # --- [ Old grammar compatibility test cases ] ---------------------------------
 #
 # Test cases for compatibility with older versions of LLVM IR. We only support

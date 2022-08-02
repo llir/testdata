@@ -379,11 +379,6 @@ define void @f74() vscale_range(1, 0) {
 	ret void
 }
 
-define void @f75() vscale_range(0, 0) {
-0:
-	ret void
-}
-
 define void @f76(i8* swiftasync %0) {
 1:
 	ret void
@@ -404,5 +399,26 @@ declare void @llvm.some.intrinsic(i32* %0)
 define void @f79() {
 0:
 	call void @llvm.some.intrinsic(i32* elementtype(i32) null)
+	ret void
+}
+
+define void @f80() {
+0:
+	ret void
+}
+
+define void @f81(i8** sret(i8*) %0) {
+1:
+	ret void
+}
+
+define void @f82(i32* %0) {
+1:
+	call void @llvm.some.intrinsic(i32* sret(i32) %0)
+	ret void
+}
+
+define void @f83(<4 x i8*> align 32 %0, <vscale x 1 x double*> align 64 %1) {
+2:
 	ret void
 }
