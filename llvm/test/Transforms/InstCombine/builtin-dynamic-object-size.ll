@@ -1,4 +1,4 @@
-; RUN: opt -instcombine -S < %s | FileCheck %s
+; RUN: opt -passes=instcombine -S < %s | FileCheck %s
 
 target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128-p7:32:32"
 target triple = "x86_64-apple-macosx10.14.0"
@@ -192,12 +192,12 @@ entry:
 declare void @bury(i32) local_unnamed_addr #2
 
 ; Function Attrs: nounwind allocsize(0)
-declare i8* @malloc(i64)
+declare i8* @malloc(i64) nounwind allocsize(0) allockind("alloc,uninitialized") "alloc-family"="malloc"
 
 declare i8* @get_unknown_buffer()
 
 ; Function Attrs: nounwind
-declare void @free(i8* nocapture)
+declare void @free(i8* nocapture) nounwind allockind("free") "alloc-family"="malloc"
 
 ; Function Attrs: nounwind readnone speculatable
 declare i64 @llvm.objectsize.i64.p0i8(i8*, i1, i1, i1)
