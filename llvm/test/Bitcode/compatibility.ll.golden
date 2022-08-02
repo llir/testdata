@@ -1392,7 +1392,7 @@ define void @instructions.strictfp() strictfp {
 
 declare void @f.nosanitize_coverage() nosanitize_coverage
 
-declare void @f.disable_sanitizer_instrumentation()
+declare void @f.disable_sanitizer_instrumentation() disable_sanitizer_instrumentation
 
 declare void @llvm.test.immarg.intrinsic(i32 immarg %0)
 
