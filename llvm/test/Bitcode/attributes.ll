@@ -276,12 +276,12 @@ define void @f44() argmemonly
 }
 
 ; CHECK: define "string_attribute" void @f45(i32 "string_attribute" %0)
-define "string_attribute" void @f45(i32 "string_attribute" %0) {
+define void @f45(i32 "string_attribute" %0) {
   ret void
 }
 
 ; CHECK: define "string_attribute_with_value"="value" void @f46(i32 "string_attribute_with_value"="value" %0)
-define "string_attribute_with_value"="value" void @f46(i32 "string_attribute_with_value"="value" %0) {
+define void @f46(i32 "string_attribute_with_value"="value" %0) {
   ret void
 }
 
