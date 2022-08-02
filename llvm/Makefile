@@ -1,4 +1,5 @@
 # LLVM version.
+# TODO: update to use LLVM 15.0 (instead of rc1)
 VER=15.0.0rc1
 
 ROOT_DIR=$(shell pwd)
