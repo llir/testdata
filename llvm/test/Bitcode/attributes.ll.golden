@@ -402,7 +402,7 @@ define void @f79() {
 	ret void
 }
 
-define void @f80() {
+define void @f80() disable_sanitizer_instrumentation {
 0:
 	ret void
 }
